@@ -144,6 +144,52 @@ namespace CapaDiseño
                 asignacionconcepto.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
+
+        bool ventanaSolicitudEmpleadoN = false;
+        Frm_SolicitudEmpleadoN solicitudEmpleado = new Frm_SolicitudEmpleadoN();
+        private void solicitudEmpleadoNuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_SolicitudEmpleadoN);
+            if (ventanaSolicitudEmpleadoN == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    solicitudEmpleado = new Frm_SolicitudEmpleadoN();
+                }
+
+                solicitudEmpleado.MdiParent = this;
+                solicitudEmpleado.Show();
+                Application.DoEvents();
+                ventanaSolicitudEmpleadoN = true;
+            }
+            else
+            {
+                solicitudEmpleado.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaMantPerfil = false;
+        Frm_MantPerfiles perfiles = new Frm_MantPerfiles();
+        private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantPerfiles);
+            if (ventanaMantPerfil == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    perfiles = new Frm_MantPerfiles();
+                }
+
+                perfiles.MdiParent = this;
+                perfiles.Show();
+                Application.DoEvents();
+                ventanaMantPerfil = true;
+            }
+            else
+            {
+                perfiles.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
     }
     }
 
