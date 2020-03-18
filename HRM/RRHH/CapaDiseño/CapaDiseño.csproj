@@ -59,6 +59,12 @@
     <Compile Include="Consulta\Frm_consultaEmpleado.Designer.cs">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\CONVOCATORIA Y SELECCION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\CONVOCATORIA Y SELECCION.Designer.cs">
+      <DependentUpon>CONVOCATORIA Y SELECCION.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Frm_MantPercepciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_consultaEmpleado.resx">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\CONVOCATORIA Y SELECCION.resx">
+      <DependentUpon>CONVOCATORIA Y SELECCION.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantPercepciones.resx">
       <DependentUpon>Frm_MantPercepciones.cs</DependentUpon>
