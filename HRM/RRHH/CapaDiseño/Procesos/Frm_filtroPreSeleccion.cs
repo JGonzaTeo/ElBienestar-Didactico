@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaLogica_RRHH;
+using CapaLogica;
 using System.Data.Odbc;
 
 namespace Recursos_Humanos
@@ -135,6 +135,16 @@ namespace Recursos_Humanos
             this.Close();
         }else
                 MessageBox.Show("No se han seleccionado candidatos, por favor seleccionelos.");
+        }
+
+        private void Btn_minimizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

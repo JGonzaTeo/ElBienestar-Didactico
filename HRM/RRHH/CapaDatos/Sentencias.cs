@@ -106,5 +106,76 @@ namespace CapaDatos
                 return null;
             }
         }
+
+        /*CONSULTA PRESELECCION*/
+        public OdbcDataReader ConsultaSeleccionFiltro(string id)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "select pkidCurriculum, nombre, apellido, numero, direccion, correo_electronico from tbl_curriculums where fksolicitudempleado =" + id + ";";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader ConsultaSeleccionComparacion(string id)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = " select primaria, secundaria, bachillerato, estudiante_universitario, graduadoU, cursoExtra, sueldo_Base from tbl_solicitud_empleado_detalle where pksolicitudempleado = " + id + ";";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader ConsultaSeleccionComparacionAceptados(string id)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = " select  primaria, secundaria, bachillerato, estudiante_universitario, graduadoU, cursoExtra, sueldoesperado, pkidCurriculum, Nombre, apellido from tbl_curriculums where fksolicitudempleado =" + id + ";";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        /*FIN CONSULTA PRESELECCION*/
+
+        /*INSERTAR BANCO*/
+        public OdbcDataReader InsertarBanco(string codCurri)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into tbl_bancotalento values (0," + codCurri + ", 1);";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
     }
 }

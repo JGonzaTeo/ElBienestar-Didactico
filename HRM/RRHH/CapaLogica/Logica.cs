@@ -43,6 +43,29 @@ namespace CapaLogica
           
 
         }
+
+
+        public OdbcDataReader ConsultaLogicaPreseleccionFiltro(string id)
+        {
+            return sn.ConsultaSeleccionFiltro(id);
+        }
+
+        public OdbcDataReader ConsultaLogicaPreseleccionComparacion(string id)
+        {
+            return sn.ConsultaSeleccionComparacion(id);
+        }
+
+        public OdbcDataReader ConsultaSeleccionComparacionAceptados(string id)
+        {
+            return sn.ConsultaSeleccionComparacionAceptados(id);
+        }
+
+        /*INSERTAR BANCO*/
+        public OdbcDataReader InsertarBanco(string codCurri)
+        {
+            return sn.InsertarBanco(codCurri);
+        }
+        /*FIN DE INSERTAR BANCO*/
     }
 }
 
