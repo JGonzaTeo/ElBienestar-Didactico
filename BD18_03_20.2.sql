@@ -1,15 +1,15 @@
-CREATE DATABASE  IF NOT EXISTS `mydb` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE  IF NOT EXISTS `mydb` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `mydb`;
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: mydb
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.34-MariaDB
+-- Server version	8.0.17
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -23,7 +23,7 @@ USE `mydb`;
 
 DROP TABLE IF EXISTS `asistencia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `asistencia` (
   `pkcodigoasistencia` int(11) NOT NULL,
   `fkcodigoempleado` int(11) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE `asistencia` (
   `horasalida` datetime DEFAULT NULL,
   PRIMARY KEY (`pkcodigoasistencia`),
   KEY `fk_asistencia_empleado1_idx` (`fkcodigoempleado`),
-  CONSTRAINT `fk_asistencia_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_asistencia_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -47,12 +47,37 @@ LOCK TABLES `asistencia` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `candidatos_internos`
+--
+
+DROP TABLE IF EXISTS `candidatos_internos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `candidatos_internos` (
+  `pkcodigocandidato` int(11) NOT NULL,
+  `pksolicitudempleado` int(11) NOT NULL,
+  `pkcodperfil` int(11) NOT NULL,
+  `estado` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`pkcodigocandidato`,`pksolicitudempleado`,`pkcodperfil`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `candidatos_internos`
+--
+
+LOCK TABLES `candidatos_internos` WRITE;
+/*!40000 ALTER TABLE `candidatos_internos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `candidatos_internos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `concepto`
 --
 
 DROP TABLE IF EXISTS `concepto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `concepto` (
   `pkcodigoconcepto` int(11) NOT NULL,
   `nombreconcepto` varchar(45) DEFAULT NULL,
@@ -79,7 +104,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `departamentos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `departamentos` (
   `pkcodigodepto` int(11) NOT NULL,
   `nombredepto` varchar(45) DEFAULT NULL,
@@ -104,7 +129,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `despidoempleado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `despidoempleado` (
   `pkcodigodespidoempleado` int(11) NOT NULL,
   `fkcodigoempleado` int(11) NOT NULL,
@@ -113,7 +138,7 @@ CREATE TABLE `despidoempleado` (
   `fechadespido` date DEFAULT NULL,
   PRIMARY KEY (`pkcodigodespidoempleado`),
   KEY `fk_despidoempleado_empleado1_idx` (`fkcodigoempleado`),
-  CONSTRAINT `fk_despidoempleado_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_despidoempleado_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -132,7 +157,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `empleado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `empleado` (
   `pkcodigoempleado` int(11) NOT NULL,
   `fkcodigojornada` int(11) NOT NULL,
@@ -150,9 +175,7 @@ CREATE TABLE `empleado` (
   `nit` int(11) DEFAULT NULL,
   PRIMARY KEY (`pkcodigoempleado`),
   KEY `fk_empleado_jornada_idx` (`fkcodigojornada`),
-  KEY `fk_empleado_TipoContratacion1_idx` (`TipoContratacion_pkcodigocontratacion`),
-  CONSTRAINT `fk_empleado_TipoContratacion1` FOREIGN KEY (`TipoContratacion_pkcodigocontratacion`) REFERENCES `tipocontratacion` (`pkcodigocontratacion`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_empleado_jornada` FOREIGN KEY (`fkcodigojornada`) REFERENCES `jornada` (`pkcodigojornada`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_empleado_jornada` FOREIGN KEY (`fkcodigojornada`) REFERENCES `jornada` (`pkcodigojornada`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -171,7 +194,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `empleadocontable`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `empleadocontable` (
   `pkcodigolinea` int(11) NOT NULL AUTO_INCREMENT,
   `fkcodigoempleado` int(11) DEFAULT NULL,
@@ -179,8 +202,8 @@ CREATE TABLE `empleadocontable` (
   PRIMARY KEY (`pkcodigolinea`),
   KEY `fk_empleadocontable_empleado1_idx` (`fkcodigoempleado`),
   KEY `fk_empleadocontable_concepto1_idx` (`fkcodigoconcepto`),
-  CONSTRAINT `fk_empleadocontable_concepto1` FOREIGN KEY (`fkcodigoconcepto`) REFERENCES `concepto` (`pkcodigoconcepto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_empleadocontable_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_empleadocontable_concepto1` FOREIGN KEY (`fkcodigoconcepto`) REFERENCES `concepto` (`pkcodigoconcepto`),
+  CONSTRAINT `fk_empleadocontable_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -199,7 +222,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `horasextras`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `horasextras` (
   `pkcodigohorasextras` int(11) NOT NULL,
   `fkcodigoempleado` int(11) NOT NULL,
@@ -207,7 +230,7 @@ CREATE TABLE `horasextras` (
   `estado` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`pkcodigohorasextras`),
   KEY `fk_horasextras_empleado1_idx` (`fkcodigoempleado`),
-  CONSTRAINT `fk_horasextras_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_horasextras_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -226,7 +249,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `jornada`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jornada` (
   `pkcodigojornada` int(11) NOT NULL,
   `nombrejornada` varchar(45) DEFAULT NULL,
@@ -251,7 +274,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `mediodecomunicacion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `mediodecomunicacion` (
   `idMediodeComunicacion` int(11) NOT NULL,
   `Nombre` varchar(45) DEFAULT NULL,
@@ -277,7 +300,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `nomina_encabezado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `nomina_encabezado` (
   `pkcodigonomina` int(11) NOT NULL,
   `tipo_nomina` tinyint(2) DEFAULT NULL,
@@ -288,7 +311,7 @@ CREATE TABLE `nomina_encabezado` (
   `saldo_total` double DEFAULT '0',
   PRIMARY KEY (`pkcodigonomina`),
   KEY `fk_nomina_encabezado_empleado1_idx` (`fkcodigoempleado`),
-  CONSTRAINT `fk_nomina_encabezado_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_nomina_encabezado_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -307,7 +330,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `nominadetalle`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `nominadetalle` (
   `pkcodigonomina` int(11) NOT NULL,
   `cod_linea` int(11) NOT NULL,
@@ -315,7 +338,7 @@ CREATE TABLE `nominadetalle` (
   `subtotal_deduccion` double DEFAULT NULL,
   `nominadetallecol` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`pkcodigonomina`,`cod_linea`),
-  CONSTRAINT `fk_nominadetalle_nomina_encabezado1` FOREIGN KEY (`pkcodigonomina`) REFERENCES `nomina_encabezado` (`pkcodigonomina`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_nominadetalle_nomina_encabezado1` FOREIGN KEY (`pkcodigonomina`) REFERENCES `nomina_encabezado` (`pkcodigonomina`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -329,12 +352,69 @@ LOCK TABLES `nominadetalle` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `perfil_detalle`
+--
+
+DROP TABLE IF EXISTS `perfil_detalle`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `perfil_detalle` (
+  `fkcodperfil` int(11) NOT NULL,
+  `primaria` tinyint(1) DEFAULT NULL,
+  `secundaria` tinyint(1) DEFAULT NULL,
+  `bachillerato` tinyint(1) DEFAULT NULL,
+  `estudiante_U` tinyint(1) DEFAULT NULL,
+  `graduado_U` tinyint(1) DEFAULT NULL,
+  `curso_extra` tinyint(1) DEFAULT NULL,
+  `descripcion_curso` tinyint(1) DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`fkcodperfil`),
+  CONSTRAINT `fk_perfil_detalle_perfil_encabezado1` FOREIGN KEY (`fkcodperfil`) REFERENCES `perfil_encabezado` (`pkcodperfil`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `perfil_detalle`
+--
+
+LOCK TABLES `perfil_detalle` WRITE;
+/*!40000 ALTER TABLE `perfil_detalle` DISABLE KEYS */;
+/*!40000 ALTER TABLE `perfil_detalle` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `perfil_encabezado`
+--
+
+DROP TABLE IF EXISTS `perfil_encabezado`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `perfil_encabezado` (
+  `pkcodperfil` int(11) NOT NULL,
+  `fkcodigopuesto` int(11) DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`pkcodperfil`),
+  KEY `fk_perfil_encabezado_puesto1_idx` (`fkcodigopuesto`),
+  CONSTRAINT `fk_perfil_encabezado_puesto1` FOREIGN KEY (`fkcodigopuesto`) REFERENCES `puesto` (`pkcodigopuesto`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `perfil_encabezado`
+--
+
+LOCK TABLES `perfil_encabezado` WRITE;
+/*!40000 ALTER TABLE `perfil_encabezado` DISABLE KEYS */;
+/*!40000 ALTER TABLE `perfil_encabezado` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `puesto`
 --
 
 DROP TABLE IF EXISTS `puesto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `puesto` (
   `pkcodigopuesto` int(11) NOT NULL,
   `fkcodigoempleado` int(11) NOT NULL,
@@ -345,8 +425,8 @@ CREATE TABLE `puesto` (
   PRIMARY KEY (`pkcodigopuesto`),
   KEY `fk_puesto_empleado1_idx` (`fkcodigoempleado`),
   KEY `fk_puesto_departamentos1_idx` (`fkcodigodepto`),
-  CONSTRAINT `fk_puesto_departamentos1` FOREIGN KEY (`fkcodigodepto`) REFERENCES `departamentos` (`pkcodigodepto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_puesto_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_puesto_departamentos1` FOREIGN KEY (`fkcodigodepto`) REFERENCES `departamentos` (`pkcodigodepto`),
+  CONSTRAINT `fk_puesto_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -365,7 +445,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `reuniones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reuniones` (
   `pkcodigoreuniones` int(11) NOT NULL,
   `fkcodigoempleado` int(11) NOT NULL,
@@ -379,7 +459,7 @@ CREATE TABLE `reuniones` (
   `estado` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`pkcodigoreuniones`),
   KEY `fk_reuniones_empleado1_idx` (`fkcodigoempleado`),
-  CONSTRAINT `fk_reuniones_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_reuniones_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -398,7 +478,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sancionempleado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sancionempleado` (
   `pkcodigosansionempleado` int(11) NOT NULL,
   `fkcodigoempleado` int(11) NOT NULL,
@@ -409,7 +489,7 @@ CREATE TABLE `sancionempleado` (
   `estado` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`pkcodigosansionempleado`),
   KEY `fk_sancionempleado_empleado1_idx` (`fkcodigoempleado`),
-  CONSTRAINT `fk_sancionempleado_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_sancionempleado_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -423,27 +503,129 @@ LOCK TABLES `sancionempleado` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `solicitudempleado`
+-- Table structure for table `tbl_bancotalento`
 --
 
-DROP TABLE IF EXISTS `solicitudempleado`;
+DROP TABLE IF EXISTS `tbl_bancotalento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `solicitudempleado` (
-  `pkcodigosolicitudempleado` int(11) NOT NULL,
-  `razon` varchar(45) DEFAULT NULL,
-  `estado` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`pkcodigosolicitudempleado`)
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tbl_bancotalento` (
+  `pkBancoTalento` int(11) NOT NULL AUTO_INCREMENT,
+  `fkCurriculum` int(11) NOT NULL,
+  `estado` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`pkBancoTalento`,`fkCurriculum`),
+  KEY `FK_Curriculum_BancoT` (`fkCurriculum`),
+  CONSTRAINT `FK_Curriculum_BancoT` FOREIGN KEY (`fkCurriculum`) REFERENCES `tbl_curriculums` (`pkidCurriculum`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_bancotalento`
+--
+
+LOCK TABLES `tbl_bancotalento` WRITE;
+/*!40000 ALTER TABLE `tbl_bancotalento` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_bancotalento` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_curriculums`
+--
+
+DROP TABLE IF EXISTS `tbl_curriculums`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tbl_curriculums` (
+  `pkidCurriculum` int(11) NOT NULL,
+  `Nombre` varchar(45) DEFAULT NULL,
+  `Apellido` varchar(45) DEFAULT NULL,
+  `Numero` varchar(45) DEFAULT NULL,
+  `Direccion` varchar(45) DEFAULT NULL,
+  `Correo_Electronico` varchar(45) DEFAULT NULL,
+  `Primaria` tinyint(1) DEFAULT NULL,
+  `Secundaria` tinyint(1) DEFAULT NULL,
+  `Bachillerato` tinyint(1) DEFAULT NULL,
+  `Estudiante_Universitario` tinyint(1) DEFAULT NULL,
+  `GraduadoU` tinyint(1) DEFAULT NULL,
+  `CursoExtra` tinyint(1) DEFAULT NULL,
+  `DescripcionCursos` varchar(100) DEFAULT NULL,
+  `Experiencia_Previa` varchar(45) DEFAULT NULL,
+  `SueldoEsperado` double DEFAULT NULL,
+  `fksolicitudempleado` int(11) DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`pkidCurriculum`),
+  KEY `FK_solicitud_empleado_encabezado_Curriculums` (`fksolicitudempleado`),
+  CONSTRAINT `FK_solicitud_empleado_encabezado_Curriculums` FOREIGN KEY (`fksolicitudempleado`) REFERENCES `tbl_solicitud_empleado_encabezado` (`pksolicitudempleado`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_curriculums`
+--
+
+LOCK TABLES `tbl_curriculums` WRITE;
+/*!40000 ALTER TABLE `tbl_curriculums` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_curriculums` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_solicitud_empleado_detalle`
+--
+
+DROP TABLE IF EXISTS `tbl_solicitud_empleado_detalle`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tbl_solicitud_empleado_detalle` (
+  `pksolicitudempleado` int(11) NOT NULL,
+  `primaria` tinyint(1) DEFAULT NULL,
+  `secundaria` tinyint(1) DEFAULT NULL,
+  `bachillerato` tinyint(1) DEFAULT NULL,
+  `estudiante_U` tinyint(1) DEFAULT NULL,
+  `grado_U` tinyint(1) DEFAULT NULL,
+  `curso_extra` tinyint(1) DEFAULT NULL,
+  `descripcion_curso` tinyint(1) DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`pksolicitudempleado`),
+  CONSTRAINT `fk_tbl_solicitud_empleado_detalle_tbl_solicitud_empleado_enca1` FOREIGN KEY (`pksolicitudempleado`) REFERENCES `tbl_solicitud_empleado_encabezado` (`pksolicitudempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `solicitudempleado`
+-- Dumping data for table `tbl_solicitud_empleado_detalle`
 --
 
-LOCK TABLES `solicitudempleado` WRITE;
-/*!40000 ALTER TABLE `solicitudempleado` DISABLE KEYS */;
-/*!40000 ALTER TABLE `solicitudempleado` ENABLE KEYS */;
+LOCK TABLES `tbl_solicitud_empleado_detalle` WRITE;
+/*!40000 ALTER TABLE `tbl_solicitud_empleado_detalle` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_solicitud_empleado_detalle` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_solicitud_empleado_encabezado`
+--
+
+DROP TABLE IF EXISTS `tbl_solicitud_empleado_encabezado`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tbl_solicitud_empleado_encabezado` (
+  `pksolicitudempleado` int(11) NOT NULL,
+  `fkcodigoempleado` int(11) DEFAULT NULL,
+  `fkcodigocontratacion` int(11) DEFAULT NULL,
+  `fecha_creacion` date DEFAULT NULL,
+  PRIMARY KEY (`pksolicitudempleado`),
+  KEY `fk_tbl_solicitud_empleado_encabezado_empleado1_idx` (`fkcodigoempleado`),
+  KEY `fk_tbl_solicitud_empleado_encabezado_tipocontratacion1_idx` (`fkcodigocontratacion`),
+  CONSTRAINT `fk_tbl_solicitud_empleado_encabezado_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`),
+  CONSTRAINT `fk_tbl_solicitud_empleado_encabezado_tipocontratacion1` FOREIGN KEY (`fkcodigocontratacion`) REFERENCES `tipocontratacion` (`pkcodigocontratacion`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_solicitud_empleado_encabezado`
+--
+
+LOCK TABLES `tbl_solicitud_empleado_encabezado` WRITE;
+/*!40000 ALTER TABLE `tbl_solicitud_empleado_encabezado` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_solicitud_empleado_encabezado` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -452,7 +634,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `tipocontratacion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tipocontratacion` (
   `pkcodigocontratacion` int(11) NOT NULL,
   `PorContrato` varchar(45) DEFAULT NULL,
@@ -471,14 +653,6 @@ LOCK TABLES `tipocontratacion` WRITE;
 /*!40000 ALTER TABLE `tipocontratacion` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tipocontratacion` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'mydb'
---
-
---
--- Dumping routines for database 'mydb'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -489,4 +663,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-18  3:04:14
+-- Dump completed on 2020-03-18 12:11:25
