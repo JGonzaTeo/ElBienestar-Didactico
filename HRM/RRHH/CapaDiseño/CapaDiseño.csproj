@@ -77,6 +77,10 @@
     <Compile Include="Procesos\Frm_Asignaciondeconcepto.Designer.cs">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Frm_filtroPreSeleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_filtroPreSeleccion.Designer.cs" />
     <Compile Include="Procesos\Frm_Nomina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +110,7 @@
     <EmbeddedResource Include="Procesos\Frm_Asignaciondeconcepto.resx">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_filtroPreSeleccion.resx" />
     <EmbeddedResource Include="Procesos\Frm_Nomina.resx">
       <DependentUpon>Frm_Nomina.cs</DependentUpon>
     </EmbeddedResource>
