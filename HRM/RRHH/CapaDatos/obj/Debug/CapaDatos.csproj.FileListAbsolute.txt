@@ -1,0 +1,116 @@
+C:\Users\prueb\Desktop\Ingenieria de software\SMG\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\prueb\Desktop\Ingenieria de software\SMG\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\prueb\Desktop\Ingenieria de software\SMG\CapaDatos\bin\Debug\MySql.Data.dll
+C:\Users\prueb\Desktop\Ingenieria de software\SMG\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Ingenieria de software\SMG\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Ingenieria de software\SMG\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\prueb\Desktop\Ingenieria de software\SMG\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\prueb\Desktop\Ingenieria de software\SMG\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\MySql.Data.dll
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\Google.Protobuf.dll
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\Renci.SshNet.dll
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\ivan5\Desktop\SMG Git Hub\SMG\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\Google.Protobuf.dll
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\Renci.SshNet.dll
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\SMG Git Hub\SMG\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\bin\Debug\MySql.Data.dll
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\bin\Debug\Google.Protobuf.dll
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\bin\Debug\Renci.SshNet.dll
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\ivan5\Desktop\SMG_Didactico-Angel-Solares\SMG\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\bin\Debug\Google.Protobuf.dll
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\bin\Debug\Renci.SshNet.dll
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\SMG_Didactico-Ivan-Mogollon\SMG\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\bin\Debug\Google.Protobuf.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\bin\Debug\Renci.SshNet.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Proyecto Migracion\Repo\SMG_Didactico\SMG\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\bin\Debug\Google.Protobuf.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\bin\Debug\Renci.SshNet.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\CRM\RRHH\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\bin\Debug\Google.Protobuf.dll
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\bin\Debug\Renci.SshNet.dll
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\prueb\Desktop\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\bin\Debug\MySql.Data.dll
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\bin\Debug\Google.Protobuf.dll
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\bin\Debug\Renci.SshNet.dll
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\bin\Debug\Google.Protobuf.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\bin\Debug\Renci.SshNet.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.pdb
