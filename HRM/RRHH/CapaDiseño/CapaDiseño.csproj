@@ -59,6 +59,48 @@
     <Compile Include="Consulta\Frm_consultaEmpleado.Designer.cs">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Frm_MantDespidoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantDespidoEmpleado.Designer.cs">
+      <DependentUpon>Frm_MantDespidoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEliminacionReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEliminacionReunion.Designer.cs">
+      <DependentUpon>Frm_MantEliminacionReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEliminacionSansion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEliminacionSansion.Designer.cs">
+      <DependentUpon>Frm_MantEliminacionSansion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoControlAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoControlAsistencia.Designer.cs">
+      <DependentUpon>Frm_MantIngresoControlAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoReunion.Designer.cs">
+      <DependentUpon>Frm_MantIngresoReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoSansion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoSansion.Designer.cs">
+      <DependentUpon>Frm_MantIngresoSansion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantModificacionReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantModificacionReunion.Designer.cs">
+      <DependentUpon>Frm_MantModificacionReunion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Frm_MantPercepciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,11 +119,23 @@
     <Compile Include="Procesos\Frm_Asignaciondeconcepto.Designer.cs">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\Frm_ControlAsistenciaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_ControlAsistenciaPersonal.Designer.cs">
+      <DependentUpon>Frm_ControlAsistenciaPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Frm_Nomina.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Procesos\Frm_Nomina.Designer.cs">
       <DependentUpon>Frm_Nomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_SansionesEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_SansionesEmpleados.Designer.cs">
+      <DependentUpon>Frm_SansionesEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Frm_SolicitudEmpleado.cs">
       <SubType>Form</SubType>
@@ -103,6 +157,27 @@
     <EmbeddedResource Include="Consulta\Frm_consultaEmpleado.resx">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantDespidoEmpleado.resx">
+      <DependentUpon>Frm_MantDespidoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantEliminacionReunion.resx">
+      <DependentUpon>Frm_MantEliminacionReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantEliminacionSansion.resx">
+      <DependentUpon>Frm_MantEliminacionSansion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoControlAsistencia.resx">
+      <DependentUpon>Frm_MantIngresoControlAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoReunion.resx">
+      <DependentUpon>Frm_MantIngresoReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoSansion.resx">
+      <DependentUpon>Frm_MantIngresoSansion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantModificacionReunion.resx">
+      <DependentUpon>Frm_MantModificacionReunion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantPercepciones.resx">
       <DependentUpon>Frm_MantPercepciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,8 +187,14 @@
     <EmbeddedResource Include="Procesos\Frm_Asignaciondeconcepto.resx">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_ControlAsistenciaPersonal.resx">
+      <DependentUpon>Frm_ControlAsistenciaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_Nomina.resx">
       <DependentUpon>Frm_Nomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_SansionesEmpleados.resx">
+      <DependentUpon>Frm_SansionesEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_SolicitudEmpleado.resx">
       <DependentUpon>Frm_SolicitudEmpleado.cs</DependentUpon>
