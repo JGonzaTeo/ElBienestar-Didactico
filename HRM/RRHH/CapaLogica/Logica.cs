@@ -43,6 +43,63 @@ namespace CapaLogica
           
 
         }
+        //Obtener siguiente registro
+        public string siguiente(string tabla, string campo)
+        {
+            string llave = sn.obtenerfinal(tabla, campo);
+            return llave;
+        }
+        //---------------------------------------------------------------INSERT NUEVA SOLICITUD ENCABEZADO Y DETALLE-------------------------------------------------------//
+        public OdbcDataReader InsertarSolicitudEmpleado(string scampo, string creador, string tipo, string fecha, string  p2, string s2, string  b2, string  es2, string  g2, string  c2, string  extras)
+        {
+            return sn.InsertarSolicitudEmpleadoN( scampo,  creador,  tipo, fecha, p2, s2, b2, es2, g2, c2, extras);
+        }
+
+        //---------------------------------------------------------------INSERT NUEVA PERFIL-------------------------------------------------------//
+        public OdbcDataReader InsertarPerfil(string scampo, string puesto, string p2, string s2, string b2, string es2, string g2, string c2, string extras)
+        {
+            return sn.InsertarPerfil(scampo, puesto, p2, s2, b2, es2, g2, c2, extras);
+        }
+
+        //-----------------------------------------------UPDATE PERFILES-------------------------------------------------------//
+        public OdbcDataReader modificarPerfil(string scampo, string puesto, string p2, string s2, string b2, string es2, string g2, string c2, string extras)
+        {
+            return sn.modificarPerfil(scampo, puesto, p2, s2, b2, es2, g2, c2, extras);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //--------------------------------------------------------ELIMINAR PERFIL-------------------------------------------------------//
+        public OdbcDataReader eliminarPerfil(string sCodigo)
+        {
+            return sn.eliminarPerfil(sCodigo);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        /*PRESELECCION*/
+        public OdbcDataReader ConsultaLogicaPreseleccionFiltro(string id)
+        {
+            return sn.ConsultaSeleccionFiltro(id);
+        }
+
+        public OdbcDataReader ConsultaLogicaPreseleccionComparacion(string id)
+        {
+            return sn.ConsultaSeleccionComparacion(id);
+        }
+
+        public OdbcDataReader ConsultaSeleccionComparacionAceptados(string id)
+        {
+            return sn.ConsultaSeleccionComparacionAceptados(id);
+        }
+        /*FIN DE PRESELECCION*/
+
+        /*INSERTAR BANCO*/
+        public OdbcDataReader InsertarBanco(string codCurri)
+        {
+            return sn.InsertarBanco(codCurri);
+        }
+        /*FIN DE INSERTAR BANCO*/
+
     }
 }
 
