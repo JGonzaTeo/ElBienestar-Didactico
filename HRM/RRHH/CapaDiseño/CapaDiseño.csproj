@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Consulta\Frm_consltaPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consltaPerfiles.Designer.cs">
+      <DependentUpon>Frm_consltaPerfiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\Frm_consultaConceptos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,12 @@
     </Compile>
     <Compile Include="Mantenimientos\Frm_MantPercepciones.Designer.cs">
       <DependentUpon>Frm_MantPercepciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantPerfiles.Designer.cs">
+      <DependentUpon>Frm_MantPerfiles.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIParent1.cs">
       <SubType>Form</SubType>
@@ -95,6 +107,12 @@
     <Compile Include="Procesos\Frm_preSeleccion.Designer.cs">
       <DependentUpon>Frm_preSeleccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Frm_SolicitudEmpleadoN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_SolicitudEmpleadoN.Designer.cs">
+      <DependentUpon>Frm_SolicitudEmpleadoN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Validar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +124,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Consulta\Frm_consltaPerfiles.resx">
+      <DependentUpon>Frm_consltaPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_consultaConceptos.resx">
       <DependentUpon>Frm_consultaConceptos.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantPercepciones.resx">
       <DependentUpon>Frm_MantPercepciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantPerfiles.resx">
+      <DependentUpon>Frm_MantPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
@@ -129,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_preSeleccion.resx">
       <DependentUpon>Frm_preSeleccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_SolicitudEmpleadoN.resx">
+      <DependentUpon>Frm_SolicitudEmpleadoN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Validar.resx">
       <DependentUpon>Validar.cs</DependentUpon>

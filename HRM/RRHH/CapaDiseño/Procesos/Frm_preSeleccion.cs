@@ -17,7 +17,7 @@ namespace Recursos_Humanos
     {
         Logica logic = new Logica();
         ToolTip ayuda_tp = new ToolTip();
-        public Frm_preSeleccion(string use)
+        public Frm_preSeleccion()
         {
             InitializeComponent();
         }
