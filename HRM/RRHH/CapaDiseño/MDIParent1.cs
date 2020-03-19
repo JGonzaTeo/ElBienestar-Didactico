@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using CapaDiseño.Mantenimientos;
 using CapaDiseño.Procesos;
 using CapaLogica;
+using Desempeño;
 using Recursos_Humanos;
 
 namespace CapaDiseño
@@ -414,26 +415,133 @@ namespace CapaDiseño
                 sancion.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
-        bool ventanadesempeño = false;
-        Frm_DesempenioEmpleados desempeño = new Frm_DesempenioEmpleados();
-        private void desempeñoToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        bool ventanaempleado = false;
+        Frm_MantEmpleado empleado = new Frm_MantEmpleado();
+        private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_SansionesEmpleados);
-            if (ventanasancion == false || frmC == null)
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEmpleado);
+            if (ventanaempleado == false || frmC == null)
             {
                 if (frmC == null)
                 {
-                    desempeño = new Frm_DesempenioEmpleados();
+                    empleado = new Frm_MantEmpleado();
                 }
 
-                desempeño.MdiParent = this;
-                desempeño.Show();
+                empleado.MdiParent = this;
+                empleado.Show();
                 Application.DoEvents();
-                ventanasancion = true;
+                ventanaempleado = true;
             }
             else
             {
-                desempeño.WindowState = System.Windows.Forms.FormWindowState.Normal;
+                ingresoreunion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+
+        bool ventanaMC = false;
+        Frm_MediodeComunicacion MC = new Frm_MediodeComunicacion();
+        private void MedioDeComunicacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEmpleado);
+            if (ventanaMC == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    MC = new Frm_MediodeComunicacion();
+                }
+
+                MC.MdiParent = this;
+                MC.Show();
+                Application.DoEvents();
+                ventanaMC = true;
+            }
+            else
+            {
+                ingresoreunion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+
+        bool ventanacontrato = false;
+        Frm_MantTipoContratacion contrato = new Frm_MantTipoContratacion();
+        private void TipoDeContratoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEmpleado);
+            if (ventanacontrato == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    contrato = new Frm_MantTipoContratacion();
+                }
+
+                contrato.MdiParent = this;
+                contrato.Show();
+                Application.DoEvents();
+                ventanacontrato = true;
+            }
+            else
+            {
+                ingresoreunion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        private void DespidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ControlDeAsistenciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        bool ventanaconvocatoria = false;
+        Frm_MantTipoContratacion convocatoria = new Frm_MantTipoContratacion();
+        private void ConvocatoriaYSeleccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEmpleado);
+            if (ventanaconvocatoria == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    MC = new Frm_MediodeComunicacion();
+                }
+
+                convocatoria.MdiParent = this;
+                convocatoria.Show();
+                Application.DoEvents();
+                ventanaconvocatoria = true;
+            }
+            else
+            {
+                ingresoreunion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanadesempenio = false;
+        Frm_DesempenioEmpleados desempenio = new Frm_DesempenioEmpleados();
+        private void desempeñoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_DesempenioEmpleados);
+            if (ventanadesempenio == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    MC = new Frm_MediodeComunicacion();
+                }
+
+                desempenio.MdiParent = this;
+                desempenio.Show();
+                Application.DoEvents();
+                ventanadesempenio = true;
+            }
+            else
+            {
+                desempenio.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
     }

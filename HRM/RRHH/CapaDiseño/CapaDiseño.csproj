@@ -95,6 +95,12 @@
     <Compile Include="Mantenimientos\Frm_MantEliminacionSansion.Designer.cs">
       <DependentUpon>Frm_MantEliminacionSansion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEmpleado.Designer.cs">
+      <DependentUpon>Frm_MantEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Frm_MantIngresoControlAsistencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,12 @@
     </Compile>
     <Compile Include="Mantenimientos\Frm_MantIngresoSansion.Designer.cs">
       <DependentUpon>Frm_MantIngresoSansion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantMediodeComunicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantMediodeComunicacion.Designer.cs">
+      <DependentUpon>Frm_MantMediodeComunicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Frm_MantModificacionReunion.cs">
       <SubType>Form</SubType>
@@ -131,6 +143,12 @@
     <Compile Include="Mantenimientos\Frm_MantPerfiles.Designer.cs">
       <DependentUpon>Frm_MantPerfiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Frm_MantTipoContratacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantTipoContratacion.Designer.cs">
+      <DependentUpon>Frm_MantTipoContratacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIParent1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,10 +161,16 @@
     <Compile Include="Procesos\Frm_Asignaciondeconcepto.Designer.cs">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Frm_ConvocatoriaySeleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_ConvocatoriaySeleccion.designer.cs">
+      <DependentUpon>Frm_ConvocatoriaySeleccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Frm_DesempenioEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procesos\Frm_DesempenioEmpleados.Designer.cs">
+    <Compile Include="Procesos\Frm_DesempenioEmpleados.designer.cs">
       <DependentUpon>Frm_DesempenioEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Frm_filtroPreSeleccion.cs">
@@ -208,6 +232,9 @@
     <EmbeddedResource Include="Mantenimientos\Frm_MantEliminacionSansion.resx">
       <DependentUpon>Frm_MantEliminacionSansion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantEmpleado.resx">
+      <DependentUpon>Frm_MantEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoControlAsistencia.resx">
       <DependentUpon>Frm_MantIngresoControlAsistencia.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoSansion.resx">
       <DependentUpon>Frm_MantIngresoSansion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantMediodeComunicacion.resx">
+      <DependentUpon>Frm_MantMediodeComunicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantModificacionReunion.resx">
       <DependentUpon>Frm_MantModificacionReunion.cs</DependentUpon>
@@ -226,11 +256,17 @@
     <EmbeddedResource Include="Mantenimientos\Frm_MantPerfiles.resx">
       <DependentUpon>Frm_MantPerfiles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantTipoContratacion.resx">
+      <DependentUpon>Frm_MantTipoContratacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_Asignaciondeconcepto.resx">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_ConvocatoriaySeleccion.resx">
+      <DependentUpon>Frm_ConvocatoriaySeleccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_DesempenioEmpleados.resx">
       <DependentUpon>Frm_DesempenioEmpleados.cs</DependentUpon>
@@ -268,6 +304,26 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
