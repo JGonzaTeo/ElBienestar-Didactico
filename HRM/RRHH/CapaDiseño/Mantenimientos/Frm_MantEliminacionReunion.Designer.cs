@@ -183,7 +183,7 @@
             // 
             // Btn_Buscar
             // 
-            this.Btn_Buscar.Location = new System.Drawing.Point(489, 30);
+            this.Btn_Buscar.Location = new System.Drawing.Point(466, 30);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(76, 24);
             this.Btn_Buscar.TabIndex = 47;
@@ -192,7 +192,7 @@
             // 
             // Txt_NombreReunion
             // 
-            this.Txt_NombreReunion.Location = new System.Drawing.Point(195, 33);
+            this.Txt_NombreReunion.Location = new System.Drawing.Point(172, 33);
             this.Txt_NombreReunion.Name = "Txt_NombreReunion";
             this.Txt_NombreReunion.Size = new System.Drawing.Size(263, 22);
             this.Txt_NombreReunion.TabIndex = 39;
@@ -200,7 +200,7 @@
             // Lbl_NombreReunion
             // 
             this.Lbl_NombreReunion.AutoSize = true;
-            this.Lbl_NombreReunion.Location = new System.Drawing.Point(44, 34);
+            this.Lbl_NombreReunion.Location = new System.Drawing.Point(21, 34);
             this.Lbl_NombreReunion.Name = "Lbl_NombreReunion";
             this.Lbl_NombreReunion.Size = new System.Drawing.Size(150, 17);
             this.Lbl_NombreReunion.TabIndex = 32;

@@ -214,6 +214,206 @@ namespace CapaDiseño
                 preseleccion.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
+        bool ventanaingresodespido = false;
+        Frm_MantDespidoEmpleado despido = new Frm_MantDespidoEmpleado();
+        private void ingresoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantDespidoEmpleado);
+            if (ventanaingresodespido == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    despido = new Frm_MantDespidoEmpleado();
+                }
+
+                despido.MdiParent = this;
+                despido.Show();
+                Application.DoEvents();
+                ventanaingresodespido = true;
+            }
+            else
+            {
+                despido.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool ventanacrearreunion = false;
+        Frm_MantIngresoReunion ingresoreunion = new Frm_MantIngresoReunion();
+        private void crearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantIngresoReunion);
+            if (ventanacrearreunion == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    ingresoreunion = new Frm_MantIngresoReunion();
+                }
+
+                ingresoreunion.MdiParent = this;
+                ingresoreunion.Show();
+                Application.DoEvents();
+                ventanacrearreunion = true;
+            }
+            else
+            {
+                ingresoreunion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+
+        }
+        bool ventanamodreunion = false;
+        Frm_MantModificacionReunion modreunion = new Frm_MantModificacionReunion();
+        private void modificacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantModificacionReunion);
+            if (ventanamodreunion == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    modreunion = new Frm_MantModificacionReunion();
+                }
+
+                modreunion.MdiParent = this;
+                modreunion.Show();
+                Application.DoEvents();
+                ventanamodreunion = true;
+            }
+            else
+            {
+                modreunion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool ventanaelimreunion = false;
+        Frm_MantEliminacionReunion elimreunion = new Frm_MantEliminacionReunion();
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEliminacionReunion);
+            if (ventanaelimreunion == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    elimreunion = new Frm_MantEliminacionReunion();
+                }
+
+                elimreunion.MdiParent = this;
+                elimreunion.Show();
+                Application.DoEvents();
+                ventanaelimreunion = true;
+            }
+            else
+            {
+                elimreunion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool ventanacrearasistencia = false;
+        Frm_MantIngresoControlAsistencia crearasistencia = new Frm_MantIngresoControlAsistencia();
+        private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantIngresoControlAsistencia);
+            if (ventanacrearasistencia == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    crearasistencia = new Frm_MantIngresoControlAsistencia();
+                }
+
+                crearasistencia.MdiParent = this;
+                crearasistencia.Show();
+                Application.DoEvents();
+                ventanacrearasistencia = true;
+            }
+            else
+            {
+                crearasistencia.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+
+        }
+        bool ventanacrearsancion = false;
+        Frm_MantIngresoSansion crearsancion = new Frm_MantIngresoSansion();
+        private void crearToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantIngresoSansion);
+            if (ventanacrearsancion == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    crearsancion = new Frm_MantIngresoSansion();
+                }
+
+                crearsancion.MdiParent = this;
+                crearsancion.Show();
+                Application.DoEvents();
+                ventanacrearsancion = true;
+            }
+            else
+            {
+                crearsancion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool ventanaelimsancion = false;
+        Frm_MantEliminacionSansion elimsancion = new Frm_MantEliminacionSansion();
+        private void eliminarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEliminacionSansion);
+            if (ventanaelimsancion == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    elimsancion = new Frm_MantEliminacionSansion();
+                }
+
+                elimsancion.MdiParent = this;
+                elimsancion.Show();
+                Application.DoEvents();
+                ventanaelimsancion = true;
+            }
+            else
+            {
+                elimsancion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool ventanacontrolasistencia = false;
+        Frm_ControlAsistenciaPersonal controlasistencia = new Frm_ControlAsistenciaPersonal();
+        private void controlDeAsistenciaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_ControlAsistenciaPersonal);
+            if (ventanacontrolasistencia == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    controlasistencia = new Frm_ControlAsistenciaPersonal();
+                }
+
+                controlasistencia.MdiParent = this;
+                controlasistencia.Show();
+                Application.DoEvents();
+                ventanacontrolasistencia = true;
+            }
+            else
+            {
+                controlasistencia.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool ventanasancion = false;
+        Frm_SansionesEmpleados sancion = new Frm_SansionesEmpleados();
+        private void sancionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_SansionesEmpleados);
+            if (ventanasancion == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    sancion = new Frm_SansionesEmpleados();
+                }
+
+                sancion.MdiParent = this;
+                sancion.Show();
+                Application.DoEvents();
+                ventanasancion = true;
+            }
+            else
+            {
+                sancion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
     }
     }
 
