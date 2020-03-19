@@ -159,3 +159,17 @@ C:\Users\prueb\Desktop\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_N
 C:\Users\prueb\Desktop\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_Asignaciondeconcepto.resources
 C:\Users\prueb\Desktop\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_consultaConceptos.resources
 C:\Users\prueb\Desktop\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_consultaEmpleado.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.csprojAssemblyReference.cache
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_consultaConceptos.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_consultaEmpleado.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Mantenimientos.Frm_MantPercepciones.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.MDIParent1.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_Asignaciondeconcepto.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_ControlAsistenciaPersonal.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_Nomina.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_SansionesEmpleados.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\Recursos_Humanos.Frm_SolicitudEmpleado.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Properties.Resources.resources
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.csproj.GenerateResource.cache
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.dll
+C:\Users\Paula V\Desktop\Proyecto\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.pdb
