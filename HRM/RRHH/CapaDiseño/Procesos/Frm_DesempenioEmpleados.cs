@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaDiseño.Procesos
+namespace Desempeño
 {
     public partial class Frm_DesempenioEmpleados : Form
     {
         public Frm_DesempenioEmpleados()
         {
             InitializeComponent();
+            DateTime fechaHoy = DateTime.Now;
+            string fechaEvaluacion = fechaHoy.ToString("yyyy/MM/dd");
+            Txt_fechaEvaluacion.Text = fechaEvaluacion;
         }
 
         private void Btn_minimizar_Click(object sender, EventArgs e)
@@ -83,13 +86,6 @@ namespace CapaDiseño.Procesos
             Txt_totalcategoria.Text = totalCategoria.ToString();
         }
 
-        public int puntuacionTotal;
-        private void Txt_empleadosTotal_TextChanged(object sender, EventArgs e)
-        {
-            //puntuacionTotal =
-            Txt_empleadosTotal.Text = puntuacionTotal.ToString();
-        }
-
         public int PCMDE;
         private void Txt_PCMDE_TextChanged(object sender, EventArgs e)
         {
@@ -125,40 +121,34 @@ namespace CapaDiseño.Procesos
             Txt_PCS.Text = PCS.ToString();
         }
 
-        private void Txt_empleadosDesempeño_TextChanged(object sender, EventArgs e)
+        public int totalProducticidad = 0;
+        private void Nud_productividadMDE_ValueChanged(object sender, EventArgs e)
         {
-            if ((puntuacionTotal >= 0) && (puntuacionTotal <= 21))
+         /*   if(Nud_productividadMDE.Increment = true)
             {
-                Txt_empleadosDesempeño.Text = "Muy debajo de las Expectativas";
+                TotalP = totalProducticidad + Nud_productividadMDE.value;
             }
-            else if ((puntuacionTotal >= 22) && (puntuacionTotal <= 40))
+            else
             {
-                Txt_empleadosDesempeño.Text = "Debajo de las Expectativas";
+                TotalP = totalProducticidad - (3 - Nud_productividadMDE.value);
+            };
+            */
+            if (Nud_productividadMDE.Value==3)
+            {
+                Nud_productividadDE.Enabled = false;
+                Nud_productividadAE.Enabled = false;
+                Nud_productividadME.Enabled = false;
+                Nud_productividadS.Enabled = false;
             }
-            else if ((puntuacionTotal >= 41) && (puntuacionTotal <= 60))
+            else
             {
-                Txt_empleadosDesempeño.Text = "Alcanza Expectativas";
-            }
-            else if ((puntuacionTotal >= 61) && (puntuacionTotal <= 80))
-            {
-                Txt_empleadosDesempeño.Text = "Mejora Expectativas";
-            }
-            else if ((puntuacionTotal >= 81) && (puntuacionTotal <= 100))
-            {
-                Txt_empleadosDesempeño.Text = "Sobresaliente";
+                Nud_productividadDE.Enabled = true;
+                Nud_productividadAE.Enabled = true;
+                Nud_productividadME.Enabled = true;
+                Nud_productividadS.Enabled = true;
             }
         }
 
-        public int con, valor;
-        private void Txt_productividadMDE_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !(char.IsNumber(e.KeyChar));
-            
-            if ((valor >= 0) && (valor <= 3))
-            {
-                con = con++;
-            }
-            else MessageBox.Show("Por favor ingrese un valor entre 0 y 3");
-        }
+        
     }
 }

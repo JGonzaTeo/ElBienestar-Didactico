@@ -292,5 +292,201 @@ namespace CapaDatos
             }
         }
 
+        //---------------------------------------------------------------------------------------------------INSERTMNTEMPLEADO-------------------------------------------------------//
+        public OdbcDataReader InsertarEmp(string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
+        {
+            try
+            {
+
+                cn.conexionbd();
+                string consulta = "insert into empleado values(" + Pnombre + ", '" + Snombre + "' ,'" + Papellido + "','" + Sapellido + "','" + telefono + "','" + celular + "','" + email + "','" + direccion + "','" + Eestado + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+
+            }
+
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //---------------------------------------------------------------------------------------------------UPDATE EMPLEADO-----------------------------------------------------------------------//
+        public OdbcDataReader UpdateEmp(string Cod, string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
+        {
+            try
+            {
+
+                cn.conexionbd();
+                string consulta = "UPDATE empleado set primernombre='" + Pnombre + "',segundonombre='" + Snombre + "',primerapellido='" + Papellido + "',segundoapellido='" + Sapellido + "',telefono='" + telefono + "',email ='" + email + "',direccion='" + direccion + "',estado='" + Eestado + "' where pkcodigoempleado='" + Cod + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+
+            }
+
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //-------------------------------------------------------------------------------------ELIMINAR EMPLEADO------------------------------------------------------------------------------------------------------------------------------------
+
+        public OdbcDataReader EliminarEmp(string Eestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE empleado set estado='0' where pkcodigoempleado='" + Eestado + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //---------------------------------------------------------------------------------------------------INSERTAR MEDIO DE COMUNICACION-------------------------------------------------------//
+        public OdbcDataReader InsertarMC(string Nombre, string Direccion, string Telefono, string Eestado)
+        {
+            try
+            {
+
+                cn.conexionbd();
+                string consulta = "insert into mediodecomunicacion values(" + Nombre + ", '" + Direccion + "' ,'" + Telefono + "','" + Eestado + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+
+            }
+
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //--------------------------------------------------------------------------------------------------- UPDATE MEDIO DE COMUNICACION-------------------------------------------------------//
+        public OdbcDataReader UpdateMC(string ID, string Nombre, string Direccion, string Telefono, string Eestado)
+        {
+            try
+            {
+
+                cn.conexionbd();
+                string consulta = "UPDATE mediodecomunicacion set Nombre='" + Nombre + "',Direccion='" + Direccion + "'Telefono='" + Telefono + "',Estado ='" + Eestado + "' where idMediodeComunicacion ='" + ID + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+
+            }
+
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------- ELIMINAR MEDIO DE COMUNICACION ------------------------------------------------------------------------------------------------------------------------------------
+
+        public OdbcDataReader EliminarMC(string Eestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE mediodecomunicacion set estado='0' where idMediodeComunicacion='" + Eestado + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //---------------------------------------------------------------------------------------------------INSERTAR TIPO DE CONTRATACION -------------------------------------------------------//
+        public OdbcDataReader InsertarTipoC(string Contrato, string Mes, string Proyecto, string Eestado)
+        {
+            try
+            {
+
+                cn.conexionbd();
+                string consulta = "insert into tipocontratacion values(" + Contrato + ", '" + Mes + "' ,'" + Proyecto + "','" + Eestado + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+
+            }
+
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //--------------------------------------------------------------------------------------------------- UPDATE TIPO DE CONTRATACION-------------------------------------------------------//
+        public OdbcDataReader UpdateTipoC(string Cod, string Contrato, string Mes, string Proyecto, string Eestado)
+        {
+            try
+            {
+
+                cn.conexionbd();
+                string consulta = "UPDATE tipocontratacion set PorContrato='" + Contrato + "',PorMes='" + Mes + "'PorProyecto='" + Proyecto + "',Estado ='" + Eestado + "' where pkcodigocontratacion ='" + Cod + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+
+            }
+
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------- ELIMINAR TIPO DE CONTRATACION ------------------------------------------------------------------------------------------------------------------------------------
+
+        public OdbcDataReader EliminarTipoC(string Eestado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE tipocontratacion set estado='0' where idMediodeComunicacion='" + Eestado + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
     }
 }
