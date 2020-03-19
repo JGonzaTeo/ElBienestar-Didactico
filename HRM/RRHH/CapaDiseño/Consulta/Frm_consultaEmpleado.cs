@@ -23,7 +23,7 @@ namespace CapaDiseño.Consulta
             try
             {
                 Conexion conexion = new Conexion();
-                string consultaMostrar = "SELECT * FROM empleado WHERE Estado='1';";
+                string consultaMostrar = "SELECT * FROM empleado WHERE estado='1';";
                 OdbcCommand comm = new OdbcCommand(consultaMostrar, conexion.conexionbd());
                 OdbcDataReader mostrarDatos = comm.ExecuteReader();
 
@@ -31,7 +31,7 @@ namespace CapaDiseño.Consulta
                 {
                     Dgv_consultaEmpleado.Refresh();
                     Dgv_consultaEmpleado.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2), mostrarDatos.GetString(3), mostrarDatos.GetString(4), mostrarDatos.GetString(5), mostrarDatos.GetString(6) ,mostrarDatos.GetString(7), mostrarDatos.GetString(8),
-                         mostrarDatos.GetString(9), mostrarDatos.GetString(10), mostrarDatos.GetString(11), mostrarDatos.GetString(12), mostrarDatos.GetString(13), mostrarDatos.GetString(14));
+                         mostrarDatos.GetString(9), mostrarDatos.GetString(10), mostrarDatos.GetString(11), mostrarDatos.GetString(12), mostrarDatos.GetString(13));
                 }
                 comm.Connection.Close();
                 mostrarDatos.Close();
