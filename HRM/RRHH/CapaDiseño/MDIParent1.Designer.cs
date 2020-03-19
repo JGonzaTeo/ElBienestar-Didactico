@@ -36,9 +36,12 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conceptosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionDeConceptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.solicitudEmpleadoNuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preseleccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +88,8 @@
             // mantenimientosToolStripMenuItem
             // 
             this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.conceptosToolStripMenuItem});
+            this.conceptosToolStripMenuItem,
+            this.perfilesToolStripMenuItem});
             this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
             this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
@@ -93,15 +97,24 @@
             // conceptosToolStripMenuItem
             // 
             this.conceptosToolStripMenuItem.Name = "conceptosToolStripMenuItem";
-            this.conceptosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.conceptosToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
             this.conceptosToolStripMenuItem.Text = "Conceptos";
             this.conceptosToolStripMenuItem.Click += new System.EventHandler(this.ConceptosToolStripMenuItem_Click);
+            // 
+            // perfilesToolStripMenuItem
+            // 
+            this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.perfilesToolStripMenuItem.Text = "Perfiles";
+            this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
             // 
             // procesosToolStripMenuItem
             // 
             this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nominaToolStripMenuItem,
-            this.asignacionDeConceptoToolStripMenuItem});
+            this.asignacionDeConceptoToolStripMenuItem,
+            this.solicitudEmpleadoNuevoToolStripMenuItem,
+            this.preseleccionToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.procesosToolStripMenuItem.Text = "Procesos";
@@ -109,16 +122,30 @@
             // nominaToolStripMenuItem
             // 
             this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
-            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
+            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
             this.nominaToolStripMenuItem.Text = "Nomina";
             this.nominaToolStripMenuItem.Click += new System.EventHandler(this.NominaToolStripMenuItem_Click);
             // 
             // asignacionDeConceptoToolStripMenuItem
             // 
             this.asignacionDeConceptoToolStripMenuItem.Name = "asignacionDeConceptoToolStripMenuItem";
-            this.asignacionDeConceptoToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
+            this.asignacionDeConceptoToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
             this.asignacionDeConceptoToolStripMenuItem.Text = "Asignacion de concepto";
             this.asignacionDeConceptoToolStripMenuItem.Click += new System.EventHandler(this.AsignacionDeConceptoToolStripMenuItem_Click);
+            // 
+            // solicitudEmpleadoNuevoToolStripMenuItem
+            // 
+            this.solicitudEmpleadoNuevoToolStripMenuItem.Name = "solicitudEmpleadoNuevoToolStripMenuItem";
+            this.solicitudEmpleadoNuevoToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
+            this.solicitudEmpleadoNuevoToolStripMenuItem.Text = "Solicitud Empleado Nuevo";
+            this.solicitudEmpleadoNuevoToolStripMenuItem.Click += new System.EventHandler(this.solicitudEmpleadoNuevoToolStripMenuItem_Click);
+            // 
+            // preseleccionToolStripMenuItem
+            // 
+            this.preseleccionToolStripMenuItem.Name = "preseleccionToolStripMenuItem";
+            this.preseleccionToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
+            this.preseleccionToolStripMenuItem.Text = "Preseleccion";
+            this.preseleccionToolStripMenuItem.Click += new System.EventHandler(this.PreseleccionToolStripMenuItem_Click);
             // 
             // MDIParent1
             // 
@@ -131,7 +158,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MDIParent1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDIParent1";
@@ -154,6 +181,9 @@
         private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignacionDeConceptoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem solicitudEmpleadoNuevoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preseleccionToolStripMenuItem;
     }
 }
 
