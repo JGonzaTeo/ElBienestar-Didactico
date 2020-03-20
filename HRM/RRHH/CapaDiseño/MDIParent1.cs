@@ -197,7 +197,7 @@ namespace CapaDiseño
         Frm_preSeleccion preseleccion = new Frm_preSeleccion();
         private void PreseleccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantPerfiles);
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_preSeleccion);
             if (ventanaPreseleccion == false || frmC == null)
             {
                 if (frmC == null)
@@ -542,6 +542,52 @@ namespace CapaDiseño
             else
             {
                 desempenio.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanabusquedaInterna = false;
+        Frm_busquedaInterna interna = new Frm_busquedaInterna();
+        private void busquedaInternaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_busquedaInterna);
+            if (ventanadesempenio == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    interna = new Frm_busquedaInterna();
+                }
+
+                interna.MdiParent = this;
+                interna.Show();
+                Application.DoEvents();
+                ventanabusquedaInterna = true;
+            }
+            else
+            {
+                interna.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaCurriculum = false;
+        Frm_MantCurriculum curriculum = new Frm_MantCurriculum();
+        private void CurriculumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantCurriculum);
+            if (ventanaCurriculum == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    curriculum = new Frm_MantCurriculum();
+                }
+
+                curriculum.MdiParent = this;
+                curriculum.Show();
+                Application.DoEvents();
+                ventanaCurriculum = true;
+            }
+            else
+            {
+                curriculum.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
     }
