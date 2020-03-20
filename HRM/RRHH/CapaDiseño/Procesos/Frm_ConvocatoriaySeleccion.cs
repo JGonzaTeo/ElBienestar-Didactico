@@ -16,5 +16,10 @@ namespace CapaDiseño
         {
             InitializeComponent();
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
