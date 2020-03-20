@@ -31,7 +31,7 @@ namespace CapaDiseño.Procesos
             Cbo_Estado.Enabled = true;
         }
 
-        private void PicActualizar_Click(object sender, EventArgs e)
+        public void PicActualizar_Click(object sender, EventArgs e)
         {
             OdbcDataReader cita = logic.ModificarMC(Txt_ID.Text,Txt_Nombre.Text,Txt_Direccion.Text,Txt_Telefono.Text,Cbo_Estado.Text);
             MessageBox.Show("Datos modificados correctamente.");
