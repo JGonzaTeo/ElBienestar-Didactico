@@ -102,6 +102,15 @@ C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\
 C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\Actualizado\ElBienestar-Didactico-Ivan-Mogollon\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
 C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\Actualizado\ElBienestar-Didactico-Ivan-Mogollon\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\Actualizado\ElBienestar-Didactico-Ivan-Mogollon\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.pdb
 C:\Users\Conny\Downloads\ElBienestar-Didactico-Isisi-Diaz\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.dll
 C:\Users\Conny\Downloads\ElBienestar-Didactico-Isisi-Diaz\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.pdb
 C:\Users\Conny\Downloads\ElBienestar-Didactico-Isisi-Diaz\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.dll

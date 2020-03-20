@@ -500,15 +500,15 @@ namespace CapaDiseño
         }
 
         bool ventanaconvocatoria = false;
-        Frm_MantTipoContratacion convocatoria = new Frm_MantTipoContratacion();
+        Frm_Convocatoria convocatoria = new Frm_Convocatoria();
         private void ConvocatoriaYSeleccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEmpleado);
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Convocatoria);
             if (ventanaconvocatoria == false || frmC == null)
             {
                 if (frmC == null)
                 {
-                    MC = new Frm_MediodeComunicacion();
+                    convocatoria= new Frm_Convocatoria();
                 }
 
                 convocatoria.MdiParent = this;

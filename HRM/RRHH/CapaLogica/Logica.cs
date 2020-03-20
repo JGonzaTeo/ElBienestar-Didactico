@@ -249,31 +249,19 @@ namespace CapaLogica
             return sn.eliminarCurriculum(sCodigo);
 
         }
-
-        public OdbcDataReader InsertarKpi(string v1, string v2, string v3)
-        {
-            throw new NotImplementedException();
-        }
-
-        public OdbcDataReader InsertarCategoria(string v)
-        {
-            throw new NotImplementedException();
-        }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
-    }
 
-    //---------------------------------------------------------------------------DESEMPEÑO-------------------------------------------------------------------------//
-   /*
+        //---------------------------------------------------------------------------DESEMPEÑO-------------------------------------------------------------------------//
         public OdbcDataReader InsertarKpi(string fechaEvaluacion, string totalEmpleado, string desempeño)
         {
-            return sn.InsertarKpis(fechaEvaluacion, totalEmpleado, desempeño);
+            return sn.InsertarKpi(fechaEvaluacion, totalEmpleado, desempeño);
         }
 
         public OdbcDataReader InsertarCategoria(string nombreCat)
         {
             return sn.InsertarCategoria(nombreCat);
         }
-        */
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
     }
+}
 

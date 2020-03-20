@@ -15,7 +15,6 @@ namespace CapaDatos
 
         public OdbcDataReader consultaJornada(string campo)
         {
-            string error = "";
             try
             {
                 OdbcCommand command = new OdbcCommand("SELECT * FROM jornada WHERE pkcodigojornada = " + campo + " ;", cn.conexionbd());
@@ -292,7 +291,8 @@ namespace CapaDatos
             }
         }
 
-        //---------------------------------------------------------------------------------------------------INSERTMNTEMPLEADO-----------------//
+
+               //---------------------------------------------------------------------------------------------------INSERTMNTEMPLEADO-----------------//
         public OdbcDataReader InsertarEmp(string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
         {
             try
@@ -692,45 +692,42 @@ namespace CapaDatos
                 return null;
             }
         }
-        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //---------------------------------------------------------------------------DESEMPEÑO-------------------------------------------------------------------------//
+          public OdbcDataReader InsertarKpi(string fechaEvaluacion, string totalEmpleado, string desempeño)
+          {
+              try
+              {
+                  cn.conexionbd();
+                  string consulta = "INSERT INTO tbl_kpi values (0," + fechaEvaluacion + totalEmpleado + desempeño + " ) ;";
+                  comm = new OdbcCommand(consulta, cn.conexionbd());
+                  OdbcDataReader mostrar = comm.ExecuteReader();
+                  return mostrar;
+              }
+              catch (Exception err)
+              {
+                  Console.WriteLine(err.Message);
+                  return null;
+              }
+          }
+
+          public OdbcDataReader InsertarCategoria(string nombreCat)
+          {
+              try
+              {
+                  cn.conexionbd();
+                  string consulta = "INSERT INTO tbl_categoria values (0," + nombreCat + ");";
+                  comm = new OdbcCommand(consulta, cn.conexionbd());
+                  OdbcDataReader mostrar = comm.ExecuteReader();
+                  return mostrar;
+              }
+              catch (Exception err)
+              {
+                  Console.WriteLine(err.Message);
+                  return null;
+              }
+          }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
     }
-
-    //---------------------------------------------------------------------------DESEMPEÑO-------------------------------------------------------------------------//
-  /*
-    public OdbcDataReader InsertarKpi(string fechaEvaluacion, string totalEmpleado, string desempeño)
-    {
-        try
-        {
-            cn.conexiondb();
-            string consulta = "INSERT INTO tbl_kpi values (0," + fechaEvaluacion + totalEmpleado + desempeño + " ) ;";
-            comm = new OdbcCommand(consulta, cn.conexionbd());
-            OdbcDataReader mostrar = comm.ExecuteReader();
-            return mostrar;
-        }
-        catch (Exception err)
-        {
-            Console.WriteLine(err.Message);
-            return null;
-        }
-    }
-
-    public OdbcDataReader InsertarCategoria(string nombreCat)
-    {
-        try
-        {
-            cn.conexionbd();
-            string consulta = "INSERT INTO tbl_categoria values (0," + nombreCat + ");";
-            comm = new OdbcCommand(consulta, cn.conexionbd());
-            OdbcDataReader mostrar = comm.ExecuteReader();
-            return mostrar;
-        }
-        catch (Exception err)
-        {
-            Console.WriteLine(err.Message);
-            return null;
-        }
-    }
-    */
-    //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
 }
