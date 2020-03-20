@@ -76,3 +76,20 @@ C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaLogica\obj\Debug\CapaL
 C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
 C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\ivan5\Desktop\ElBienestar-Didactico\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Angel Solares\Desktop\Ingenieria de Software\Programa Recursos Humanos\Mogo\ElBienestar-Didactico-master\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\ivan5\Desktop\New folder\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\ivan5\Desktop\New folder\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\ivan5\Desktop\New folder\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\ivan5\Desktop\New folder\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\ivan5\Desktop\New folder\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\ivan5\Desktop\New folder\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\ivan5\Desktop\New folder\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\ivan5\Desktop\New folder\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.pdb
