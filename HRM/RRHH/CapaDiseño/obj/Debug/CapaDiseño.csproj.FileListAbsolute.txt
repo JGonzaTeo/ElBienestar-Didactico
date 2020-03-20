@@ -399,7 +399,6 @@ C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElB
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.MDIParent1.resources
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_Asignaciondeconcepto.resources
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_busquedaInterna.resources
-C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.CONVOCATORIA_Y_SELECCION.resources
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\Desempeño.Frm_DesempenioEmpleados.resources
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_filtroInterno.resources
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\Recursos_Humanos.Frm_filtroPreSeleccion.resources
@@ -413,3 +412,4 @@ C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElB
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.csproj.CopyComplete
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.dll
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.pdb
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_Convocatoria.resources
