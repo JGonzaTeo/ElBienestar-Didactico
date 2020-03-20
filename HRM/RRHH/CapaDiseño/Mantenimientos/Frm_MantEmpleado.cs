@@ -95,7 +95,7 @@ namespace CapaDiseño.Mantenimientos
             Txt_Direccion.Enabled = true;
         }
 
-        private void PicActualizar_Click(object sender, EventArgs e)
+        public void PicActualizar_Click(object sender, EventArgs e)
         {
             OdbcDataReader cita = logic.ModificarEmpleado(Txt_Cod.Text,Txt_PrimerApellido.Text,Txt_SegundoNombre.Text,Txt_PrimerApellido.Text,TxtSegundoApellido.Text,Txt_Telefono.Text,Txt_Celular.Text,Txt_email.Text,Txt_Direccion.Text,Cbo_estado.Text);
             MessageBox.Show("Datos modificados correctamente.");
