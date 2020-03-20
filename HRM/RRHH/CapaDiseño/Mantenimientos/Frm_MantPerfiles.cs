@@ -73,16 +73,16 @@ namespace CapaDiseño.Mantenimientos
 
         private void Btn_consultar_Click(object sender, EventArgs e)
         {
-            Frm_consultaConceptos concep = new Frm_consultaConceptos();
-            concep.ShowDialog();
+            Frm_consltaPerfiles perfil = new Frm_consltaPerfiles();
+            perfil.ShowDialog();
 
-            if (concep.DialogResult == DialogResult.OK)
+            if (perfil.DialogResult == DialogResult.OK)
             {
-                Txt_Cod.Text = concep.Dgv_consultaConceptos.Rows[concep.Dgv_consultaConceptos.CurrentRow.Index].
+                Txt_Cod.Text = perfil.Dgv_consultaPerfil.Rows[perfil.Dgv_consultaPerfil.CurrentRow.Index].
                       Cells[0].Value.ToString();
 
             }
-    }
+        }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {

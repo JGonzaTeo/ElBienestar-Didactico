@@ -100,6 +100,137 @@ namespace CapaLogica
         }
         /*FIN DE INSERTAR BANCO*/
 
+        //------------------------------------------------------------------------------------------------------INSERTEMPLEADO-------------------------------------------------------//
+        public OdbcDataReader Insertarempleado(string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
+        {
+            return sn.InsertarEmp(Pnombre, Snombre, Papellido, Sapellido, telefono, celular, email, direccion, Eestado);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------UPDATE EMPLEADO-------------------------------------------------------//
+        public OdbcDataReader ModificarEmpleado(string Cod, string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
+        {
+            return sn.UpdateEmp(Cod, Pnombre, Snombre, Papellido, Sapellido, telefono, celular, email, direccion, Eestado);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------ELIMINAR EMPLEADO-------------------------------------------------------//
+
+        public OdbcDataReader eliminarEmpleado(string Eestado)
+        {
+            return sn.EliminarEmp(Eestado);
+
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------------------------INSERTAR MC-------------------------------------------------------//
+        public OdbcDataReader InsertarMC(string Nombre, string Direccion, string Telefono, string Eestado)
+        {
+            return sn.InsertarMC(Nombre, Direccion, Telefono, Eestado);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------UPDATE MC-------------------------------------------------------//
+        public OdbcDataReader ModificarMC(string ID, string Nombre, string Direccion, string Telefono, string Eestado)
+        {
+            return sn.UpdateMC(ID, Nombre, Direccion, Telefono, Eestado);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------ELIMINAR MC -------------------------------------------------------//
+
+        public OdbcDataReader eliminarMC(string Eestado)
+        {
+            return sn.EliminarMC(Eestado);
+
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------INSERTAR TIPO CONTRATACION -------------------------------------------------------//
+        public OdbcDataReader InsertarTC(string Contrato, string Mes, string Proyecto, string Eestado)
+        {
+            return sn.InsertarMC(Contrato, Mes, Proyecto, Eestado);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------UPDATE TIPO CONTRATACION-------------------------------------------------------//
+        public OdbcDataReader ModificarTC(string Cod, string Contrato, string Mes, string Proyecto, string Eestado)
+        {
+            return sn.UpdateMC(Cod, Contrato, Mes, Proyecto, Eestado);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------ELIMINAR TIPO CONTRATACION -------------------------------------------------------//
+
+        public OdbcDataReader eliminarTC(string Eestado)
+        {
+            return sn.EliminarMC(Eestado);
+
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        /*************************************CONSULTA DE SOLICITUD EMPLEADO*/
+        public OdbcDataReader ConsultaLogicaSolicitudE(string COD)
+        {
+            return sn.ConsultaLogicaSolicitudE(COD);
+        }
+
+        /***************************CCONSULTA INTERNA DE SOLICITUD*****************************************/
+
+        public OdbcDataReader ConsultaLogicaBusquedaInterna(string id)
+        {
+            return sn.ConsultaLogicaBusquedaInterna(id);
+        }
+
+        /***************************CONSULTA INTERNAD DE PERFIL*****************************************/
+
+        public OdbcDataReader ConsultaPerfilDetalle()
+        {
+            return sn.ConsultaPerfilDetalle();
+        }
+
+        /***************************CONSULTA PERFIL Y PUESTO*****************************************/
+
+        public OdbcDataReader ConsultaEmpleadoyPuesto(string COD)
+        {
+            return sn.ConsultaEmpleadoyPuesto(COD);
+        }
+
+        /******************************IINSERTAR APTO*************************************************/
+        public OdbcDataReader InsertarAptos(string solicitud, string perfil)
+        {
+            return sn.InsertarAptos(solicitud, perfil);
+        }
+
+        //---------------------------------------------------------------INSERT NUEVO CURRICULUM-------------------------------------------------------//
+        public OdbcDataReader InsertarCurriculum(string scampo, string nombre, string apellido, string numero, string direccion, string correo, string p2, string s2, string b2, string es2, string g2, string c2, string extras, string experiencia, string sueldo, string solicitud)
+        {
+            return sn.InsertarCurriculum(scampo, nombre, apellido, numero, direccion, correo, p2, s2, b2, es2, g2, c2, extras, experiencia, sueldo, solicitud);
+        }
+
+        //-----------------------------------------------UPDATE PERFILES-------------------------------------------------------//
+        public OdbcDataReader modificarCurriculum(string scampo, string nombre, string apellido, string numero, string direccion, string correo, string p2, string s2, string b2, string es2, string g2, string c2, string extras, string experiencia, string sueldo, string solicitud)
+        {
+            return sn.modificarCurriculum(scampo, nombre, apellido, numero, direccion, correo, p2, s2, b2, es2, g2, c2, extras, experiencia, sueldo, solicitud);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //--------------------------------------------------------ELIMINAR PERFIL-------------------------------------------------------//
+        public OdbcDataReader eliminarCurriculum(string sCodigo)
+        {
+            return sn.eliminarCurriculum(sCodigo);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+
     }
 }
 
