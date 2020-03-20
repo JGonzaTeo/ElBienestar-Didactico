@@ -15,7 +15,6 @@ namespace CapaDatos
 
         public OdbcDataReader consultaJornada(string campo)
         {
-            string error = "";
             try
             {
                 OdbcCommand command = new OdbcCommand("SELECT * FROM jornada WHERE pkcodigojornada = " + campo + " ;", cn.conexionbd());
@@ -292,7 +291,8 @@ namespace CapaDatos
             }
         }
 
-        //---------------------------------------------------------------------------------------------------INSERTMNTEMPLEADO-----------------//
+
+               //---------------------------------------------------------------------------------------------------INSERTMNTEMPLEADO-----------------//
         public OdbcDataReader InsertarEmp(string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
         {
             try
@@ -692,7 +692,6 @@ namespace CapaDatos
                 return null;
             }
         }
-        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-
+        
     }
 }

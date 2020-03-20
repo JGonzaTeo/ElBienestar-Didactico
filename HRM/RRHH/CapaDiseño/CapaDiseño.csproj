@@ -34,6 +34,9 @@
     <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -197,11 +200,11 @@
     <Compile Include="Procesos\Frm_busquedaInterna.Designer.cs">
       <DependentUpon>Frm_busquedaInterna.cs</DependentUpon>
     </Compile>
-    <Compile Include="Procesos\Frm_ConvocatoriaySeleccion.cs">
+    <Compile Include="Procesos\Frm_Convocatoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procesos\Frm_ConvocatoriaySeleccion.designer.cs">
-      <DependentUpon>Frm_ConvocatoriaySeleccion.cs</DependentUpon>
+    <Compile Include="Procesos\Frm_Convocatoria.Designer.cs">
+      <DependentUpon>Frm_Convocatoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Frm_DesempenioEmpleados.cs">
       <SubType>Form</SubType>
@@ -325,8 +328,8 @@
     <EmbeddedResource Include="Procesos\Frm_busquedaInterna.resx">
       <DependentUpon>Frm_busquedaInterna.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\Frm_ConvocatoriaySeleccion.resx">
-      <DependentUpon>Frm_ConvocatoriaySeleccion.cs</DependentUpon>
+    <EmbeddedResource Include="Procesos\Frm_Convocatoria.resx">
+      <DependentUpon>Frm_Convocatoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_DesempenioEmpleados.resx">
       <DependentUpon>Frm_DesempenioEmpleados.cs</DependentUpon>
