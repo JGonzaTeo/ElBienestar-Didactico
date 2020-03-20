@@ -86,8 +86,8 @@ DROP TABLE IF EXISTS `categoria`;
 CREATE TABLE `categoria` (
   `pkcodcategoria` int NOT NULL,
   `nombre` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`pkcodcategoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`pkcodcategoria`),
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -470,30 +470,6 @@ LOCK TABLES `perfil_encabezado` WRITE;
 /*!40000 ALTER TABLE `perfil_encabezado` DISABLE KEYS */;
 INSERT INTO `perfil_encabezado` VALUES (1,1,1),(2,1,1);
 /*!40000 ALTER TABLE `perfil_encabezado` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `pregunta`
---
-
-DROP TABLE IF EXISTS `pregunta`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pregunta` (
-  `pkcodpregunta` int NOT NULL,
-  `pregunta` varchar(45) DEFAULT NULL,
-  `respuesta` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`pkcodpregunta`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pregunta`
---
-
-LOCK TABLES `pregunta` WRITE;
-/*!40000 ALTER TABLE `pregunta` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pregunta` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
