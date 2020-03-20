@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using CapaDiseño.Mantenimientos;
 using CapaDiseño.Procesos;
 using CapaLogica;
+using Desempeño;
 using Recursos_Humanos;
 
 namespace CapaDiseño
@@ -196,7 +197,7 @@ namespace CapaDiseño
         Frm_preSeleccion preseleccion = new Frm_preSeleccion();
         private void PreseleccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantPerfiles);
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_preSeleccion);
             if (ventanaPreseleccion == false || frmC == null)
             {
                 if (frmC == null)
@@ -518,6 +519,75 @@ namespace CapaDiseño
             else
             {
                 ingresoreunion.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanadesempenio = false;
+        Frm_DesempenioEmpleados desempenio = new Frm_DesempenioEmpleados();
+        private void desempeñoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_DesempenioEmpleados);
+            if (ventanadesempenio == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    MC = new Frm_MediodeComunicacion();
+                }
+
+                desempenio.MdiParent = this;
+                desempenio.Show();
+                Application.DoEvents();
+                ventanadesempenio = true;
+            }
+            else
+            {
+                desempenio.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanabusquedaInterna = false;
+        Frm_busquedaInterna interna = new Frm_busquedaInterna();
+        private void busquedaInternaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_busquedaInterna);
+            if (ventanadesempenio == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    interna = new Frm_busquedaInterna();
+                }
+
+                interna.MdiParent = this;
+                interna.Show();
+                Application.DoEvents();
+                ventanabusquedaInterna = true;
+            }
+            else
+            {
+                interna.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaCurriculum = false;
+        Frm_MantCurriculum curriculum = new Frm_MantCurriculum();
+        private void CurriculumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantCurriculum);
+            if (ventanaCurriculum == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    curriculum = new Frm_MantCurriculum();
+                }
+
+                curriculum.MdiParent = this;
+                curriculum.Show();
+                Application.DoEvents();
+                ventanaCurriculum = true;
+            }
+            else
+            {
+                curriculum.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
     }

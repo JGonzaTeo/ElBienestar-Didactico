@@ -59,11 +59,23 @@
     <Compile Include="Consulta\Frm_consultaConceptos.Designer.cs">
       <DependentUpon>Frm_consultaConceptos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\Frm_consultaCurriculum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaCurriculum.designer.cs">
+      <DependentUpon>Frm_consultaCurriculum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\Frm_consultaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consulta\Frm_consultaEmpleado.Designer.cs">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaSolicitudEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaSolicitudEmpleado.Designer.cs">
+      <DependentUpon>Frm_consultaSolicitudEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Consulta\Frm_ControlAsistenciaPersonal.cs">
       <SubType>Form</SubType>
@@ -71,11 +83,29 @@
     <Compile Include="Consulta\Frm_ControlAsistenciaPersonal.Designer.cs">
       <DependentUpon>Frm_ControlAsistenciaPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\Frm_MediodeComunicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_MediodeComunicacion.Designer.cs">
+      <DependentUpon>Frm_MediodeComunicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\Frm_SansionesEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consulta\Frm_SansionesEmpleados.Designer.cs">
       <DependentUpon>Frm_SansionesEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_TipoContratacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_TipoContratacion.Designer.cs">
+      <DependentUpon>Frm_TipoContratacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantCurriculum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantCurriculum.designer.cs">
+      <DependentUpon>Frm_MantCurriculum.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Frm_MantDespidoEmpleado.cs">
       <SubType>Form</SubType>
@@ -161,11 +191,29 @@
     <Compile Include="Procesos\Frm_Asignaciondeconcepto.Designer.cs">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Frm_busquedaInterna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_busquedaInterna.Designer.cs">
+      <DependentUpon>Frm_busquedaInterna.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Frm_ConvocatoriaySeleccion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Procesos\Frm_ConvocatoriaySeleccion.designer.cs">
       <DependentUpon>Frm_ConvocatoriaySeleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_DesempenioEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_DesempenioEmpleados.designer.cs">
+      <DependentUpon>Frm_DesempenioEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_filtroInterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_filtroInterno.Designer.cs">
+      <DependentUpon>Frm_filtroInterno.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Frm_filtroPreSeleccion.cs">
       <SubType>Form</SubType>
@@ -208,14 +256,29 @@
     <EmbeddedResource Include="Consulta\Frm_consultaConceptos.resx">
       <DependentUpon>Frm_consultaConceptos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaCurriculum.resx">
+      <DependentUpon>Frm_consultaCurriculum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_consultaEmpleado.resx">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaSolicitudEmpleado.resx">
+      <DependentUpon>Frm_consultaSolicitudEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_ControlAsistenciaPersonal.resx">
       <DependentUpon>Frm_ControlAsistenciaPersonal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_MediodeComunicacion.resx">
+      <DependentUpon>Frm_MediodeComunicacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_SansionesEmpleados.resx">
       <DependentUpon>Frm_SansionesEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_TipoContratacion.resx">
+      <DependentUpon>Frm_TipoContratacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantCurriculum.resx">
+      <DependentUpon>Frm_MantCurriculum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantDespidoEmpleado.resx">
       <DependentUpon>Frm_MantDespidoEmpleado.cs</DependentUpon>
@@ -259,8 +322,17 @@
     <EmbeddedResource Include="Procesos\Frm_Asignaciondeconcepto.resx">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_busquedaInterna.resx">
+      <DependentUpon>Frm_busquedaInterna.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_ConvocatoriaySeleccion.resx">
       <DependentUpon>Frm_ConvocatoriaySeleccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_DesempenioEmpleados.resx">
+      <DependentUpon>Frm_DesempenioEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_filtroInterno.resx">
+      <DependentUpon>Frm_filtroInterno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_filtroPreSeleccion.resx">
       <DependentUpon>Frm_filtroPreSeleccion.cs</DependentUpon>

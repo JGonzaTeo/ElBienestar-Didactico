@@ -139,7 +139,7 @@ namespace CapaDatos
             try
             {
                 cn.conexionbd();
-                string consulta = "insert into tbl_solicitud_empleado_encabezado values("+ scampo + ',' + creador + ',' + tipo + ',' + "'"+ fecha +"');";
+                string consulta = "insert into tbl_solicitud_empleado_encabezado values("+ scampo + ',' + creador + ',' + tipo + ',' + "'"+ fecha +"' , 1);";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 string consulta2 = "insert into tbl_solicitud_empleado_detalle values(" + scampo + ',' + p2 + ',' + s2 + ',' + b2 + ',' + es2 + ',' + g2 + ',' + c2 + ',' + "'" + extras + "',1);";
@@ -292,7 +292,7 @@ namespace CapaDatos
             }
         }
 
-        //---------------------------------------------------------------------------------------------------INSERTMNTEMPLEADO-------------------------------------------------------//
+        //---------------------------------------------------------------------------------------------------INSERTMNTEMPLEADO-----------------//
         public OdbcDataReader InsertarEmp(string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
         {
             try
@@ -313,9 +313,9 @@ namespace CapaDatos
             }
         }
 
-        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //-------------------------------------------------------------------------------------------------------------------------------------//
 
-        //---------------------------------------------------------------------------------------------------UPDATE EMPLEADO-----------------------------------------------------------------------//
+        //---------------------------------------------------------------------------------------------------UPDATE EMPLEADO------------------//
         public OdbcDataReader UpdateEmp(string Cod, string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
         {
             try
@@ -336,9 +336,9 @@ namespace CapaDatos
             }
         }
 
-        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //----------------------------------------------------------------------------------------------------------------------------------//
 
-        //-------------------------------------------------------------------------------------ELIMINAR EMPLEADO------------------------------------------------------------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------------ELIMINAR EMPLEADO---------------------------//
 
         public OdbcDataReader EliminarEmp(string Eestado)
         {
@@ -357,9 +357,29 @@ namespace CapaDatos
             }
         }
 
-        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //---------------------------------------------------------------------------------------------------------------------------------//
 
-        //---------------------------------------------------------------------------------------------------INSERTAR MEDIO DE COMUNICACION-------------------------------------------------------//
+        //-------------------------------------------------------------------------------------CONSULTAAAAA EMPLEADO ---------------------//
+        public OdbcDataReader consultaempleado(string codemp)
+        {
+
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM empleado WHERE pkcodigoempleado = " + codemp + " ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+
+        //---------------------------------------------------------------------------------------------------INSERTAR MEDIO DE COMUNICACION---//
         public OdbcDataReader InsertarMC(string Nombre, string Direccion, string Telefono, string Eestado)
         {
             try
@@ -379,9 +399,9 @@ namespace CapaDatos
                 return null;
             }
         }
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------------------------------------------------------//
 
-        //--------------------------------------------------------------------------------------------------- UPDATE MEDIO DE COMUNICACION-------------------------------------------------------//
+        //--------------------------------------------------------------------------------------------------- UPDATE MEDIO DE COMUNICACION----//
         public OdbcDataReader UpdateMC(string ID, string Nombre, string Direccion, string Telefono, string Eestado)
         {
             try
@@ -401,9 +421,9 @@ namespace CapaDatos
                 return null;
             }
         }
-        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //-----------------------------------------------------------------------------------------------------------------------------------//
 
-        //------------------------------------------------------------------------------------- ELIMINAR MEDIO DE COMUNICACION ------------------------------------------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------- ELIMINAR MEDIO DE COMUNICACION ----------------------------//
 
         public OdbcDataReader EliminarMC(string Eestado)
         {
@@ -422,7 +442,27 @@ namespace CapaDatos
             }
         }
 
-        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //-------------------------------------------------------------------------------------CONSULTAAAAA MC ------------------------------------------//
+        public OdbcDataReader consultaMC(string code)
+        {
+
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM mediodecomunicacion WHERE pkmediodecomunicacion = " + code + " ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
         //---------------------------------------------------------------------------------------------------INSERTAR TIPO DE CONTRATACION -------------------------------------------------------//
         public OdbcDataReader InsertarTipoC(string Contrato, string Mes, string Proyecto, string Eestado)
         {
@@ -487,6 +527,172 @@ namespace CapaDatos
         }
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //-------------------------------------------------------------------------------------CONSULTAAAAA EMPLEADO -------------------------------------------------------------------------------------------//
+        public OdbcDataReader consultaCotratacion(string codemp)
+        {
+
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM  tipocontratacion WHERE pkcodigocontratacion = " + codemp + " ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+
+
+        /********************************CONSULTA DE SOLICITUD EMPLEADO*********************************************************************/
+        public OdbcDataReader ConsultaLogicaSolicitudE(string COD)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consultaGraAsis = "SELECT * FROM tbl_solicitud_empleado_encabezado WHERE pksolicitudempleado="+ COD+";";
+                comm = new OdbcCommand(consultaGraAsis, cn.conexionbd());
+                OdbcDataReader mostrarResultados = comm.ExecuteReader();
+                return mostrarResultados;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+
+        /***************CONSULTA BUSQUEDA INTERNA****************************************************/
+        public OdbcDataReader ConsultaLogicaBusquedaInterna(string id)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = " select * from tbl_solicitud_empleado_detalle where pksolicitudempleado = " + id + ";";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        /***************CONSULTA BUSQUEDA INTERNA****************************************************/
+        public OdbcDataReader ConsultaPerfilDetalle()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT * FROM perfil_detalle;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        /***************CONSULTA PERFIL Y PUESTO****************************************************/
+        public OdbcDataReader ConsultaEmpleadoyPuesto(string COD)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "Select e.pkcodigoempleado, e.fkcodigojornada, e.primernombre,e.primerapellido, p.pkcodigopuesto from empleado e inner join puesto p on e.pkcodigoempleado = p.fkcodigoempleado inner join perfil_encabezado l on p.pkcodigopuesto = l.fkcodigopuesto where l.pkcodperfil ='" + COD + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        /***************************INSERTAR BANCO****************************************************/
+        public OdbcDataReader InsertarAptos(string solicitud, string perfil)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into candidatos_internos values (0," + solicitud + "," + perfil + ", 1);";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //---------------------------------------------INSERT CURRICULUM-------------------------------------------------------//
+        public OdbcDataReader InsertarCurriculum(string scampo, string nombre, string apellido, string numero, string direccion, string correo, string p2, string s2, string b2, string es2, string g2, string c2, string extras, string experiencia, string sueldo, string solicitud)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into tbl_curriculums values(" + scampo + ',' + nombre + ',' + apellido + ',' + numero + ',' + direccion + ',' + correo + ',' + p2 + ',' + s2 + ',' + b2 + ',' + es2 + ',' + g2 + ',' + c2 + ',' + extras + ',' + experiencia + ',' + sueldo + ',' + solicitud + ",1);";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //------------------------------------------------------------------------------------------------------UPDATE-------------------------------------------------------//
+        public OdbcDataReader modificarCurriculum(string scampo, string nombre, string apellido, string numero, string direccion, string correo, string p2, string s2, string b2, string es2, string g2, string c2, string extras, string experiencia, string sueldo, string solicitud)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE tbl_curriculums set ='" + scampo + "', Nombre='" + nombre + "', Apellido='" + apellido + "', Numero='" + numero + "', Direccion='" + direccion + "', Correo_Electronico='" + correo + "', primaria='" + p2 + "', secundaria='" + s2 + "', bachillerato='" + b2 + "', estudiante_U='" + es2 + "', graduado_U='" + g2 + "', curso_extra='" + c2 + "', descripcion_curso='" + extras + "', Experiencia_Previa='" + experiencia + "', SueldoEsperado='" + sueldo + "', fksolicitudempleado='" + solicitud + "' where fkcodperfil='" + scampo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------------------------DELETE CURRICULUM-------------------------------------------------------//
+        public OdbcDataReader eliminarCurriculum(string sCodigo)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE tbl_curriculums set estado='0' where pkidCurriculum='" + sCodigo + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
     }
 }

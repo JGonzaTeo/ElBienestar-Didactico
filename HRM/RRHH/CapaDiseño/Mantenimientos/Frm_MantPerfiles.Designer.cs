@@ -59,8 +59,10 @@
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Btn_editar = new System.Windows.Forms.Button();
             this.Btn_ingresar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Pnl_nombreForm.SuspendLayout();
             this.gpb_datos.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -128,30 +130,16 @@
             // gpb_datos
             // 
             this.gpb_datos.Controls.Add(this.btn_buscarCreador);
-            this.gpb_datos.Controls.Add(this.lbl_desCursos);
-            this.gpb_datos.Controls.Add(this.txt_extras);
-            this.gpb_datos.Controls.Add(this.chc_Cursos);
-            this.gpb_datos.Controls.Add(this.chc_Graduado);
-            this.gpb_datos.Controls.Add(this.chc_Estudiante);
-            this.gpb_datos.Controls.Add(this.chc_bachillerato);
-            this.gpb_datos.Controls.Add(this.chc_secundaria);
-            this.gpb_datos.Controls.Add(this.chc_primaria);
-            this.gpb_datos.Controls.Add(this.lbl_curso);
-            this.gpb_datos.Controls.Add(this.lbl_gUniversidad);
-            this.gpb_datos.Controls.Add(this.lbl_estuUni);
-            this.gpb_datos.Controls.Add(this.lbl_bachillerato);
-            this.gpb_datos.Controls.Add(this.lbl_secundaria);
-            this.gpb_datos.Controls.Add(this.lbl_primaria);
             this.gpb_datos.Controls.Add(this.Txt_puesto);
             this.gpb_datos.Controls.Add(this.Lbl_nom);
             this.gpb_datos.Controls.Add(this.Lbl_codPercepcion);
             this.gpb_datos.Controls.Add(this.Txt_Cod);
             this.gpb_datos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpb_datos.Location = new System.Drawing.Point(32, 235);
+            this.gpb_datos.Location = new System.Drawing.Point(33, 235);
             this.gpb_datos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gpb_datos.Name = "gpb_datos";
             this.gpb_datos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gpb_datos.Size = new System.Drawing.Size(1221, 432);
+            this.gpb_datos.Size = new System.Drawing.Size(1221, 110);
             this.gpb_datos.TabIndex = 75;
             this.gpb_datos.TabStop = false;
             this.gpb_datos.Text = "Encabezado";
@@ -161,7 +149,7 @@
             this.btn_buscarCreador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btn_buscarCreador.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscarCreador.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_buscarCreador.Location = new System.Drawing.Point(548, 92);
+            this.btn_buscarCreador.Location = new System.Drawing.Point(1119, 42);
             this.btn_buscarCreador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_buscarCreador.Name = "btn_buscarCreador";
             this.btn_buscarCreador.Size = new System.Drawing.Size(53, 42);
@@ -174,7 +162,7 @@
             // 
             this.lbl_desCursos.AutoSize = true;
             this.lbl_desCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_desCursos.Location = new System.Drawing.Point(33, 252);
+            this.lbl_desCursos.Location = new System.Drawing.Point(7, 184);
             this.lbl_desCursos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_desCursos.Name = "lbl_desCursos";
             this.lbl_desCursos.Size = new System.Drawing.Size(211, 20);
@@ -185,18 +173,18 @@
             // 
             this.txt_extras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_extras.Location = new System.Drawing.Point(39, 281);
-            this.txt_extras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_extras.Location = new System.Drawing.Point(13, 235);
+            this.txt_extras.Margin = new System.Windows.Forms.Padding(4);
             this.txt_extras.Multiline = true;
             this.txt_extras.Name = "txt_extras";
-            this.txt_extras.Size = new System.Drawing.Size(665, 111);
+            this.txt_extras.Size = new System.Drawing.Size(947, 125);
             this.txt_extras.TabIndex = 73;
             // 
             // chc_Cursos
             // 
             this.chc_Cursos.AutoSize = true;
-            this.chc_Cursos.Location = new System.Drawing.Point(1033, 103);
-            this.chc_Cursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chc_Cursos.Location = new System.Drawing.Point(942, 130);
+            this.chc_Cursos.Margin = new System.Windows.Forms.Padding(4);
             this.chc_Cursos.Name = "chc_Cursos";
             this.chc_Cursos.Size = new System.Drawing.Size(18, 17);
             this.chc_Cursos.TabIndex = 72;
@@ -205,8 +193,8 @@
             // chc_Graduado
             // 
             this.chc_Graduado.AutoSize = true;
-            this.chc_Graduado.Location = new System.Drawing.Point(1035, 49);
-            this.chc_Graduado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chc_Graduado.Location = new System.Drawing.Point(942, 84);
+            this.chc_Graduado.Margin = new System.Windows.Forms.Padding(4);
             this.chc_Graduado.Name = "chc_Graduado";
             this.chc_Graduado.Size = new System.Drawing.Size(18, 17);
             this.chc_Graduado.TabIndex = 71;
@@ -215,8 +203,8 @@
             // chc_Estudiante
             // 
             this.chc_Estudiante.AutoSize = true;
-            this.chc_Estudiante.Location = new System.Drawing.Point(1033, 187);
-            this.chc_Estudiante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chc_Estudiante.Location = new System.Drawing.Point(942, 48);
+            this.chc_Estudiante.Margin = new System.Windows.Forms.Padding(4);
             this.chc_Estudiante.Name = "chc_Estudiante";
             this.chc_Estudiante.Size = new System.Drawing.Size(18, 17);
             this.chc_Estudiante.TabIndex = 70;
@@ -225,8 +213,8 @@
             // chc_bachillerato
             // 
             this.chc_bachillerato.AutoSize = true;
-            this.chc_bachillerato.Location = new System.Drawing.Point(1033, 146);
-            this.chc_bachillerato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chc_bachillerato.Location = new System.Drawing.Point(371, 136);
+            this.chc_bachillerato.Margin = new System.Windows.Forms.Padding(4);
             this.chc_bachillerato.Name = "chc_bachillerato";
             this.chc_bachillerato.Size = new System.Drawing.Size(18, 17);
             this.chc_bachillerato.TabIndex = 69;
@@ -235,8 +223,8 @@
             // chc_secundaria
             // 
             this.chc_secundaria.AutoSize = true;
-            this.chc_secundaria.Location = new System.Drawing.Point(372, 187);
-            this.chc_secundaria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chc_secundaria.Location = new System.Drawing.Point(372, 91);
+            this.chc_secundaria.Margin = new System.Windows.Forms.Padding(4);
             this.chc_secundaria.Name = "chc_secundaria";
             this.chc_secundaria.Size = new System.Drawing.Size(18, 17);
             this.chc_secundaria.TabIndex = 68;
@@ -245,8 +233,8 @@
             // chc_primaria
             // 
             this.chc_primaria.AutoSize = true;
-            this.chc_primaria.Location = new System.Drawing.Point(372, 143);
-            this.chc_primaria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chc_primaria.Location = new System.Drawing.Point(372, 47);
+            this.chc_primaria.Margin = new System.Windows.Forms.Padding(4);
             this.chc_primaria.Name = "chc_primaria";
             this.chc_primaria.Size = new System.Drawing.Size(18, 17);
             this.chc_primaria.TabIndex = 67;
@@ -256,7 +244,7 @@
             // 
             this.lbl_curso.AutoSize = true;
             this.lbl_curso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_curso.Location = new System.Drawing.Point(695, 105);
+            this.lbl_curso.Location = new System.Drawing.Point(606, 130);
             this.lbl_curso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_curso.Name = "lbl_curso";
             this.lbl_curso.Size = new System.Drawing.Size(121, 20);
@@ -267,7 +255,7 @@
             // 
             this.lbl_gUniversidad.AutoSize = true;
             this.lbl_gUniversidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_gUniversidad.Location = new System.Drawing.Point(695, 49);
+            this.lbl_gUniversidad.Location = new System.Drawing.Point(604, 84);
             this.lbl_gUniversidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_gUniversidad.Name = "lbl_gUniversidad";
             this.lbl_gUniversidad.Size = new System.Drawing.Size(180, 20);
@@ -278,7 +266,7 @@
             // 
             this.lbl_estuUni.AutoSize = true;
             this.lbl_estuUni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estuUni.Location = new System.Drawing.Point(695, 183);
+            this.lbl_estuUni.Location = new System.Drawing.Point(604, 44);
             this.lbl_estuUni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_estuUni.Name = "lbl_estuUni";
             this.lbl_estuUni.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -290,7 +278,7 @@
             // 
             this.lbl_bachillerato.AutoSize = true;
             this.lbl_bachillerato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_bachillerato.Location = new System.Drawing.Point(695, 143);
+            this.lbl_bachillerato.Location = new System.Drawing.Point(33, 133);
             this.lbl_bachillerato.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_bachillerato.Name = "lbl_bachillerato";
             this.lbl_bachillerato.Size = new System.Drawing.Size(103, 20);
@@ -301,7 +289,7 @@
             // 
             this.lbl_secundaria.AutoSize = true;
             this.lbl_secundaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_secundaria.Location = new System.Drawing.Point(33, 183);
+            this.lbl_secundaria.Location = new System.Drawing.Point(33, 87);
             this.lbl_secundaria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_secundaria.Name = "lbl_secundaria";
             this.lbl_secundaria.Size = new System.Drawing.Size(98, 20);
@@ -312,7 +300,7 @@
             // 
             this.lbl_primaria.AutoSize = true;
             this.lbl_primaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_primaria.Location = new System.Drawing.Point(33, 143);
+            this.lbl_primaria.Location = new System.Drawing.Point(33, 47);
             this.lbl_primaria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_primaria.Name = "lbl_primaria";
             this.lbl_primaria.Size = new System.Drawing.Size(77, 20);
@@ -321,7 +309,7 @@
             // 
             // Txt_puesto
             // 
-            this.Txt_puesto.Location = new System.Drawing.Point(240, 96);
+            this.Txt_puesto.Location = new System.Drawing.Point(811, 46);
             this.Txt_puesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_puesto.Name = "Txt_puesto";
             this.Txt_puesto.Size = new System.Drawing.Size(281, 27);
@@ -330,7 +318,7 @@
             // Lbl_nom
             // 
             this.Lbl_nom.AutoSize = true;
-            this.Lbl_nom.Location = new System.Drawing.Point(33, 100);
+            this.Lbl_nom.Location = new System.Drawing.Point(604, 50);
             this.Lbl_nom.Name = "Lbl_nom";
             this.Lbl_nom.Size = new System.Drawing.Size(123, 20);
             this.Lbl_nom.TabIndex = 2;
@@ -459,11 +447,38 @@
             this.Btn_ingresar.UseVisualStyleBackColor = false;
             this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbl_desCursos);
+            this.groupBox1.Controls.Add(this.txt_extras);
+            this.groupBox1.Controls.Add(this.lbl_primaria);
+            this.groupBox1.Controls.Add(this.lbl_secundaria);
+            this.groupBox1.Controls.Add(this.chc_Cursos);
+            this.groupBox1.Controls.Add(this.chc_primaria);
+            this.groupBox1.Controls.Add(this.chc_secundaria);
+            this.groupBox1.Controls.Add(this.chc_Graduado);
+            this.groupBox1.Controls.Add(this.lbl_bachillerato);
+            this.groupBox1.Controls.Add(this.chc_bachillerato);
+            this.groupBox1.Controls.Add(this.lbl_curso);
+            this.groupBox1.Controls.Add(this.lbl_estuUni);
+            this.groupBox1.Controls.Add(this.lbl_gUniversidad);
+            this.groupBox1.Controls.Add(this.chc_Estudiante);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(33, 369);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1221, 374);
+            this.groupBox1.TabIndex = 76;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Detalle";
+            // 
             // Frm_MantPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 716);
+            this.ClientSize = new System.Drawing.Size(1292, 758);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Pnl_nombreForm);
             this.Controls.Add(this.gpb_datos);
             this.Controls.Add(this.Btn_consultar);
@@ -472,7 +487,7 @@
             this.Controls.Add(this.Btn_editar);
             this.Controls.Add(this.Btn_ingresar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_MantPerfiles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MantPerfiles";
@@ -481,6 +496,8 @@
             this.Pnl_nombreForm.PerformLayout();
             this.gpb_datos.ResumeLayout(false);
             this.gpb_datos.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -517,5 +534,6 @@
         private System.Windows.Forms.Label lbl_desCursos;
         private System.Windows.Forms.TextBox txt_extras;
         private System.Windows.Forms.Button btn_buscarCreador;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
