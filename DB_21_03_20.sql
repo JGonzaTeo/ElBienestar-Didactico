@@ -86,11 +86,7 @@ DROP TABLE IF EXISTS `categoria`;
 CREATE TABLE `categoria` (
   `pkcodcategoria` int NOT NULL,
   `nombre` varchar(45) DEFAULT NULL,
-  `descripcion` varchar(45) DEFAULT NULL,
-  `fkcodpregunta` int DEFAULT NULL,
-  PRIMARY KEY (`pkcodcategoria`),
-  KEY `fk_categoria_pregunta1_idx` (`fkcodpregunta`),
-  CONSTRAINT `fk_categoria_pregunta1` FOREIGN KEY (`fkcodpregunta`) REFERENCES `pregunta` (`pkcodpregunta`)
+  PRIMARY KEY (`pkcodcategoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -127,6 +123,7 @@ CREATE TABLE `concepto` (
 
 LOCK TABLES `concepto` WRITE;
 /*!40000 ALTER TABLE `concepto` DISABLE KEYS */;
+INSERT INTO `concepto` VALUES (1,'a',1,1,1,1);
 /*!40000 ALTER TABLE `concepto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +149,7 @@ CREATE TABLE `departamentos` (
 
 LOCK TABLES `departamentos` WRITE;
 /*!40000 ALTER TABLE `departamentos` DISABLE KEYS */;
-INSERT INTO `departamentos` VALUES (1,'1','1',1);
+INSERT INTO `departamentos` VALUES (1,'ADIO','CHULA',0),(2,'PRUEBA','INSERTAR',0),(3,'NUEVO','NUEVO2',1);
 /*!40000 ALTER TABLE `departamentos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -477,30 +474,6 @@ INSERT INTO `perfil_encabezado` VALUES (1,1,1),(2,1,1);
 UNLOCK TABLES;
 
 --
--- Table structure for table `pregunta`
---
-
-DROP TABLE IF EXISTS `pregunta`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pregunta` (
-  `pkcodpregunta` int NOT NULL,
-  `pregunta` varchar(45) DEFAULT NULL,
-  `respuesta` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`pkcodpregunta`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pregunta`
---
-
-LOCK TABLES `pregunta` WRITE;
-/*!40000 ALTER TABLE `pregunta` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pregunta` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `puesto`
 --
 
@@ -768,4 +741,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-19 22:07:14
+-- Dump completed on 2020-03-21 14:59:38

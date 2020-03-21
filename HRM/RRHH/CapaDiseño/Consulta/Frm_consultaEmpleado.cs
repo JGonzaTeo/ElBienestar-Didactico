@@ -12,12 +12,15 @@ using System.Windows.Forms;
 
 namespace CapaDiseño.Consulta
 {
+    
     public partial class Frm_consultaEmpleado : Form
     {
         public Frm_consultaEmpleado()
         {
             InitializeComponent();
         }
+
+
         public void MostrarConsulta()
         {
             try
@@ -40,6 +43,8 @@ namespace CapaDiseño.Consulta
             {
                 Console.Write(err.Message);
             }
+
+            
         }
 
         private void Btn_minimizar_Click(object sender, EventArgs e)
@@ -70,5 +75,6 @@ namespace CapaDiseño.Consulta
                 Close();
             }
         }
+
     }
 }

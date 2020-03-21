@@ -14,6 +14,7 @@ namespace CapaDiseño.Consulta
 {
     public partial class Frm_consltaPerfiles : Form
     {
+        string[] valores = new string[7];
         public Frm_consltaPerfiles()
         {
             InitializeComponent();
@@ -30,14 +31,27 @@ namespace CapaDiseño.Consulta
 
                 string consultaMostrar2 = "SELECT * FROM perfil_detalle WHERE Estado='1';";
                 OdbcCommand comm2 = new OdbcCommand(consultaMostrar2, conexion.conexionbd());
-                OdbcDataReader mostrarDatos2 = comm.ExecuteReader();
-                while (mostrarDatos.Read())
+                OdbcDataReader mostrarDatos2 = comm2.ExecuteReader();
+                int contador = 0;
+                while (mostrarDatos.Read() && mostrarDatos2.Read())
                 {
+                    contador= 0;
                     Dgv_consultaPerfil.Refresh();
-                    Dgv_consultaPerfil.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos2.GetString(1), mostrarDatos2.GetString(2), mostrarDatos2.GetString(3), mostrarDatos2.GetString(4), mostrarDatos2.GetString(5), mostrarDatos2.GetString(6), mostrarDatos2.GetString(7));
+                    for(int n=1; n < 7; n++)
+                    {
+                        if(mostrarDatos2.GetString(n) == "1")
+                            valores[contador] = "Si";
+                        else
+                            valores[contador] = "No";
+
+                        contador++;
+                    }
+                    Dgv_consultaPerfil.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), valores[0], valores[1], valores[2], valores[3], valores[4], valores[5], mostrarDatos2.GetString(7));
                 }
                 comm.Connection.Close();
                 mostrarDatos.Close();
+                comm2.Connection.Close();
+                mostrarDatos2.Close();
             }
             catch (Exception err)
             {

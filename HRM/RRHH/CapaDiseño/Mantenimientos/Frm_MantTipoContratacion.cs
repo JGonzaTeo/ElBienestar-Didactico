@@ -57,5 +57,20 @@ namespace CapaDiseño.Mantenimientos
             OdbcDataReader cita = logic.eliminarEmpleado(Txt_Codigo.Text);
             MessageBox.Show("Eliminado Correctamente.");
         }
+
+        private void Btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void Btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Por el momento se encuentra en desarollo");
+        }
+
+        private void Btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
