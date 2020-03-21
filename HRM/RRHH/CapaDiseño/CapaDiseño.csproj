@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +74,12 @@
     </Compile>
     <Compile Include="Consulta\Frm_consultaEmpleado.Designer.cs">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaJornada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaJornada.Designer.cs">
+      <DependentUpon>Frm_consultaJornada.cs</DependentUpon>
     </Compile>
     <Compile Include="Consulta\Frm_consultaSolicitudEmpleado.cs">
       <SubType>Form</SubType>
@@ -152,6 +159,12 @@
     <Compile Include="Mantenimientos\Frm_MantIngresoSansion.Designer.cs">
       <DependentUpon>Frm_MantIngresoSansion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Frm_MantJornada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantJornada.Designer.cs">
+      <DependentUpon>Frm_MantJornada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Frm_MantMediodeComunicacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +237,12 @@
     <Compile Include="Procesos\Frm_filtroPreSeleccion.designer.cs">
       <DependentUpon>Frm_filtroPreSeleccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Frm_Metas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_Metas.Designer.cs">
+      <DependentUpon>Frm_Metas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Frm_Nomina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +284,9 @@
     <EmbeddedResource Include="Consulta\Frm_consultaEmpleado.resx">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaJornada.resx">
+      <DependentUpon>Frm_consultaJornada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_consultaSolicitudEmpleado.resx">
       <DependentUpon>Frm_consultaSolicitudEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +326,9 @@
     <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoSansion.resx">
       <DependentUpon>Frm_MantIngresoSansion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantJornada.resx">
+      <DependentUpon>Frm_MantJornada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantMediodeComunicacion.resx">
       <DependentUpon>Frm_MantMediodeComunicacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_filtroPreSeleccion.resx">
       <DependentUpon>Frm_filtroPreSeleccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_Metas.resx">
+      <DependentUpon>Frm_Metas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_Nomina.resx">
       <DependentUpon>Frm_Nomina.cs</DependentUpon>

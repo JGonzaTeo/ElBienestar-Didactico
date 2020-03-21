@@ -125,6 +125,7 @@
             this.Dgv_consultaEmpleado.Location = new System.Drawing.Point(8, 72);
             this.Dgv_consultaEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.Dgv_consultaEmpleado.Name = "Dgv_consultaEmpleado";
+            this.Dgv_consultaEmpleado.RowHeadersVisible = false;
             this.Dgv_consultaEmpleado.RowHeadersWidth = 51;
             this.Dgv_consultaEmpleado.RowTemplate.Height = 24;
             this.Dgv_consultaEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

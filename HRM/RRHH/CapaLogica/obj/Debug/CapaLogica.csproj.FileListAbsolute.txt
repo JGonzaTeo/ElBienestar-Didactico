@@ -120,3 +120,20 @@ C:\Users\Conny\Downloads\ElBienestar-Didactico-Isisi-Diaz\HRM\RRHH\CapaLogica\ob
 C:\Users\Conny\Downloads\ElBienestar-Didactico-Isisi-Diaz\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
 C:\Users\Conny\Downloads\ElBienestar-Didactico-Isisi-Diaz\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\Conny\Downloads\ElBienestar-Didactico-Isisi-Diaz\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\RRHH\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\RRHH\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csprojAssemblyReference.cache
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\RRHH\CapaLogica\obj\Debug\CapaLogica.pdb
