@@ -89,12 +89,6 @@ namespace CapaDiseño.Mantenimientos
                       Cells[4].Value.ToString();
                 Cbo_estado.Text = concep.Dgv_consultaConceptos.Rows[concep.Dgv_consultaConceptos.CurrentRow.Index].
                      Cells[5].Value.ToString();
-
-
-
-
-
-
             }
         }
     }

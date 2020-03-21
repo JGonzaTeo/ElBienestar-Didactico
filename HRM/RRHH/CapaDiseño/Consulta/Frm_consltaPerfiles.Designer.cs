@@ -138,6 +138,7 @@
             this.Dgv_consultaPerfil.AllowUserToDeleteRows = false;
             this.Dgv_consultaPerfil.AllowUserToResizeColumns = false;
             this.Dgv_consultaPerfil.AllowUserToResizeRows = false;
+            this.Dgv_consultaPerfil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgv_consultaPerfil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_consultaPerfil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cod,
@@ -152,6 +153,7 @@
             this.Dgv_consultaPerfil.Location = new System.Drawing.Point(16, 100);
             this.Dgv_consultaPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dgv_consultaPerfil.Name = "Dgv_consultaPerfil";
+            this.Dgv_consultaPerfil.ReadOnly = true;
             this.Dgv_consultaPerfil.RowHeadersVisible = false;
             this.Dgv_consultaPerfil.RowHeadersWidth = 51;
             this.Dgv_consultaPerfil.RowTemplate.Height = 24;
@@ -164,63 +166,63 @@
             this.cod.HeaderText = "COD Perfil";
             this.cod.MinimumWidth = 6;
             this.cod.Name = "cod";
-            this.cod.Width = 125;
+            this.cod.ReadOnly = true;
             // 
             // CODP
             // 
             this.CODP.HeaderText = "COD Puesto";
             this.CODP.MinimumWidth = 6;
             this.CODP.Name = "CODP";
-            this.CODP.Width = 125;
+            this.CODP.ReadOnly = true;
             // 
             // primaria
             // 
             this.primaria.HeaderText = "Primaria";
             this.primaria.MinimumWidth = 6;
             this.primaria.Name = "primaria";
-            this.primaria.Width = 125;
+            this.primaria.ReadOnly = true;
             // 
             // secundaria
             // 
             this.secundaria.HeaderText = "Secundaria";
             this.secundaria.MinimumWidth = 6;
             this.secundaria.Name = "secundaria";
-            this.secundaria.Width = 125;
+            this.secundaria.ReadOnly = true;
             // 
             // bachillerato
             // 
             this.bachillerato.HeaderText = "Bachillerato";
             this.bachillerato.MinimumWidth = 6;
             this.bachillerato.Name = "bachillerato";
-            this.bachillerato.Width = 125;
+            this.bachillerato.ReadOnly = true;
             // 
             // eU
             // 
             this.eU.HeaderText = "Estudiante Universitario";
             this.eU.MinimumWidth = 6;
             this.eU.Name = "eU";
-            this.eU.Width = 125;
+            this.eU.ReadOnly = true;
             // 
             // gU
             // 
             this.gU.HeaderText = "Graduado Universidad";
             this.gU.MinimumWidth = 6;
             this.gU.Name = "gU";
-            this.gU.Width = 125;
+            this.gU.ReadOnly = true;
             // 
             // cE
             // 
             this.cE.HeaderText = "Curso Extra";
             this.cE.MinimumWidth = 6;
             this.cE.Name = "cE";
-            this.cE.Width = 125;
+            this.cE.ReadOnly = true;
             // 
             // descripcion
             // 
             this.descripcion.HeaderText = "Descripcion";
             this.descripcion.MinimumWidth = 6;
             this.descripcion.Name = "descripcion";
-            this.descripcion.Width = 125;
+            this.descripcion.ReadOnly = true;
             // 
             // Frm_consltaPerfiles
             // 
@@ -232,7 +234,7 @@
             this.Controls.Add(this.Btn_seleccionar);
             this.Controls.Add(this.Dgv_consultaPerfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_consltaPerfiles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_consltaPerfiles";
