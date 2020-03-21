@@ -341,7 +341,7 @@ namespace Desempeño
             empleadoDesempeño();
         }
 
-        decimal Totalempleado;
+        public decimal Totalempleado;
 
         public void totalEmpleado()
         {

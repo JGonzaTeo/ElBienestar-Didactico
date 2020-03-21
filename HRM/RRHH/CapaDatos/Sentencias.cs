@@ -13,24 +13,6 @@ namespace CapaDatos
         Conexion cn = new Conexion();
         OdbcCommand comm;
 
-        public OdbcDataReader consultaJornada(string campo)
-        {
-            try
-            {
-                OdbcCommand command = new OdbcCommand("SELECT * FROM jornada WHERE pkcodigojornada = " + campo + " ;", cn.conexionbd());
-                OdbcDataReader reader = command.ExecuteReader();
-                reader.Read();
-                return reader;
-            }
-            catch (Exception err)
-            {
-
-                Console.WriteLine(err.Message);
-                return null;
-            }
-
-        }
-
         //------------------------------------------------------------------------------------------------------INSERTS-------------------------------------------------------//
         public OdbcDataReader Insertarconcepto(string sCodigo, string sNombre, string sTipoconcepto, string ssaldo, string stipoaccion, string sestado)
         {
@@ -292,7 +274,7 @@ namespace CapaDatos
         }
 
 
-               //---------------------------------------------------------------------------------------------------INSERTMNTEMPLEADO-----------------//
+        //---------------------------------------------------------------------------------------------------INSERTMNTEMPLEADO-----------------//
         public OdbcDataReader InsertarEmp(string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
         {
             try
@@ -312,7 +294,6 @@ namespace CapaDatos
                 return null;
             }
         }
-
         //-------------------------------------------------------------------------------------------------------------------------------------//
 
         //---------------------------------------------------------------------------------------------------UPDATE EMPLEADO------------------//
@@ -694,40 +675,353 @@ namespace CapaDatos
         }
 
         //---------------------------------------------------------------------------DESEMPEÑO-------------------------------------------------------------------------//
-          public OdbcDataReader InsertarKpi(string fechaEvaluacion, string totalEmpleado, string desempeño)
-          {
-              try
-              {
-                  cn.conexionbd();
-                  string consulta = "INSERT INTO tbl_kpi values (0," + fechaEvaluacion + totalEmpleado + desempeño + " ) ;";
-                  comm = new OdbcCommand(consulta, cn.conexionbd());
-                  OdbcDataReader mostrar = comm.ExecuteReader();
-                  return mostrar;
-              }
-              catch (Exception err)
-              {
-                  Console.WriteLine(err.Message);
-                  return null;
-              }
-          }
+        public OdbcDataReader InsertarKpi(string fechaEvaluacion, string totalEmpleado, string desempeño)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "INSERT INTO tbl_kpi values (0," + fechaEvaluacion + totalEmpleado + desempeño + " ) ;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
 
-          public OdbcDataReader InsertarCategoria(string nombreCat)
-          {
-              try
-              {
-                  cn.conexionbd();
-                  string consulta = "INSERT INTO tbl_categoria values (0," + nombreCat + ");";
-                  comm = new OdbcCommand(consulta, cn.conexionbd());
-                  OdbcDataReader mostrar = comm.ExecuteReader();
-                  return mostrar;
-              }
-              catch (Exception err)
-              {
-                  Console.WriteLine(err.Message);
-                  return null;
-              }
-          }
+        public OdbcDataReader InsertarCategoria(string nombreCat)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "INSERT INTO tbl_categoria values (0," + nombreCat + ");";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }  
+        }
+
+        public OdbcDataReader InsertarMeta(string nombreMeta, string tipoMeta, string descrip, string comple, string fechaMeta)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "INSERT INTO metas values (0," + nombreMeta + tipoMeta + descrip + comple + fechaMeta + ");";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------- BUSCAR EMPLEADO ------------------------------------------------------------------------------------------------------------------------------------
 
+        public OdbcDataReader BuscarEmpleadoS(string sCodigo)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "select primernombre,primerapellido from empleado where pkcodigoempleado = " + sCodigo + " and estado = 1; ";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------- INGRESO CONTROL ASISTENCIA ------------------------------------------------------------------------------------------------------------------------------------
+        public OdbcDataReader InsertarControlAsistencia(string sCodigoEmpleado, string sNombre, string sApellido, string sFechaIngreso, string sHoraIngreso)
+        {
+            try
+            {
+
+                string consulta = "INSERT INTO asistencia(fkcodigoempleado, fechaentrada, horaentrada) values(" + sCodigoEmpleado + ", '" + sFechaIngreso + "', '" + sHoraIngreso + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+
+            }
+
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------- INGRESO REUNION ------------------------------------------------------------------------------------------------------------------------------------
+        public OdbcDataReader InsertarReunion(string sCodigoEmpleado, string sNombre, string sDescripcion, string sFechaInicio, string sFechaFinal, string sHoraInicio, string sHoraFinal, string sCantidad)
+        {
+            try
+            {
+                int iDisponible = 1;
+                string consulta = "INSERT INTO reuniones(fkcodigoempleado, nombrereunion, descripcion, fechainicio, fechafinal, horainicio, horafinal, cantidadempleados, estado)  values(" + sCodigoEmpleado + ", '" + sNombre + "', '" + sDescripcion + "', '" + sFechaInicio + "', '" + sFechaFinal + "', '" + sHoraInicio + "', '" + sHoraFinal + "', '" + sCantidad + "', '" + iDisponible + "');";
+
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+
+            }
+
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //------------------------------------------------------------------------------------- BUSCAR EMPLEADO REUNION ------------------------------------------------------------------------------------------------------------------------------------
+
+        public OdbcDataReader BuscarEmpleadoReunion(string sCodigo)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "select primernombre from empleado where pkcodigoempleado = " + sCodigo + " and estado = 1; ";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------- BUSCAR REUNION ------------------------------------------------------------------------------------------------------------------------------------
+
+        public OdbcDataReader BuscarReunion(string sNombre)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "select descripcion,fechainicio,fechafinal,horainicio,horafinal,cantidadempleados from reuniones where nombrereunion = '" + sNombre + "' and estado = 1; ";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------- UPDATE REUNION ------------------------------------------------------------------------------------------------------------------------------------
+        public OdbcDataReader UpdateReunion(string sNombre, string sDescripcion, string sFechaInicio, string sFechaFinal, string sHoraInicio, string sHoraFinal, string sCantidad)
+        {
+            try
+            {
+                cn.conexionbd();
+                int iDisponible = 1;
+                string consulta = "UPDATE reuniones set descripcion='" + sDescripcion + "',fechainicio='" + sFechaInicio + "',fechafinal='" + sFechaFinal + "',horainicio ='" + sHoraInicio + "',horafinal ='" + sHoraFinal + "',cantidadempleados ='" + sCantidad + "' where nombrereunion ='" + sNombre + "' AND estado ='" + iDisponible + "'; ";
+
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------- DELETE REUNION ------------------------------------------------------------------------------------------------------------------------------------
+
+        public OdbcDataReader DeleteReunion(string sNombre)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE reuniones set estado='0' where nombrereunion ='" + sNombre + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------- INSERTAR DESPIDO ------------------------------------------------------------------------------------------------------------------------------------
+
+        public OdbcDataReader InsertarDespido(string sCodigoEmpleado, string sRazonDespido, string sDescripcion, string sFecha)
+        {
+            try
+            {
+                cn.conexionbd();
+                //InsertarDespido
+                string consulta = "INSERT INTO despidoempleado(fkcodigoempleado,razondespido,descripciondespido,fechadespido)  values(" + sCodigoEmpleado + ", '" + sRazonDespido + "', '" + sDescripcion + "', '" + sFecha + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+
+                //Update Eliminar Empleado
+                string consulta2 = "UPDATE empleado set estado='0' where pkcodigoempleado ='" + sCodigoEmpleado + "';";
+                comm = new OdbcCommand(consulta2, cn.conexionbd());
+                OdbcDataReader mostrar2 = comm.ExecuteReader();
+
+                return mostrar;
+            }
+
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------- INSERTAR SANSION ------------------------------------------------------------------------------------------------------------------------------------
+        public OdbcDataReader InsertarSansion(string sCodigoEmpleado, string sRazonSansion, string sDescripcion, string sFechaInicio, string sFechaFinal)
+        {
+            try
+            {
+                int iDisponible = 1;
+                string consulta = "INSERT INTO sancionempleado(fkcodigoempleado, nombre,descipcion, fechainicio, fechafinal, estado)  values(" + sCodigoEmpleado + ", '" + sRazonSansion + "', '" + sDescripcion + "', '" + sFechaInicio + "', '" + sFechaFinal + "', '" + iDisponible + "');";
+
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+
+            }
+
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //------------------------------------------------------------------------------------- BUSCAR SANSION ------------------------------------------------------------------------------------------------------------------------------------
+        public OdbcDataReader BuscarSansion(string sNombre)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "select fkcodigoempleado,descipcion,fechainicio,fechafinal from sancionempleado where nombre = '" + sNombre + "' and estado = 1; ";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //------------------------------------------------------------------------------------- ELIMINAR SANSION ------------------------------------------------------------------------------------------------------------------------------------
+        public OdbcDataReader DeleteSansion(string sNombre)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE sancionempleado set estado='0' where nombre ='" + sNombre + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        //JORNADA
+        //------------------------------------------------------------------------------------------------------CONSULTA-------------------------------------------------------//
+        public OdbcDataReader consultaJornada(string campo)
+        {
+            try
+            {
+                OdbcCommand command = new OdbcCommand("SELECT * FROM jornada WHERE pkcodigojornada = " + campo + " ;", cn.conexionbd());
+                OdbcDataReader reader = command.ExecuteReader();
+                reader.Read();
+                return reader;
+            }
+            catch (Exception err)
+            {
+
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------------------------INSERTS-------------------------------------------------------//
+        public OdbcDataReader insertarJornada(string codigoJornada, string nombreJornada, string horasJornada, string estadoJornada)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into jornada values(" + codigoJornada + ", '" + nombreJornada + "' ,'" + horasJornada + "','" + estadoJornada + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------UPDATE-------------------------------------------------------//
+        public OdbcDataReader modificarJornada(string codigoJornada, string nombreJornada, string horasJornada, string estadoJornada)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE jornada set nombrejornada='" + nombreJornada + "',horasjornada='" + horasJornada + "',estado='" + estadoJornada + "' where pkcodigojornada='" + codigoJornada + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------------------------DELETE-------------------------------------------------------//
+        public OdbcDataReader eliminarJornada(string codigoJornada)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "UPDATE jornada set estado='0' where pkcodigojornada='" + codigoJornada + "';";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        
     }
 }

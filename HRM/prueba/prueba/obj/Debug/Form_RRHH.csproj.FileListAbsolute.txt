@@ -98,3 +98,36 @@ C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElB
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\prueba\prueba\obj\Debug\Form_RRHH.csproj.CopyComplete
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\prueba\prueba\obj\Debug\prueba.exe
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\prueba\prueba\obj\Debug\prueba.pdb
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\bin\Debug\prueba.exe.config
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\bin\Debug\prueba.exe
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\bin\Debug\prueba.pdb
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\bin\Debug\CapaDiseño.dll
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\bin\Debug\CapaLogica.dll
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\bin\Debug\CapaDatos.dll
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\bin\Debug\CapaDiseño.pdb
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\bin\Debug\CapaLogica.pdb
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\bin\Debug\CapaDatos.pdb
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\obj\Debug\Form_RRHH.csprojAssemblyReference.cache
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\obj\Debug\prueba.Form1.resources
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\obj\Debug\prueba.Properties.Resources.resources
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\obj\Debug\Form_RRHH.csproj.GenerateResource.cache
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\obj\Debug\Form_RRHH.csproj.CopyComplete
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\obj\Debug\prueba.exe
+C:\Users\Paula V\Desktop\ElBienestar-Didactico-Conny-Maria\HRM\prueba\prueba\obj\Debug\prueba.pdb
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\bin\Debug\prueba.exe.config
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\bin\Debug\prueba.exe
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\bin\Debug\prueba.pdb
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\bin\Debug\CapaDiseño.dll
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\bin\Debug\CapaLogica.dll
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\bin\Debug\CapaDatos.dll
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\bin\Debug\CapaDiseño.pdb
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\bin\Debug\CapaLogica.pdb
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\bin\Debug\CapaDatos.pdb
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\obj\Debug\Form_RRHH.csprojAssemblyReference.cache
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\obj\Debug\prueba.Form1.resources
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\obj\Debug\prueba.Properties.Resources.resources
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\obj\Debug\Form_RRHH.csproj.GenerateResource.cache
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\obj\Debug\Form_RRHH.csproj.CoreCompileInputs.cache
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\obj\Debug\Form_RRHH.csproj.CopyComplete
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\obj\Debug\prueba.exe
+C:\Users\Conny\Downloads\ElBienestar-Didactico-Paula-Vasquez\HRM\prueba\prueba\obj\Debug\prueba.pdb
