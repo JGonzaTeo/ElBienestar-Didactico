@@ -34,10 +34,14 @@
     <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,11 +51,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Consulta\Frm_consltaPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consltaPerfiles.Designer.cs">
+      <DependentUpon>Frm_consltaPerfiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\Frm_consultaConceptos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consulta\Frm_consultaConceptos.Designer.cs">
       <DependentUpon>Frm_consultaConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaCurriculum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaCurriculum.designer.cs">
+      <DependentUpon>Frm_consultaCurriculum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaDepartamento.Designer.cs">
+      <DependentUpon>Frm_consultaDepartamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Consulta\Frm_consultaEmpleado.cs">
       <SubType>Form</SubType>
@@ -59,11 +81,131 @@
     <Compile Include="Consulta\Frm_consultaEmpleado.Designer.cs">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\Frm_consultaJornada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaJornada.Designer.cs">
+      <DependentUpon>Frm_consultaJornada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaSolicitudEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaSolicitudEmpleado.Designer.cs">
+      <DependentUpon>Frm_consultaSolicitudEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_ControlAsistenciaPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_ControlAsistenciaPersonal.Designer.cs">
+      <DependentUpon>Frm_ControlAsistenciaPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_MediodeComunicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_MediodeComunicacion.Designer.cs">
+      <DependentUpon>Frm_MediodeComunicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_SansionesEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_SansionesEmpleados.Designer.cs">
+      <DependentUpon>Frm_SansionesEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_TipoContratacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_TipoContratacion.Designer.cs">
+      <DependentUpon>Frm_TipoContratacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantCurriculum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantCurriculum.designer.cs">
+      <DependentUpon>Frm_MantCurriculum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantDespidoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantDespidoEmpleado.Designer.cs">
+      <DependentUpon>Frm_MantDespidoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_ManteDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_ManteDepartamento.Designer.cs">
+      <DependentUpon>Frm_ManteDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEliminacionReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEliminacionReunion.Designer.cs">
+      <DependentUpon>Frm_MantEliminacionReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEliminacionSansion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEliminacionSansion.Designer.cs">
+      <DependentUpon>Frm_MantEliminacionSansion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantEmpleado.Designer.cs">
+      <DependentUpon>Frm_MantEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoControlAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoControlAsistencia.Designer.cs">
+      <DependentUpon>Frm_MantIngresoControlAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoReunion.Designer.cs">
+      <DependentUpon>Frm_MantIngresoReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoSansion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresoSansion.Designer.cs">
+      <DependentUpon>Frm_MantIngresoSansion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantJornada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantJornada.Designer.cs">
+      <DependentUpon>Frm_MantJornada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantMediodeComunicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantMediodeComunicacion.Designer.cs">
+      <DependentUpon>Frm_MantMediodeComunicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantModificacionReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantModificacionReunion.Designer.cs">
+      <DependentUpon>Frm_MantModificacionReunion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Frm_MantPercepciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimientos\Frm_MantPercepciones.Designer.cs">
       <DependentUpon>Frm_MantPercepciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantPerfiles.Designer.cs">
+      <DependentUpon>Frm_MantPerfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantTipoContratacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantTipoContratacion.Designer.cs">
+      <DependentUpon>Frm_MantTipoContratacion.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIParent1.cs">
       <SubType>Form</SubType>
@@ -74,14 +216,65 @@
     <Compile Include="Procesos\Frm_Asignaciondeconcepto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procesos\Frm_Asignaciondeconcepto.Designer.cs">
+    <Compile Include="Procesos\Frm_Asignaciondeconcepto.designer.cs">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_busquedaInterna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_busquedaInterna.Designer.cs">
+      <DependentUpon>Frm_busquedaInterna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_Convocatoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_Convocatoria.Designer.cs">
+      <DependentUpon>Frm_Convocatoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_DesempenioEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_DesempenioEmpleados.designer.cs">
+      <DependentUpon>Frm_DesempenioEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_filtroInterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_filtroInterno.Designer.cs">
+      <DependentUpon>Frm_filtroInterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_filtroPreSeleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_filtroPreSeleccion.designer.cs">
+      <DependentUpon>Frm_filtroPreSeleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_Metas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_Metas.Designer.cs">
+      <DependentUpon>Frm_Metas.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Frm_Nomina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procesos\Frm_Nomina.Designer.cs">
+    <Compile Include="Procesos\Frm_Nomina.designer.cs">
       <DependentUpon>Frm_Nomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_preSeleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_preSeleccion.Designer.cs">
+      <DependentUpon>Frm_preSeleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_SolicitudEmpleadoN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_SolicitudEmpleadoN.Designer.cs">
+      <DependentUpon>Frm_SolicitudEmpleadoN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Validar.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -91,14 +284,83 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Consulta\Frm_consltaPerfiles.resx">
+      <DependentUpon>Frm_consltaPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_consultaConceptos.resx">
       <DependentUpon>Frm_consultaConceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaCurriculum.resx">
+      <DependentUpon>Frm_consultaCurriculum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaDepartamento.resx">
+      <DependentUpon>Frm_consultaDepartamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_consultaEmpleado.resx">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaJornada.resx">
+      <DependentUpon>Frm_consultaJornada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaSolicitudEmpleado.resx">
+      <DependentUpon>Frm_consultaSolicitudEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_ControlAsistenciaPersonal.resx">
+      <DependentUpon>Frm_ControlAsistenciaPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_MediodeComunicacion.resx">
+      <DependentUpon>Frm_MediodeComunicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_SansionesEmpleados.resx">
+      <DependentUpon>Frm_SansionesEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_TipoContratacion.resx">
+      <DependentUpon>Frm_TipoContratacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantCurriculum.resx">
+      <DependentUpon>Frm_MantCurriculum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantDespidoEmpleado.resx">
+      <DependentUpon>Frm_MantDespidoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_ManteDepartamento.resx">
+      <DependentUpon>Frm_ManteDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantEliminacionReunion.resx">
+      <DependentUpon>Frm_MantEliminacionReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantEliminacionSansion.resx">
+      <DependentUpon>Frm_MantEliminacionSansion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantEmpleado.resx">
+      <DependentUpon>Frm_MantEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoControlAsistencia.resx">
+      <DependentUpon>Frm_MantIngresoControlAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoReunion.resx">
+      <DependentUpon>Frm_MantIngresoReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoSansion.resx">
+      <DependentUpon>Frm_MantIngresoSansion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantJornada.resx">
+      <DependentUpon>Frm_MantJornada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantMediodeComunicacion.resx">
+      <DependentUpon>Frm_MantMediodeComunicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantModificacionReunion.resx">
+      <DependentUpon>Frm_MantModificacionReunion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantPercepciones.resx">
       <DependentUpon>Frm_MantPercepciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantPerfiles.resx">
+      <DependentUpon>Frm_MantPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantTipoContratacion.resx">
+      <DependentUpon>Frm_MantTipoContratacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
@@ -106,8 +368,35 @@
     <EmbeddedResource Include="Procesos\Frm_Asignaciondeconcepto.resx">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_busquedaInterna.resx">
+      <DependentUpon>Frm_busquedaInterna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_Convocatoria.resx">
+      <DependentUpon>Frm_Convocatoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_DesempenioEmpleados.resx">
+      <DependentUpon>Frm_DesempenioEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_filtroInterno.resx">
+      <DependentUpon>Frm_filtroInterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_filtroPreSeleccion.resx">
+      <DependentUpon>Frm_filtroPreSeleccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_Metas.resx">
+      <DependentUpon>Frm_Metas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_Nomina.resx">
       <DependentUpon>Frm_Nomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_preSeleccion.resx">
+      <DependentUpon>Frm_preSeleccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_SolicitudEmpleadoN.resx">
+      <DependentUpon>Frm_SolicitudEmpleadoN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Validar.resx">
+      <DependentUpon>Validar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,6 +416,26 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
