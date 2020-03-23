@@ -18,6 +18,7 @@ namespace CapaDiseño.Consulta
         public Frm_consultaSolicitudEmpleado()
         {
             InitializeComponent();
+            Mostrar();
         }
         public void Mostrar()
         {

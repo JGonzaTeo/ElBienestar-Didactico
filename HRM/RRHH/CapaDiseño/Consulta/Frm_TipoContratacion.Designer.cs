@@ -32,15 +32,15 @@
             this.Btn_actualizarMedio = new System.Windows.Forms.Button();
             this.Btn_seleccionarMedio = new System.Windows.Forms.Button();
             this.Dgv_consultaContratacion = new System.Windows.Forms.DataGridView();
-            this.Pnl_nombreForm = new System.Windows.Forms.Panel();
-            this.Label_Contratar = new System.Windows.Forms.Label();
-            this.btn_minimizar = new System.Windows.Forms.Button();
-            this.btn_cerrar = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pnl_nombreForm = new System.Windows.Forms.Panel();
+            this.btn_minimizar = new System.Windows.Forms.Button();
+            this.Label_Contratar = new System.Windows.Forms.Label();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consultaContratacion)).BeginInit();
             this.Pnl_nombreForm.SuspendLayout();
             this.SuspendLayout();
@@ -97,54 +97,6 @@
             this.Dgv_consultaContratacion.Size = new System.Drawing.Size(696, 169);
             this.Dgv_consultaContratacion.TabIndex = 80;
             // 
-            // Pnl_nombreForm
-            // 
-            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
-            this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
-            this.Pnl_nombreForm.Controls.Add(this.Label_Contratar);
-            this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
-            this.Pnl_nombreForm.Location = new System.Drawing.Point(-10, 2);
-            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
-            this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(978, 51);
-            this.Pnl_nombreForm.TabIndex = 79;
-            // 
-            // Label_Contratar
-            // 
-            this.Label_Contratar.AutoSize = true;
-            this.Label_Contratar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Contratar.ForeColor = System.Drawing.Color.White;
-            this.Label_Contratar.Location = new System.Drawing.Point(20, 12);
-            this.Label_Contratar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Label_Contratar.Name = "Label_Contratar";
-            this.Label_Contratar.Size = new System.Drawing.Size(277, 20);
-            this.Label_Contratar.TabIndex = 0;
-            this.Label_Contratar.Text = "Consulta de Tipo de Contratacion";
-            // 
-            // btn_minimizar
-            // 
-            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(852, 12);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
-            this.btn_minimizar.TabIndex = 5;
-            this.btn_minimizar.UseVisualStyleBackColor = true;
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(925, 12);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
-            this.btn_cerrar.TabIndex = 4;
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Codigo";
@@ -170,6 +122,56 @@
             this.Column5.HeaderText = "Estado";
             this.Column5.Name = "Column5";
             // 
+            // Pnl_nombreForm
+            // 
+            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
+            this.Pnl_nombreForm.Controls.Add(this.Label_Contratar);
+            this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
+            this.Pnl_nombreForm.Location = new System.Drawing.Point(-10, 2);
+            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
+            this.Pnl_nombreForm.Name = "Pnl_nombreForm";
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(978, 51);
+            this.Pnl_nombreForm.TabIndex = 79;
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.Location = new System.Drawing.Point(852, 12);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
+            this.btn_minimizar.TabIndex = 5;
+            this.btn_minimizar.UseVisualStyleBackColor = true;
+            this.btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
+            // 
+            // Label_Contratar
+            // 
+            this.Label_Contratar.AutoSize = true;
+            this.Label_Contratar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Contratar.ForeColor = System.Drawing.Color.White;
+            this.Label_Contratar.Location = new System.Drawing.Point(20, 12);
+            this.Label_Contratar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label_Contratar.Name = "Label_Contratar";
+            this.Label_Contratar.Size = new System.Drawing.Size(277, 20);
+            this.Label_Contratar.TabIndex = 0;
+            this.Label_Contratar.Text = "Consulta de Tipo de Contratacion";
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
+            this.btn_cerrar.Location = new System.Drawing.Point(925, 12);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
+            this.btn_cerrar.TabIndex = 4;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
+            // 
             // Frm_TipoContratacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +183,7 @@
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_TipoContratacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_TipoContratacion";
             this.Load += new System.EventHandler(this.Frm_TipoContratacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consultaContratacion)).EndInit();

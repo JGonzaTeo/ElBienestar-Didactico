@@ -134,6 +134,7 @@
             this.Pic_Consultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_Consultar.TabIndex = 82;
             this.Pic_Consultar.TabStop = false;
+            this.Pic_Consultar.Click += new System.EventHandler(this.Pic_Consultar_Click);
             // 
             // Pic_Borrar
             // 
@@ -305,6 +306,7 @@
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_MantTipoContratacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MantTipoContratacion";
             this.Load += new System.EventHandler(this.Frm_MantTipoContratacion_Load);
             this.Pnl_nombreForm.ResumeLayout(false);

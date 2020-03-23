@@ -250,8 +250,169 @@ namespace CapaLogica
 
         }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //---------------------------------------------------------------------------DESEMPEÑO-------------------------------------------------------------------------//
+        //--------------------------------------------------------INSERTAR KPI-------------------------------------------------------//
+        public OdbcDataReader InsertarKpi(string fechaEvaluacion, string totalEmpleado, string desempeño)
+        {
+            return sn.InsertarKpi(fechaEvaluacion, totalEmpleado, desempeño);
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //--------------------------------------------------------INSERTAR CATEGORIA-------------------------------------------------------//
+        public OdbcDataReader InsertarCategoria(string nombreCat)
+        {
+            return sn.InsertarCategoria(nombreCat);
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //--------------------------------------------------------INSERTAR META-------------------------------------------------------//
+        public OdbcDataReader InsertarMeta(string nombreMeta, string tipoMeta, string descrip, string comple, string fechaMeta)
+        {
+            return sn.InsertarMeta(nombreMeta, tipoMeta, descrip, comple, fechaMeta);
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------BuscarEmpleado---------------------------------------------
+
+        public OdbcDataReader BuscarEmpleado(string sCodigo)
+        {
+            return sn.BuscarEmpleadoS(sCodigo);
+        }
+
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //-----------------------------------------------------------------------------------------------------Insertar Control Asistencia----------------------------------------------------------------//
+        public OdbcDataReader InsertaControlAsistencia(string sCodigoEmpleado, string sNombre, string sApellido, string sFechaIngreso, string sHoraIngreso)
+        {
+            return sn.InsertarControlAsistencia(sCodigoEmpleado, sNombre, sApellido, sFechaIngreso, sHoraIngreso);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //-----------------------------------------------------------------------------------------------------Insertar Reunion----------------------------------------------------------------//
+        public OdbcDataReader InsertaReunion(string sCodigoEmpleado, string sNombre, string sDescripcion, string sFechaInicio, string sFechaFinal, string sHoraInicio, string sHoraFinal, string sCantidad)
+        {
+            return sn.InsertarReunion(sCodigoEmpleado, sNombre, sDescripcion, sFechaInicio, sFechaFinal, sHoraInicio, sHoraFinal, sCantidad);
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------BuscarEmpleadoReunion---------------------------------------------
+
+        public OdbcDataReader BuscarEmpleadoReunion(string sCodigo)
+        {
+            return sn.BuscarEmpleadoS(sCodigo);
+        }
+        //------------------------------------------------------------------------------------------------------BuscarReunion---------------------------------------------
+
+        public OdbcDataReader BuscarReunion(string sNombre)
+        {
+            return sn.BuscarReunion(sNombre);
+        }
+        //------------------------------------------------------------------------------------------------------ActualizarReunion---------------------------------------------
+
+        public OdbcDataReader UpdateReunion(string sNombre, string sDescripcion, string sFechaInicio, string sFechaFinal, string sHoraInicio, string sHoraFinal, string sCantidad)
+        {
+            return sn.UpdateReunion(sNombre, sDescripcion, sFechaInicio, sFechaFinal, sHoraInicio, sHoraFinal, sCantidad);
+        }
+        //------------------------------------------------------------------------------------------------------ELIMINAR Reunion-------------------------------------------------------//
+
+        public OdbcDataReader DeleteReunion(string sNombre)
+        {
+            return sn.DeleteReunion(sNombre);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------INSERTAR DESPIDO ---------------------------------------------
+        public OdbcDataReader InsertaDespido(string sCodigoEmpleado, string sRazonDespido, string sDescripcion, string sFecha)
+        {
+            return sn.InsertarDespido(sCodigoEmpleado, sRazonDespido, sDescripcion, sFecha);
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------INSERTAR SANSION ---------------------------------------------
+        public OdbcDataReader InsertarSansion(string sCodigoEmpleado, string sRazonSansion, string sDescripcion, string sFechaInicio, string sFechaFinal)
+        {
+            return sn.InsertarSansion(sCodigoEmpleado, sRazonSansion, sDescripcion, sFechaInicio, sFechaFinal);
+        }
+
+        //------------------------------------------------------------------------------------------------------BUSCAR SANSION ---------------------------------------------
+        public OdbcDataReader BuscarSansion(string sNombre)
+        {
+            return sn.BuscarSansion(sNombre);
+        }
+        //------------------------------------------------------------------------------------------------------ELIMINAR SANSION ---------------------------------------------
+        public OdbcDataReader DeleteSansion(string sNombre)
+        {
+            return sn.DeleteSansion(sNombre);
+        }
+        //---------------------------------------------------------------------------JORNADA-------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------------------------INSERTS-------------------------------------------------------//
+        public OdbcDataReader insertarJornada(string codigoJornada, string nombreJornada, string horasJornada, string estadoJornada)
+        {
+            return sn.insertarJornada(codigoJornada, nombreJornada,horasJornada,estadoJornada);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        //------------------------------------------------------------------------------------------------------UPDATE-------------------------------------------------------//
+        public OdbcDataReader modificarJornada(string codigoJornada, string nombreJornada, string horasJornada, string estadoJornada)
+        {
+            return sn.modificarJornada(codigoJornada,nombreJornada,horasJornada,estadoJornada);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //------------------------------------------------------------------------------------------------------UPDATE-------------------------------------------------------//
+        public OdbcDataReader eliminarJornada(string codigoJornada)
+        {
+            return sn.eliminarJornada(codigoJornada);
+
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        /********************MODIFICAR DEPARTAMENTO**************************************************************************/
+        public OdbcDataReader modificarDepartamento(string sCodigo, string sNombre, string sdescripcion)
+        {
+            return sn.modificarDepartamento(sCodigo, sNombre, sdescripcion);
+
+        }
+        //----------------------------INSERTS DEPARTAMENTO-------------------------------------------------------//
+        public OdbcDataReader InsertarDepartamento(string sCodigo, string sNombre, string sDescripcion)
+        {
+            return sn.InsertarDepartamento(sCodigo, sNombre, sDescripcion);
+
+        }
+        //------------------------------------ELIMINAR DEPARTAMENTO------------------------------------------------------//
+        public OdbcDataReader eliminarDepartamento(string sCodigo)
+        {
+            return sn.eliminarDepartamento(sCodigo);
+
+        }
+
+        public OdbcDataReader bitacora(string sCodigo, string sip, string Smac, string susuario, string sdepartamento, string sfechahora, string saccion, string sformulario)
+        {
+            return sn.insertarbitacora( sCodigo ,sip,  Smac,  susuario,  sdepartamento,  sfechahora,  saccion,  sformulario);
+
+        }
+        public OdbcDataReader buscarempleadocontable()
+        {
+            return sn.Consultaempleadonominal();
 
 
+        }
+
+        public OdbcDataReader insertarempleadocont(string scodempleado, string scodconcepto)
+        {
+            return sn.insertarempleadoconable(scodempleado, scodconcepto);
+
+        }
+  
+        public OdbcDataReader consultarnomina()
+        {
+            return sn.Consultanomina();
+
+
+        }
     }
 }
 
