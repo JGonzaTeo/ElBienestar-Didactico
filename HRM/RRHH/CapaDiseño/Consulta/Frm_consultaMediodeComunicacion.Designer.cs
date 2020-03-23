@@ -1,6 +1,6 @@
 ﻿namespace CapaDiseño.Consulta
 {
-    partial class Frm_MediodeComunicacion
+    partial class Frm_consultaMediodeComunicacion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MediodeComunicacion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_consultaMediodeComunicacion));
             this.Btn_actualizarMedio = new System.Windows.Forms.Button();
             this.Btn_seleccionarMedio = new System.Windows.Forms.Button();
             this.Dgv_consultaMedios = new System.Windows.Forms.DataGridView();
-            this.Pnl_nombreForm = new System.Windows.Forms.Panel();
-            this.btn_minimizar = new System.Windows.Forms.Button();
-            this.Label_CMC = new System.Windows.Forms.Label();
-            this.btn_cerrar = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pnl_nombreForm = new System.Windows.Forms.Panel();
+            this.btn_minimizar = new System.Windows.Forms.Button();
+            this.Label_CMC = new System.Windows.Forms.Label();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consultaMedios)).BeginInit();
             this.Pnl_nombreForm.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             this.Btn_actualizarMedio.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_actualizarMedio.Name = "Btn_actualizarMedio";
             this.Btn_actualizarMedio.Size = new System.Drawing.Size(123, 33);
-            this.Btn_actualizarMedio.TabIndex = 78;
+            this.Btn_actualizarMedio.TabIndex = 82;
             this.Btn_actualizarMedio.Text = "Actualizar";
             this.Btn_actualizarMedio.UseVisualStyleBackColor = true;
             this.Btn_actualizarMedio.Click += new System.EventHandler(this.Btn_actualizarMedio_Click);
@@ -74,7 +74,7 @@
             this.Btn_seleccionarMedio.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_seleccionarMedio.Name = "Btn_seleccionarMedio";
             this.Btn_seleccionarMedio.Size = new System.Drawing.Size(123, 33);
-            this.Btn_seleccionarMedio.TabIndex = 77;
+            this.Btn_seleccionarMedio.TabIndex = 81;
             this.Btn_seleccionarMedio.Text = "Seleccionar";
             this.Btn_seleccionarMedio.UseVisualStyleBackColor = true;
             this.Btn_seleccionarMedio.Click += new System.EventHandler(this.Btn_seleccionarMedio_Click);
@@ -95,55 +95,7 @@
             this.Dgv_consultaMedios.RowTemplate.Height = 24;
             this.Dgv_consultaMedios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_consultaMedios.Size = new System.Drawing.Size(696, 169);
-            this.Dgv_consultaMedios.TabIndex = 76;
-            // 
-            // Pnl_nombreForm
-            // 
-            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
-            this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
-            this.Pnl_nombreForm.Controls.Add(this.Label_CMC);
-            this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
-            this.Pnl_nombreForm.Location = new System.Drawing.Point(-10, 2);
-            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
-            this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(978, 51);
-            this.Pnl_nombreForm.TabIndex = 75;
-            // 
-            // btn_minimizar
-            // 
-            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(852, 12);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
-            this.btn_minimizar.TabIndex = 5;
-            this.btn_minimizar.UseVisualStyleBackColor = true;
-            // 
-            // Label_CMC
-            // 
-            this.Label_CMC.AutoSize = true;
-            this.Label_CMC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_CMC.ForeColor = System.Drawing.Color.White;
-            this.Label_CMC.Location = new System.Drawing.Point(20, 12);
-            this.Label_CMC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Label_CMC.Name = "Label_CMC";
-            this.Label_CMC.Size = new System.Drawing.Size(309, 20);
-            this.Label_CMC.TabIndex = 0;
-            this.Label_CMC.Text = "Consulta de Medios de Comunicacion";
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(925, 12);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
-            this.btn_cerrar.TabIndex = 4;
-            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.Dgv_consultaMedios.TabIndex = 80;
             // 
             // Column1
             // 
@@ -170,7 +122,57 @@
             this.Column5.HeaderText = "Estado";
             this.Column5.Name = "Column5";
             // 
-            // Frm_MediodeComunicacion
+            // Pnl_nombreForm
+            // 
+            this.Pnl_nombreForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
+            this.Pnl_nombreForm.Controls.Add(this.Label_CMC);
+            this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
+            this.Pnl_nombreForm.Location = new System.Drawing.Point(1, 1);
+            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
+            this.Pnl_nombreForm.Name = "Pnl_nombreForm";
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(978, 51);
+            this.Pnl_nombreForm.TabIndex = 79;
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.Location = new System.Drawing.Point(852, 12);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
+            this.btn_minimizar.TabIndex = 5;
+            this.btn_minimizar.UseVisualStyleBackColor = true;
+            this.btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
+            // 
+            // Label_CMC
+            // 
+            this.Label_CMC.AutoSize = true;
+            this.Label_CMC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_CMC.ForeColor = System.Drawing.Color.White;
+            this.Label_CMC.Location = new System.Drawing.Point(20, 12);
+            this.Label_CMC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label_CMC.Name = "Label_CMC";
+            this.Label_CMC.Size = new System.Drawing.Size(309, 20);
+            this.Label_CMC.TabIndex = 0;
+            this.Label_CMC.Text = "Consulta de Medios de Comunicacion";
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
+            this.btn_cerrar.Location = new System.Drawing.Point(925, 12);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
+            this.btn_cerrar.TabIndex = 4;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
+            // 
+            // Frm_consultaMediodeComunicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,8 +182,9 @@
             this.Controls.Add(this.Dgv_consultaMedios);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_MediodeComunicacion";
-            this.Text = "Frm_MediodeComunicacion";
+            this.Name = "Frm_consultaMediodeComunicacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Frm_consultaMediodeComunicacion";
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consultaMedios)).EndInit();
             this.Pnl_nombreForm.ResumeLayout(false);
             this.Pnl_nombreForm.PerformLayout();

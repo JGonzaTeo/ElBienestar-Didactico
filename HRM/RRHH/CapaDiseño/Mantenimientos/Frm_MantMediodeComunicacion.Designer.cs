@@ -134,6 +134,7 @@
             this.Pic_Consultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_Consultar.TabIndex = 77;
             this.Pic_Consultar.TabStop = false;
+            this.Pic_Consultar.Click += new System.EventHandler(this.Pic_Consultar_Click);
             // 
             // Pic_Borrar
             // 
@@ -300,7 +301,9 @@
             this.Controls.Add(this.Pic_Insertar);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(852, 12);
             this.Name = "Frm_MediodeComunicacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MediodeComunicacion";
             this.Pnl_nombreForm.ResumeLayout(false);
             this.Pnl_nombreForm.PerformLayout();

@@ -1,5 +1,5 @@
-﻿using iTextSharp.text;
-using iTextSharp.text.pdf;
+﻿//using iTextSharp.text;
+//using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -105,17 +105,19 @@ namespace CapaDiseño.Procesos
         }
 
         private void Btn_Imprimir_Click(object sender, EventArgs e)
+        {/*
+            IMPRIMIR PENDIENTE
+            */
+        }
+
+        private void Btn_minimizar_Click(object sender, EventArgs e)
         {
-            Document document = new Document(iTextSharp.text.PageSize.A8, 15, 10, 30, 10);
-            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(@"PDF\pdf.pdf", FileMode.Create));
-            document.Open();
-            Paragraph paragraph = new Paragraph(Label_ID.Text);
-            Paragraph paragraph1 = new Paragraph(Label_Medio.Text);
-            Paragraph paragraph2 = new Paragraph(Label_TipoContratacion.Text);
-            Paragraph paragraph3 = new Paragraph(Label_Fecha.Text);
-            document.Add(paragraph);
-            document.Close();
-            System.Diagnostics.Process.Start(@"PDF\pdf.pdf");
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

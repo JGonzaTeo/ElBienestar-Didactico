@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.NetworkInformation;
 
 
 namespace CapaDiseño.Procesos
@@ -17,9 +19,38 @@ namespace CapaDiseño.Procesos
     public partial class Frm_MediodeComunicacion : Form
     {
         Logica logic = new Logica();
-        public Frm_MediodeComunicacion()
+        string slocalIP;
+        string smacAddresses;
+        string suser;
+        
+          
+        public void obtenerip()
         {
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    slocalIP = ip.ToString();
+                }
+            }
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    smacAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
+
+                }
+            }
+        }
+        public Frm_MediodeComunicacion(String susuario)
+        {
+
             InitializeComponent();
+            obtenerip();
+            suser = susuario;
         }
 
         private void Pic_Insertar_Click(object sender, EventArgs e)
@@ -35,18 +66,24 @@ namespace CapaDiseño.Procesos
         {
             OdbcDataReader cita = logic.ModificarMC(Txt_ID.Text,Txt_Nombre.Text,Txt_Direccion.Text,Txt_Telefono.Text,Cbo_Estado.Text);
             MessageBox.Show("Datos modificados correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
+
         }
 
         private void Pic_Guardar_Click(object sender, EventArgs e)
         {
             OdbcDataReader cita = logic.InsertarMC( Txt_Nombre.Text, Txt_Direccion.Text, Txt_Telefono.Text, Cbo_Estado.Text);
             MessageBox.Show("Datos insertar correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
+
         }
 
         private void Pic_Borrar_Click(object sender, EventArgs e)
         {
             OdbcDataReader cita = logic.eliminarEmpleado(Txt_ID.Text);
             MessageBox.Show("Eliminado Correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
+
         }
 
         private void Btn_cerrar_Click(object sender, EventArgs e)
@@ -62,6 +99,12 @@ namespace CapaDiseño.Procesos
         private void Btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Pic_Consultar_Click(object sender, EventArgs e)
+        {
+            Frm_consultaMediodeComunicacion concep = new Frm_consultaMediodeComunicacion();
+            concep.ShowDialog();
         }
     }
 }

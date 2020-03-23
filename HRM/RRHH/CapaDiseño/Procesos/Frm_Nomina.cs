@@ -10,6 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.NetworkInformation;
+
 
 namespace CapaDiseño.Procesos
 {
@@ -17,9 +20,56 @@ namespace CapaDiseño.Procesos
     {
 
        Logica logic = new Logica();
-        public Frm_Nomina()
+
+        string slocalIP;
+        string smacAddresses;
+        string suser;
+       
+        
+        public void obtenerip()
+        {
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    slocalIP = ip.ToString();
+                }
+            }
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    smacAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
+
+                }
+            }
+        }
+        public Frm_Nomina(String susuario)
         {
             InitializeComponent();
+            MostrarEmpleados();
+            obtenerip();
+            suser = susuario;
+        }
+        public void MostrarEmpleados()
+        {
+            Dgv_empleadoscontables.Rows.Clear();
+            OdbcDataReader mostrarEmpleado = logic.consultarnomina();
+            try
+            {
+                while (mostrarEmpleado.Read())
+                {
+                    Dgv_empleadoscontables.Rows.Add(mostrarEmpleado.GetString(0), mostrarEmpleado.GetString(1), mostrarEmpleado.GetString(2), mostrarEmpleado.GetString(3),
+                        mostrarEmpleado.GetString(4), mostrarEmpleado.GetString(5), mostrarEmpleado.GetString(6));
+                }
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+            }
         }
 
         private void Btn_cerrar_Click(object sender, EventArgs e)
@@ -60,6 +110,9 @@ namespace CapaDiseño.Procesos
             Txt_saldonominal.Text = Convert.ToString(total);
             OdbcDataReader cita = logic.Insertarnomina(Txt_CodEncabezado.Text,Txt_tiponomina.Text, Dtp_fechainicio.Text, Dtp_fechafin.Text, Txt_codempleado.Text, Txt_Observaciones.Text, Txt_saldonominal.Text);
             MessageBox.Show("Datos registrados.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
+
+
 
         }
     }

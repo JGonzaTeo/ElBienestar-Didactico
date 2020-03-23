@@ -12,12 +12,9 @@ using System.Windows.Forms;
 
 namespace CapaDiseño.Consulta
 {
-    public partial class Frm_MediodeComunicacion : Form
+    public partial class Frm_consultaMediodeComunicacion : Form
     {
-        public Frm_MediodeComunicacion()
-        {
-            InitializeComponent();
-        }
+
         public void MostrarConsulta()
         {
             try
@@ -39,6 +36,22 @@ namespace CapaDiseño.Consulta
             {
                 Console.Write(err.Message);
             }
+        }
+
+        public Frm_consultaMediodeComunicacion()
+        {
+            InitializeComponent();
+            MostrarConsulta();
+        }
+
+        private void Btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
         private void Btn_actualizarMedio_Click(object sender, EventArgs e)
