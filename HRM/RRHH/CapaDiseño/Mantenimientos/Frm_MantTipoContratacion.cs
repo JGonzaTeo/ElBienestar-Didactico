@@ -109,5 +109,11 @@ namespace CapaDiseño.Mantenimientos
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void Pic_Consultar_Click(object sender, EventArgs e)
+        {
+            Frm_TipoContratacion concep = new Frm_TipoContratacion();
+            concep.ShowDialog();
+        }
     }
 }

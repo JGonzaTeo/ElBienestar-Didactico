@@ -16,7 +16,7 @@ using System.Net.NetworkInformation;
 
 namespace CapaDiseño.Procesos
 {
-    public partial class Frm_MediodeComunicacion : Form
+    public partial class Frm_MantMediodeComunicacion : Form
     {
         Logica logic = new Logica();
         string slocalIP;
@@ -45,7 +45,7 @@ namespace CapaDiseño.Procesos
                 }
             }
         }
-        public Frm_MediodeComunicacion(String susuario)
+        public Frm_MantMediodeComunicacion(String susuario)
         {
 
             InitializeComponent();
@@ -99,6 +99,12 @@ namespace CapaDiseño.Procesos
         private void Btn_minimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Pic_Consultar_Click(object sender, EventArgs e)
+        {
+            Frm_consultaMediodeComunicacion concep = new Frm_consultaMediodeComunicacion();
+            concep.ShowDialog();
         }
     }
 }

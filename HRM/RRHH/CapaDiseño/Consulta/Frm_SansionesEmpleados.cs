@@ -17,6 +17,7 @@ namespace CapaDiseño.Procesos
         public Frm_SansionesEmpleados()
         {
             InitializeComponent();
+            MostrarSansionEmpleado();
         }
 
         public void MostrarSansionEmpleado()

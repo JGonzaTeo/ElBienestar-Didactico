@@ -18,6 +18,7 @@ namespace CapaDiseño.Consulta
         public Frm_consltaPerfiles()
         {
             InitializeComponent();
+            MostrarConsulta();
         }
         //-----------------------------------------------------------------------------------para mostrar en DGV------------------------------------------------------------------------------
         public void MostrarConsulta()

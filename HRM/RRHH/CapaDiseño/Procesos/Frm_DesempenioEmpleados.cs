@@ -20,6 +20,7 @@ namespace Desempeño
         public Frm_DesempenioEmpleados()
         {
             InitializeComponent();
+
             DateTime fechaHoy = DateTime.Now;
             string fechaEvaluacion = fechaHoy.ToString("yyyy/MM/dd");
             Txt_fechaEvaluacion.Text = fechaEvaluacion;

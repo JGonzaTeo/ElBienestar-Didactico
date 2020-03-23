@@ -17,6 +17,7 @@ namespace CapaDiseño.Consulta
         public Frm_consultaJornada()
         {
             InitializeComponent();
+            MostrarConsulta();
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace CapaDiseño.Procesos
 {
-    partial class Frm_MediodeComunicacion
+    partial class Frm_MantMediodeComunicacion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MediodeComunicacion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MantMediodeComunicacion));
             this.Pnl_nombreForm = new System.Windows.Forms.Panel();
             this.btn_Ayuda = new System.Windows.Forms.Button();
             this.Label_MantEmpleados = new System.Windows.Forms.Label();
@@ -134,6 +134,7 @@
             this.Pic_Consultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_Consultar.TabIndex = 77;
             this.Pic_Consultar.TabStop = false;
+            this.Pic_Consultar.Click += new System.EventHandler(this.Pic_Consultar_Click);
             // 
             // Pic_Borrar
             // 
@@ -300,7 +301,9 @@
             this.Controls.Add(this.Pic_Insertar);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(852, 12);
             this.Name = "Frm_MediodeComunicacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MediodeComunicacion";
             this.Pnl_nombreForm.ResumeLayout(false);
             this.Pnl_nombreForm.PerformLayout();

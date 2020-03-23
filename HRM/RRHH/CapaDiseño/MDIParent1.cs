@@ -447,7 +447,7 @@ namespace CapaDiseño
         }
 
         bool ventanaMC = false;
-        Frm_MediodeComunicacion MC = new Frm_MediodeComunicacion("");
+        Frm_MantMediodeComunicacion MC = new Frm_MantMediodeComunicacion("");
         private void MedioDeComunicacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEmpleado);
@@ -455,7 +455,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    MC = new Frm_MediodeComunicacion(susuario);
+                    MC = new Frm_MantMediodeComunicacion(susuario);
                 }
 
                 MC.MdiParent = this;

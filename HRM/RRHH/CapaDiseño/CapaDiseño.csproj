@@ -87,6 +87,12 @@
     <Compile Include="Consulta\Frm_consultaJornada.Designer.cs">
       <DependentUpon>Frm_consultaJornada.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\Frm_consultaMediodeComunicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaMediodeComunicacion.Designer.cs">
+      <DependentUpon>Frm_consultaMediodeComunicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\Frm_consultaSolicitudEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,12 +104,6 @@
     </Compile>
     <Compile Include="Consulta\Frm_ControlAsistenciaPersonal.Designer.cs">
       <DependentUpon>Frm_ControlAsistenciaPersonal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Consulta\Frm_MediodeComunicacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consulta\Frm_MediodeComunicacion.Designer.cs">
-      <DependentUpon>Frm_MediodeComunicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Consulta\Frm_SansionesEmpleados.cs">
       <SubType>Form</SubType>
@@ -302,14 +302,14 @@
     <EmbeddedResource Include="Consulta\Frm_consultaJornada.resx">
       <DependentUpon>Frm_consultaJornada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaMediodeComunicacion.resx">
+      <DependentUpon>Frm_consultaMediodeComunicacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_consultaSolicitudEmpleado.resx">
       <DependentUpon>Frm_consultaSolicitudEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_ControlAsistenciaPersonal.resx">
       <DependentUpon>Frm_ControlAsistenciaPersonal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consulta\Frm_MediodeComunicacion.resx">
-      <DependentUpon>Frm_MediodeComunicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_SansionesEmpleados.resx">
       <DependentUpon>Frm_SansionesEmpleados.cs</DependentUpon>
