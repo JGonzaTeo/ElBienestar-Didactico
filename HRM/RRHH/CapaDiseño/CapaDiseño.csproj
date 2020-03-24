@@ -69,6 +69,12 @@
     <Compile Include="Consulta\Frm_consultaCurriculum.designer.cs">
       <DependentUpon>Frm_consultaCurriculum.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\Frm_consultaDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaDepartamento.Designer.cs">
+      <DependentUpon>Frm_consultaDepartamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\Frm_consultaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     <Compile Include="Consulta\Frm_consultaJornada.Designer.cs">
       <DependentUpon>Frm_consultaJornada.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\Frm_consultaMediodeComunicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaMediodeComunicacion.Designer.cs">
+      <DependentUpon>Frm_consultaMediodeComunicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\Frm_consultaSolicitudEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,12 +104,6 @@
     </Compile>
     <Compile Include="Consulta\Frm_ControlAsistenciaPersonal.Designer.cs">
       <DependentUpon>Frm_ControlAsistenciaPersonal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Consulta\Frm_MediodeComunicacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consulta\Frm_MediodeComunicacion.Designer.cs">
-      <DependentUpon>Frm_MediodeComunicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Consulta\Frm_SansionesEmpleados.cs">
       <SubType>Form</SubType>
@@ -122,6 +128,12 @@
     </Compile>
     <Compile Include="Mantenimientos\Frm_MantDespidoEmpleado.Designer.cs">
       <DependentUpon>Frm_MantDespidoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_ManteDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_ManteDepartamento.Designer.cs">
+      <DependentUpon>Frm_ManteDepartamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\Frm_MantEliminacionReunion.cs">
       <SubType>Form</SubType>
@@ -204,7 +216,7 @@
     <Compile Include="Procesos\Frm_Asignaciondeconcepto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procesos\Frm_Asignaciondeconcepto.Designer.cs">
+    <Compile Include="Procesos\Frm_Asignaciondeconcepto.designer.cs">
       <DependentUpon>Frm_Asignaciondeconcepto.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Frm_busquedaInterna.cs">
@@ -246,7 +258,7 @@
     <Compile Include="Procesos\Frm_Nomina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procesos\Frm_Nomina.Designer.cs">
+    <Compile Include="Procesos\Frm_Nomina.designer.cs">
       <DependentUpon>Frm_Nomina.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Frm_preSeleccion.cs">
@@ -281,20 +293,23 @@
     <EmbeddedResource Include="Consulta\Frm_consultaCurriculum.resx">
       <DependentUpon>Frm_consultaCurriculum.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaDepartamento.resx">
+      <DependentUpon>Frm_consultaDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_consultaEmpleado.resx">
       <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_consultaJornada.resx">
       <DependentUpon>Frm_consultaJornada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaMediodeComunicacion.resx">
+      <DependentUpon>Frm_consultaMediodeComunicacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_consultaSolicitudEmpleado.resx">
       <DependentUpon>Frm_consultaSolicitudEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_ControlAsistenciaPersonal.resx">
       <DependentUpon>Frm_ControlAsistenciaPersonal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consulta\Frm_MediodeComunicacion.resx">
-      <DependentUpon>Frm_MediodeComunicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\Frm_SansionesEmpleados.resx">
       <DependentUpon>Frm_SansionesEmpleados.cs</DependentUpon>
@@ -307,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantDespidoEmpleado.resx">
       <DependentUpon>Frm_MantDespidoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_ManteDepartamento.resx">
+      <DependentUpon>Frm_ManteDepartamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantEliminacionReunion.resx">
       <DependentUpon>Frm_MantEliminacionReunion.cs</DependentUpon>

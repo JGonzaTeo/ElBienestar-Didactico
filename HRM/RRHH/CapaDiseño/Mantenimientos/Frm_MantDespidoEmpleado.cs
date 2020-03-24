@@ -9,15 +9,44 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica;
+using System.Net;
+using System.Net.NetworkInformation;
 namespace CapaDiseño.Mantenimientos
 {
     public partial class Frm_MantDespidoEmpleado : Form
     {
         Logica Logic = new Logica();
+        string slocalIP;
+        string smacAddresses;
+        string suser;
+        
+          
+        public void obtenerip()
+        {
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    slocalIP = ip.ToString();
+                }
+            }
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    smacAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
 
-        public Frm_MantDespidoEmpleado()
+                }
+            }
+        }
+        public Frm_MantDespidoEmpleado(String susuario)
         {
             InitializeComponent();
+            obtenerip();
+            suser = susuario;
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)
@@ -80,6 +109,8 @@ namespace CapaDiseño.Mantenimientos
             {
                 OdbcDataReader Despido = Logic.InsertaDespido(Txt_CodigoEmpleado.Text, Txt_RazonDespido.Text, Txt_Descripcion.Text, Txt_Fecha.Text);
                 MessageBox.Show("Despido Ingresado");
+                Logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
+
                 //LimpiarCampos
                 Txt_CodigoEmpleado.Clear();
                 Txt_CodigoEmpleado.Focus();

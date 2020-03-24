@@ -30,7 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MantEmpleado));
             this.Pnl_nombreForm = new System.Windows.Forms.Panel();
+            this.btn_Ayuda = new System.Windows.Forms.Button();
             this.Label_MantEmpleados = new System.Windows.Forms.Label();
+            this.btn_minimizar = new System.Windows.Forms.Button();
+            this.btn_cerrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Lbl_cod = new System.Windows.Forms.Label();
             this.Txt_Cod = new System.Windows.Forms.TextBox();
@@ -60,9 +63,6 @@
             this.Pic_Guardar = new System.Windows.Forms.PictureBox();
             this.PicActualizar = new System.Windows.Forms.PictureBox();
             this.Pic_Insertar = new System.Windows.Forms.PictureBox();
-            this.btn_Ayuda = new System.Windows.Forms.Button();
-            this.btn_minimizar = new System.Windows.Forms.Button();
-            this.btn_cerrar = new System.Windows.Forms.Button();
             this.Pnl_nombreForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Consultar)).BeginInit();
@@ -86,6 +86,19 @@
             this.Pnl_nombreForm.TabIndex = 1;
             this.Pnl_nombreForm.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_nombreForm_Paint);
             // 
+            // btn_Ayuda
+            // 
+            this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Ayuda.Image = global::CapaDiseño.Properties.Resources.question__1_;
+            this.btn_Ayuda.Location = new System.Drawing.Point(862, 11);
+            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Ayuda.Name = "btn_Ayuda";
+            this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
+            this.btn_Ayuda.TabIndex = 6;
+            this.btn_Ayuda.UseVisualStyleBackColor = true;
+            this.btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click);
+            // 
             // Label_MantEmpleados
             // 
             this.Label_MantEmpleados.AutoSize = true;
@@ -97,6 +110,32 @@
             this.Label_MantEmpleados.Size = new System.Drawing.Size(298, 20);
             this.Label_MantEmpleados.TabIndex = 0;
             this.Label_MantEmpleados.Text = "MANTENIMIENTO DE EMPLEADOS";
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.Location = new System.Drawing.Point(825, 11);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
+            this.btn_minimizar.TabIndex = 5;
+            this.btn_minimizar.UseVisualStyleBackColor = true;
+            this.btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
+            this.btn_cerrar.Location = new System.Drawing.Point(899, 11);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
+            this.btn_cerrar.TabIndex = 4;
+            this.btn_cerrar.UseVisualStyleBackColor = true;
+            this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
             // 
             // groupBox1
             // 
@@ -394,45 +433,6 @@
             this.Pic_Insertar.TabStop = false;
             this.Pic_Insertar.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
-            // btn_Ayuda
-            // 
-            this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Ayuda.Image = global::CapaDiseño.Properties.Resources.question__1_;
-            this.btn_Ayuda.Location = new System.Drawing.Point(862, 11);
-            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Ayuda.Name = "btn_Ayuda";
-            this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
-            this.btn_Ayuda.TabIndex = 6;
-            this.btn_Ayuda.UseVisualStyleBackColor = true;
-            this.btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click);
-            // 
-            // btn_minimizar
-            // 
-            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(825, 11);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
-            this.btn_minimizar.TabIndex = 5;
-            this.btn_minimizar.UseVisualStyleBackColor = true;
-            this.btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
-            // 
-            // btn_cerrar
-            // 
-            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(899, 11);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
-            this.btn_cerrar.TabIndex = 4;
-            this.btn_cerrar.UseVisualStyleBackColor = true;
-            this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
-            // 
             // Frm_MantEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,6 +447,7 @@
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_MantEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MantEmpleado";
             this.Pnl_nombreForm.ResumeLayout(false);
             this.Pnl_nombreForm.PerformLayout();

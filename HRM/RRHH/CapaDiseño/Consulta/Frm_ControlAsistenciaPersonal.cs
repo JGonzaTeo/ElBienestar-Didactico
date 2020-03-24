@@ -17,6 +17,7 @@ namespace CapaDiseño.Procesos
         public Frm_ControlAsistenciaPersonal()
         {
             InitializeComponent();
+            MostrarAsistenciaPersonal();
         }
 
         public void MostrarAsistenciaPersonal()

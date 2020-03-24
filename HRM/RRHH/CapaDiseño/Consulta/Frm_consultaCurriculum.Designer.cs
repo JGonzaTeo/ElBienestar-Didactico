@@ -59,9 +59,10 @@
             this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
             this.Pnl_nombreForm.Controls.Add(this.label1);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
-            this.Pnl_nombreForm.Location = new System.Drawing.Point(2, 1);
+            this.Pnl_nombreForm.Location = new System.Drawing.Point(0, -1);
+            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(1293, 63);
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(976, 51);
             this.Pnl_nombreForm.TabIndex = 2;
             // 
             // btn_minimizar
@@ -69,9 +70,10 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(1136, 15);
+            this.btn_minimizar.Location = new System.Drawing.Point(852, 12);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(44, 38);
+            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.UseVisualStyleBackColor = true;
             // 
@@ -80,9 +82,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(26, 15);
+            this.label1.Location = new System.Drawing.Point(20, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 25);
+            this.label1.Size = new System.Drawing.Size(195, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Consulta de Curriculum";
             // 
@@ -91,9 +94,10 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(1233, 15);
+            this.btn_cerrar.Location = new System.Drawing.Point(925, 12);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(44, 38);
+            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             // 
@@ -105,10 +109,10 @@
             this.Btn_actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.Btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_actualizar.Location = new System.Drawing.Point(948, 370);
-            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_actualizar.Location = new System.Drawing.Point(711, 301);
+            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_actualizar.Name = "Btn_actualizar";
-            this.Btn_actualizar.Size = new System.Drawing.Size(164, 41);
+            this.Btn_actualizar.Size = new System.Drawing.Size(123, 33);
             this.Btn_actualizar.TabIndex = 79;
             this.Btn_actualizar.Text = "Actualizar";
             this.Btn_actualizar.UseVisualStyleBackColor = true;
@@ -122,10 +126,10 @@
             this.Btn_seleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
             this.Btn_seleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_seleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_seleccionar.Location = new System.Drawing.Point(1117, 370);
-            this.Btn_seleccionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_seleccionar.Location = new System.Drawing.Point(838, 301);
+            this.Btn_seleccionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_seleccionar.Name = "Btn_seleccionar";
-            this.Btn_seleccionar.Size = new System.Drawing.Size(164, 41);
+            this.Btn_seleccionar.Size = new System.Drawing.Size(123, 33);
             this.Btn_seleccionar.TabIndex = 78;
             this.Btn_seleccionar.Text = "Seleccionar";
             this.Btn_seleccionar.UseVisualStyleBackColor = true;
@@ -152,14 +156,14 @@
             this.gU,
             this.cE,
             this.descripcion});
-            this.Dgv_consultaCurriculum.Location = new System.Drawing.Point(16, 69);
-            this.Dgv_consultaCurriculum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Dgv_consultaCurriculum.Location = new System.Drawing.Point(12, 56);
+            this.Dgv_consultaCurriculum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Dgv_consultaCurriculum.Name = "Dgv_consultaCurriculum";
             this.Dgv_consultaCurriculum.RowHeadersVisible = false;
             this.Dgv_consultaCurriculum.RowHeadersWidth = 51;
             this.Dgv_consultaCurriculum.RowTemplate.Height = 24;
             this.Dgv_consultaCurriculum.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_consultaCurriculum.Size = new System.Drawing.Size(1263, 297);
+            this.Dgv_consultaCurriculum.Size = new System.Drawing.Size(947, 241);
             this.Dgv_consultaCurriculum.TabIndex = 77;
             this.Dgv_consultaCurriculum.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_consultaPerfil_CellContentClick);
             // 
@@ -256,14 +260,15 @@
             // 
             // Frm_consultaCurriculum
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 416);
+            this.ClientSize = new System.Drawing.Size(974, 338);
             this.Controls.Add(this.Btn_actualizar);
             this.Controls.Add(this.Btn_seleccionar);
             this.Controls.Add(this.Dgv_consultaCurriculum);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Frm_consultaCurriculum";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_consultaCurriculum";

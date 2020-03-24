@@ -17,6 +17,7 @@ namespace CapaDiseño.Consulta
         public Frm_consultaConceptos()
         {
             InitializeComponent();
+            MostrarConsulta();
         }
 
 

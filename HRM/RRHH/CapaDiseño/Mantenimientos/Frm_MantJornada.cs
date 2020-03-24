@@ -10,15 +10,47 @@ using System.Windows.Forms;
 using CapaDiseño.Consulta;
 using CapaLogica;
 using System.Data.Odbc;
+using System.Net;
+using System.Net.NetworkInformation;
+
 
 namespace CapaDiseño.Mantenimientos
 {
     public partial class Frm_MantJornada : Form
     {
         Logica logic = new Logica();
-        public Frm_MantJornada()
+
+        string slocalIP;
+        string smacAddresses;
+        string suser;
+        
+          
+        public void obtenerip()
+        {
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    slocalIP = ip.ToString();
+                }
+            }
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    smacAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
+
+                }
+            }
+        }
+        public Frm_MantJornada(String susuario)
         {
             InitializeComponent();
+            obtenerip();
+            suser = susuario;
         }
 
         private void Btn_minimizar_Click(object sender, EventArgs e)
@@ -48,18 +80,24 @@ namespace CapaDiseño.Mantenimientos
         {
             OdbcDataReader jornada = logic.modificarJornada(Txt_codigoJornada.Text, Txt_nombreJornada.Text, Txt_horasJornada.Text, Cbo_estadoJornada.Text);
             MessageBox.Show("Datos modificados correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
+
         }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
             OdbcDataReader jornada = logic.insertarJornada(Txt_codigoJornada.Text, Txt_nombreJornada.Text, Txt_horasJornada.Text, Cbo_estadoJornada.Text);
             MessageBox.Show("Datos registrados.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
+
         }
 
         private void Btn_borrar_Click(object sender, EventArgs e)
         {
             OdbcDataReader jornada = logic.eliminarJornada(Txt_codigoJornada.Text);
             MessageBox.Show("Eliminado Correctamentee.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
+
         }
 
         private void Btn_consultar_Click(object sender, EventArgs e)

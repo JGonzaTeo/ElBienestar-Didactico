@@ -66,7 +66,7 @@
             this.Pnl_nombreForm.Controls.Add(this.Label_MantEmpleados);
             this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
-            this.Pnl_nombreForm.Location = new System.Drawing.Point(1, 2);
+            this.Pnl_nombreForm.Location = new System.Drawing.Point(0, 0);
             this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_nombreForm.Name = "Pnl_nombreForm";
             this.Pnl_nombreForm.Size = new System.Drawing.Size(970, 51);
@@ -134,6 +134,7 @@
             this.Pic_Consultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_Consultar.TabIndex = 82;
             this.Pic_Consultar.TabStop = false;
+            this.Pic_Consultar.Click += new System.EventHandler(this.Pic_Consultar_Click);
             // 
             // Pic_Borrar
             // 
@@ -295,7 +296,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 375);
+            this.ClientSize = new System.Drawing.Size(954, 340);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Pic_Consultar);
             this.Controls.Add(this.Pic_Borrar);
@@ -305,6 +306,7 @@
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_MantTipoContratacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MantTipoContratacion";
             this.Load += new System.EventHandler(this.Frm_MantTipoContratacion_Load);
             this.Pnl_nombreForm.ResumeLayout(false);

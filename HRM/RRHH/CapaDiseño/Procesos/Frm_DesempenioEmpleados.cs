@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CapaLogica;
 using System.Data.Odbc;
 using CapaDiseño.Consulta;
+using Metas;
 
 namespace Desempeño
 {
@@ -390,6 +391,9 @@ namespace Desempeño
 
         private void Btn_insertar_Click(object sender, EventArgs e)
         {
+            Frm_Metas metas = new Frm_Metas();
+            metas.Txt_totalMeta.Text = Txt_empleadosTotal.Text;
+
             //DESEMPEÑO
             try
             {
