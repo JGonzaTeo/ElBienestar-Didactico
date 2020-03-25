@@ -15,7 +15,6 @@ namespace CapaDatos
 
             try
             {
-
                 conn.Open();
             }
             catch (OdbcException ex)
@@ -24,6 +23,5 @@ namespace CapaDatos
             }
             return conn;
         }
-
     }
 }

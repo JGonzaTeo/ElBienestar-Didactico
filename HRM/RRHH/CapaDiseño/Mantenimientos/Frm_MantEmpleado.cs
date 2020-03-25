@@ -10,7 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Net;
+using System.Net.NetworkInformation;
 
 
 namespace CapaDiseño.Mantenimientos
@@ -18,9 +19,38 @@ namespace CapaDiseño.Mantenimientos
     public partial class Frm_MantEmpleado : Form
     {
         Logica logic = new Logica();
-        public Frm_MantEmpleado()
+        string slocalIP;
+        string smacAddresses;
+        string suser;
+        
+          
+
+        public void obtenerip()
+        {
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    slocalIP = ip.ToString();
+                }
+            }
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    smacAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
+
+                }
+            }
+        }
+        public Frm_MantEmpleado(String susuario)
         {
             InitializeComponent();
+            obtenerip();
+            suser = susuario;
         }
 
         private void Pnl_nombreForm_Paint(object sender, PaintEventArgs e)
@@ -99,18 +129,24 @@ namespace CapaDiseño.Mantenimientos
         {
             OdbcDataReader cita = logic.ModificarEmpleado(Txt_Cod.Text,Txt_PrimerApellido.Text,Txt_SegundoNombre.Text,Txt_PrimerApellido.Text,TxtSegundoApellido.Text,Txt_Telefono.Text,Txt_Celular.Text,Txt_email.Text,Txt_Direccion.Text,Cbo_estado.Text);
             MessageBox.Show("Datos modificados correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
+
         }
 
         private void Pic_Guardar_Click(object sender, EventArgs e)
         {
             OdbcDataReader cita = logic.Insertarempleado(Txt_PrimerApellido.Text, Txt_SegundoNombre.Text, Txt_PrimerApellido.Text, TxtSegundoApellido.Text, Txt_Telefono.Text, Txt_Celular.Text, Txt_email.Text, Txt_Direccion.Text, Cbo_estado.Text);
             MessageBox.Show("Datos Insertados");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
+
         }
 
         private void Pic_Borrar_Click(object sender, EventArgs e)
         {
             OdbcDataReader cita = logic.eliminarEmpleado(Txt_Cod.Text);
             MessageBox.Show("Eliminado Correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
+
         }
 
         private void Pic_Consultar_Click(object sender, EventArgs e)

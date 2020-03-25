@@ -62,7 +62,7 @@
             // 
             // Btn_Imprimir
             // 
-            this.Btn_Imprimir.Location = new System.Drawing.Point(797, 160);
+            this.Btn_Imprimir.Location = new System.Drawing.Point(778, 134);
             this.Btn_Imprimir.Name = "Btn_Imprimir";
             this.Btn_Imprimir.Size = new System.Drawing.Size(104, 30);
             this.Btn_Imprimir.TabIndex = 26;
@@ -73,6 +73,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.DTP_fEHCA);
+            this.panel1.Controls.Add(this.Btn_Imprimir);
             this.panel1.Controls.Add(this.Cbo_MC);
             this.panel1.Controls.Add(this.Cbo_TipoC);
             this.panel1.Controls.Add(this.Txt_Id);
@@ -80,14 +81,14 @@
             this.panel1.Controls.Add(this.Label_Medio);
             this.panel1.Controls.Add(this.Label_TipoContratacion);
             this.panel1.Controls.Add(this.Label_ID);
-            this.panel1.Location = new System.Drawing.Point(34, 79);
+            this.panel1.Location = new System.Drawing.Point(17, 64);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 278);
+            this.panel1.Size = new System.Drawing.Size(904, 177);
             this.panel1.TabIndex = 25;
             // 
             // DTP_fEHCA
             // 
-            this.DTP_fEHCA.Location = new System.Drawing.Point(506, 110);
+            this.DTP_fEHCA.Location = new System.Drawing.Point(602, 26);
             this.DTP_fEHCA.Name = "DTP_fEHCA";
             this.DTP_fEHCA.Size = new System.Drawing.Size(213, 20);
             this.DTP_fEHCA.TabIndex = 18;
@@ -95,16 +96,16 @@
             // Cbo_MC
             // 
             this.Cbo_MC.FormattingEnabled = true;
-            this.Cbo_MC.Location = new System.Drawing.Point(246, 199);
+            this.Cbo_MC.Location = new System.Drawing.Point(602, 90);
             this.Cbo_MC.Name = "Cbo_MC";
-            this.Cbo_MC.Size = new System.Drawing.Size(173, 21);
+            this.Cbo_MC.Size = new System.Drawing.Size(213, 21);
             this.Cbo_MC.TabIndex = 17;
             this.Cbo_MC.SelectedIndexChanged += new System.EventHandler(this.Cbo_MC_SelectedIndexChanged);
             // 
             // Cbo_TipoC
             // 
             this.Cbo_TipoC.FormattingEnabled = true;
-            this.Cbo_TipoC.Location = new System.Drawing.Point(246, 109);
+            this.Cbo_TipoC.Location = new System.Drawing.Point(221, 87);
             this.Cbo_TipoC.Name = "Cbo_TipoC";
             this.Cbo_TipoC.Size = new System.Drawing.Size(173, 21);
             this.Cbo_TipoC.TabIndex = 16;
@@ -112,7 +113,7 @@
             // 
             // Txt_Id
             // 
-            this.Txt_Id.Location = new System.Drawing.Point(246, 44);
+            this.Txt_Id.Location = new System.Drawing.Point(221, 22);
             this.Txt_Id.Name = "Txt_Id";
             this.Txt_Id.Size = new System.Drawing.Size(173, 20);
             this.Txt_Id.TabIndex = 8;
@@ -120,7 +121,7 @@
             // Label_Fecha
             // 
             this.Label_Fecha.AutoSize = true;
-            this.Label_Fecha.Location = new System.Drawing.Point(458, 113);
+            this.Label_Fecha.Location = new System.Drawing.Point(478, 25);
             this.Label_Fecha.Name = "Label_Fecha";
             this.Label_Fecha.Size = new System.Drawing.Size(42, 13);
             this.Label_Fecha.TabIndex = 6;
@@ -130,17 +131,17 @@
             // 
             this.Label_Medio.AutoSize = true;
             this.Label_Medio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Medio.Location = new System.Drawing.Point(56, 199);
+            this.Label_Medio.Location = new System.Drawing.Point(464, 88);
             this.Label_Medio.Name = "Label_Medio";
-            this.Label_Medio.Size = new System.Drawing.Size(184, 17);
+            this.Label_Medio.Size = new System.Drawing.Size(117, 34);
             this.Label_Medio.TabIndex = 5;
-            this.Label_Medio.Text = "MEDIO DE COMUNICACION";
+            this.Label_Medio.Text = "MEDIO DE \r\nCOMUNICACION";
             // 
             // Label_TipoContratacion
             // 
             this.Label_TipoContratacion.AutoSize = true;
             this.Label_TipoContratacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_TipoContratacion.Location = new System.Drawing.Point(56, 112);
+            this.Label_TipoContratacion.Location = new System.Drawing.Point(31, 90);
             this.Label_TipoContratacion.Name = "Label_TipoContratacion";
             this.Label_TipoContratacion.Size = new System.Drawing.Size(142, 17);
             this.Label_TipoContratacion.TabIndex = 4;
@@ -150,7 +151,7 @@
             // 
             this.Label_ID.AutoSize = true;
             this.Label_ID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_ID.Location = new System.Drawing.Point(56, 47);
+            this.Label_ID.Location = new System.Drawing.Point(31, 25);
             this.Label_ID.Name = "Label_ID";
             this.Label_ID.Size = new System.Drawing.Size(94, 17);
             this.Label_ID.TabIndex = 3;
@@ -159,7 +160,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(432, 385);
+            this.label1.Location = new System.Drawing.Point(435, 259);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 13);
             this.label1.TabIndex = 23;
@@ -178,9 +179,10 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.DGV_PERFIL.Location = new System.Drawing.Point(12, 414);
+            this.DGV_PERFIL.Location = new System.Drawing.Point(11, 289);
             this.DGV_PERFIL.Name = "DGV_PERFIL";
-            this.DGV_PERFIL.Size = new System.Drawing.Size(926, 149);
+            this.DGV_PERFIL.RowHeadersVisible = false;
+            this.DGV_PERFIL.Size = new System.Drawing.Size(910, 205);
             this.DGV_PERFIL.TabIndex = 22;
             // 
             // Column1
@@ -236,7 +238,7 @@
             this.Pnl_Desempeño.Controls.Add(this.Btn_cerrar);
             this.Pnl_Desempeño.Controls.Add(this.Lbl_desempeñoTitulo);
             this.Pnl_Desempeño.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pnl_Desempeño.Location = new System.Drawing.Point(2, 1);
+            this.Pnl_Desempeño.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Desempeño.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_Desempeño.Name = "Pnl_Desempeño";
             this.Pnl_Desempeño.Size = new System.Drawing.Size(949, 51);
@@ -265,6 +267,7 @@
             this.Btn_minimizar.Size = new System.Drawing.Size(33, 31);
             this.Btn_minimizar.TabIndex = 8;
             this.Btn_minimizar.UseVisualStyleBackColor = true;
+            this.Btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
             // 
             // Btn_cerrar
             // 
@@ -277,6 +280,7 @@
             this.Btn_cerrar.Size = new System.Drawing.Size(33, 31);
             this.Btn_cerrar.TabIndex = 7;
             this.Btn_cerrar.UseVisualStyleBackColor = true;
+            this.Btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
             // 
             // Lbl_desempeñoTitulo
             // 
@@ -293,14 +297,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 577);
+            this.ClientSize = new System.Drawing.Size(945, 503);
             this.Controls.Add(this.Pnl_Desempeño);
-            this.Controls.Add(this.Btn_Imprimir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DGV_PERFIL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Convocatoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Convocatoria";
             this.Load += new System.EventHandler(this.Frm_Convocatoria_Load);
             this.panel1.ResumeLayout(false);

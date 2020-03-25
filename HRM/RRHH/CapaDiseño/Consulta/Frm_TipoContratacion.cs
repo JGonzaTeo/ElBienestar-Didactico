@@ -17,6 +17,7 @@ namespace CapaDiseño.Consulta
         public Frm_TipoContratacion()
         {
             InitializeComponent();
+            MostrarConsulta();
         }
         public void MostrarConsulta()
         {
@@ -62,6 +63,31 @@ namespace CapaDiseño.Consulta
                 DialogResult = DialogResult.OK;
                 Close();
             }
+        }
+
+        private void Btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btn_minimizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Por el momento se encuentra en desarollo");
+        }
+
+        private void btn_cerrar_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

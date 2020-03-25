@@ -52,6 +52,8 @@
             this.medioDeComunicacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeContratoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.curriculumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jornadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignacionDeConceptoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +62,9 @@
             this.controlDeAsistenciaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sancionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.convocatoriaYSeleccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.desempeñoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kPIEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.desempeñoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaInternaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -117,7 +121,9 @@
             this.empleadosToolStripMenuItem,
             this.medioDeComunicacionToolStripMenuItem,
             this.tipoDeContratoToolStripMenuItem,
-            this.curriculumToolStripMenuItem});
+            this.curriculumToolStripMenuItem,
+            this.jornadasToolStripMenuItem,
+            this.departamentosToolStripMenuItem});
             this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
             this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
@@ -250,6 +256,20 @@
             this.curriculumToolStripMenuItem.Text = "Curriculum";
             this.curriculumToolStripMenuItem.Click += new System.EventHandler(this.CurriculumToolStripMenuItem_Click);
             // 
+            // jornadasToolStripMenuItem
+            // 
+            this.jornadasToolStripMenuItem.Name = "jornadasToolStripMenuItem";
+            this.jornadasToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.jornadasToolStripMenuItem.Text = "Jornadas";
+            this.jornadasToolStripMenuItem.Click += new System.EventHandler(this.jornadasToolStripMenuItem_Click);
+            // 
+            // departamentosToolStripMenuItem
+            // 
+            this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
+            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.departamentosToolStripMenuItem.Text = "Departamentos";
+            this.departamentosToolStripMenuItem.Click += new System.EventHandler(this.departamentosToolStripMenuItem_Click);
+            // 
             // procesosToolStripMenuItem
             // 
             this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -260,7 +280,7 @@
             this.controlDeAsistenciaToolStripMenuItem1,
             this.sancionToolStripMenuItem1,
             this.convocatoriaYSeleccionToolStripMenuItem,
-            this.desempeñoEmpleadoToolStripMenuItem,
+            this.kPIEmpleadoToolStripMenuItem,
             this.busquedaInternaToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
@@ -315,12 +335,28 @@
             this.convocatoriaYSeleccionToolStripMenuItem.Text = "Convocatoria";
             this.convocatoriaYSeleccionToolStripMenuItem.Click += new System.EventHandler(this.ConvocatoriaYSeleccionToolStripMenuItem_Click);
             // 
-            // desempeñoEmpleadoToolStripMenuItem
+            // kPIEmpleadoToolStripMenuItem
             // 
-            this.desempeñoEmpleadoToolStripMenuItem.Name = "desempeñoEmpleadoToolStripMenuItem";
-            this.desempeñoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.desempeñoEmpleadoToolStripMenuItem.Text = "Desempeño Empleado";
-            this.desempeñoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.desempeñoEmpleadoToolStripMenuItem_Click);
+            this.kPIEmpleadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.desempeñoToolStripMenuItem1,
+            this.metasToolStripMenuItem1});
+            this.kPIEmpleadoToolStripMenuItem.Name = "kPIEmpleadoToolStripMenuItem";
+            this.kPIEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.kPIEmpleadoToolStripMenuItem.Text = "KPI Empleado";
+            // 
+            // metasToolStripMenuItem1
+            // 
+            this.metasToolStripMenuItem1.Name = "metasToolStripMenuItem1";
+            this.metasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.metasToolStripMenuItem1.Text = "Metas";
+            this.metasToolStripMenuItem1.Click += new System.EventHandler(this.metasToolStripMenuItem1_Click);
+            // 
+            // desempeñoToolStripMenuItem1
+            // 
+            this.desempeñoToolStripMenuItem1.Name = "desempeñoToolStripMenuItem1";
+            this.desempeñoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.desempeñoToolStripMenuItem1.Text = "Desempeño";
+            this.desempeñoToolStripMenuItem1.Click += new System.EventHandler(this.desempeñoToolStripMenuItem1_Click);
             // 
             // busquedaInternaToolStripMenuItem
             // 
@@ -344,6 +380,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDIParent1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MDIParent1_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -382,9 +419,13 @@
         private System.Windows.Forms.ToolStripMenuItem medioDeComunicacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDeContratoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem convocatoriaYSeleccionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem desempeñoEmpleadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem busquedaInternaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem curriculumToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kPIEmpleadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem metasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem desempeñoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem jornadasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem;
     }
 }
 
