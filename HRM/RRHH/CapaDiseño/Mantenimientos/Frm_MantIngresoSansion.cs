@@ -73,11 +73,6 @@ namespace CapaDiseño.Mantenimientos
                     {
                         MessageBox.Show("Ingrese un codigo existente");
                     }
-                    else
-                    {
-                        Txt_FechaInicio.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                        Txt_FechaFinal.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                    }
 
                    
                 }
@@ -90,13 +85,18 @@ namespace CapaDiseño.Mantenimientos
 
         private void Btn_RealizarSansion_Click(object sender, EventArgs e)
         {
-            if (Txt_CodigoEmpleado.Text == "" | Txt_NombreEmpleado.Text == "" | Txt_FechaInicio.Text == "" | Txt_RazonSansion.Text == "" | Txt_FechaFinal.Text == "" | Txt_Descripcion.Text == "")
+            if (Txt_CodigoEmpleado.Text == "" | Txt_NombreEmpleado.Text == ""| Txt_RazonSansion.Text == "" | Txt_Descripcion.Text == "")
             {
                 MessageBox.Show("Debe llenar todos los Campos Solicitados");
             }
             else
             {
-                OdbcDataReader Sansion = Logic.InsertarSansion(Txt_CodigoEmpleado.Text, Txt_RazonSansion.Text, Txt_Descripcion.Text, Txt_FechaInicio.Text, Txt_FechaFinal.Text);
+                //FORMATO DE FECHAS Y HORAS
+                string sFechaIngreso, sFechaSalida;
+                sFechaIngreso = Dtp_FechaIngreso.Value.ToString("yyyy-MM-dd");
+                sFechaSalida = Dtp_FechaSalida.Value.ToString("yyyy-MM-dd");
+
+                OdbcDataReader Sansion = Logic.InsertarSansion(Txt_CodigoEmpleado.Text, Txt_RazonSansion.Text, Txt_Descripcion.Text, sFechaIngreso, sFechaSalida);
                 MessageBox.Show("Sansión Ingresada");
                 Logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
 
@@ -106,8 +106,8 @@ namespace CapaDiseño.Mantenimientos
                 Txt_RazonSansion.Clear();
                 Txt_NombreEmpleado.Clear();
                 Txt_Descripcion.Clear();
-                Txt_FechaInicio.Clear();
-                Txt_FechaFinal.Clear();
+                Dtp_FechaIngreso.ResetText();
+                Dtp_FechaSalida.ResetText();
 
             }
         }

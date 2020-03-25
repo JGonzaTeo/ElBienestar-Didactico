@@ -59,8 +59,9 @@
             this.Pnl_nombreForm.Controls.Add(this.lbl_asignacionconcepto);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
             this.Pnl_nombreForm.Location = new System.Drawing.Point(0, -1);
+            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(1310, 63);
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(982, 51);
             this.Pnl_nombreForm.TabIndex = 2;
             // 
             // btn_Ayuda
@@ -68,9 +69,10 @@
             this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ayuda.Image")));
-            this.btn_Ayuda.Location = new System.Drawing.Point(770, 15);
+            this.btn_Ayuda.Location = new System.Drawing.Point(578, 12);
+            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Ayuda.Name = "btn_Ayuda";
-            this.btn_Ayuda.Size = new System.Drawing.Size(44, 38);
+            this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
             this.btn_Ayuda.TabIndex = 6;
             this.btn_Ayuda.UseVisualStyleBackColor = true;
             this.btn_Ayuda.Click += new System.EventHandler(this.Btn_Ayuda_Click);
@@ -80,9 +82,10 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(723, 15);
+            this.btn_minimizar.Location = new System.Drawing.Point(542, 12);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(44, 38);
+            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.UseVisualStyleBackColor = true;
             this.btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click);
@@ -92,9 +95,10 @@
             this.lbl_asignacionconcepto.AutoSize = true;
             this.lbl_asignacionconcepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_asignacionconcepto.ForeColor = System.Drawing.Color.White;
-            this.lbl_asignacionconcepto.Location = new System.Drawing.Point(26, 15);
+            this.lbl_asignacionconcepto.Location = new System.Drawing.Point(20, 12);
+            this.lbl_asignacionconcepto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_asignacionconcepto.Name = "lbl_asignacionconcepto";
-            this.lbl_asignacionconcepto.Size = new System.Drawing.Size(312, 25);
+            this.lbl_asignacionconcepto.Size = new System.Drawing.Size(250, 20);
             this.lbl_asignacionconcepto.TabIndex = 0;
             this.lbl_asignacionconcepto.Text = "ASIGNACION DE CONCEPTO";
             // 
@@ -103,9 +107,10 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(820, 15);
+            this.btn_cerrar.Location = new System.Drawing.Point(615, 12);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(44, 38);
+            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
@@ -117,11 +122,12 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.Dgv_consultaempleado.Location = new System.Drawing.Point(69, 219);
+            this.Dgv_consultaempleado.Location = new System.Drawing.Point(52, 178);
+            this.Dgv_consultaempleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Dgv_consultaempleado.Name = "Dgv_consultaempleado";
             this.Dgv_consultaempleado.RowHeadersWidth = 51;
             this.Dgv_consultaempleado.RowTemplate.Height = 24;
-            this.Dgv_consultaempleado.Size = new System.Drawing.Size(576, 150);
+            this.Dgv_consultaempleado.Size = new System.Drawing.Size(432, 122);
             this.Dgv_consultaempleado.TabIndex = 3;
             // 
             // Column1
@@ -148,9 +154,10 @@
             // chk_Selecciontodos
             // 
             this.chk_Selecciontodos.AutoSize = true;
-            this.chk_Selecciontodos.Location = new System.Drawing.Point(497, 192);
+            this.chk_Selecciontodos.Location = new System.Drawing.Point(373, 156);
+            this.chk_Selecciontodos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chk_Selecciontodos.Name = "chk_Selecciontodos";
-            this.chk_Selecciontodos.Size = new System.Drawing.Size(148, 21);
+            this.chk_Selecciontodos.Size = new System.Drawing.Size(115, 17);
             this.chk_Selecciontodos.TabIndex = 4;
             this.chk_Selecciontodos.Text = "Seleccionar Todos";
             this.chk_Selecciontodos.UseVisualStyleBackColor = true;
@@ -159,9 +166,10 @@
             // btn_Aceptar
             // 
             this.btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Aceptar.Location = new System.Drawing.Point(723, 400);
+            this.btn_Aceptar.Location = new System.Drawing.Point(510, 250);
+            this.btn_Aceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Aceptar.Name = "btn_Aceptar";
-            this.btn_Aceptar.Size = new System.Drawing.Size(118, 42);
+            this.btn_Aceptar.Size = new System.Drawing.Size(101, 34);
             this.btn_Aceptar.TabIndex = 5;
             this.btn_Aceptar.Text = "Finalizar";
             this.btn_Aceptar.UseVisualStyleBackColor = true;
@@ -171,17 +179,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 99);
+            this.label1.Location = new System.Drawing.Point(23, 80);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 24);
+            this.label1.Size = new System.Drawing.Size(126, 18);
             this.label1.TabIndex = 6;
             this.label1.Text = "Codigo concepto:";
             // 
             // Txt_codigoconcepto
             // 
-            this.Txt_codigoconcepto.Location = new System.Drawing.Point(214, 100);
+            this.Txt_codigoconcepto.Location = new System.Drawing.Point(160, 81);
+            this.Txt_codigoconcepto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_codigoconcepto.Name = "Txt_codigoconcepto";
-            this.Txt_codigoconcepto.Size = new System.Drawing.Size(405, 22);
+            this.Txt_codigoconcepto.Size = new System.Drawing.Size(305, 20);
             this.Txt_codigoconcepto.TabIndex = 7;
             // 
             // button1
@@ -190,9 +200,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(625, 92);
+            this.button1.Location = new System.Drawing.Point(469, 75);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 38);
+            this.button1.Size = new System.Drawing.Size(45, 31);
             this.button1.TabIndex = 8;
             this.button1.Text = "B";
             this.button1.UseVisualStyleBackColor = false;
@@ -200,9 +211,10 @@
             // 
             // Btn_siguiente
             // 
-            this.Btn_siguiente.Location = new System.Drawing.Point(550, 400);
+            this.Btn_siguiente.Location = new System.Drawing.Point(510, 178);
+            this.Btn_siguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_siguiente.Name = "Btn_siguiente";
-            this.Btn_siguiente.Size = new System.Drawing.Size(135, 42);
+            this.Btn_siguiente.Size = new System.Drawing.Size(101, 34);
             this.Btn_siguiente.TabIndex = 9;
             this.Btn_siguiente.Text = "Siguiente";
             this.Btn_siguiente.UseVisualStyleBackColor = true;
@@ -212,31 +224,34 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 147);
+            this.label2.Location = new System.Drawing.Point(23, 119);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 20);
+            this.label2.Size = new System.Drawing.Size(147, 17);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nombre del concepto:";
             // 
             // Txt_nombreconcepto
             // 
-            this.Txt_nombreconcepto.Location = new System.Drawing.Point(234, 145);
+            this.Txt_nombreconcepto.Location = new System.Drawing.Point(176, 118);
+            this.Txt_nombreconcepto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_nombreconcepto.Name = "Txt_nombreconcepto";
-            this.Txt_nombreconcepto.Size = new System.Drawing.Size(153, 22);
+            this.Txt_nombreconcepto.Size = new System.Drawing.Size(116, 20);
             this.Txt_nombreconcepto.TabIndex = 11;
             // 
             // Txt_codemp
             // 
-            this.Txt_codemp.Location = new System.Drawing.Point(692, 107);
+            this.Txt_codemp.Location = new System.Drawing.Point(521, 83);
+            this.Txt_codemp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Txt_codemp.Name = "Txt_codemp";
-            this.Txt_codemp.Size = new System.Drawing.Size(100, 22);
+            this.Txt_codemp.Size = new System.Drawing.Size(76, 20);
             this.Txt_codemp.TabIndex = 12;
             // 
             // Frm_Asignaciondeconcepto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 476);
+            this.ClientSize = new System.Drawing.Size(652, 316);
             this.Controls.Add(this.Txt_codemp);
             this.Controls.Add(this.Txt_nombreconcepto);
             this.Controls.Add(this.label2);
@@ -249,6 +264,7 @@
             this.Controls.Add(this.Dgv_consultaempleado);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Frm_Asignaciondeconcepto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ASIGNACION DE CONCEPTO";

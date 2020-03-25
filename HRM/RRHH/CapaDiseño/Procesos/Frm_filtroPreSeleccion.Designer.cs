@@ -83,14 +83,13 @@
             this.gU,
             this.curE,
             this.sueldo});
-            this.Dgv_consultaAceptados.Location = new System.Drawing.Point(20, 121);
-            this.Dgv_consultaAceptados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgv_consultaAceptados.Location = new System.Drawing.Point(15, 98);
             this.Dgv_consultaAceptados.Name = "Dgv_consultaAceptados";
             this.Dgv_consultaAceptados.ReadOnly = true;
             this.Dgv_consultaAceptados.RowHeadersVisible = false;
             this.Dgv_consultaAceptados.RowHeadersWidth = 51;
             this.Dgv_consultaAceptados.RowTemplate.Height = 24;
-            this.Dgv_consultaAceptados.Size = new System.Drawing.Size(1336, 226);
+            this.Dgv_consultaAceptados.Size = new System.Drawing.Size(1002, 184);
             this.Dgv_consultaAceptados.TabIndex = 34;
             this.Dgv_consultaAceptados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_consultaAceptados_CellClick);
             // 
@@ -168,10 +167,9 @@
             // 
             this.lbl_aptos.AutoSize = true;
             this.lbl_aptos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_aptos.Location = new System.Drawing.Point(19, 84);
-            this.lbl_aptos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_aptos.Location = new System.Drawing.Point(14, 68);
             this.lbl_aptos.Name = "lbl_aptos";
-            this.lbl_aptos.Size = new System.Drawing.Size(188, 21);
+            this.lbl_aptos.Size = new System.Drawing.Size(143, 17);
             this.lbl_aptos.TabIndex = 35;
             this.lbl_aptos.Text = "Aptos para el puesto";
             // 
@@ -179,10 +177,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 368);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(14, 299);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 21);
+            this.label1.Size = new System.Drawing.Size(166, 17);
             this.label1.TabIndex = 36;
             this.label1.Text = "No aptos para el puesto";
             // 
@@ -205,14 +202,13 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
-            this.Dgv_consultaRecha.Location = new System.Drawing.Point(20, 399);
-            this.Dgv_consultaRecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgv_consultaRecha.Location = new System.Drawing.Point(15, 324);
             this.Dgv_consultaRecha.Name = "Dgv_consultaRecha";
             this.Dgv_consultaRecha.ReadOnly = true;
             this.Dgv_consultaRecha.RowHeadersVisible = false;
             this.Dgv_consultaRecha.RowHeadersWidth = 51;
             this.Dgv_consultaRecha.RowTemplate.Height = 24;
-            this.Dgv_consultaRecha.Size = new System.Drawing.Size(1336, 226);
+            this.Dgv_consultaRecha.Size = new System.Drawing.Size(1002, 184);
             this.Dgv_consultaRecha.TabIndex = 40;
             this.Dgv_consultaRecha.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_consultaRecha_CellClick);
             // 
@@ -289,10 +285,9 @@
             // btn_buscar
             // 
             this.btn_buscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar.Location = new System.Drawing.Point(1364, 121);
-            this.btn_buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_buscar.Location = new System.Drawing.Point(1023, 98);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(73, 226);
+            this.btn_buscar.Size = new System.Drawing.Size(75, 184);
             this.btn_buscar.TabIndex = 38;
             this.btn_buscar.Text = "Guardar";
             this.btn_buscar.UseVisualStyleBackColor = true;
@@ -305,9 +300,10 @@
             this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
             this.Pnl_nombreForm.Controls.Add(this.lbl_procesonominal);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
-            this.Pnl_nombreForm.Location = new System.Drawing.Point(12, 12);
+            this.Pnl_nombreForm.Location = new System.Drawing.Point(0, 0);
+            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(1425, 63);
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(1126, 51);
             this.Pnl_nombreForm.TabIndex = 41;
             // 
             // btn_Ayuda
@@ -315,9 +311,10 @@
             this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ayuda.Image")));
-            this.btn_Ayuda.Location = new System.Drawing.Point(1302, 11);
+            this.btn_Ayuda.Location = new System.Drawing.Point(1036, 9);
+            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Ayuda.Name = "btn_Ayuda";
-            this.btn_Ayuda.Size = new System.Drawing.Size(44, 38);
+            this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
             this.btn_Ayuda.TabIndex = 6;
             this.btn_Ayuda.UseVisualStyleBackColor = true;
             // 
@@ -326,9 +323,10 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(1255, 11);
+            this.btn_minimizar.Location = new System.Drawing.Point(1001, 9);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_minimizar.Name = "btn_minimizar";
-            this.btn_minimizar.Size = new System.Drawing.Size(44, 38);
+            this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
             this.btn_minimizar.TabIndex = 5;
             this.btn_minimizar.UseVisualStyleBackColor = true;
             this.btn_minimizar.Click += new System.EventHandler(this.Btn_minimizar_Click_1);
@@ -338,9 +336,10 @@
             this.lbl_procesonominal.AutoSize = true;
             this.lbl_procesonominal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_procesonominal.ForeColor = System.Drawing.Color.White;
-            this.lbl_procesonominal.Location = new System.Drawing.Point(26, 15);
+            this.lbl_procesonominal.Location = new System.Drawing.Point(20, 12);
+            this.lbl_procesonominal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_procesonominal.Name = "lbl_procesonominal";
-            this.lbl_procesonominal.Size = new System.Drawing.Size(271, 25);
+            this.lbl_procesonominal.Size = new System.Drawing.Size(223, 20);
             this.lbl_procesonominal.TabIndex = 0;
             this.lbl_procesonominal.Text = "Preseleccion de Candidato";
             // 
@@ -349,18 +348,19 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(1352, 11);
+            this.btn_cerrar.Location = new System.Drawing.Point(1074, 9);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(44, 38);
+            this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
             // 
             // Frm_filtroPreSeleccion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1448, 640);
+            this.ClientSize = new System.Drawing.Size(1123, 520);
             this.Controls.Add(this.Pnl_nombreForm);
             this.Controls.Add(this.Dgv_consultaRecha);
             this.Controls.Add(this.btn_buscar);
@@ -368,7 +368,6 @@
             this.Controls.Add(this.lbl_aptos);
             this.Controls.Add(this.Dgv_consultaAceptados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_filtroPreSeleccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_filtroPreSeleccion";
