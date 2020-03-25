@@ -55,6 +55,41 @@ namespace CapaDiseño.Procesos
             Txt_SubtotalPercepciones.Enabled = false;
             Txt_SubtotalDeducciones.Enabled = false;
             Txt_saldonominal.Enabled = false;
+
+            foreach (DataGridViewRow row in Dgv_empleadoscontables.Rows)
+            {
+                if (Convert.ToString(row.Cells["Column6"].Value) == "Percepcion")
+                {
+                    if (Convert.ToString(row.Cells["Column7"].Value) == "Suma")
+                    {
+                       
+                 
+                        row.Cells["Column8"].Value = Convert.ToDouble(row.Cells["Column3"].Value) + Convert.ToDouble(row.Cells["Column5"].Value);
+                    }
+                    if (Convert.ToString(row.Cells["Column7"].Value) == "Multiplicacion")
+                    {
+                    
+                        row.Cells["Column8"].Value = Convert.ToDouble(row.Cells["Column3"].Value) * Convert.ToDouble(row.Cells["Column5"].Value);
+                    }
+
+
+                }
+                else if (Convert.ToString(row.Cells["Column6"].Value) == "Deduccion")
+                {
+                    if (Convert.ToString(row.Cells["Column7"].Value) == "Suma")
+                    {
+                       
+                        row.Cells["Column8"].Value = Convert.ToDouble(row.Cells["Column3"].Value) + Convert.ToDouble(row.Cells["Column5"].Value);
+                    }
+                    if (Convert.ToString(row.Cells["Column7"].Value) == "Multiplicacion")
+                    {
+                      
+                        row.Cells["Column8"].Value = Convert.ToDouble(row.Cells["Column3"].Value) * Convert.ToDouble(row.Cells["Column5"].Value);
+                    }
+                }
+
+
+            }
         }
 
         public void MostrarEmpleados()
@@ -160,6 +195,7 @@ namespace CapaDiseño.Procesos
 
                         prespuestaps2 = prespuestaps2 + prespuestaps;
                         //MessageBox.Show("sumando" + Convert.ToString(prespuestaps2));
+                        row.Cells["Column8"].Value = Convert.ToDouble(row.Cells["Column3"].Value) + Convert.ToDouble(row.Cells["Column5"].Value);
                     }
                     if (Convert.ToString(row.Cells["Column7"].Value) == "Multiplicacion")
                     {
@@ -167,6 +203,7 @@ namespace CapaDiseño.Procesos
                         //MessageBox.Show("encontro una multiplicacion");
                         prespuestapm2 = prespuestapm2 + prespuestapm;
                         //MessageBox.Show("multiplicando" + Convert.ToString(prespuestapm2));
+                        row.Cells["Column8"].Value = Convert.ToDouble(row.Cells["Column3"].Value) * Convert.ToDouble(row.Cells["Column5"].Value);
                     }
 
 
@@ -181,6 +218,7 @@ namespace CapaDiseño.Procesos
 
                         drespuestaps2 = drespuestaps2 + drespuestaps;
                         //MessageBox.Show("sumando" + Convert.ToString(drespuestaps2));
+                        row.Cells["Column8"].Value = Convert.ToDouble(row.Cells["Column3"].Value) + Convert.ToDouble(row.Cells["Column5"].Value);
                     }
                     if (Convert.ToString(row.Cells["Column7"].Value) == "Multiplicacion")
                     {
@@ -188,6 +226,7 @@ namespace CapaDiseño.Procesos
                         //MessageBox.Show("encontro una multiplicacion");
                         drespuestapm2 = drespuestapm2 + drespuestapm;
                         //MessageBox.Show("multiplicando" + Convert.ToString(drespuestapm2));
+                        row.Cells["Column8"].Value = Convert.ToDouble(row.Cells["Column3"].Value) * Convert.ToDouble(row.Cells["Column5"].Value);
                     }
                 }
 

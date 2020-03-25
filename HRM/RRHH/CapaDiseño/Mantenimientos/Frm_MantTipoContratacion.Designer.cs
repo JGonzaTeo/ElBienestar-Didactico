@@ -34,11 +34,6 @@
             this.Label_MantEmpleados = new System.Windows.Forms.Label();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.Pic_Consultar = new System.Windows.Forms.PictureBox();
-            this.Pic_Borrar = new System.Windows.Forms.PictureBox();
-            this.Pic_Guardar = new System.Windows.Forms.PictureBox();
-            this.PicActualizar = new System.Windows.Forms.PictureBox();
-            this.Pic_Insertar = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Cbo_Estado = new System.Windows.Forms.ComboBox();
             this.Label_Estado = new System.Windows.Forms.Label();
@@ -50,12 +45,12 @@
             this.Label_xContrato = new System.Windows.Forms.Label();
             this.Txt_Codigo = new System.Windows.Forms.TextBox();
             this.Label_Codigo = new System.Windows.Forms.Label();
+            this.Btn_consultar = new System.Windows.Forms.Button();
+            this.Btn_borrar = new System.Windows.Forms.Button();
+            this.Btn_guardar = new System.Windows.Forms.Button();
+            this.Btn_editar = new System.Windows.Forms.Button();
+            this.Btn_ingresar = new System.Windows.Forms.Button();
             this.Pnl_nombreForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Consultar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Borrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Guardar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicActualizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Insertar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,71 +117,6 @@
             this.btn_cerrar.TabIndex = 4;
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.Btn_cerrar_Click);
-            // 
-            // Pic_Consultar
-            // 
-            this.Pic_Consultar.BackColor = System.Drawing.Color.Transparent;
-            this.Pic_Consultar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Pic_Consultar.Image = global::CapaDiseño.Properties.Resources.question;
-            this.Pic_Consultar.Location = new System.Drawing.Point(602, 82);
-            this.Pic_Consultar.Name = "Pic_Consultar";
-            this.Pic_Consultar.Size = new System.Drawing.Size(56, 61);
-            this.Pic_Consultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_Consultar.TabIndex = 82;
-            this.Pic_Consultar.TabStop = false;
-            this.Pic_Consultar.Click += new System.EventHandler(this.Pic_Consultar_Click);
-            // 
-            // Pic_Borrar
-            // 
-            this.Pic_Borrar.BackColor = System.Drawing.Color.Transparent;
-            this.Pic_Borrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Pic_Borrar.Image = global::CapaDiseño.Properties.Resources.eraser;
-            this.Pic_Borrar.Location = new System.Drawing.Point(540, 82);
-            this.Pic_Borrar.Name = "Pic_Borrar";
-            this.Pic_Borrar.Size = new System.Drawing.Size(56, 61);
-            this.Pic_Borrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_Borrar.TabIndex = 81;
-            this.Pic_Borrar.TabStop = false;
-            this.Pic_Borrar.Click += new System.EventHandler(this.Pic_Borrar_Click);
-            // 
-            // Pic_Guardar
-            // 
-            this.Pic_Guardar.BackColor = System.Drawing.Color.Transparent;
-            this.Pic_Guardar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Pic_Guardar.Image = global::CapaDiseño.Properties.Resources.save__1_;
-            this.Pic_Guardar.Location = new System.Drawing.Point(478, 82);
-            this.Pic_Guardar.Name = "Pic_Guardar";
-            this.Pic_Guardar.Size = new System.Drawing.Size(56, 61);
-            this.Pic_Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_Guardar.TabIndex = 80;
-            this.Pic_Guardar.TabStop = false;
-            this.Pic_Guardar.Click += new System.EventHandler(this.Pic_Guardar_Click);
-            // 
-            // PicActualizar
-            // 
-            this.PicActualizar.BackColor = System.Drawing.Color.Transparent;
-            this.PicActualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PicActualizar.Image = global::CapaDiseño.Properties.Resources.file;
-            this.PicActualizar.Location = new System.Drawing.Point(416, 82);
-            this.PicActualizar.Name = "PicActualizar";
-            this.PicActualizar.Size = new System.Drawing.Size(56, 61);
-            this.PicActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicActualizar.TabIndex = 79;
-            this.PicActualizar.TabStop = false;
-            this.PicActualizar.Click += new System.EventHandler(this.PicActualizar_Click);
-            // 
-            // Pic_Insertar
-            // 
-            this.Pic_Insertar.BackColor = System.Drawing.Color.Transparent;
-            this.Pic_Insertar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Pic_Insertar.Image = global::CapaDiseño.Properties.Resources.add__1_;
-            this.Pic_Insertar.Location = new System.Drawing.Point(355, 82);
-            this.Pic_Insertar.Name = "Pic_Insertar";
-            this.Pic_Insertar.Size = new System.Drawing.Size(55, 61);
-            this.Pic_Insertar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pic_Insertar.TabIndex = 78;
-            this.Pic_Insertar.TabStop = false;
-            this.Pic_Insertar.Click += new System.EventHandler(this.Pic_Insertar_Click);
             // 
             // groupBox1
             // 
@@ -292,17 +222,122 @@
             this.Label_Codigo.TabIndex = 6;
             this.Label_Codigo.Text = "Codigo";
             // 
+            // Btn_consultar
+            // 
+            this.Btn_consultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.Btn_consultar.FlatAppearance.BorderSize = 3;
+            this.Btn_consultar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.Btn_consultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.Btn_consultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.Btn_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_consultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_consultar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_consultar.Image")));
+            this.Btn_consultar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_consultar.Location = new System.Drawing.Point(597, 64);
+            this.Btn_consultar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_consultar.Name = "Btn_consultar";
+            this.Btn_consultar.Size = new System.Drawing.Size(110, 89);
+            this.Btn_consultar.TabIndex = 91;
+            this.Btn_consultar.Text = "Consultar";
+            this.Btn_consultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_consultar.UseVisualStyleBackColor = false;
+            this.Btn_consultar.Click += new System.EventHandler(this.Btn_consultar_Click);
+            // 
+            // Btn_borrar
+            // 
+            this.Btn_borrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.Btn_borrar.FlatAppearance.BorderSize = 3;
+            this.Btn_borrar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.Btn_borrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.Btn_borrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.Btn_borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_borrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_borrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_borrar.Image")));
+            this.Btn_borrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_borrar.Location = new System.Drawing.Point(513, 64);
+            this.Btn_borrar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_borrar.Name = "Btn_borrar";
+            this.Btn_borrar.Size = new System.Drawing.Size(86, 89);
+            this.Btn_borrar.TabIndex = 90;
+            this.Btn_borrar.Text = "Borrar";
+            this.Btn_borrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_borrar.UseVisualStyleBackColor = false;
+            this.Btn_borrar.Click += new System.EventHandler(this.Btn_borrar_Click);
+            // 
+            // Btn_guardar
+            // 
+            this.Btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.Btn_guardar.FlatAppearance.BorderSize = 3;
+            this.Btn_guardar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.Btn_guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.Btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.Btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_guardar.Image")));
+            this.Btn_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_guardar.Location = new System.Drawing.Point(429, 64);
+            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_guardar.Name = "Btn_guardar";
+            this.Btn_guardar.Size = new System.Drawing.Size(86, 89);
+            this.Btn_guardar.TabIndex = 89;
+            this.Btn_guardar.Text = "Guardar";
+            this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_guardar.UseVisualStyleBackColor = false;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
+            // 
+            // Btn_editar
+            // 
+            this.Btn_editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.Btn_editar.FlatAppearance.BorderSize = 3;
+            this.Btn_editar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.Btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.Btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.Btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_editar.Image")));
+            this.Btn_editar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_editar.Location = new System.Drawing.Point(345, 64);
+            this.Btn_editar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_editar.Name = "Btn_editar";
+            this.Btn_editar.Size = new System.Drawing.Size(86, 89);
+            this.Btn_editar.TabIndex = 88;
+            this.Btn_editar.Text = "Editar";
+            this.Btn_editar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_editar.UseVisualStyleBackColor = false;
+            this.Btn_editar.Click += new System.EventHandler(this.Btn_editar_Click);
+            // 
+            // Btn_ingresar
+            // 
+            this.Btn_ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.Btn_ingresar.FlatAppearance.BorderSize = 3;
+            this.Btn_ingresar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.Btn_ingresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.Btn_ingresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.Btn_ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_ingresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ingresar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ingresar.Image")));
+            this.Btn_ingresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Btn_ingresar.Location = new System.Drawing.Point(261, 64);
+            this.Btn_ingresar.Margin = new System.Windows.Forms.Padding(2);
+            this.Btn_ingresar.Name = "Btn_ingresar";
+            this.Btn_ingresar.Size = new System.Drawing.Size(86, 89);
+            this.Btn_ingresar.TabIndex = 87;
+            this.Btn_ingresar.Text = "Ingresar";
+            this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_ingresar.UseVisualStyleBackColor = false;
+            this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
+            // 
             // Frm_MantTipoContratacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 340);
+            this.Controls.Add(this.Btn_consultar);
+            this.Controls.Add(this.Btn_borrar);
+            this.Controls.Add(this.Btn_guardar);
+            this.Controls.Add(this.Btn_editar);
+            this.Controls.Add(this.Btn_ingresar);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Pic_Consultar);
-            this.Controls.Add(this.Pic_Borrar);
-            this.Controls.Add(this.Pic_Guardar);
-            this.Controls.Add(this.PicActualizar);
-            this.Controls.Add(this.Pic_Insertar);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_MantTipoContratacion";
@@ -311,11 +346,6 @@
             this.Load += new System.EventHandler(this.Frm_MantTipoContratacion_Load);
             this.Pnl_nombreForm.ResumeLayout(false);
             this.Pnl_nombreForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Consultar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Borrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Guardar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicActualizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Insertar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -329,11 +359,6 @@
         private System.Windows.Forms.Label Label_MantEmpleados;
         private System.Windows.Forms.Button btn_minimizar;
         private System.Windows.Forms.Button btn_cerrar;
-        private System.Windows.Forms.PictureBox Pic_Consultar;
-        private System.Windows.Forms.PictureBox Pic_Borrar;
-        private System.Windows.Forms.PictureBox Pic_Guardar;
-        private System.Windows.Forms.PictureBox PicActualizar;
-        private System.Windows.Forms.PictureBox Pic_Insertar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Label_xMes;
         private System.Windows.Forms.Label Label_xContrato;
@@ -345,5 +370,10 @@
         private System.Windows.Forms.ComboBox Cbo_Contrato;
         private System.Windows.Forms.ComboBox Cbo_Estado;
         private System.Windows.Forms.Label Label_Estado;
+        private System.Windows.Forms.Button Btn_consultar;
+        private System.Windows.Forms.Button Btn_borrar;
+        private System.Windows.Forms.Button Btn_guardar;
+        private System.Windows.Forms.Button Btn_editar;
+        private System.Windows.Forms.Button Btn_ingresar;
     }
 }

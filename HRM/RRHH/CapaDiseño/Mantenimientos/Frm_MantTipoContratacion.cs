@@ -62,39 +62,6 @@ namespace CapaDiseño.Mantenimientos
 
         }
 
-        private void Pic_Insertar_Click(object sender, EventArgs e)
-        {
-            Txt_Codigo.Enabled = true;
-            Cbo_Contrato.Enabled = true;
-            Cbo_Estado.Enabled = true;
-            Cbo_Mes.Enabled = true;
-            Cbo_Proyecto.Enabled = true;
-        }
-
-        private void PicActualizar_Click(object sender, EventArgs e)
-        {
-            OdbcDataReader cita = logic.ModificarTC(Txt_Codigo.Text,Cbo_Contrato.Text,Cbo_Mes.Text,Cbo_Proyecto.Text, Cbo_Estado.Text);
-            MessageBox.Show("Datos modificados correctamente.");
-            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
-
-        }
-
-        private void Pic_Guardar_Click(object sender, EventArgs e)
-        {
-            OdbcDataReader cita = logic.InsertarMC(Cbo_Contrato.Text, Cbo_Mes.Text, Cbo_Proyecto.Text, Cbo_Estado.Text);
-            MessageBox.Show("Datos insertar correctamente.");
-            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
-
-        }
-
-        private void Pic_Borrar_Click(object sender, EventArgs e)
-        {
-            OdbcDataReader cita = logic.eliminarEmpleado(Txt_Codigo.Text);
-            MessageBox.Show("Eliminado Correctamente.");
-            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
-
-        }
-
         private void Btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -111,6 +78,44 @@ namespace CapaDiseño.Mantenimientos
         }
 
         private void Pic_Consultar_Click(object sender, EventArgs e)
+        {
+            Frm_TipoContratacion concep = new Frm_TipoContratacion();
+            concep.ShowDialog();
+        }
+
+        private void Btn_ingresar_Click(object sender, EventArgs e)
+        {
+            Txt_Codigo.Enabled = true;
+            Cbo_Contrato.Enabled = true;
+            Cbo_Estado.Enabled = true;
+            Cbo_Mes.Enabled = true;
+            Cbo_Proyecto.Enabled = true;
+        }
+
+        private void Btn_editar_Click(object sender, EventArgs e)
+        {
+            OdbcDataReader cita = logic.ModificarTC(Txt_Codigo.Text, Cbo_Contrato.Text, Cbo_Mes.Text, Cbo_Proyecto.Text, Cbo_Estado.Text);
+            MessageBox.Show("Datos modificados correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
+        }
+
+        private void Btn_guardar_Click(object sender, EventArgs e)
+        {
+            OdbcDataReader cita = logic.InsertarMC(Cbo_Contrato.Text, Cbo_Mes.Text, Cbo_Proyecto.Text, Cbo_Estado.Text);
+            MessageBox.Show("Datos insertar correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
+
+        }
+
+        private void Btn_borrar_Click(object sender, EventArgs e)
+        {
+            OdbcDataReader cita = logic.eliminarEmpleado(Txt_Codigo.Text);
+            MessageBox.Show("Eliminado Correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
+
+        }
+
+        private void Btn_consultar_Click(object sender, EventArgs e)
         {
             Frm_TipoContratacion concep = new Frm_TipoContratacion();
             concep.ShowDialog();
