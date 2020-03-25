@@ -38,9 +38,13 @@
             this.Btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_metaTitulo = new System.Windows.Forms.Label();
             this.Gpb_meta = new System.Windows.Forms.GroupBox();
+            this.Nud_puntajeMeta = new System.Windows.Forms.NumericUpDown();
+            this.Txt_nombreMeta = new System.Windows.Forms.TextBox();
+            this.Lbl_puntaje = new System.Windows.Forms.Label();
+            this.Txt_totalMeta = new System.Windows.Forms.TextBox();
+            this.Lbl_totalMeta = new System.Windows.Forms.Label();
             this.Cob_completado = new System.Windows.Forms.ComboBox();
             this.Cob_tipoMeta = new System.Windows.Forms.ComboBox();
-            this.Cob_nombreMeta = new System.Windows.Forms.ComboBox();
             this.Btn_Agregar = new System.Windows.Forms.Button();
             this.Lbl_nombreEmpleado = new System.Windows.Forms.Label();
             this.Txt_empleadoMeta = new System.Windows.Forms.TextBox();
@@ -48,7 +52,7 @@
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.Lbl_fechaMeta = new System.Windows.Forms.Label();
             this.Lbl_completado = new System.Windows.Forms.Label();
-            this.Lbl_tipoMeta = new System.Windows.Forms.Label();
+            this.Lbl_plazoMeta = new System.Windows.Forms.Label();
             this.Txt_descripcion = new System.Windows.Forms.TextBox();
             this.Lbl_descripcion = new System.Windows.Forms.Label();
             this.Lbl_codigoMeta = new System.Windows.Forms.Label();
@@ -61,10 +65,9 @@
             this.Puntaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_grafica = new System.Windows.Forms.GroupBox();
             this.Ct_graficaMeta = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Lbl_totalMeta = new System.Windows.Forms.Label();
-            this.Txt_totalMeta = new System.Windows.Forms.TextBox();
             this.Pnl_Desempeño.SuspendLayout();
             this.Gpb_meta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Nud_puntajeMeta)).BeginInit();
             this.Gpb_vista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_vistaMeta)).BeginInit();
             this.Gpb_grafica.SuspendLayout();
@@ -137,11 +140,13 @@
             // 
             // Gpb_meta
             // 
+            this.Gpb_meta.Controls.Add(this.Nud_puntajeMeta);
+            this.Gpb_meta.Controls.Add(this.Txt_nombreMeta);
+            this.Gpb_meta.Controls.Add(this.Lbl_puntaje);
             this.Gpb_meta.Controls.Add(this.Txt_totalMeta);
             this.Gpb_meta.Controls.Add(this.Lbl_totalMeta);
             this.Gpb_meta.Controls.Add(this.Cob_completado);
             this.Gpb_meta.Controls.Add(this.Cob_tipoMeta);
-            this.Gpb_meta.Controls.Add(this.Cob_nombreMeta);
             this.Gpb_meta.Controls.Add(this.Btn_Agregar);
             this.Gpb_meta.Controls.Add(this.Lbl_nombreEmpleado);
             this.Gpb_meta.Controls.Add(this.Txt_empleadoMeta);
@@ -149,7 +154,7 @@
             this.Gpb_meta.Controls.Add(this.Btn_buscar);
             this.Gpb_meta.Controls.Add(this.Lbl_fechaMeta);
             this.Gpb_meta.Controls.Add(this.Lbl_completado);
-            this.Gpb_meta.Controls.Add(this.Lbl_tipoMeta);
+            this.Gpb_meta.Controls.Add(this.Lbl_plazoMeta);
             this.Gpb_meta.Controls.Add(this.Txt_descripcion);
             this.Gpb_meta.Controls.Add(this.Lbl_descripcion);
             this.Gpb_meta.Controls.Add(this.Lbl_codigoMeta);
@@ -162,10 +167,58 @@
             this.Gpb_meta.TabStop = false;
             this.Gpb_meta.Text = "Meta";
             // 
+            // Nud_puntajeMeta
+            // 
+            this.Nud_puntajeMeta.Location = new System.Drawing.Point(259, 191);
+            this.Nud_puntajeMeta.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.Nud_puntajeMeta.Name = "Nud_puntajeMeta";
+            this.Nud_puntajeMeta.Size = new System.Drawing.Size(101, 20);
+            this.Nud_puntajeMeta.TabIndex = 16;
+            this.Nud_puntajeMeta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Txt_nombreMeta
+            // 
+            this.Txt_nombreMeta.Location = new System.Drawing.Point(119, 97);
+            this.Txt_nombreMeta.Name = "Txt_nombreMeta";
+            this.Txt_nombreMeta.Size = new System.Drawing.Size(134, 20);
+            this.Txt_nombreMeta.TabIndex = 15;
+            // 
+            // Lbl_puntaje
+            // 
+            this.Lbl_puntaje.AutoSize = true;
+            this.Lbl_puntaje.Location = new System.Drawing.Point(266, 172);
+            this.Lbl_puntaje.Name = "Lbl_puntaje";
+            this.Lbl_puntaje.Size = new System.Drawing.Size(43, 13);
+            this.Lbl_puntaje.TabIndex = 13;
+            this.Lbl_puntaje.Text = "Puntaje";
+            // 
+            // Txt_totalMeta
+            // 
+            this.Txt_totalMeta.Location = new System.Drawing.Point(257, 225);
+            this.Txt_totalMeta.Name = "Txt_totalMeta";
+            this.Txt_totalMeta.Size = new System.Drawing.Size(100, 20);
+            this.Txt_totalMeta.TabIndex = 10;
+            // 
+            // Lbl_totalMeta
+            // 
+            this.Lbl_totalMeta.AutoSize = true;
+            this.Lbl_totalMeta.Location = new System.Drawing.Point(193, 225);
+            this.Lbl_totalMeta.Name = "Lbl_totalMeta";
+            this.Lbl_totalMeta.Size = new System.Drawing.Size(58, 13);
+            this.Lbl_totalMeta.TabIndex = 12;
+            this.Lbl_totalMeta.Text = "Total Meta";
+            // 
             // Cob_completado
             // 
             this.Cob_completado.FormattingEnabled = true;
-            this.Cob_completado.Location = new System.Drawing.Point(11, 197);
+            this.Cob_completado.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.Cob_completado.Location = new System.Drawing.Point(11, 188);
             this.Cob_completado.Name = "Cob_completado";
             this.Cob_completado.Size = new System.Drawing.Size(109, 21);
             this.Cob_completado.TabIndex = 7;
@@ -173,25 +226,20 @@
             // Cob_tipoMeta
             // 
             this.Cob_tipoMeta.FormattingEnabled = true;
+            this.Cob_tipoMeta.Items.AddRange(new object[] {
+            "Corto",
+            "Mediano"});
             this.Cob_tipoMeta.Location = new System.Drawing.Point(259, 97);
             this.Cob_tipoMeta.Name = "Cob_tipoMeta";
             this.Cob_tipoMeta.Size = new System.Drawing.Size(101, 21);
             this.Cob_tipoMeta.TabIndex = 5;
             // 
-            // Cob_nombreMeta
-            // 
-            this.Cob_nombreMeta.FormattingEnabled = true;
-            this.Cob_nombreMeta.Location = new System.Drawing.Point(132, 97);
-            this.Cob_nombreMeta.Name = "Cob_nombreMeta";
-            this.Cob_nombreMeta.Size = new System.Drawing.Size(109, 21);
-            this.Cob_nombreMeta.TabIndex = 4;
-            // 
             // Btn_Agregar
             // 
-            this.Btn_Agregar.Location = new System.Drawing.Point(123, 223);
+            this.Btn_Agregar.Location = new System.Drawing.Point(29, 225);
             this.Btn_Agregar.Name = "Btn_Agregar";
             this.Btn_Agregar.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Agregar.TabIndex = 10;
+            this.Btn_Agregar.TabIndex = 11;
             this.Btn_Agregar.Text = "Agregar";
             this.Btn_Agregar.UseVisualStyleBackColor = true;
             this.Btn_Agregar.Click += new System.EventHandler(this.Btn_Agregar_Click);
@@ -216,7 +264,7 @@
             // Txt_fechaMeta
             // 
             this.Txt_fechaMeta.Enabled = false;
-            this.Txt_fechaMeta.Location = new System.Drawing.Point(143, 197);
+            this.Txt_fechaMeta.Location = new System.Drawing.Point(143, 188);
             this.Txt_fechaMeta.Name = "Txt_fechaMeta";
             this.Txt_fechaMeta.Size = new System.Drawing.Size(98, 20);
             this.Txt_fechaMeta.TabIndex = 8;
@@ -235,7 +283,7 @@
             // Lbl_fechaMeta
             // 
             this.Lbl_fechaMeta.AutoSize = true;
-            this.Lbl_fechaMeta.Location = new System.Drawing.Point(152, 181);
+            this.Lbl_fechaMeta.Location = new System.Drawing.Point(152, 172);
             this.Lbl_fechaMeta.Name = "Lbl_fechaMeta";
             this.Lbl_fechaMeta.Size = new System.Drawing.Size(79, 13);
             this.Lbl_fechaMeta.TabIndex = 11;
@@ -244,24 +292,24 @@
             // Lbl_completado
             // 
             this.Lbl_completado.AutoSize = true;
-            this.Lbl_completado.Location = new System.Drawing.Point(26, 181);
+            this.Lbl_completado.Location = new System.Drawing.Point(26, 172);
             this.Lbl_completado.Name = "Lbl_completado";
             this.Lbl_completado.Size = new System.Drawing.Size(63, 13);
             this.Lbl_completado.TabIndex = 10;
             this.Lbl_completado.Text = "Completado";
             // 
-            // Lbl_tipoMeta
+            // Lbl_plazoMeta
             // 
-            this.Lbl_tipoMeta.AutoSize = true;
-            this.Lbl_tipoMeta.Location = new System.Drawing.Point(266, 81);
-            this.Lbl_tipoMeta.Name = "Lbl_tipoMeta";
-            this.Lbl_tipoMeta.Size = new System.Drawing.Size(55, 13);
-            this.Lbl_tipoMeta.TabIndex = 9;
-            this.Lbl_tipoMeta.Text = "Tipo Meta";
+            this.Lbl_plazoMeta.AutoSize = true;
+            this.Lbl_plazoMeta.Location = new System.Drawing.Point(266, 81);
+            this.Lbl_plazoMeta.Name = "Lbl_plazoMeta";
+            this.Lbl_plazoMeta.Size = new System.Drawing.Size(60, 13);
+            this.Lbl_plazoMeta.TabIndex = 9;
+            this.Lbl_plazoMeta.Text = "Plazo Meta";
             // 
             // Txt_descripcion
             // 
-            this.Txt_descripcion.Location = new System.Drawing.Point(11, 151);
+            this.Txt_descripcion.Location = new System.Drawing.Point(11, 146);
             this.Txt_descripcion.Multiline = true;
             this.Txt_descripcion.Name = "Txt_descripcion";
             this.Txt_descripcion.Size = new System.Drawing.Size(349, 20);
@@ -270,7 +318,7 @@
             // Lbl_descripcion
             // 
             this.Lbl_descripcion.AutoSize = true;
-            this.Lbl_descripcion.Location = new System.Drawing.Point(26, 135);
+            this.Lbl_descripcion.Location = new System.Drawing.Point(26, 130);
             this.Lbl_descripcion.Name = "Lbl_descripcion";
             this.Lbl_descripcion.Size = new System.Drawing.Size(63, 13);
             this.Lbl_descripcion.TabIndex = 4;
@@ -287,6 +335,7 @@
             // 
             // Txt_codigoMeta
             // 
+            this.Txt_codigoMeta.Enabled = false;
             this.Txt_codigoMeta.Location = new System.Drawing.Point(11, 97);
             this.Txt_codigoMeta.Name = "Txt_codigoMeta";
             this.Txt_codigoMeta.Size = new System.Drawing.Size(100, 20);
@@ -365,26 +414,12 @@
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
+            series1.YValuesPerPoint = 6;
             this.Ct_graficaMeta.Series.Add(series1);
             this.Ct_graficaMeta.Size = new System.Drawing.Size(425, 464);
             this.Ct_graficaMeta.TabIndex = 0;
             this.Ct_graficaMeta.Text = "chart1";
-            // 
-            // Lbl_totalMeta
-            // 
-            this.Lbl_totalMeta.AutoSize = true;
-            this.Lbl_totalMeta.Location = new System.Drawing.Point(266, 181);
-            this.Lbl_totalMeta.Name = "Lbl_totalMeta";
-            this.Lbl_totalMeta.Size = new System.Drawing.Size(58, 13);
-            this.Lbl_totalMeta.TabIndex = 12;
-            this.Lbl_totalMeta.Text = "Total Meta";
-            // 
-            // Txt_totalMeta
-            // 
-            this.Txt_totalMeta.Location = new System.Drawing.Point(259, 198);
-            this.Txt_totalMeta.Name = "Txt_totalMeta";
-            this.Txt_totalMeta.Size = new System.Drawing.Size(100, 20);
-            this.Txt_totalMeta.TabIndex = 9;
+            this.Ct_graficaMeta.Click += new System.EventHandler(this.Ct_graficaMeta_Click);
             // 
             // Frm_Metas
             // 
@@ -403,6 +438,7 @@
             this.Pnl_Desempeño.PerformLayout();
             this.Gpb_meta.ResumeLayout(false);
             this.Gpb_meta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Nud_puntajeMeta)).EndInit();
             this.Gpb_vista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_vistaMeta)).EndInit();
             this.Gpb_grafica.ResumeLayout(false);
@@ -421,7 +457,7 @@
         private System.Windows.Forms.GroupBox Gpb_meta;
         private System.Windows.Forms.Label Lbl_fechaMeta;
         private System.Windows.Forms.Label Lbl_completado;
-        private System.Windows.Forms.Label Lbl_tipoMeta;
+        private System.Windows.Forms.Label Lbl_plazoMeta;
         private System.Windows.Forms.Button Btn_buscar;
         private System.Windows.Forms.TextBox Txt_empleadoMeta;
         private System.Windows.Forms.Label Lbl_nombreEmpleado;
@@ -440,10 +476,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Puntaje;
         private System.Windows.Forms.ComboBox Cob_completado;
         private System.Windows.Forms.ComboBox Cob_tipoMeta;
-        private System.Windows.Forms.ComboBox Cob_nombreMeta;
         private System.Windows.Forms.DataVisualization.Charting.Chart Ct_graficaMeta;
-        private System.Windows.Forms.TextBox Txt_totalMeta;
         private System.Windows.Forms.Label Lbl_totalMeta;
+        private System.Windows.Forms.Label Lbl_puntaje;
+        private System.Windows.Forms.TextBox Txt_nombreMeta;
+        private System.Windows.Forms.NumericUpDown Nud_puntajeMeta;
+        public System.Windows.Forms.TextBox Txt_totalMeta;
     }
 }
 

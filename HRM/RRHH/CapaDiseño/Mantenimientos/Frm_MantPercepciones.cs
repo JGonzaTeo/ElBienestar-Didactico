@@ -10,13 +10,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace CapaDiseño.Mantenimientos
 {
     public partial class Frm_MantPercepciones : Form
     {
+        string slocalIP;
+        string smacAddresses;
+        string suser;
+        public void obtenerip()
+        {
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+               if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    slocalIP = ip.ToString();
+                }               
+            }
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    smacAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
+
+                }
+            }
+        }        
+
         Logica logic = new Logica();
-        public Frm_MantPercepciones()
+        public Frm_MantPercepciones(String susuario)
         {
             InitializeComponent();
             Txt_Cod.Enabled = false;
@@ -25,6 +52,10 @@ namespace CapaDiseño.Mantenimientos
             Cbo_estado.Enabled = false;
             Cbo_tipo.Enabled = false;
             Cbo_tipooperacion.Enabled = false;
+            Txt_Cod.Text= logic.siguiente("concepto", "pkcodigoconcepto");
+            obtenerip();
+            // MessageBox.Show(susuario);
+            suser = susuario;
         }
 
         private void Btn_cerrar_Click(object sender, EventArgs e)
@@ -46,6 +77,9 @@ namespace CapaDiseño.Mantenimientos
         {
             OdbcDataReader cita = logic.Insertarconcepto(Txt_Cod.Text,Txt_nombre.Text,Cbo_tipo.Text,Txt_Saldo.Text,Cbo_tipooperacion.Text,Cbo_estado.Text);
             MessageBox.Show("Datos registrados.");
+            logic.siguiente("concepto", "pkcodigoconcepto");
+           
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
         }
 
         private void Btn_ingresar_Click(object sender, EventArgs e)
@@ -56,18 +90,21 @@ namespace CapaDiseño.Mantenimientos
             Cbo_estado.Enabled = true;
             Cbo_tipo.Enabled = true;
             Cbo_tipooperacion.Enabled = true;
+           
         }
 
         private void Btn_editar_Click(object sender, EventArgs e)
         {
             OdbcDataReader cita = logic.modificarConcepto(Txt_Cod.Text, Txt_nombre.Text, Cbo_tipo.Text, Txt_Saldo.Text, Cbo_tipooperacion.Text, Cbo_estado.Text);
             MessageBox.Show("Datos modificados correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
         }
 
         private void Btn_borrar_Click(object sender, EventArgs e)
         {
             OdbcDataReader cita = logic.eliminarconcepto(Txt_Cod.Text);
             MessageBox.Show("Eliminado Correctamentee.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
         }
 
         public void Btn_consultar_Click(object sender, EventArgs e)
@@ -91,5 +128,7 @@ namespace CapaDiseño.Mantenimientos
                      Cells[5].Value.ToString();
             }
         }
+
+      
     }
 }

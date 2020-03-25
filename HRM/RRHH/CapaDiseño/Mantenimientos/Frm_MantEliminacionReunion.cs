@@ -9,15 +9,46 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace CapaDiseño.Mantenimientos
 {
     public partial class Frm_MantEliminacionReunion : Form
     {
         Logica Logic = new Logica();
-        public Frm_MantEliminacionReunion()
+
+        string slocalIP;
+        string smacAddresses;
+        string suser;
+        
+          
+        public void obtenerip()
+        {
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    slocalIP = ip.ToString();
+                }
+            }
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    smacAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
+
+                }
+            }
+        }
+        public Frm_MantEliminacionReunion(String susuario)
         {
             InitializeComponent();
+            obtenerip();
+            suser = susuario;
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
@@ -66,6 +97,8 @@ namespace CapaDiseño.Mantenimientos
             {
                 OdbcDataReader Reunion = Logic.DeleteReunion(Txt_NombreReunion.Text);
                 MessageBox.Show("Reunión Eliminada");
+                Logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
+
                 //LimpiarCampos
                 Txt_NombreReunion.Clear();
                 Txt_NombreReunion.Focus();

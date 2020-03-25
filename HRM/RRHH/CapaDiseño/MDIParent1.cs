@@ -21,7 +21,7 @@ namespace CapaDiseño
     public partial class MDIParent1 : Form
     {
         Logica logic = new Logica();
-
+        string susuario="usuario";
         private int childFormNumber = 0;
 
         public MDIParent1()
@@ -76,7 +76,7 @@ namespace CapaDiseño
         }
 
         bool ventanaConceptos = false;
-        Frm_MantPercepciones conceptos = new Frm_MantPercepciones();
+        Frm_MantPercepciones conceptos = new Frm_MantPercepciones("");
         private void ConceptosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantPercepciones);
@@ -84,7 +84,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    conceptos = new Frm_MantPercepciones();
+                    conceptos = new Frm_MantPercepciones(susuario);
                 }
 
                 conceptos.MdiParent = this;
@@ -100,7 +100,7 @@ namespace CapaDiseño
         }
 
         bool ventananomina = false;
-        Frm_Nomina nomina = new Frm_Nomina();
+        Frm_Nomina nomina = new Frm_Nomina("");
         private void NominaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Nomina);
@@ -108,7 +108,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    nomina = new Frm_Nomina();
+                    nomina = new Frm_Nomina(susuario);
                 }
 
                 nomina.MdiParent = this;
@@ -169,7 +169,7 @@ namespace CapaDiseño
         }
 
         bool ventanaMantPerfil = false;
-        Frm_MantPerfiles perfiles = new Frm_MantPerfiles();
+        Frm_MantPerfiles perfiles = new Frm_MantPerfiles("");
         private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantPerfiles);
@@ -177,7 +177,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    perfiles = new Frm_MantPerfiles();
+                    perfiles = new Frm_MantPerfiles(susuario);
                 }
 
                 perfiles.MdiParent = this;
@@ -215,7 +215,7 @@ namespace CapaDiseño
         }
 
         bool ventanaingresodespido = false;
-        Frm_MantDespidoEmpleado despido = new Frm_MantDespidoEmpleado();
+        Frm_MantDespidoEmpleado despido = new Frm_MantDespidoEmpleado("");
         private void ingresoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantDespidoEmpleado);
@@ -223,7 +223,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    despido = new Frm_MantDespidoEmpleado();
+                    despido = new Frm_MantDespidoEmpleado(susuario);
                 }
 
                 despido.MdiParent = this;
@@ -238,7 +238,7 @@ namespace CapaDiseño
         }
 
         bool ventanacrearreunion = false;
-        Frm_MantIngresoReunion ingresoreunion = new Frm_MantIngresoReunion();
+        Frm_MantIngresoReunion ingresoreunion = new Frm_MantIngresoReunion("");
         private void crearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantIngresoReunion);
@@ -246,7 +246,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    ingresoreunion = new Frm_MantIngresoReunion();
+                    ingresoreunion = new Frm_MantIngresoReunion(susuario);
                 }
 
                 ingresoreunion.MdiParent = this;
@@ -262,7 +262,7 @@ namespace CapaDiseño
         }
 
         bool ventanamodreunion = false;
-        Frm_MantModificacionReunion modreunion = new Frm_MantModificacionReunion();
+        Frm_MantModificacionReunion modreunion = new Frm_MantModificacionReunion("");
         private void modificacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantModificacionReunion);
@@ -270,7 +270,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    modreunion = new Frm_MantModificacionReunion();
+                    modreunion = new Frm_MantModificacionReunion(susuario);
                 }
 
                 modreunion.MdiParent = this;
@@ -285,7 +285,7 @@ namespace CapaDiseño
         }
 
         bool ventanaelimreunion = false;
-        Frm_MantEliminacionReunion elimreunion = new Frm_MantEliminacionReunion();
+        Frm_MantEliminacionReunion elimreunion = new Frm_MantEliminacionReunion("");
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEliminacionReunion);
@@ -293,7 +293,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    elimreunion = new Frm_MantEliminacionReunion();
+                    elimreunion = new Frm_MantEliminacionReunion(susuario);
                 }
 
                 elimreunion.MdiParent = this;
@@ -308,7 +308,7 @@ namespace CapaDiseño
         }
 
         bool ventanacrearasistencia = false;
-        Frm_MantIngresoControlAsistencia crearasistencia = new Frm_MantIngresoControlAsistencia();
+        Frm_MantIngresoControlAsistencia crearasistencia = new Frm_MantIngresoControlAsistencia("");
         private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantIngresoControlAsistencia);
@@ -316,7 +316,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    crearasistencia = new Frm_MantIngresoControlAsistencia();
+                    crearasistencia = new Frm_MantIngresoControlAsistencia(susuario);
                 }
 
                 crearasistencia.MdiParent = this;
@@ -332,7 +332,7 @@ namespace CapaDiseño
         }
 
         bool ventanacrearsancion = false;
-        Frm_MantIngresoSansion crearsancion = new Frm_MantIngresoSansion();
+        Frm_MantIngresoSansion crearsancion = new Frm_MantIngresoSansion("");
         private void crearToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantIngresoSansion);
@@ -340,7 +340,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    crearsancion = new Frm_MantIngresoSansion();
+                    crearsancion = new Frm_MantIngresoSansion(susuario);
                 }
 
                 crearsancion.MdiParent = this;
@@ -355,7 +355,7 @@ namespace CapaDiseño
         }
 
         bool ventanaelimsancion = false;
-        Frm_MantEliminacionSansion elimsancion = new Frm_MantEliminacionSansion();
+        Frm_MantEliminacionSansion elimsancion = new Frm_MantEliminacionSansion("");
         private void eliminarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEliminacionSansion);
@@ -363,7 +363,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    elimsancion = new Frm_MantEliminacionSansion();
+                    elimsancion = new Frm_MantEliminacionSansion(susuario);
                 }
 
                 elimsancion.MdiParent = this;
@@ -424,7 +424,7 @@ namespace CapaDiseño
         }
 
         bool ventanaempleado = false;
-        Frm_MantEmpleado empleado = new Frm_MantEmpleado();
+        Frm_MantEmpleado empleado = new Frm_MantEmpleado("");
         private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEmpleado);
@@ -432,7 +432,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    empleado = new Frm_MantEmpleado();
+                    empleado = new Frm_MantEmpleado(susuario);
                 }
 
                 empleado.MdiParent = this;
@@ -447,7 +447,7 @@ namespace CapaDiseño
         }
 
         bool ventanaMC = false;
-        Frm_MediodeComunicacion MC = new Frm_MediodeComunicacion();
+        Frm_MediodeComunicacion MC = new Frm_MediodeComunicacion("");
         private void MedioDeComunicacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEmpleado);
@@ -455,7 +455,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    MC = new Frm_MediodeComunicacion();
+                    MC = new Frm_MediodeComunicacion(susuario);
                 }
 
                 MC.MdiParent = this;
@@ -470,7 +470,7 @@ namespace CapaDiseño
         }
 
         bool ventanacontrato = false;
-        Frm_MantTipoContratacion contrato = new Frm_MantTipoContratacion();
+        Frm_MantTipoContratacion contrato = new Frm_MantTipoContratacion("");
         private void TipoDeContratoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantEmpleado);
@@ -478,7 +478,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    contrato = new Frm_MantTipoContratacion();
+                    contrato = new Frm_MantTipoContratacion(susuario);
                 }
 
                 contrato.MdiParent = this;
@@ -549,7 +549,7 @@ namespace CapaDiseño
         }
 
         bool ventanaCurriculum = false;
-        Frm_MantCurriculum curriculum = new Frm_MantCurriculum();
+        Frm_MantCurriculum curriculum = new Frm_MantCurriculum("");
         private void CurriculumToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantCurriculum);
@@ -557,7 +557,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    curriculum = new Frm_MantCurriculum();
+                    curriculum = new Frm_MantCurriculum(susuario);
                 }
 
                 curriculum.MdiParent = this;
@@ -618,7 +618,7 @@ namespace CapaDiseño
         }
 
         bool ventanaJornada = false;
-        Frm_MantJornada jornadas = new Frm_MantJornada();
+        Frm_MantJornada jornadas = new Frm_MantJornada("");
         private void jornadasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantJornada);
@@ -626,7 +626,7 @@ namespace CapaDiseño
             {
                 if (frmC == null)
                 {
-                    jornadas = new Frm_MantJornada();
+                    jornadas = new Frm_MantJornada(susuario);
                 }
 
                 jornadas.MdiParent = this;
@@ -638,6 +638,34 @@ namespace CapaDiseño
             {
                 jornadas.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
+        }
+
+        bool ventanaDepartamentos = false;
+        Frm_ManteDepartamento departamento = new Frm_ManteDepartamento("");
+        private void departamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_ManteDepartamento);
+            if (ventanaDepartamentos == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    departamento = new Frm_ManteDepartamento(susuario);
+                }
+
+                departamento.MdiParent = this;
+                departamento.Show();
+                Application.DoEvents();
+                ventanaDepartamentos = true;
+            }
+            else
+            {
+                departamento.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        private void MDIParent1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

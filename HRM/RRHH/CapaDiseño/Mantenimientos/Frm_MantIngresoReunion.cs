@@ -9,14 +9,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica;
+using System.Net;
+using System.Net.NetworkInformation;
+
 namespace CapaDiseño.Mantenimientos
 {
     public partial class Frm_MantIngresoReunion : Form
     {
         Logica Logic = new Logica();
-        public Frm_MantIngresoReunion()
+
+        string slocalIP;
+        string smacAddresses;
+        string suser;
+        
+          
+        public void obtenerip()
+        {
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    slocalIP = ip.ToString();
+                }
+            }
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    smacAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
+
+                }
+            }
+        }
+
+        public Frm_MantIngresoReunion(String susuario)
         {
             InitializeComponent();
+            obtenerip();
+            suser = susuario;
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
@@ -68,6 +101,7 @@ namespace CapaDiseño.Mantenimientos
             {
                 OdbcDataReader Reunion = Logic.InsertaReunion(Txt_CodigoEmpleado.Text, Txt_NombreReunion.Text, Txt_DescripcionReunion.Text, Txt_FechaInicio.Text, Txt_FechaFinal.Text, Txt_HoraInicio.Text, Txt_HoraFinal.Text, Txt_CantidadEmpleados.Text);
                 MessageBox.Show("Reunión Ingresada");
+                Logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
                 //LimpiarCampos
                 Txt_CodigoEmpleado.Clear();
                 Txt_CodigoEmpleado.Focus();

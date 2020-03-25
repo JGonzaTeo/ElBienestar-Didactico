@@ -9,15 +9,46 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaLogica;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace CapaDiseño.Mantenimientos
 {
     public partial class Frm_MantModificacionReunion : Form
     {
         Logica Logic = new Logica();
-        public Frm_MantModificacionReunion()
+
+        string slocalIP;
+        string smacAddresses;
+        string suser;
+        
+        public void obtenerip()
+        {
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    slocalIP = ip.ToString();
+                }
+            }
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    smacAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
+
+                }
+            }
+        }
+        public Frm_MantModificacionReunion(String susuario)
         {
             InitializeComponent();
+            obtenerip();
+
+            suser = susuario;
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
@@ -66,6 +97,8 @@ namespace CapaDiseño.Mantenimientos
             {
                 OdbcDataReader Reunion = Logic.UpdateReunion(Txt_NombreReunion.Text, Txt_Descripcion.Text, Txt_FechaInicio.Text, Txt_FechaFinal.Text, Txt_HoraInicio.Text, Txt_HoraFinal.Text, Txt_CantidadEmpleado.Text);
                 MessageBox.Show("Reunión Modificada");
+                Logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
+
                 //LimpiarCampos
                 Txt_NombreReunion.Clear();
                 Txt_NombreReunion.Focus();
