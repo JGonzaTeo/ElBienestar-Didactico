@@ -73,11 +73,6 @@ namespace CapaDiseño.Mantenimientos
                     {
                         MessageBox.Show("Ingrese un codito existente");
                     }
-                    else
-                    {
-                        Txt_HoraIngreso.Text = DateTime.Now.ToLongTimeString();
-                        Txt_FechaIngreso.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                    }
                     
                 }
                 catch (Exception err)
@@ -104,14 +99,32 @@ namespace CapaDiseño.Mantenimientos
 
         private void Btn_RegistrarAsistencia_Click(object sender, EventArgs e)
         {
-            if (Txt_CodigoEmpleado.Text == "" | Txt_Nombre.Text == "" | Txt_Apellido.Text == "" | Txt_FechaIngreso.Text == "" | Txt_HoraIngreso.Text == "")
+            if (Txt_CodigoEmpleado.Text == "" | Txt_Nombre.Text == "" | Txt_Apellido.Text == ""  )
             {
                 MessageBox.Show("Debe llenar todos los Campos Solicitados");
             }
             else
             {
+                //FORMATO DE FECHAS Y HORAS
+                string sFechaIngreso, sFechaSalida, sHoraIngreso, sHoraSalida;
+                sFechaIngreso = Dtp_FechaIngreso.Value.ToString("yyyy-MM-dd");
+                sFechaSalida = Dtp_FechaSalida.Value.ToString("yyyy-MM-dd");
+                sHoraIngreso = Dtp_HoraIngreso.Value.ToLongTimeString();
+                sHoraSalida = Dtp_HoraSalida.Value.ToLongTimeString();
+                
+                //HORAS EXTRAS
+                TimeSpan tDiferenciaHoras = new TimeSpan();
+                DateTime dhorauno = new DateTime();
+                dhorauno = DateTime.Parse(sHoraIngreso);
+                DateTime dhorados = new DateTime();
+                dhorados = DateTime.Parse(sHoraSalida);
 
-                OdbcDataReader ControlAsistencia = Logic.InsertaControlAsistencia(Txt_CodigoEmpleado.Text, Txt_Nombre.Text, Txt_Apellido.Text, Txt_FechaIngreso.Text, Txt_HoraIngreso.Text);
+                tDiferenciaHoras = -(dhorauno - dhorados);
+                int ihoras = tDiferenciaHoras.Hours;
+                float fHorasTotales = tDiferenciaHoras.Hours;
+
+                //ENVIO DE DATOS
+                OdbcDataReader ControlAsistencia = Logic.InsertaControlAsistencia(Txt_CodigoEmpleado.Text, Txt_Nombre.Text, Txt_Apellido.Text, sFechaIngreso, sFechaSalida,sHoraIngreso,sHoraSalida,fHorasTotales);
                 MessageBox.Show("Asistencia Ingresada");
                 Logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
 
@@ -120,10 +133,18 @@ namespace CapaDiseño.Mantenimientos
                 Txt_CodigoEmpleado.Focus();
                 Txt_Nombre.Clear();
                 Txt_Apellido.Clear();
-                Txt_FechaIngreso.Clear();
-                Txt_HoraIngreso.Clear();
+                Dtp_FechaIngreso.ResetText();
+                Dtp_FechaSalida.ResetText();
+                Dtp_HoraIngreso.ResetText();
+                Dtp_HoraSalida.ResetText();
+
+
+
+                
 
             }
         }
+
+
     }
 }

@@ -67,10 +67,10 @@ namespace CapaDiseño.Mantenimientos
                     {
 
                         Txt_Descripcion.Text = Reunion.GetString(0);
-                        Txt_FechaInicio.Text = Reunion.GetString(1);
-                        Txt_FechaFinal.Text = Reunion.GetString(2);
-                        Txt_HoraInicio.Text = Reunion.GetString(3);
-                        Txt_HoraFinal.Text = Reunion.GetString(4);
+                        Dtp_FechaIngreso.Text = Reunion.GetString(1);
+                        Dtp_FechaSalida.Text = Reunion.GetString(2);
+                        Dtp_HoraIngreso.Text = Reunion.GetString(3);
+                        Dtp_HoraSalida.Text = Reunion.GetString(4);
                         Txt_CantidadEmpleado.Text = Reunion.GetString(5);
 
 
@@ -89,13 +89,21 @@ namespace CapaDiseño.Mantenimientos
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (Txt_NombreReunion.Text == "" | Txt_FechaInicio.Text == "" | Txt_HoraInicio.Text == "" | Txt_FechaFinal.Text == "" | Txt_HoraFinal.Text == "" | Txt_CantidadEmpleado.Text == "")
+            if (Txt_NombreReunion.Text == ""  | Txt_CantidadEmpleado.Text == "")
             {
                 MessageBox.Show("Debe llenar todos los Campos Solicitados");
             }
             else
             {
-                OdbcDataReader Reunion = Logic.UpdateReunion(Txt_NombreReunion.Text, Txt_Descripcion.Text, Txt_FechaInicio.Text, Txt_FechaFinal.Text, Txt_HoraInicio.Text, Txt_HoraFinal.Text, Txt_CantidadEmpleado.Text);
+
+                //FORMATO DE FECHAS Y HORAS
+                string sFechaIngreso, sFechaSalida, sHoraIngreso, sHoraSalida;
+                sFechaIngreso = Dtp_FechaIngreso.Value.ToString("yyyy-MM-dd");
+                sFechaSalida = Dtp_FechaSalida.Value.ToString("yyyy-MM-dd");
+                sHoraIngreso = Dtp_HoraIngreso.Value.ToLongTimeString();
+                sHoraSalida = Dtp_HoraSalida.Value.ToLongTimeString();
+
+                OdbcDataReader Reunion = Logic.UpdateReunion(Txt_NombreReunion.Text, Txt_Descripcion.Text, sFechaIngreso,sFechaSalida, sHoraIngreso, sHoraSalida, Txt_CantidadEmpleado.Text);
                 MessageBox.Show("Reunión Modificada");
                 Logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
 
@@ -103,11 +111,11 @@ namespace CapaDiseño.Mantenimientos
                 Txt_NombreReunion.Clear();
                 Txt_NombreReunion.Focus();
                 Txt_Descripcion.Clear();
-                Txt_FechaInicio.Clear();
-                Txt_FechaFinal.Clear();
-                Txt_HoraInicio.Clear();
-                Txt_HoraFinal.Clear();
                 Txt_CantidadEmpleado.Clear();
+                Dtp_FechaIngreso.ResetText();
+                Dtp_FechaSalida.ResetText();
+                Dtp_HoraIngreso.ResetText();
+                Dtp_HoraSalida.ResetText();
             }
         }
 
