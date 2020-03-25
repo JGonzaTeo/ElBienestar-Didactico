@@ -66,10 +66,10 @@
             this.Pnl_nombreForm.Controls.Add(this.Label_MantEmpleados);
             this.Pnl_nombreForm.Controls.Add(this.btn_minimizar);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
-            this.Pnl_nombreForm.Location = new System.Drawing.Point(1, 0);
+            this.Pnl_nombreForm.Location = new System.Drawing.Point(-1, 0);
             this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_nombreForm.Name = "Pnl_nombreForm";
-            this.Pnl_nombreForm.Size = new System.Drawing.Size(970, 51);
+            this.Pnl_nombreForm.Size = new System.Drawing.Size(644, 51);
             this.Pnl_nombreForm.TabIndex = 2;
             // 
             // btn_Ayuda
@@ -77,7 +77,7 @@
             this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ayuda.Image")));
-            this.btn_Ayuda.Location = new System.Drawing.Point(862, 11);
+            this.btn_Ayuda.Location = new System.Drawing.Point(555, 11);
             this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ayuda.Name = "btn_Ayuda";
             this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
@@ -102,7 +102,7 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(825, 11);
+            this.btn_minimizar.Location = new System.Drawing.Point(518, 11);
             this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
@@ -115,7 +115,7 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(899, 11);
+            this.btn_cerrar.Location = new System.Drawing.Point(592, 11);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
@@ -128,19 +128,20 @@
             this.Pic_Consultar.BackColor = System.Drawing.Color.Transparent;
             this.Pic_Consultar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Pic_Consultar.Image = global::CapaDiseño.Properties.Resources.question;
-            this.Pic_Consultar.Location = new System.Drawing.Point(590, 81);
+            this.Pic_Consultar.Location = new System.Drawing.Point(443, 72);
             this.Pic_Consultar.Name = "Pic_Consultar";
             this.Pic_Consultar.Size = new System.Drawing.Size(56, 61);
             this.Pic_Consultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pic_Consultar.TabIndex = 77;
             this.Pic_Consultar.TabStop = false;
+            this.Pic_Consultar.Click += new System.EventHandler(this.Pic_Consultar_Click);
             // 
             // Pic_Borrar
             // 
             this.Pic_Borrar.BackColor = System.Drawing.Color.Transparent;
             this.Pic_Borrar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Pic_Borrar.Image = global::CapaDiseño.Properties.Resources.eraser;
-            this.Pic_Borrar.Location = new System.Drawing.Point(528, 81);
+            this.Pic_Borrar.Location = new System.Drawing.Point(381, 72);
             this.Pic_Borrar.Name = "Pic_Borrar";
             this.Pic_Borrar.Size = new System.Drawing.Size(56, 61);
             this.Pic_Borrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +154,7 @@
             this.Pic_Guardar.BackColor = System.Drawing.Color.Transparent;
             this.Pic_Guardar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Pic_Guardar.Image = global::CapaDiseño.Properties.Resources.save__1_;
-            this.Pic_Guardar.Location = new System.Drawing.Point(466, 81);
+            this.Pic_Guardar.Location = new System.Drawing.Point(319, 72);
             this.Pic_Guardar.Name = "Pic_Guardar";
             this.Pic_Guardar.Size = new System.Drawing.Size(56, 61);
             this.Pic_Guardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -166,7 +167,7 @@
             this.PicActualizar.BackColor = System.Drawing.Color.Transparent;
             this.PicActualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PicActualizar.Image = global::CapaDiseño.Properties.Resources.file;
-            this.PicActualizar.Location = new System.Drawing.Point(404, 81);
+            this.PicActualizar.Location = new System.Drawing.Point(257, 72);
             this.PicActualizar.Name = "PicActualizar";
             this.PicActualizar.Size = new System.Drawing.Size(56, 61);
             this.PicActualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,7 +180,7 @@
             this.Pic_Insertar.BackColor = System.Drawing.Color.Transparent;
             this.Pic_Insertar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Pic_Insertar.Image = global::CapaDiseño.Properties.Resources.add__1_;
-            this.Pic_Insertar.Location = new System.Drawing.Point(343, 81);
+            this.Pic_Insertar.Location = new System.Drawing.Point(196, 72);
             this.Pic_Insertar.Name = "Pic_Insertar";
             this.Pic_Insertar.Size = new System.Drawing.Size(55, 61);
             this.Pic_Insertar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -199,9 +200,9 @@
             this.groupBox1.Controls.Add(this.Label_Nombre);
             this.groupBox1.Controls.Add(this.Txt_ID);
             this.groupBox1.Controls.Add(this.Label_IDMC);
-            this.groupBox1.Location = new System.Drawing.Point(51, 160);
+            this.groupBox1.Location = new System.Drawing.Point(23, 152);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(871, 179);
+            this.groupBox1.Size = new System.Drawing.Size(591, 179);
             this.groupBox1.TabIndex = 78;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS";
@@ -209,7 +210,7 @@
             // Cbo_Estado
             // 
             this.Cbo_Estado.FormattingEnabled = true;
-            this.Cbo_Estado.Location = new System.Drawing.Point(525, 109);
+            this.Cbo_Estado.Location = new System.Drawing.Point(391, 104);
             this.Cbo_Estado.Name = "Cbo_Estado";
             this.Cbo_Estado.Size = new System.Drawing.Size(182, 21);
             this.Cbo_Estado.TabIndex = 9;
@@ -217,7 +218,7 @@
             // Label_Estado
             // 
             this.Label_Estado.AutoSize = true;
-            this.Label_Estado.Location = new System.Drawing.Point(455, 111);
+            this.Label_Estado.Location = new System.Drawing.Point(321, 106);
             this.Label_Estado.Name = "Label_Estado";
             this.Label_Estado.Size = new System.Drawing.Size(40, 13);
             this.Label_Estado.TabIndex = 8;
@@ -225,7 +226,7 @@
             // 
             // Txt_Telefono
             // 
-            this.Txt_Telefono.Location = new System.Drawing.Point(525, 63);
+            this.Txt_Telefono.Location = new System.Drawing.Point(391, 58);
             this.Txt_Telefono.Name = "Txt_Telefono";
             this.Txt_Telefono.Size = new System.Drawing.Size(182, 20);
             this.Txt_Telefono.TabIndex = 7;
@@ -233,7 +234,7 @@
             // Label_Telefono
             // 
             this.Label_Telefono.AutoSize = true;
-            this.Label_Telefono.Location = new System.Drawing.Point(455, 66);
+            this.Label_Telefono.Location = new System.Drawing.Point(321, 61);
             this.Label_Telefono.Name = "Label_Telefono";
             this.Label_Telefono.Size = new System.Drawing.Size(49, 13);
             this.Label_Telefono.TabIndex = 6;
@@ -241,7 +242,7 @@
             // 
             // Txt_Direccion
             // 
-            this.Txt_Direccion.Location = new System.Drawing.Point(227, 134);
+            this.Txt_Direccion.Location = new System.Drawing.Point(93, 129);
             this.Txt_Direccion.Name = "Txt_Direccion";
             this.Txt_Direccion.Size = new System.Drawing.Size(182, 20);
             this.Txt_Direccion.TabIndex = 5;
@@ -249,7 +250,7 @@
             // Label_Direccion
             // 
             this.Label_Direccion.AutoSize = true;
-            this.Label_Direccion.Location = new System.Drawing.Point(157, 137);
+            this.Label_Direccion.Location = new System.Drawing.Point(23, 132);
             this.Label_Direccion.Name = "Label_Direccion";
             this.Label_Direccion.Size = new System.Drawing.Size(52, 13);
             this.Label_Direccion.TabIndex = 4;
@@ -257,7 +258,7 @@
             // 
             // Txt_Nombre
             // 
-            this.Txt_Nombre.Location = new System.Drawing.Point(227, 86);
+            this.Txt_Nombre.Location = new System.Drawing.Point(93, 81);
             this.Txt_Nombre.Name = "Txt_Nombre";
             this.Txt_Nombre.Size = new System.Drawing.Size(182, 20);
             this.Txt_Nombre.TabIndex = 3;
@@ -265,7 +266,7 @@
             // Label_Nombre
             // 
             this.Label_Nombre.AutoSize = true;
-            this.Label_Nombre.Location = new System.Drawing.Point(157, 89);
+            this.Label_Nombre.Location = new System.Drawing.Point(23, 84);
             this.Label_Nombre.Name = "Label_Nombre";
             this.Label_Nombre.Size = new System.Drawing.Size(44, 13);
             this.Label_Nombre.TabIndex = 2;
@@ -273,7 +274,7 @@
             // 
             // Txt_ID
             // 
-            this.Txt_ID.Location = new System.Drawing.Point(227, 41);
+            this.Txt_ID.Location = new System.Drawing.Point(93, 36);
             this.Txt_ID.Name = "Txt_ID";
             this.Txt_ID.Size = new System.Drawing.Size(182, 20);
             this.Txt_ID.TabIndex = 1;
@@ -281,7 +282,7 @@
             // Label_IDMC
             // 
             this.Label_IDMC.AutoSize = true;
-            this.Label_IDMC.Location = new System.Drawing.Point(157, 44);
+            this.Label_IDMC.Location = new System.Drawing.Point(23, 39);
             this.Label_IDMC.Name = "Label_IDMC";
             this.Label_IDMC.Size = new System.Drawing.Size(18, 13);
             this.Label_IDMC.TabIndex = 0;
@@ -291,7 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 375);
+            this.ClientSize = new System.Drawing.Size(640, 352);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Pic_Consultar);
             this.Controls.Add(this.Pic_Borrar);
@@ -300,7 +301,9 @@
             this.Controls.Add(this.Pic_Insertar);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(852, 12);
             this.Name = "Frm_MediodeComunicacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MediodeComunicacion";
             this.Pnl_nombreForm.ResumeLayout(false);
             this.Pnl_nombreForm.PerformLayout();

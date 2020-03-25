@@ -17,6 +17,7 @@ namespace CapaDiseño.Procesos
         public Frm_ControlAsistenciaPersonal()
         {
             InitializeComponent();
+            MostrarAsistenciaPersonal();
         }
 
         public void MostrarAsistenciaPersonal()
@@ -25,14 +26,14 @@ namespace CapaDiseño.Procesos
             {
                 Conexion conexion = new Conexion();
                 //string consultaMostrar = "select * from asistencia;";
-                string consultaMostrar = "Select pkcodigoasistencia,fkcodigoempleado,fechaentrada,horaentrada from asistencia ;";
+                string consultaMostrar = "Select * from asistencia ;";
                 OdbcCommand comm = new OdbcCommand(consultaMostrar, conexion.conexionbd());
                 OdbcDataReader mostrarDatos = comm.ExecuteReader();
 
                 while (mostrarDatos.Read())
                 {
                     Dgv_AsistenciaPersonal.Refresh();
-                    Dgv_AsistenciaPersonal.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2), mostrarDatos.GetString(3));
+                    Dgv_AsistenciaPersonal.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2), mostrarDatos.GetString(3), mostrarDatos.GetString(4), mostrarDatos.GetString(5));
                 }
                 comm.Connection.Close();
                 mostrarDatos.Close();
