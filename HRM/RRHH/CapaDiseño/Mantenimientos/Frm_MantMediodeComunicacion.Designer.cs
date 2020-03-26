@@ -208,6 +208,7 @@
             this.Txt_ID.Name = "Txt_ID";
             this.Txt_ID.Size = new System.Drawing.Size(182, 20);
             this.Txt_ID.TabIndex = 1;
+            this.Txt_ID.TextChanged += new System.EventHandler(this.Txt_ID_TextChanged);
             // 
             // Label_IDMC
             // 
