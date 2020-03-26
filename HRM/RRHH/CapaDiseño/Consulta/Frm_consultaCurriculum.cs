@@ -69,5 +69,20 @@ namespace CapaDiseño.Consulta
                 Close();
             }
         }
+
+        private void Btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void Frm_consultaCurriculum_Load(object sender, EventArgs e)
+        {
+            MostrarConsulta();
+        }
     }
 }

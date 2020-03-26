@@ -105,9 +105,9 @@ namespace CapaDiseño.Procesos
         }
 
         private void Btn_Imprimir_Click(object sender, EventArgs e)
-        {/*
-            IMPRIMIR PENDIENTE
-            */
+        {
+            MessageBox.Show("CREACION DE PDF PENDIENTE CASI TERMINADA");
+            
         }
 
         private void Btn_minimizar_Click(object sender, EventArgs e)

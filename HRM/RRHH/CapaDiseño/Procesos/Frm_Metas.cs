@@ -143,5 +143,15 @@ namespace Metas
         {
             totalKpi();
         }
+
+        private void Txt_empleadoMeta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_totalMeta_TextChanged(object sender, EventArgs e)
+        {
+            Txt_totalMeta.Enabled = false;
+        }
     }
 }

@@ -580,7 +580,7 @@ namespace CapaDatos
             try
             {
                 cn.conexionbd();
-                string consulta = "insert into tbl_curriculums values(" + scampo + ',' + nombre + ',' + apellido + ',' + numero + ',' + direccion + ',' + correo + ',' + p2 + ',' + s2 + ',' + b2 + ',' + es2 + ',' + g2 + ',' + c2 + ',' + extras + ',' + experiencia + ',' + sueldo + ',' + solicitud + ",1);";
+                string consulta = "insert into tbl_curriculums values(" + scampo + ",'" + nombre + "','" + apellido + "','" + numero + "','" + direccion + "','" + correo + "'," + p2 + ',' + s2 + ',' + b2 + ',' + es2 + ',' + g2 + ',' + c2 + ",'" + extras + "','" + experiencia + "'," + sueldo + "," + solicitud + ",1);";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
