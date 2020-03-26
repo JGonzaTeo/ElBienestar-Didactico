@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using CapaLogica;
 using System.Net;
 using System.Net.NetworkInformation;
+using CapaDiseño.Consulta;
 
 namespace CapaDiseño.Mantenimientos
 {
@@ -125,6 +126,18 @@ namespace CapaDiseño.Mantenimientos
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void Btn_ConsultarEmpleados_Click(object sender, EventArgs e)
+        {
+            Frm_consultaEmpleado consultaempleado = new Frm_consultaEmpleado();
+            consultaempleado.ShowDialog();
+
+            if (consultaempleado.DialogResult == DialogResult.OK)
+            {
+                Txt_CodigoEmpleado.Text = consultaempleado.Dgv_consultaEmpleado.Rows[consultaempleado.Dgv_consultaEmpleado.CurrentRow.Index].Cells[0].Value.ToString();
+
+            }
         }
     }
 }

@@ -56,6 +56,30 @@ namespace CapaDiseño.Mantenimientos
             suser = susuario;
         }
 
+        public void limpiar()
+        {
+            Txt_Cod.Text = " ";
+            Txt_nombre.Text = " ";
+            txt_Apellido.Text = " ";
+            txt_Correo.Text = " ";
+            txt_Direccion.Text = " ";
+            txt_Experiencia.Text = " ";
+            txt_extras.Text = " ";
+            txt_Numero.Text = " ";
+            txt_Solicitud.Text = " ";
+            txt_Sueldo.Text = " ";
+            chc_primaria.Checked = false;
+            chc_secundaria.Checked = false;
+            chc_bachillerato.Checked = false;
+            chc_Estudiante.Checked = false;
+            chc_Graduado.Checked = false;
+
+            scampo = logic.siguiente("tbl_curriculums", "pkidCurriculum");
+            Txt_Cod.Text = scampo;
+
+
+        }
+
         private void Btn_buscarCreador_Click(object sender, EventArgs e)
         {
 
@@ -129,7 +153,7 @@ namespace CapaDiseño.Mantenimientos
             MessageBox.Show("Curriculum Creado");
 
             logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
-
+            limpiar();
         }
 
         private void Btn_editar_Click(object sender, EventArgs e)
@@ -162,7 +186,7 @@ namespace CapaDiseño.Mantenimientos
             OdbcDataReader curriculum = logic.modificarCurriculum(Txt_Cod.Text, Txt_nombre.Text,txt_Apellido.Text,txt_Numero.Text,txt_Direccion.Text,txt_Correo.Text, p2, s2, b2, es2, g2, c2, txt_extras.Text,txt_Experiencia.Text,txt_Sueldo.Text,txt_Solicitud.Text);
             MessageBox.Show("Datos modificados correctamente");
             logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
-
+            limpiar();
         }
 
         private void Btn_borrar_Click(object sender, EventArgs e)
@@ -170,7 +194,7 @@ namespace CapaDiseño.Mantenimientos
             OdbcDataReader perfil = logic.eliminarCurriculum(Txt_Cod.Text);
             MessageBox.Show("Eliminado Correctamentee.");
             logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
-
+            limpiar();
         }
 
         private void Btn_consultar_Click(object sender, EventArgs e)

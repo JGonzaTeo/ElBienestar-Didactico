@@ -128,5 +128,10 @@ namespace CapaDiseño.Procesos
         {
 
         }
+
+        private void Gpb_nominaencabezado_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

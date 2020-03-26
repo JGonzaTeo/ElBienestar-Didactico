@@ -33,6 +33,7 @@
             this.Lbl_Despido = new System.Windows.Forms.Label();
             this.Btn_RealizarDespido = new System.Windows.Forms.Button();
             this.Gpb_DatosDespido = new System.Windows.Forms.GroupBox();
+            this.Dtp_FechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.Txt_Descripcion = new System.Windows.Forms.TextBox();
             this.Txt_RazonDespido = new System.Windows.Forms.TextBox();
             this.Txt_NombreEmpleado = new System.Windows.Forms.TextBox();
@@ -47,10 +48,12 @@
             this.btn_Ayuda = new System.Windows.Forms.Button();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.Dtp_FechaIngreso = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Btn_ConsultarEmpleados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Barra)).BeginInit();
             this.Gpb_DatosDespido.SuspendLayout();
             this.Gpb_Busqueda.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pic_Barra
@@ -59,7 +62,7 @@
             this.Pic_Barra.Location = new System.Drawing.Point(-1, -2);
             this.Pic_Barra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pic_Barra.Name = "Pic_Barra";
-            this.Pic_Barra.Size = new System.Drawing.Size(615, 62);
+            this.Pic_Barra.Size = new System.Drawing.Size(733, 62);
             this.Pic_Barra.TabIndex = 21;
             this.Pic_Barra.TabStop = false;
             // 
@@ -77,7 +80,7 @@
             // 
             // Btn_RealizarDespido
             // 
-            this.Btn_RealizarDespido.Location = new System.Drawing.Point(229, 421);
+            this.Btn_RealizarDespido.Location = new System.Drawing.Point(293, 420);
             this.Btn_RealizarDespido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_RealizarDespido.Name = "Btn_RealizarDespido";
             this.Btn_RealizarDespido.Size = new System.Drawing.Size(144, 38);
@@ -100,14 +103,24 @@
             this.Gpb_DatosDespido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Gpb_DatosDespido.Name = "Gpb_DatosDespido";
             this.Gpb_DatosDespido.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Gpb_DatosDespido.Size = new System.Drawing.Size(540, 215);
+            this.Gpb_DatosDespido.Size = new System.Drawing.Size(639, 215);
             this.Gpb_DatosDespido.TabIndex = 28;
             this.Gpb_DatosDespido.TabStop = false;
             this.Gpb_DatosDespido.Text = "Datos para Despido";
             // 
+            // Dtp_FechaIngreso
+            // 
+            this.Dtp_FechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_FechaIngreso.Location = new System.Drawing.Point(231, 162);
+            this.Dtp_FechaIngreso.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaIngreso.Name = "Dtp_FechaIngreso";
+            this.Dtp_FechaIngreso.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Dtp_FechaIngreso.Size = new System.Drawing.Size(265, 22);
+            this.Dtp_FechaIngreso.TabIndex = 10;
+            // 
             // Txt_Descripcion
             // 
-            this.Txt_Descripcion.Location = new System.Drawing.Point(129, 121);
+            this.Txt_Descripcion.Location = new System.Drawing.Point(231, 121);
             this.Txt_Descripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Descripcion.Name = "Txt_Descripcion";
             this.Txt_Descripcion.Size = new System.Drawing.Size(279, 22);
@@ -115,7 +128,7 @@
             // 
             // Txt_RazonDespido
             // 
-            this.Txt_RazonDespido.Location = new System.Drawing.Point(164, 80);
+            this.Txt_RazonDespido.Location = new System.Drawing.Point(266, 80);
             this.Txt_RazonDespido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_RazonDespido.Name = "Txt_RazonDespido";
             this.Txt_RazonDespido.Size = new System.Drawing.Size(243, 22);
@@ -123,7 +136,7 @@
             // 
             // Txt_NombreEmpleado
             // 
-            this.Txt_NombreEmpleado.Location = new System.Drawing.Point(164, 42);
+            this.Txt_NombreEmpleado.Location = new System.Drawing.Point(266, 42);
             this.Txt_NombreEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_NombreEmpleado.Name = "Txt_NombreEmpleado";
             this.Txt_NombreEmpleado.Size = new System.Drawing.Size(243, 22);
@@ -132,7 +145,7 @@
             // Lbl_Fecha
             // 
             this.Lbl_Fecha.AutoSize = true;
-            this.Lbl_Fecha.Location = new System.Drawing.Point(35, 167);
+            this.Lbl_Fecha.Location = new System.Drawing.Point(137, 167);
             this.Lbl_Fecha.Name = "Lbl_Fecha";
             this.Lbl_Fecha.Size = new System.Drawing.Size(47, 17);
             this.Lbl_Fecha.TabIndex = 4;
@@ -141,7 +154,7 @@
             // Lbl_Descripcion
             // 
             this.Lbl_Descripcion.AutoSize = true;
-            this.Lbl_Descripcion.Location = new System.Drawing.Point(31, 121);
+            this.Lbl_Descripcion.Location = new System.Drawing.Point(133, 121);
             this.Lbl_Descripcion.Name = "Lbl_Descripcion";
             this.Lbl_Descripcion.Size = new System.Drawing.Size(82, 17);
             this.Lbl_Descripcion.TabIndex = 3;
@@ -150,7 +163,7 @@
             // Lbl_RazonDespido
             // 
             this.Lbl_RazonDespido.AutoSize = true;
-            this.Lbl_RazonDespido.Location = new System.Drawing.Point(31, 84);
+            this.Lbl_RazonDespido.Location = new System.Drawing.Point(133, 84);
             this.Lbl_RazonDespido.Name = "Lbl_RazonDespido";
             this.Lbl_RazonDespido.Size = new System.Drawing.Size(128, 17);
             this.Lbl_RazonDespido.TabIndex = 2;
@@ -159,7 +172,7 @@
             // Lbl_NombreEmpleado
             // 
             this.Lbl_NombreEmpleado.AutoSize = true;
-            this.Lbl_NombreEmpleado.Location = new System.Drawing.Point(31, 42);
+            this.Lbl_NombreEmpleado.Location = new System.Drawing.Point(133, 42);
             this.Lbl_NombreEmpleado.Name = "Lbl_NombreEmpleado";
             this.Lbl_NombreEmpleado.Size = new System.Drawing.Size(125, 17);
             this.Lbl_NombreEmpleado.TabIndex = 0;
@@ -170,29 +183,29 @@
             this.Gpb_Busqueda.Controls.Add(this.Txt_CodigoEmpleado);
             this.Gpb_Busqueda.Controls.Add(this.Btn_Buscar);
             this.Gpb_Busqueda.Controls.Add(this.Lbl_CodigoEmpleado);
-            this.Gpb_Busqueda.Location = new System.Drawing.Point(36, 81);
+            this.Gpb_Busqueda.Location = new System.Drawing.Point(267, 85);
             this.Gpb_Busqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Gpb_Busqueda.Name = "Gpb_Busqueda";
             this.Gpb_Busqueda.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Gpb_Busqueda.Size = new System.Drawing.Size(543, 89);
+            this.Gpb_Busqueda.Size = new System.Drawing.Size(411, 89);
             this.Gpb_Busqueda.TabIndex = 27;
             this.Gpb_Busqueda.TabStop = false;
-            this.Gpb_Busqueda.Text = "Busqueda";
+            this.Gpb_Busqueda.Text = "Busqueda de Empleado";
             // 
             // Txt_CodigoEmpleado
             // 
-            this.Txt_CodigoEmpleado.Location = new System.Drawing.Point(163, 33);
+            this.Txt_CodigoEmpleado.Location = new System.Drawing.Point(149, 34);
             this.Txt_CodigoEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_CodigoEmpleado.Name = "Txt_CodigoEmpleado";
-            this.Txt_CodigoEmpleado.Size = new System.Drawing.Size(247, 22);
+            this.Txt_CodigoEmpleado.Size = new System.Drawing.Size(143, 22);
             this.Txt_CodigoEmpleado.TabIndex = 7;
             // 
             // Btn_Buscar
             // 
-            this.Btn_Buscar.Location = new System.Drawing.Point(429, 30);
+            this.Btn_Buscar.Location = new System.Drawing.Point(306, 29);
             this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Buscar.Name = "Btn_Buscar";
-            this.Btn_Buscar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Buscar.Size = new System.Drawing.Size(91, 32);
             this.Btn_Buscar.TabIndex = 6;
             this.Btn_Buscar.Text = "Buscar";
             this.Btn_Buscar.UseVisualStyleBackColor = true;
@@ -201,7 +214,7 @@
             // Lbl_CodigoEmpleado
             // 
             this.Lbl_CodigoEmpleado.AutoSize = true;
-            this.Lbl_CodigoEmpleado.Location = new System.Drawing.Point(37, 36);
+            this.Lbl_CodigoEmpleado.Location = new System.Drawing.Point(23, 37);
             this.Lbl_CodigoEmpleado.Name = "Lbl_CodigoEmpleado";
             this.Lbl_CodigoEmpleado.Size = new System.Drawing.Size(119, 17);
             this.Lbl_CodigoEmpleado.TabIndex = 1;
@@ -213,7 +226,7 @@
             this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Ayuda.Image = global::CapaDiseño.Properties.Resources.question__1_;
-            this.btn_Ayuda.Location = new System.Drawing.Point(505, 11);
+            this.btn_Ayuda.Location = new System.Drawing.Point(609, 11);
             this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Ayuda.Name = "btn_Ayuda";
             this.btn_Ayuda.Size = new System.Drawing.Size(44, 38);
@@ -227,7 +240,7 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(456, 11);
+            this.btn_minimizar.Location = new System.Drawing.Point(560, 11);
             this.btn_minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(44, 38);
@@ -241,7 +254,7 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(555, 11);
+            this.btn_cerrar.Location = new System.Drawing.Point(659, 11);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(44, 38);
@@ -249,21 +262,33 @@
             this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
-            // Dtp_FechaIngreso
+            // groupBox1
             // 
-            this.Dtp_FechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Dtp_FechaIngreso.Location = new System.Drawing.Point(129, 162);
-            this.Dtp_FechaIngreso.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_FechaIngreso.Name = "Dtp_FechaIngreso";
-            this.Dtp_FechaIngreso.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Dtp_FechaIngreso.Size = new System.Drawing.Size(265, 22);
-            this.Dtp_FechaIngreso.TabIndex = 10;
+            this.groupBox1.Controls.Add(this.Btn_ConsultarEmpleados);
+            this.groupBox1.Location = new System.Drawing.Point(39, 85);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(207, 86);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Empleados";
+            // 
+            // Btn_ConsultarEmpleados
+            // 
+            this.Btn_ConsultarEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ConsultarEmpleados.Location = new System.Drawing.Point(19, 28);
+            this.Btn_ConsultarEmpleados.Name = "Btn_ConsultarEmpleados";
+            this.Btn_ConsultarEmpleados.Size = new System.Drawing.Size(167, 36);
+            this.Btn_ConsultarEmpleados.TabIndex = 34;
+            this.Btn_ConsultarEmpleados.Text = "Consultar Empleados";
+            this.Btn_ConsultarEmpleados.UseVisualStyleBackColor = true;
+            this.Btn_ConsultarEmpleados.Click += new System.EventHandler(this.Btn_ConsultarEmpleados_Click);
             // 
             // Frm_MantDespidoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 480);
+            this.ClientSize = new System.Drawing.Size(715, 480);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_Ayuda);
             this.Controls.Add(this.Btn_RealizarDespido);
             this.Controls.Add(this.btn_minimizar);
@@ -282,6 +307,7 @@
             this.Gpb_DatosDespido.PerformLayout();
             this.Gpb_Busqueda.ResumeLayout(false);
             this.Gpb_Busqueda.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +333,7 @@
         private System.Windows.Forms.Button btn_minimizar;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.DateTimePicker Dtp_FechaIngreso;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button Btn_ConsultarEmpleados;
     }
 }

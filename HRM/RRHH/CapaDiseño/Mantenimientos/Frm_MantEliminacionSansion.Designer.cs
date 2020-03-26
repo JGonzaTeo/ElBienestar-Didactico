@@ -33,6 +33,8 @@
             this.Lbl_EliminarSansion = new System.Windows.Forms.Label();
             this.Btn_EliminarSansion = new System.Windows.Forms.Button();
             this.Gpb_IngresoDatos = new System.Windows.Forms.GroupBox();
+            this.Dtp_FechaSalida = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_FechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.Txt_CodigoEmpleado = new System.Windows.Forms.TextBox();
             this.Lbl_CodigoEmpleado = new System.Windows.Forms.Label();
             this.Lbl_FechaFinalizacion = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.btn_Ayuda = new System.Windows.Forms.Button();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.Dtp_FechaSalida = new System.Windows.Forms.DateTimePicker();
-            this.Dtp_FechaIngreso = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Barra)).BeginInit();
             this.Gpb_IngresoDatos.SuspendLayout();
             this.Gpb_Busqueda.SuspendLayout();
@@ -73,7 +73,7 @@
             this.Lbl_EliminarSansion.Name = "Lbl_EliminarSansion";
             this.Lbl_EliminarSansion.Size = new System.Drawing.Size(316, 31);
             this.Lbl_EliminarSansion.TabIndex = 29;
-            this.Lbl_EliminarSansion.Text = "Eliminación de Sansión";
+            this.Lbl_EliminarSansion.Text = "Eliminación de Sanción";
             // 
             // Btn_EliminarSansion
             // 
@@ -104,6 +104,26 @@
             this.Gpb_IngresoDatos.TabIndex = 31;
             this.Gpb_IngresoDatos.TabStop = false;
             this.Gpb_IngresoDatos.Text = "Ingreso de Datos";
+            // 
+            // Dtp_FechaSalida
+            // 
+            this.Dtp_FechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_FechaSalida.Location = new System.Drawing.Point(207, 171);
+            this.Dtp_FechaSalida.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaSalida.Name = "Dtp_FechaSalida";
+            this.Dtp_FechaSalida.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Dtp_FechaSalida.Size = new System.Drawing.Size(265, 22);
+            this.Dtp_FechaSalida.TabIndex = 25;
+            // 
+            // Dtp_FechaIngreso
+            // 
+            this.Dtp_FechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_FechaIngreso.Location = new System.Drawing.Point(196, 130);
+            this.Dtp_FechaIngreso.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaIngreso.Name = "Dtp_FechaIngreso";
+            this.Dtp_FechaIngreso.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Dtp_FechaIngreso.Size = new System.Drawing.Size(265, 22);
+            this.Dtp_FechaIngreso.TabIndex = 24;
             // 
             // Txt_CodigoEmpleado
             // 
@@ -197,7 +217,7 @@
             this.Lbl_RazonSansion.Name = "Lbl_RazonSansion";
             this.Lbl_RazonSansion.Size = new System.Drawing.Size(139, 17);
             this.Lbl_RazonSansion.TabIndex = 14;
-            this.Lbl_RazonSansion.Text = "Razon de la Sansión";
+            this.Lbl_RazonSansion.Text = "Razon de la Sanción";
             // 
             // btn_Ayuda
             // 
@@ -240,26 +260,6 @@
             this.btn_cerrar.TabIndex = 71;
             this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
-            // 
-            // Dtp_FechaSalida
-            // 
-            this.Dtp_FechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Dtp_FechaSalida.Location = new System.Drawing.Point(207, 171);
-            this.Dtp_FechaSalida.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_FechaSalida.Name = "Dtp_FechaSalida";
-            this.Dtp_FechaSalida.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Dtp_FechaSalida.Size = new System.Drawing.Size(265, 22);
-            this.Dtp_FechaSalida.TabIndex = 25;
-            // 
-            // Dtp_FechaIngreso
-            // 
-            this.Dtp_FechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Dtp_FechaIngreso.Location = new System.Drawing.Point(196, 130);
-            this.Dtp_FechaIngreso.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_FechaIngreso.Name = "Dtp_FechaIngreso";
-            this.Dtp_FechaIngreso.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Dtp_FechaIngreso.Size = new System.Drawing.Size(265, 22);
-            this.Dtp_FechaIngreso.TabIndex = 24;
             // 
             // Frm_MantEliminacionSansion
             // 

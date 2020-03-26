@@ -578,10 +578,10 @@ CREATE TABLE `reuniones` (
   `fkcodigoempleado` int NOT NULL,
   `nombrereunion` varchar(45) DEFAULT NULL,
   `descripcion` varchar(45) DEFAULT NULL,
-  `fechainicio` time DEFAULT NULL,
-  `fechafinal` time DEFAULT NULL,
-  `horainicio` datetime DEFAULT NULL,
-  `horafinal` datetime DEFAULT NULL,
+  `fechainicio` datetime DEFAULT NULL,
+  `fechafinal` datetime DEFAULT NULL,
+  `horainicio` time DEFAULT NULL,
+  `horafinal` time DEFAULT NULL,
   `cantidadempleados` int DEFAULT NULL,
   `estado` tinyint DEFAULT NULL,
   PRIMARY KEY (`pkcodigoreuniones`),
@@ -802,4 +802,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-24 22:12:06
+-- Dump completed on 2020-03-25 21:01:15

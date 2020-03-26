@@ -48,6 +48,7 @@ namespace CapaDiseño.Mantenimientos
             InitializeComponent();
             obtenerip();
             suser = susuario;
+            Gpb_IngresoDatos.Enabled = false;
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
