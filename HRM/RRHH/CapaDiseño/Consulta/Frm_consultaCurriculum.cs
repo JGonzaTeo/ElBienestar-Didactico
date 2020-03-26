@@ -17,6 +17,7 @@ namespace CapaDiseño.Consulta
         public Frm_consultaCurriculum()
         {
             InitializeComponent();
+            MostrarConsulta();
         }
 
         public void MostrarConsulta()
@@ -67,6 +68,21 @@ namespace CapaDiseño.Consulta
                 DialogResult = DialogResult.OK;
                 Close();
             }
+        }
+
+        private void Btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void Frm_consultaCurriculum_Load(object sender, EventArgs e)
+        {
+            MostrarConsulta();
         }
     }
 }

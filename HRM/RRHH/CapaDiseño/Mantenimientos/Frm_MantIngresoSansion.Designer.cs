@@ -29,15 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MantIngresoSansion));
-            this.Pic_Cerrar = new System.Windows.Forms.PictureBox();
-            this.Pic_Minimizar = new System.Windows.Forms.PictureBox();
-            this.Pic_Pregunta = new System.Windows.Forms.PictureBox();
-            this.Pic_Barra = new System.Windows.Forms.PictureBox();
-            this.Gpb_IngresoDatos = new System.Windows.Forms.GroupBox();
-            this.Dtp_FechaFinalizacion = new System.Windows.Forms.DateTimePicker();
-            this.Lbl_FechaFinalizacion = new System.Windows.Forms.Label();
+            this.Lbl_IngresoSansion = new System.Windows.Forms.Label();
             this.Btn_RealizarSansion = new System.Windows.Forms.Button();
-            this.Dtp_FechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.Gpb_IngresoDatos = new System.Windows.Forms.GroupBox();
+            this.Lbl_FechaFinalizacion = new System.Windows.Forms.Label();
             this.Txt_Descripcion = new System.Windows.Forms.TextBox();
             this.Txt_RazonSansion = new System.Windows.Forms.TextBox();
             this.Txt_NombreEmpleado = new System.Windows.Forms.TextBox();
@@ -49,60 +44,45 @@
             this.Btn_Buscar = new System.Windows.Forms.Button();
             this.Txt_CodigoEmpleado = new System.Windows.Forms.TextBox();
             this.Lbl_CodigoEmpleado = new System.Windows.Forms.Label();
-            this.Lbl_IngresoSansion = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Cerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Pregunta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Barra)).BeginInit();
+            this.Pic_Barra = new System.Windows.Forms.PictureBox();
+            this.btn_Ayuda = new System.Windows.Forms.Button();
+            this.btn_minimizar = new System.Windows.Forms.Button();
+            this.btn_cerrar = new System.Windows.Forms.Button();
+            this.Dtp_FechaSalida = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_FechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.Gpb_IngresoDatos.SuspendLayout();
             this.Gpb_Busqueda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Barra)).BeginInit();
             this.SuspendLayout();
             // 
-            // Pic_Cerrar
+            // Lbl_IngresoSansion
             // 
-            this.Pic_Cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
-            this.Pic_Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Pic_Cerrar.Image")));
-            this.Pic_Cerrar.Location = new System.Drawing.Point(524, 6);
-            this.Pic_Cerrar.Name = "Pic_Cerrar";
-            this.Pic_Cerrar.Size = new System.Drawing.Size(24, 23);
-            this.Pic_Cerrar.TabIndex = 31;
-            this.Pic_Cerrar.TabStop = false;
+            this.Lbl_IngresoSansion.AutoSize = true;
+            this.Lbl_IngresoSansion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.Lbl_IngresoSansion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_IngresoSansion.ForeColor = System.Drawing.Color.White;
+            this.Lbl_IngresoSansion.Location = new System.Drawing.Point(15, 11);
+            this.Lbl_IngresoSansion.Name = "Lbl_IngresoSansion";
+            this.Lbl_IngresoSansion.Size = new System.Drawing.Size(265, 31);
+            this.Lbl_IngresoSansion.TabIndex = 32;
+            this.Lbl_IngresoSansion.Text = "Ingreso de Sansión";
             // 
-            // Pic_Minimizar
+            // Btn_RealizarSansion
             // 
-            this.Pic_Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
-            this.Pic_Minimizar.Image = ((System.Drawing.Image)(resources.GetObject("Pic_Minimizar.Image")));
-            this.Pic_Minimizar.Location = new System.Drawing.Point(461, 4);
-            this.Pic_Minimizar.Name = "Pic_Minimizar";
-            this.Pic_Minimizar.Size = new System.Drawing.Size(26, 26);
-            this.Pic_Minimizar.TabIndex = 30;
-            this.Pic_Minimizar.TabStop = false;
-            // 
-            // Pic_Pregunta
-            // 
-            this.Pic_Pregunta.Image = ((System.Drawing.Image)(resources.GetObject("Pic_Pregunta.Image")));
-            this.Pic_Pregunta.InitialImage = ((System.Drawing.Image)(resources.GetObject("Pic_Pregunta.InitialImage")));
-            this.Pic_Pregunta.Location = new System.Drawing.Point(494, 4);
-            this.Pic_Pregunta.Name = "Pic_Pregunta";
-            this.Pic_Pregunta.Size = new System.Drawing.Size(23, 26);
-            this.Pic_Pregunta.TabIndex = 29;
-            this.Pic_Pregunta.TabStop = false;
-            // 
-            // Pic_Barra
-            // 
-            this.Pic_Barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
-            this.Pic_Barra.Location = new System.Drawing.Point(-55, -4);
-            this.Pic_Barra.Name = "Pic_Barra";
-            this.Pic_Barra.Size = new System.Drawing.Size(615, 37);
-            this.Pic_Barra.TabIndex = 28;
-            this.Pic_Barra.TabStop = false;
+            this.Btn_RealizarSansion.Location = new System.Drawing.Point(193, 448);
+            this.Btn_RealizarSansion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_RealizarSansion.Name = "Btn_RealizarSansion";
+            this.Btn_RealizarSansion.Size = new System.Drawing.Size(141, 37);
+            this.Btn_RealizarSansion.TabIndex = 33;
+            this.Btn_RealizarSansion.Text = "Realizar Sansión";
+            this.Btn_RealizarSansion.UseVisualStyleBackColor = true;
+            this.Btn_RealizarSansion.Click += new System.EventHandler(this.Btn_RealizarSansion_Click);
             // 
             // Gpb_IngresoDatos
             // 
-            this.Gpb_IngresoDatos.Controls.Add(this.Dtp_FechaFinalizacion);
+            this.Gpb_IngresoDatos.Controls.Add(this.Dtp_FechaSalida);
+            this.Gpb_IngresoDatos.Controls.Add(this.Dtp_FechaIngreso);
             this.Gpb_IngresoDatos.Controls.Add(this.Lbl_FechaFinalizacion);
-            this.Gpb_IngresoDatos.Controls.Add(this.Btn_RealizarSansion);
-            this.Gpb_IngresoDatos.Controls.Add(this.Dtp_FechaInicio);
             this.Gpb_IngresoDatos.Controls.Add(this.Txt_Descripcion);
             this.Gpb_IngresoDatos.Controls.Add(this.Txt_RazonSansion);
             this.Gpb_IngresoDatos.Controls.Add(this.Txt_NombreEmpleado);
@@ -110,19 +90,14 @@
             this.Gpb_IngresoDatos.Controls.Add(this.Lbl_Descripcion);
             this.Gpb_IngresoDatos.Controls.Add(this.Lbl_RazonSansion);
             this.Gpb_IngresoDatos.Controls.Add(this.Lbl_NombreEmpleado);
-            this.Gpb_IngresoDatos.Location = new System.Drawing.Point(20, 185);
+            this.Gpb_IngresoDatos.Location = new System.Drawing.Point(31, 190);
+            this.Gpb_IngresoDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Gpb_IngresoDatos.Name = "Gpb_IngresoDatos";
-            this.Gpb_IngresoDatos.Size = new System.Drawing.Size(499, 300);
-            this.Gpb_IngresoDatos.TabIndex = 26;
+            this.Gpb_IngresoDatos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Gpb_IngresoDatos.Size = new System.Drawing.Size(499, 236);
+            this.Gpb_IngresoDatos.TabIndex = 35;
             this.Gpb_IngresoDatos.TabStop = false;
             this.Gpb_IngresoDatos.Text = "Ingreso de Datos";
-            // 
-            // Dtp_FechaFinalizacion
-            // 
-            this.Dtp_FechaFinalizacion.Location = new System.Drawing.Point(156, 193);
-            this.Dtp_FechaFinalizacion.Name = "Dtp_FechaFinalizacion";
-            this.Dtp_FechaFinalizacion.Size = new System.Drawing.Size(200, 22);
-            this.Dtp_FechaFinalizacion.TabIndex = 24;
             // 
             // Lbl_FechaFinalizacion
             // 
@@ -133,41 +108,28 @@
             this.Lbl_FechaFinalizacion.TabIndex = 23;
             this.Lbl_FechaFinalizacion.Text = "Fecha Finalización";
             // 
-            // Btn_RealizarSansion
-            // 
-            this.Btn_RealizarSansion.Location = new System.Drawing.Point(194, 245);
-            this.Btn_RealizarSansion.Name = "Btn_RealizarSansion";
-            this.Btn_RealizarSansion.Size = new System.Drawing.Size(110, 23);
-            this.Btn_RealizarSansion.TabIndex = 21;
-            this.Btn_RealizarSansion.Text = "Realizar Sansión";
-            this.Btn_RealizarSansion.UseVisualStyleBackColor = true;
-            // 
-            // Dtp_FechaInicio
-            // 
-            this.Dtp_FechaInicio.Location = new System.Drawing.Point(156, 152);
-            this.Dtp_FechaInicio.Name = "Dtp_FechaInicio";
-            this.Dtp_FechaInicio.Size = new System.Drawing.Size(200, 22);
-            this.Dtp_FechaInicio.TabIndex = 20;
-            // 
             // Txt_Descripcion
             // 
             this.Txt_Descripcion.Location = new System.Drawing.Point(128, 108);
+            this.Txt_Descripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Descripcion.Name = "Txt_Descripcion";
-            this.Txt_Descripcion.Size = new System.Drawing.Size(278, 22);
+            this.Txt_Descripcion.Size = new System.Drawing.Size(279, 22);
             this.Txt_Descripcion.TabIndex = 19;
             // 
             // Txt_RazonSansion
             // 
             this.Txt_RazonSansion.Location = new System.Drawing.Point(163, 68);
+            this.Txt_RazonSansion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_RazonSansion.Name = "Txt_RazonSansion";
-            this.Txt_RazonSansion.Size = new System.Drawing.Size(243, 22);
+            this.Txt_RazonSansion.Size = new System.Drawing.Size(244, 22);
             this.Txt_RazonSansion.TabIndex = 18;
             // 
             // Txt_NombreEmpleado
             // 
             this.Txt_NombreEmpleado.Location = new System.Drawing.Point(156, 30);
+            this.Txt_NombreEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_NombreEmpleado.Name = "Txt_NombreEmpleado";
-            this.Txt_NombreEmpleado.Size = new System.Drawing.Size(243, 22);
+            this.Txt_NombreEmpleado.Size = new System.Drawing.Size(251, 22);
             this.Txt_NombreEmpleado.TabIndex = 17;
             // 
             // Lbl_FechaInicio
@@ -191,7 +153,7 @@
             // Lbl_RazonSansion
             // 
             this.Lbl_RazonSansion.AutoSize = true;
-            this.Lbl_RazonSansion.Location = new System.Drawing.Point(25, 72);
+            this.Lbl_RazonSansion.Location = new System.Drawing.Point(25, 71);
             this.Lbl_RazonSansion.Name = "Lbl_RazonSansion";
             this.Lbl_RazonSansion.Size = new System.Drawing.Size(139, 17);
             this.Lbl_RazonSansion.TabIndex = 14;
@@ -211,25 +173,30 @@
             this.Gpb_Busqueda.Controls.Add(this.Btn_Buscar);
             this.Gpb_Busqueda.Controls.Add(this.Txt_CodigoEmpleado);
             this.Gpb_Busqueda.Controls.Add(this.Lbl_CodigoEmpleado);
-            this.Gpb_Busqueda.Location = new System.Drawing.Point(18, 70);
+            this.Gpb_Busqueda.Location = new System.Drawing.Point(29, 75);
+            this.Gpb_Busqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Gpb_Busqueda.Name = "Gpb_Busqueda";
-            this.Gpb_Busqueda.Size = new System.Drawing.Size(502, 100);
-            this.Gpb_Busqueda.TabIndex = 25;
+            this.Gpb_Busqueda.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Gpb_Busqueda.Size = new System.Drawing.Size(501, 100);
+            this.Gpb_Busqueda.TabIndex = 34;
             this.Gpb_Busqueda.TabStop = false;
             this.Gpb_Busqueda.Text = "Busqueda";
             // 
             // Btn_Buscar
             // 
             this.Btn_Buscar.Location = new System.Drawing.Point(384, 46);
+            this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Buscar.Name = "Btn_Buscar";
-            this.Btn_Buscar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Buscar.Size = new System.Drawing.Size(85, 27);
             this.Btn_Buscar.TabIndex = 2;
             this.Btn_Buscar.Text = "Buscar";
             this.Btn_Buscar.UseVisualStyleBackColor = true;
+            this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
             // 
             // Txt_CodigoEmpleado
             // 
             this.Txt_CodigoEmpleado.Location = new System.Drawing.Point(160, 48);
+            this.Txt_CodigoEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_CodigoEmpleado.Name = "Txt_CodigoEmpleado";
             this.Txt_CodigoEmpleado.Size = new System.Drawing.Size(192, 22);
             this.Txt_CodigoEmpleado.TabIndex = 1;
@@ -243,58 +210,111 @@
             this.Lbl_CodigoEmpleado.TabIndex = 0;
             this.Lbl_CodigoEmpleado.Text = "Codigo Empleado";
             // 
-            // Lbl_IngresoSansion
+            // Pic_Barra
             // 
-            this.Lbl_IngresoSansion.AutoSize = true;
-            this.Lbl_IngresoSansion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
-            this.Lbl_IngresoSansion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_IngresoSansion.ForeColor = System.Drawing.Color.White;
-            this.Lbl_IngresoSansion.Location = new System.Drawing.Point(12, 1);
-            this.Lbl_IngresoSansion.Name = "Lbl_IngresoSansion";
-            this.Lbl_IngresoSansion.Size = new System.Drawing.Size(265, 31);
-            this.Lbl_IngresoSansion.TabIndex = 32;
-            this.Lbl_IngresoSansion.Text = "Ingreso de Sansión";
+            this.Pic_Barra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.Pic_Barra.Location = new System.Drawing.Point(-55, -4);
+            this.Pic_Barra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Pic_Barra.Name = "Pic_Barra";
+            this.Pic_Barra.Size = new System.Drawing.Size(615, 55);
+            this.Pic_Barra.TabIndex = 28;
+            this.Pic_Barra.TabStop = false;
+            // 
+            // btn_Ayuda
+            // 
+            this.btn_Ayuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Ayuda.Image = global::CapaDiseño.Properties.Resources.question__1_;
+            this.btn_Ayuda.Location = new System.Drawing.Point(457, 9);
+            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Ayuda.Name = "btn_Ayuda";
+            this.btn_Ayuda.Size = new System.Drawing.Size(44, 38);
+            this.btn_Ayuda.TabIndex = 38;
+            this.btn_Ayuda.UseVisualStyleBackColor = false;
+            this.btn_Ayuda.Click += new System.EventHandler(this.btn_Ayuda_Click);
+            // 
+            // btn_minimizar
+            // 
+            this.btn_minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
+            this.btn_minimizar.Location = new System.Drawing.Point(408, 9);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_minimizar.Name = "btn_minimizar";
+            this.btn_minimizar.Size = new System.Drawing.Size(44, 38);
+            this.btn_minimizar.TabIndex = 37;
+            this.btn_minimizar.UseVisualStyleBackColor = false;
+            this.btn_minimizar.Click += new System.EventHandler(this.btn_minimizar_Click);
+            // 
+            // btn_cerrar
+            // 
+            this.btn_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(107)))), ((int)(((byte)(44)))));
+            this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
+            this.btn_cerrar.Location = new System.Drawing.Point(507, 9);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_cerrar.Name = "btn_cerrar";
+            this.btn_cerrar.Size = new System.Drawing.Size(44, 38);
+            this.btn_cerrar.TabIndex = 36;
+            this.btn_cerrar.UseVisualStyleBackColor = false;
+            this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
+            // 
+            // Dtp_FechaSalida
+            // 
+            this.Dtp_FechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_FechaSalida.Location = new System.Drawing.Point(163, 191);
+            this.Dtp_FechaSalida.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaSalida.Name = "Dtp_FechaSalida";
+            this.Dtp_FechaSalida.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Dtp_FechaSalida.Size = new System.Drawing.Size(265, 22);
+            this.Dtp_FechaSalida.TabIndex = 25;
+            // 
+            // Dtp_FechaIngreso
+            // 
+            this.Dtp_FechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_FechaIngreso.Location = new System.Drawing.Point(142, 150);
+            this.Dtp_FechaIngreso.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaIngreso.Name = "Dtp_FechaIngreso";
+            this.Dtp_FechaIngreso.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Dtp_FechaIngreso.Size = new System.Drawing.Size(265, 22);
+            this.Dtp_FechaIngreso.TabIndex = 24;
             // 
             // Frm_MantIngresoSansion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 516);
-            this.Controls.Add(this.Lbl_IngresoSansion);
-            this.Controls.Add(this.Pic_Cerrar);
-            this.Controls.Add(this.Pic_Minimizar);
-            this.Controls.Add(this.Pic_Pregunta);
-            this.Controls.Add(this.Pic_Barra);
+            this.Controls.Add(this.btn_Ayuda);
+            this.Controls.Add(this.btn_minimizar);
+            this.Controls.Add(this.btn_cerrar);
+            this.Controls.Add(this.Btn_RealizarSansion);
             this.Controls.Add(this.Gpb_IngresoDatos);
             this.Controls.Add(this.Gpb_Busqueda);
+            this.Controls.Add(this.Lbl_IngresoSansion);
+            this.Controls.Add(this.Pic_Barra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_MantIngresoSansion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MantIngresoSansion";
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Cerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Pregunta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pic_Barra)).EndInit();
             this.Gpb_IngresoDatos.ResumeLayout(false);
             this.Gpb_IngresoDatos.PerformLayout();
             this.Gpb_Busqueda.ResumeLayout(false);
             this.Gpb_Busqueda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Barra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox Pic_Cerrar;
-        private System.Windows.Forms.PictureBox Pic_Minimizar;
-        private System.Windows.Forms.PictureBox Pic_Pregunta;
-        private System.Windows.Forms.PictureBox Pic_Barra;
-        private System.Windows.Forms.GroupBox Gpb_IngresoDatos;
-        private System.Windows.Forms.DateTimePicker Dtp_FechaFinalizacion;
-        private System.Windows.Forms.Label Lbl_FechaFinalizacion;
+        private System.Windows.Forms.Label Lbl_IngresoSansion;
         private System.Windows.Forms.Button Btn_RealizarSansion;
-        private System.Windows.Forms.DateTimePicker Dtp_FechaInicio;
+        private System.Windows.Forms.GroupBox Gpb_IngresoDatos;
+        private System.Windows.Forms.Label Lbl_FechaFinalizacion;
         private System.Windows.Forms.TextBox Txt_Descripcion;
         private System.Windows.Forms.TextBox Txt_RazonSansion;
         private System.Windows.Forms.TextBox Txt_NombreEmpleado;
@@ -306,6 +326,11 @@
         private System.Windows.Forms.Button Btn_Buscar;
         private System.Windows.Forms.TextBox Txt_CodigoEmpleado;
         private System.Windows.Forms.Label Lbl_CodigoEmpleado;
-        private System.Windows.Forms.Label Lbl_IngresoSansion;
+        private System.Windows.Forms.PictureBox Pic_Barra;
+        private System.Windows.Forms.Button btn_Ayuda;
+        private System.Windows.Forms.Button btn_minimizar;
+        private System.Windows.Forms.Button btn_cerrar;
+        private System.Windows.Forms.DateTimePicker Dtp_FechaSalida;
+        private System.Windows.Forms.DateTimePicker Dtp_FechaIngreso;
     }
 }

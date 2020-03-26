@@ -28,6 +28,8 @@ namespace CapaDiseño.Procesos
             string fecha = fechaHoy.ToString("yyyy/MM/dd");
             txt_fecha.Text = fecha;
 
+            txt_creador.Enabled = false;
+            txt_tipo.Enabled = false;
             //chc_primaria.Enabled = false;
             //chc_secundaria.Enabled = false;
             //chc_bachillerato.Enabled = false;
@@ -35,7 +37,7 @@ namespace CapaDiseño.Procesos
             //chc_Graduado.Enabled = false;
             //chc_Cursos.Enabled = false;
             //txt_extras.Enabled = false;
-            btn_buscarContratacion.Enabled = false;
+            //btn_buscarContratacion.Enabled = false;
         }
 
         private void btn_buscarCreador_Click(object sender, EventArgs e)
@@ -56,14 +58,13 @@ namespace CapaDiseño.Procesos
 
         private void btn_buscarContratacion_Click(object sender, EventArgs e)
         {
-            //Cambiar al que realice Isis
-            /*
-            Frm_consultaEmpleado concep = new Frm_consultaEmpleado();
+            
+            Frm_TipoContratacion concep = new Frm_TipoContratacion();
             concep.ShowDialog();
 
             if (concep.DialogResult == DialogResult.OK)
             {
-                txt_creador.Text = concep.Dgv_consultaEmpleado.Rows[concep.Dgv_consultaEmpleado.CurrentRow.Index].
+                txt_creador.Text = concep.Dgv_consultaContratacion.Rows[concep.Dgv_consultaContratacion.CurrentRow.Index].
                       Cells[0].Value.ToString();
             }
             if (string.IsNullOrEmpty(txt_creador.Text))
@@ -72,7 +73,7 @@ namespace CapaDiseño.Procesos
                 txt_extras.Enabled = true;
                 chc_primaria.Enabled = true;
             }
-            */
+            
         }
 
         private void btn_generar_Click(object sender, EventArgs e)
@@ -104,8 +105,13 @@ namespace CapaDiseño.Procesos
             c2 = c1.ToString();
 
             //MessageBox.Show(p2);
-            OdbcDataReader encabezado = logic.InsertarSolicitudEmpleado(scampo, txt_creador.Text, txt_tipo.Text, txt_fecha.Text, p2, s2, b2, es2, g2, c2, txt_extras.Text);
-            MessageBox.Show("Solicitud creada exitosamente.");
+            if (string.IsNullOrEmpty(txt_creador.Text) || string.IsNullOrEmpty(txt_tipo.Text))
+                MessageBox.Show("Algunos campos estan sin rellenar.");
+            else
+            {
+                OdbcDataReader encabezado = logic.InsertarSolicitudEmpleado(scampo, txt_creador.Text, txt_tipo.Text, txt_fecha.Text, p2, s2, b2, es2, g2, c2, txt_extras.Text);
+                MessageBox.Show("Solicitud creada exitosamente.");
+            }
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)
@@ -116,6 +122,16 @@ namespace CapaDiseño.Procesos
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void Frm_SolicitudEmpleadoN_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Gpb_nominaencabezado_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

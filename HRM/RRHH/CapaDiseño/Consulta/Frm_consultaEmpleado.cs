@@ -12,12 +12,16 @@ using System.Windows.Forms;
 
 namespace CapaDiseño.Consulta
 {
+    
     public partial class Frm_consultaEmpleado : Form
     {
         public Frm_consultaEmpleado()
         {
             InitializeComponent();
+            MostrarConsulta();
         }
+
+
         public void MostrarConsulta()
         {
             try
@@ -40,6 +44,8 @@ namespace CapaDiseño.Consulta
             {
                 Console.Write(err.Message);
             }
+
+            
         }
 
         private void Btn_minimizar_Click(object sender, EventArgs e)
@@ -69,6 +75,21 @@ namespace CapaDiseño.Consulta
                 DialogResult = DialogResult.OK;
                 Close();
             }
+        }
+
+        private void btn_minimizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_Ayuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Por el momento se encuentra en desarollo");
+        }
+
+        private void btn_cerrar_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

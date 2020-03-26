@@ -51,7 +51,6 @@
             this.Txt_PTME = new System.Windows.Forms.TextBox();
             this.Txt_PTS = new System.Windows.Forms.TextBox();
             this.Txt_totalPT = new System.Windows.Forms.TextBox();
-            this.Txt_PCMDE = new System.Windows.Forms.TextBox();
             this.Txt_PCDE = new System.Windows.Forms.TextBox();
             this.Txt_PCAE = new System.Windows.Forms.TextBox();
             this.Txt_PCME = new System.Windows.Forms.TextBox();
@@ -61,23 +60,18 @@
             this.Txt_TCAE = new System.Windows.Forms.TextBox();
             this.Txt_TCME = new System.Windows.Forms.TextBox();
             this.Txt_TCS = new System.Windows.Forms.TextBox();
+            this.Txt_PCMDE = new System.Windows.Forms.TextBox();
             this.Txt_totalcategoria = new System.Windows.Forms.TextBox();
+            this.Btn_insertar = new System.Windows.Forms.Button();
             this.Gpb_empleados = new System.Windows.Forms.GroupBox();
+            this.Txt_nombreEmpleado = new System.Windows.Forms.TextBox();
+            this.Btn_buscar = new System.Windows.Forms.Button();
             this.Txt_fechaEvaluacion = new System.Windows.Forms.TextBox();
-            this.Txt_departamento = new System.Windows.Forms.TextBox();
             this.Txt_empleadosTotal = new System.Windows.Forms.TextBox();
-            this.Txt_jefeGerente = new System.Windows.Forms.TextBox();
             this.Lbl_total = new System.Windows.Forms.Label();
             this.Txt_empleadosDesempeño = new System.Windows.Forms.TextBox();
-            this.Txt_fechaIngreso = new System.Windows.Forms.TextBox();
             this.Lbl_desempeño1 = new System.Windows.Forms.Label();
-            this.Txt_cargo = new System.Windows.Forms.TextBox();
-            this.Lbl_departamento = new System.Windows.Forms.Label();
-            this.Lbl_jefeGerente = new System.Windows.Forms.Label();
-            this.Lbl_fechaIngreso = new System.Windows.Forms.Label();
-            this.Lbl_cargo = new System.Windows.Forms.Label();
             this.Lbl_fechaEvalucacion = new System.Windows.Forms.Label();
-            this.Cbo_nombreEmpleado = new System.Windows.Forms.ComboBox();
             this.Lbl_nombreEmpleado = new System.Windows.Forms.Label();
             this.Gpb_categorias = new System.Windows.Forms.GroupBox();
             this.Tlp_categorias = new System.Windows.Forms.TableLayoutPanel();
@@ -267,7 +261,6 @@
             this.Tlp_puntaje.Controls.Add(this.Txt_PTME, 0, 4);
             this.Tlp_puntaje.Controls.Add(this.Txt_PTS, 0, 5);
             this.Tlp_puntaje.Controls.Add(this.Txt_totalPT, 0, 6);
-            this.Tlp_puntaje.Controls.Add(this.Txt_PCMDE, 2, 1);
             this.Tlp_puntaje.Controls.Add(this.Txt_PCDE, 2, 2);
             this.Tlp_puntaje.Controls.Add(this.Txt_PCAE, 2, 3);
             this.Tlp_puntaje.Controls.Add(this.Txt_PCME, 2, 4);
@@ -277,7 +270,8 @@
             this.Tlp_puntaje.Controls.Add(this.Txt_TCAE, 3, 3);
             this.Tlp_puntaje.Controls.Add(this.Txt_TCME, 3, 4);
             this.Tlp_puntaje.Controls.Add(this.Txt_TCS, 3, 5);
-            this.Tlp_puntaje.Controls.Add(this.Txt_totalcategoria, 1, 6);
+            this.Tlp_puntaje.Controls.Add(this.Txt_PCMDE, 2, 1);
+            this.Tlp_puntaje.Controls.Add(this.Txt_totalcategoria, 3, 6);
             this.Tlp_puntaje.Location = new System.Drawing.Point(6, 19);
             this.Tlp_puntaje.Name = "Tlp_puntaje";
             this.Tlp_puntaje.RowCount = 7;
@@ -406,7 +400,8 @@
             this.Txt_PTMDE.Name = "Txt_PTMDE";
             this.Txt_PTMDE.Size = new System.Drawing.Size(77, 20);
             this.Txt_PTMDE.TabIndex = 9;
-            this.Txt_PTMDE.TextChanged += new System.EventHandler(this.Txt_PTMDE_TextChanged);
+            this.Txt_PTMDE.Text = "0";
+            this.Txt_PTMDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_PTDE
             // 
@@ -415,7 +410,8 @@
             this.Txt_PTDE.Name = "Txt_PTDE";
             this.Txt_PTDE.Size = new System.Drawing.Size(77, 20);
             this.Txt_PTDE.TabIndex = 10;
-            this.Txt_PTDE.TextChanged += new System.EventHandler(this.Txt_PTDE_TextChanged);
+            this.Txt_PTDE.Text = "21";
+            this.Txt_PTDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_PTAE
             // 
@@ -424,7 +420,8 @@
             this.Txt_PTAE.Name = "Txt_PTAE";
             this.Txt_PTAE.Size = new System.Drawing.Size(77, 20);
             this.Txt_PTAE.TabIndex = 11;
-            this.Txt_PTAE.TextChanged += new System.EventHandler(this.Txt_PTAE_TextChanged);
+            this.Txt_PTAE.Text = "41";
+            this.Txt_PTAE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_PTME
             // 
@@ -433,7 +430,8 @@
             this.Txt_PTME.Name = "Txt_PTME";
             this.Txt_PTME.Size = new System.Drawing.Size(77, 20);
             this.Txt_PTME.TabIndex = 12;
-            this.Txt_PTME.TextChanged += new System.EventHandler(this.Txt_PTME_TextChanged);
+            this.Txt_PTME.Text = "61";
+            this.Txt_PTME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_PTS
             // 
@@ -442,7 +440,8 @@
             this.Txt_PTS.Name = "Txt_PTS";
             this.Txt_PTS.Size = new System.Drawing.Size(77, 20);
             this.Txt_PTS.TabIndex = 13;
-            this.Txt_PTS.TextChanged += new System.EventHandler(this.Txt_PTS_TextChanged);
+            this.Txt_PTS.Text = "81";
+            this.Txt_PTS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_totalPT
             // 
@@ -454,16 +453,8 @@
             this.Txt_totalPT.Name = "Txt_totalPT";
             this.Txt_totalPT.Size = new System.Drawing.Size(77, 20);
             this.Txt_totalPT.TabIndex = 14;
-            this.Txt_totalPT.TextChanged += new System.EventHandler(this.Txt_totalPT_TextChanged);
-            // 
-            // Txt_PCMDE
-            // 
-            this.Txt_PCMDE.Enabled = false;
-            this.Txt_PCMDE.Location = new System.Drawing.Point(183, 36);
-            this.Txt_PCMDE.Name = "Txt_PCMDE";
-            this.Txt_PCMDE.Size = new System.Drawing.Size(77, 20);
-            this.Txt_PCMDE.TabIndex = 15;
-            this.Txt_PCMDE.TextChanged += new System.EventHandler(this.Txt_PCMDE_TextChanged);
+            this.Txt_totalPT.Text = "100";
+            this.Txt_totalPT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_PCDE
             // 
@@ -472,7 +463,8 @@
             this.Txt_PCDE.Name = "Txt_PCDE";
             this.Txt_PCDE.Size = new System.Drawing.Size(77, 20);
             this.Txt_PCDE.TabIndex = 16;
-            this.Txt_PCDE.TextChanged += new System.EventHandler(this.Txt_PCDE_TextChanged);
+            this.Txt_PCDE.Text = "2";
+            this.Txt_PCDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_PCAE
             // 
@@ -481,7 +473,8 @@
             this.Txt_PCAE.Name = "Txt_PCAE";
             this.Txt_PCAE.Size = new System.Drawing.Size(77, 20);
             this.Txt_PCAE.TabIndex = 17;
-            this.Txt_PCAE.TextChanged += new System.EventHandler(this.Txt_PCAE_TextChanged);
+            this.Txt_PCAE.Text = "3";
+            this.Txt_PCAE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_PCME
             // 
@@ -490,7 +483,8 @@
             this.Txt_PCME.Name = "Txt_PCME";
             this.Txt_PCME.Size = new System.Drawing.Size(77, 20);
             this.Txt_PCME.TabIndex = 18;
-            this.Txt_PCME.TextChanged += new System.EventHandler(this.Txt_PCME_TextChanged);
+            this.Txt_PCME.Text = "4";
+            this.Txt_PCME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_PCS
             // 
@@ -499,7 +493,8 @@
             this.Txt_PCS.Name = "Txt_PCS";
             this.Txt_PCS.Size = new System.Drawing.Size(77, 20);
             this.Txt_PCS.TabIndex = 19;
-            this.Txt_PCS.TextChanged += new System.EventHandler(this.Txt_PCS_TextChanged);
+            this.Txt_PCS.Text = "5";
+            this.Txt_PCS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_TCMDE
             // 
@@ -508,6 +503,7 @@
             this.Txt_TCMDE.Name = "Txt_TCMDE";
             this.Txt_TCMDE.Size = new System.Drawing.Size(78, 20);
             this.Txt_TCMDE.TabIndex = 20;
+            this.Txt_TCMDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_TCDE
             // 
@@ -516,6 +512,7 @@
             this.Txt_TCDE.Name = "Txt_TCDE";
             this.Txt_TCDE.Size = new System.Drawing.Size(78, 20);
             this.Txt_TCDE.TabIndex = 21;
+            this.Txt_TCDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_TCAE
             // 
@@ -524,6 +521,7 @@
             this.Txt_TCAE.Name = "Txt_TCAE";
             this.Txt_TCAE.Size = new System.Drawing.Size(78, 20);
             this.Txt_TCAE.TabIndex = 22;
+            this.Txt_TCAE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_TCME
             // 
@@ -532,6 +530,7 @@
             this.Txt_TCME.Name = "Txt_TCME";
             this.Txt_TCME.Size = new System.Drawing.Size(78, 20);
             this.Txt_TCME.TabIndex = 23;
+            this.Txt_TCME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_TCS
             // 
@@ -540,80 +539,97 @@
             this.Txt_TCS.Name = "Txt_TCS";
             this.Txt_TCS.Size = new System.Drawing.Size(78, 20);
             this.Txt_TCS.TabIndex = 24;
+            this.Txt_TCS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Txt_PCMDE
+            // 
+            this.Txt_PCMDE.Enabled = false;
+            this.Txt_PCMDE.Location = new System.Drawing.Point(183, 36);
+            this.Txt_PCMDE.Name = "Txt_PCMDE";
+            this.Txt_PCMDE.Size = new System.Drawing.Size(77, 20);
+            this.Txt_PCMDE.TabIndex = 15;
+            this.Txt_PCMDE.Text = "1";
+            this.Txt_PCMDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Txt_totalcategoria
             // 
             this.Txt_totalcategoria.Enabled = false;
-            this.Txt_totalcategoria.Location = new System.Drawing.Point(93, 201);
+            this.Txt_totalcategoria.Location = new System.Drawing.Point(273, 201);
             this.Txt_totalcategoria.Name = "Txt_totalcategoria";
             this.Txt_totalcategoria.Size = new System.Drawing.Size(77, 20);
             this.Txt_totalcategoria.TabIndex = 25;
-            this.Txt_totalcategoria.TextChanged += new System.EventHandler(this.Txt_totalcategoria_TextChanged);
+            this.Txt_totalcategoria.Text = "20";
+            this.Txt_totalcategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Btn_insertar
+            // 
+            this.Btn_insertar.Location = new System.Drawing.Point(177, 158);
+            this.Btn_insertar.Name = "Btn_insertar";
+            this.Btn_insertar.Size = new System.Drawing.Size(84, 32);
+            this.Btn_insertar.TabIndex = 26;
+            this.Btn_insertar.Text = "Insertar";
+            this.Btn_insertar.UseVisualStyleBackColor = true;
+            this.Btn_insertar.Click += new System.EventHandler(this.Btn_insertar_Click);
             // 
             // Gpb_empleados
             // 
+            this.Gpb_empleados.Controls.Add(this.Txt_nombreEmpleado);
+            this.Gpb_empleados.Controls.Add(this.Btn_buscar);
             this.Gpb_empleados.Controls.Add(this.Txt_fechaEvaluacion);
-            this.Gpb_empleados.Controls.Add(this.Txt_departamento);
             this.Gpb_empleados.Controls.Add(this.Txt_empleadosTotal);
-            this.Gpb_empleados.Controls.Add(this.Txt_jefeGerente);
             this.Gpb_empleados.Controls.Add(this.Lbl_total);
             this.Gpb_empleados.Controls.Add(this.Txt_empleadosDesempeño);
-            this.Gpb_empleados.Controls.Add(this.Txt_fechaIngreso);
             this.Gpb_empleados.Controls.Add(this.Lbl_desempeño1);
-            this.Gpb_empleados.Controls.Add(this.Txt_cargo);
-            this.Gpb_empleados.Controls.Add(this.Lbl_departamento);
-            this.Gpb_empleados.Controls.Add(this.Lbl_jefeGerente);
-            this.Gpb_empleados.Controls.Add(this.Lbl_fechaIngreso);
-            this.Gpb_empleados.Controls.Add(this.Lbl_cargo);
             this.Gpb_empleados.Controls.Add(this.Lbl_fechaEvalucacion);
-            this.Gpb_empleados.Controls.Add(this.Cbo_nombreEmpleado);
             this.Gpb_empleados.Controls.Add(this.Lbl_nombreEmpleado);
-            this.Gpb_empleados.Location = new System.Drawing.Point(12, 56);
+            this.Gpb_empleados.Controls.Add(this.Btn_insertar);
+            this.Gpb_empleados.Location = new System.Drawing.Point(12, 52);
             this.Gpb_empleados.Name = "Gpb_empleados";
             this.Gpb_empleados.Size = new System.Drawing.Size(429, 261);
             this.Gpb_empleados.TabIndex = 6;
             this.Gpb_empleados.TabStop = false;
             this.Gpb_empleados.Text = "Empleados";
             // 
+            // Txt_nombreEmpleado
+            // 
+            this.Txt_nombreEmpleado.Location = new System.Drawing.Point(14, 47);
+            this.Txt_nombreEmpleado.Name = "Txt_nombreEmpleado";
+            this.Txt_nombreEmpleado.Size = new System.Drawing.Size(115, 20);
+            this.Txt_nombreEmpleado.TabIndex = 16;
+            // 
+            // Btn_buscar
+            // 
+            this.Btn_buscar.Location = new System.Drawing.Point(136, 44);
+            this.Btn_buscar.Name = "Btn_buscar";
+            this.Btn_buscar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_buscar.TabIndex = 15;
+            this.Btn_buscar.Text = "Buscar";
+            this.Btn_buscar.UseVisualStyleBackColor = true;
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
+            // 
             // Txt_fechaEvaluacion
             // 
-            this.Txt_fechaEvaluacion.Location = new System.Drawing.Point(14, 98);
+            this.Txt_fechaEvaluacion.Enabled = false;
+            this.Txt_fechaEvaluacion.Location = new System.Drawing.Point(222, 45);
             this.Txt_fechaEvaluacion.Name = "Txt_fechaEvaluacion";
             this.Txt_fechaEvaluacion.Size = new System.Drawing.Size(197, 20);
             this.Txt_fechaEvaluacion.TabIndex = 14;
             this.Txt_fechaEvaluacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Txt_departamento
-            // 
-            this.Txt_departamento.Enabled = false;
-            this.Txt_departamento.Location = new System.Drawing.Point(242, 152);
-            this.Txt_departamento.Multiline = true;
-            this.Txt_departamento.Name = "Txt_departamento";
-            this.Txt_departamento.Size = new System.Drawing.Size(175, 20);
-            this.Txt_departamento.TabIndex = 13;
-            // 
             // Txt_empleadosTotal
             // 
             this.Txt_empleadosTotal.Enabled = false;
-            this.Txt_empleadosTotal.Location = new System.Drawing.Point(95, 219);
+            this.Txt_empleadosTotal.Location = new System.Drawing.Point(95, 112);
             this.Txt_empleadosTotal.Name = "Txt_empleadosTotal";
             this.Txt_empleadosTotal.Size = new System.Drawing.Size(322, 20);
             this.Txt_empleadosTotal.TabIndex = 3;
-            // 
-            // Txt_jefeGerente
-            // 
-            this.Txt_jefeGerente.Enabled = false;
-            this.Txt_jefeGerente.Location = new System.Drawing.Point(14, 152);
-            this.Txt_jefeGerente.Multiline = true;
-            this.Txt_jefeGerente.Name = "Txt_jefeGerente";
-            this.Txt_jefeGerente.Size = new System.Drawing.Size(197, 20);
-            this.Txt_jefeGerente.TabIndex = 12;
+            this.Txt_empleadosTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Lbl_total
             // 
             this.Lbl_total.AutoSize = true;
             this.Lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_total.Location = new System.Drawing.Point(27, 226);
+            this.Lbl_total.Location = new System.Drawing.Point(27, 119);
             this.Lbl_total.Name = "Lbl_total";
             this.Lbl_total.Size = new System.Drawing.Size(39, 16);
             this.Lbl_total.TabIndex = 0;
@@ -622,96 +638,31 @@
             // Txt_empleadosDesempeño
             // 
             this.Txt_empleadosDesempeño.Enabled = false;
-            this.Txt_empleadosDesempeño.Location = new System.Drawing.Point(95, 190);
+            this.Txt_empleadosDesempeño.Location = new System.Drawing.Point(95, 83);
             this.Txt_empleadosDesempeño.Name = "Txt_empleadosDesempeño";
             this.Txt_empleadosDesempeño.Size = new System.Drawing.Size(322, 20);
             this.Txt_empleadosDesempeño.TabIndex = 2;
-            // 
-            // Txt_fechaIngreso
-            // 
-            this.Txt_fechaIngreso.Enabled = false;
-            this.Txt_fechaIngreso.Location = new System.Drawing.Point(242, 96);
-            this.Txt_fechaIngreso.Multiline = true;
-            this.Txt_fechaIngreso.Name = "Txt_fechaIngreso";
-            this.Txt_fechaIngreso.Size = new System.Drawing.Size(175, 20);
-            this.Txt_fechaIngreso.TabIndex = 11;
+            this.Txt_empleadosDesempeño.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Lbl_desempeño1
             // 
             this.Lbl_desempeño1.AutoSize = true;
             this.Lbl_desempeño1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_desempeño1.Location = new System.Drawing.Point(11, 191);
+            this.Lbl_desempeño1.Location = new System.Drawing.Point(11, 84);
             this.Lbl_desempeño1.Name = "Lbl_desempeño1";
             this.Lbl_desempeño1.Size = new System.Drawing.Size(83, 16);
             this.Lbl_desempeño1.TabIndex = 1;
             this.Lbl_desempeño1.Text = "Desempeño";
             // 
-            // Txt_cargo
-            // 
-            this.Txt_cargo.Enabled = false;
-            this.Txt_cargo.Location = new System.Drawing.Point(242, 42);
-            this.Txt_cargo.Multiline = true;
-            this.Txt_cargo.Name = "Txt_cargo";
-            this.Txt_cargo.Size = new System.Drawing.Size(175, 20);
-            this.Txt_cargo.TabIndex = 10;
-            // 
-            // Lbl_departamento
-            // 
-            this.Lbl_departamento.AutoSize = true;
-            this.Lbl_departamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_departamento.Location = new System.Drawing.Point(252, 136);
-            this.Lbl_departamento.Name = "Lbl_departamento";
-            this.Lbl_departamento.Size = new System.Drawing.Size(94, 16);
-            this.Lbl_departamento.TabIndex = 8;
-            this.Lbl_departamento.Text = "Departamento";
-            // 
-            // Lbl_jefeGerente
-            // 
-            this.Lbl_jefeGerente.AutoSize = true;
-            this.Lbl_jefeGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_jefeGerente.Location = new System.Drawing.Point(27, 136);
-            this.Lbl_jefeGerente.Name = "Lbl_jefeGerente";
-            this.Lbl_jefeGerente.Size = new System.Drawing.Size(92, 16);
-            this.Lbl_jefeGerente.TabIndex = 7;
-            this.Lbl_jefeGerente.Text = "Jefe / Gerente";
-            // 
-            // Lbl_fechaIngreso
-            // 
-            this.Lbl_fechaIngreso.AutoSize = true;
-            this.Lbl_fechaIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_fechaIngreso.Location = new System.Drawing.Point(252, 80);
-            this.Lbl_fechaIngreso.Name = "Lbl_fechaIngreso";
-            this.Lbl_fechaIngreso.Size = new System.Drawing.Size(113, 16);
-            this.Lbl_fechaIngreso.TabIndex = 6;
-            this.Lbl_fechaIngreso.Text = "Fecha de Ingreso";
-            // 
-            // Lbl_cargo
-            // 
-            this.Lbl_cargo.AutoSize = true;
-            this.Lbl_cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_cargo.Location = new System.Drawing.Point(252, 25);
-            this.Lbl_cargo.Name = "Lbl_cargo";
-            this.Lbl_cargo.Size = new System.Drawing.Size(45, 16);
-            this.Lbl_cargo.TabIndex = 5;
-            this.Lbl_cargo.Text = "Cargo";
-            // 
             // Lbl_fechaEvalucacion
             // 
             this.Lbl_fechaEvalucacion.AutoSize = true;
             this.Lbl_fechaEvalucacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_fechaEvalucacion.Location = new System.Drawing.Point(27, 80);
+            this.Lbl_fechaEvalucacion.Location = new System.Drawing.Point(235, 27);
             this.Lbl_fechaEvalucacion.Name = "Lbl_fechaEvalucacion";
             this.Lbl_fechaEvalucacion.Size = new System.Drawing.Size(135, 16);
             this.Lbl_fechaEvalucacion.TabIndex = 4;
             this.Lbl_fechaEvalucacion.Text = "Fecha de Evaluación";
-            // 
-            // Cbo_nombreEmpleado
-            // 
-            this.Cbo_nombreEmpleado.FormattingEnabled = true;
-            this.Cbo_nombreEmpleado.Location = new System.Drawing.Point(14, 41);
-            this.Cbo_nombreEmpleado.Name = "Cbo_nombreEmpleado";
-            this.Cbo_nombreEmpleado.Size = new System.Drawing.Size(197, 21);
-            this.Cbo_nombreEmpleado.TabIndex = 3;
             // 
             // Lbl_nombreEmpleado
             // 
@@ -815,6 +766,7 @@
             this.Nud_asistenciaS.Size = new System.Drawing.Size(120, 20);
             this.Nud_asistenciaS.TabIndex = 52;
             this.Nud_asistenciaS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_asistenciaS.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_asistenciaME
             // 
@@ -828,6 +780,7 @@
             this.Nud_asistenciaME.Size = new System.Drawing.Size(120, 20);
             this.Nud_asistenciaME.TabIndex = 52;
             this.Nud_asistenciaME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_asistenciaME.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_asistenciaAE
             // 
@@ -841,6 +794,7 @@
             this.Nud_asistenciaAE.Size = new System.Drawing.Size(120, 20);
             this.Nud_asistenciaAE.TabIndex = 52;
             this.Nud_asistenciaAE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_asistenciaAE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_asistenciaDE
             // 
@@ -854,6 +808,7 @@
             this.Nud_asistenciaDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_asistenciaDE.TabIndex = 52;
             this.Nud_asistenciaDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_asistenciaDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_asistenciaMDE
             // 
@@ -867,6 +822,7 @@
             this.Nud_asistenciaMDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_asistenciaMDE.TabIndex = 52;
             this.Nud_asistenciaMDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_asistenciaMDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Lbl_CategoriaMDE
             // 
@@ -1000,7 +956,7 @@
             this.Nud_productividadMDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_productividadMDE.TabIndex = 26;
             this.Nud_productividadMDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Nud_productividadMDE.ValueChanged += new System.EventHandler(this.Nud_productividadMDE_ValueChanged);
+            this.Nud_productividadMDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_productividadDE
             // 
@@ -1014,6 +970,7 @@
             this.Nud_productividadDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_productividadDE.TabIndex = 27;
             this.Nud_productividadDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_productividadDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_productividadAE
             // 
@@ -1027,6 +984,7 @@
             this.Nud_productividadAE.Size = new System.Drawing.Size(120, 20);
             this.Nud_productividadAE.TabIndex = 28;
             this.Nud_productividadAE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_productividadAE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_productividadME
             // 
@@ -1040,6 +998,7 @@
             this.Nud_productividadME.Size = new System.Drawing.Size(120, 20);
             this.Nud_productividadME.TabIndex = 29;
             this.Nud_productividadME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_productividadME.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_productividadS
             // 
@@ -1053,6 +1012,7 @@
             this.Nud_productividadS.Size = new System.Drawing.Size(120, 20);
             this.Nud_productividadS.TabIndex = 30;
             this.Nud_productividadS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_productividadS.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_eficienciaMDE
             // 
@@ -1066,6 +1026,7 @@
             this.Nud_eficienciaMDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_eficienciaMDE.TabIndex = 31;
             this.Nud_eficienciaMDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_eficienciaMDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_eficienciaDE
             // 
@@ -1079,6 +1040,7 @@
             this.Nud_eficienciaDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_eficienciaDE.TabIndex = 32;
             this.Nud_eficienciaDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_eficienciaDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_eficienciaAE
             // 
@@ -1092,6 +1054,7 @@
             this.Nud_eficienciaAE.Size = new System.Drawing.Size(120, 20);
             this.Nud_eficienciaAE.TabIndex = 33;
             this.Nud_eficienciaAE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_eficienciaAE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_eficienciaME
             // 
@@ -1105,6 +1068,7 @@
             this.Nud_eficienciaME.Size = new System.Drawing.Size(120, 20);
             this.Nud_eficienciaME.TabIndex = 34;
             this.Nud_eficienciaME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_eficienciaME.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_eficienciaS
             // 
@@ -1118,6 +1082,7 @@
             this.Nud_eficienciaS.Size = new System.Drawing.Size(120, 20);
             this.Nud_eficienciaS.TabIndex = 35;
             this.Nud_eficienciaS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_eficienciaS.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_organizacionMDE
             // 
@@ -1131,6 +1096,7 @@
             this.Nud_organizacionMDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_organizacionMDE.TabIndex = 36;
             this.Nud_organizacionMDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_organizacionMDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_organizacionDE
             // 
@@ -1144,6 +1110,7 @@
             this.Nud_organizacionDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_organizacionDE.TabIndex = 37;
             this.Nud_organizacionDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_organizacionDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_organizacionAE
             // 
@@ -1157,6 +1124,7 @@
             this.Nud_organizacionAE.Size = new System.Drawing.Size(120, 20);
             this.Nud_organizacionAE.TabIndex = 38;
             this.Nud_organizacionAE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_organizacionAE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_organizacionME
             // 
@@ -1170,6 +1138,7 @@
             this.Nud_organizacionME.Size = new System.Drawing.Size(120, 20);
             this.Nud_organizacionME.TabIndex = 39;
             this.Nud_organizacionME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_organizacionME.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_organizacionS
             // 
@@ -1183,6 +1152,7 @@
             this.Nud_organizacionS.Size = new System.Drawing.Size(120, 20);
             this.Nud_organizacionS.TabIndex = 40;
             this.Nud_organizacionS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_organizacionS.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_aprendizajeydesarrolloMDE
             // 
@@ -1196,6 +1166,7 @@
             this.Nud_aprendizajeydesarrolloMDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_aprendizajeydesarrolloMDE.TabIndex = 41;
             this.Nud_aprendizajeydesarrolloMDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_aprendizajeydesarrolloMDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_aprendizajeydesarrolloDE
             // 
@@ -1209,6 +1180,7 @@
             this.Nud_aprendizajeydesarrolloDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_aprendizajeydesarrolloDE.TabIndex = 42;
             this.Nud_aprendizajeydesarrolloDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_aprendizajeydesarrolloDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_aprendizajeydesarrolloAE
             // 
@@ -1222,6 +1194,7 @@
             this.Nud_aprendizajeydesarrolloAE.Size = new System.Drawing.Size(120, 20);
             this.Nud_aprendizajeydesarrolloAE.TabIndex = 43;
             this.Nud_aprendizajeydesarrolloAE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_aprendizajeydesarrolloAE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_aprendizajeydesarrolloME
             // 
@@ -1235,6 +1208,7 @@
             this.Nud_aprendizajeydesarrolloME.Size = new System.Drawing.Size(120, 20);
             this.Nud_aprendizajeydesarrolloME.TabIndex = 44;
             this.Nud_aprendizajeydesarrolloME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_aprendizajeydesarrolloME.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_aprendizajeydesarrolloS
             // 
@@ -1248,6 +1222,7 @@
             this.Nud_aprendizajeydesarrolloS.Size = new System.Drawing.Size(120, 20);
             this.Nud_aprendizajeydesarrolloS.TabIndex = 45;
             this.Nud_aprendizajeydesarrolloS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_aprendizajeydesarrolloS.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_comunicacionMDE
             // 
@@ -1261,6 +1236,7 @@
             this.Nud_comunicacionMDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_comunicacionMDE.TabIndex = 46;
             this.Nud_comunicacionMDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_comunicacionMDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_comunicacionDE
             // 
@@ -1274,6 +1250,7 @@
             this.Nud_comunicacionDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_comunicacionDE.TabIndex = 47;
             this.Nud_comunicacionDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_comunicacionDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_comunicacionAE
             // 
@@ -1287,6 +1264,7 @@
             this.Nud_comunicacionAE.Size = new System.Drawing.Size(120, 20);
             this.Nud_comunicacionAE.TabIndex = 48;
             this.Nud_comunicacionAE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_comunicacionAE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_comunicacionME
             // 
@@ -1300,6 +1278,7 @@
             this.Nud_comunicacionME.Size = new System.Drawing.Size(120, 20);
             this.Nud_comunicacionME.TabIndex = 49;
             this.Nud_comunicacionME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_comunicacionME.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_comunicacionS
             // 
@@ -1313,6 +1292,7 @@
             this.Nud_comunicacionS.Size = new System.Drawing.Size(120, 20);
             this.Nud_comunicacionS.TabIndex = 50;
             this.Nud_comunicacionS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_comunicacionS.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_relacionesinterpersonalesMDE
             // 
@@ -1326,6 +1306,7 @@
             this.Nud_relacionesinterpersonalesMDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_relacionesinterpersonalesMDE.TabIndex = 51;
             this.Nud_relacionesinterpersonalesMDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_relacionesinterpersonalesMDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_relacionesinterpersonalesDE
             // 
@@ -1339,6 +1320,7 @@
             this.Nud_relacionesinterpersonalesDE.Size = new System.Drawing.Size(120, 20);
             this.Nud_relacionesinterpersonalesDE.TabIndex = 52;
             this.Nud_relacionesinterpersonalesDE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_relacionesinterpersonalesDE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_relacionesinterpersonalesAE
             // 
@@ -1352,6 +1334,7 @@
             this.Nud_relacionesinterpersonalesAE.Size = new System.Drawing.Size(120, 20);
             this.Nud_relacionesinterpersonalesAE.TabIndex = 53;
             this.Nud_relacionesinterpersonalesAE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_relacionesinterpersonalesAE.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_relacionesinterpersonalesME
             // 
@@ -1365,6 +1348,7 @@
             this.Nud_relacionesinterpersonalesME.Size = new System.Drawing.Size(120, 20);
             this.Nud_relacionesinterpersonalesME.TabIndex = 54;
             this.Nud_relacionesinterpersonalesME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_relacionesinterpersonalesME.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Nud_relacionesinterpersonalesS
             // 
@@ -1378,6 +1362,7 @@
             this.Nud_relacionesinterpersonalesS.Size = new System.Drawing.Size(120, 20);
             this.Nud_relacionesinterpersonalesS.TabIndex = 55;
             this.Nud_relacionesinterpersonalesS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Nud_relacionesinterpersonalesS.ValueChanged += new System.EventHandler(this.valorCambiado);
             // 
             // Frm_DesempenioEmpleados
             // 
@@ -1391,7 +1376,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_DesempenioEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "0";
             this.Pnl_Desempeño.ResumeLayout(false);
             this.Pnl_Desempeño.PerformLayout();
             this.Gpb_puntaje.ResumeLayout(false);
@@ -1477,20 +1462,10 @@
         private System.Windows.Forms.TextBox Txt_TCS;
         private System.Windows.Forms.TextBox Txt_totalcategoria;
         private System.Windows.Forms.GroupBox Gpb_empleados;
-        private System.Windows.Forms.TextBox Txt_departamento;
-        private System.Windows.Forms.TextBox Txt_empleadosTotal;
-        private System.Windows.Forms.TextBox Txt_jefeGerente;
         private System.Windows.Forms.Label Lbl_total;
         private System.Windows.Forms.TextBox Txt_empleadosDesempeño;
-        private System.Windows.Forms.TextBox Txt_fechaIngreso;
         private System.Windows.Forms.Label Lbl_desempeño1;
-        private System.Windows.Forms.TextBox Txt_cargo;
-        private System.Windows.Forms.Label Lbl_departamento;
-        private System.Windows.Forms.Label Lbl_jefeGerente;
-        private System.Windows.Forms.Label Lbl_fechaIngreso;
-        private System.Windows.Forms.Label Lbl_cargo;
         private System.Windows.Forms.Label Lbl_fechaEvalucacion;
-        private System.Windows.Forms.ComboBox Cbo_nombreEmpleado;
         private System.Windows.Forms.Label Lbl_nombreEmpleado;
         private System.Windows.Forms.GroupBox Gpb_categorias;
         private System.Windows.Forms.TableLayoutPanel Tlp_categorias;
@@ -1542,6 +1517,10 @@
         private System.Windows.Forms.NumericUpDown Nud_relacionesinterpersonalesME;
         private System.Windows.Forms.NumericUpDown Nud_relacionesinterpersonalesS;
         private System.Windows.Forms.TextBox Txt_fechaEvaluacion;
+        private System.Windows.Forms.Button Btn_insertar;
+        private System.Windows.Forms.TextBox Txt_nombreEmpleado;
+        private System.Windows.Forms.Button Btn_buscar;
+        public System.Windows.Forms.TextBox Txt_empleadosTotal;
     }
 }
 
