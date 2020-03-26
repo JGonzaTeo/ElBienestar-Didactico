@@ -22,8 +22,9 @@ namespace CapaDiseño.Mantenimientos
         string slocalIP;
         string smacAddresses;
         string suser;
-        
-          
+        string scampo;
+
+
         public void obtenerip()
         {
             IPHostEntry host;
@@ -50,6 +51,15 @@ namespace CapaDiseño.Mantenimientos
             InitializeComponent();
             obtenerip();
             suser = susuario;
+
+            Txt_Codigo.Enabled = false;
+            Cbo_Contrato.Enabled = false;
+            Cbo_Estado.Enabled = false;
+            Cbo_Mes.Enabled =  false;
+            Cbo_Proyecto.Enabled = false;
+
+            scampo = logic.siguiente("mediodecomunicacion", "pkmediodecomunicacion");
+            Txt_Codigo.Text = scampo;
         }
 
         private void Frm_MantTipoContratacion_Load(object sender, EventArgs e)

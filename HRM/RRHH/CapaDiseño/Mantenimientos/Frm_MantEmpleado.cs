@@ -51,6 +51,15 @@ namespace CapaDiseño.Mantenimientos
             InitializeComponent();
             obtenerip();
             suser = susuario;
+
+            Txt_PrimerApellido.Enabled = false;
+            Txt_SegundoNombre.Enabled = false;
+            Txt_PrimerApellido.Enabled = false;
+            Txt_SegundoNombre.Enabled = false;
+            Txt_Telefono.Enabled = false;
+            Txt_Celular.Enabled = false;
+            Txt_email.Enabled = false;
+            Txt_Direccion.Enabled = false;
         }
 
         private void Pnl_nombreForm_Paint(object sender, PaintEventArgs e)

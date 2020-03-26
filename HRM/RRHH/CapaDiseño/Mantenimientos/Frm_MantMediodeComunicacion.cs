@@ -22,8 +22,9 @@ namespace CapaDiseño.Procesos
         string slocalIP;
         string smacAddresses;
         string suser;
-        
-          
+        string scampo;
+
+
         public void obtenerip()
         {
             IPHostEntry host;
@@ -51,6 +52,15 @@ namespace CapaDiseño.Procesos
             InitializeComponent();
             obtenerip();
             suser = susuario;
+
+            Txt_ID.Enabled = false;
+            Txt_Nombre.Enabled = false;
+            Txt_Direccion.Enabled = false;
+            Txt_Telefono.Enabled = false;
+            Cbo_Estado.Enabled = false;
+
+            scampo = logic.siguiente("mediodecomunicacion", "pkmediodecomunicacion");
+            Txt_ID.Text = scampo;
         }
 
         private void Btn_cerrar_Click(object sender, EventArgs e)
@@ -109,6 +119,11 @@ namespace CapaDiseño.Procesos
         {
             Frm_consultaMediodeComunicacion concep = new Frm_consultaMediodeComunicacion();
             concep.ShowDialog();
+        }
+
+        private void Txt_ID_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
