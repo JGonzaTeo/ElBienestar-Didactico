@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using CapaLogica;
 using System.Net;
 using System.Net.NetworkInformation;
+using CapaDiseño.Consulta;
 
 namespace CapaDiseño.Mantenimientos
 {
@@ -75,13 +76,6 @@ namespace CapaDiseño.Mantenimientos
                         MessageBox.Show("Debe ingresar un codigo existente");
 
                     }
-                    else
-                    {
-                        Txt_HoraInicio.Text = DateTime.Now.ToLongTimeString();
-                        Txt_FechaInicio.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                        Txt_HoraFinal.Text = DateTime.Now.ToLongTimeString();
-                        Txt_FechaFinal.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                    }
                     
                 }
                 catch (Exception err)
@@ -93,13 +87,20 @@ namespace CapaDiseño.Mantenimientos
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (Txt_NombreReunion.Text == "" | Txt_FechaInicio.Text == "" | Txt_HoraInicio.Text == "" | Txt_FechaFinal.Text == "" | Txt_HoraFinal.Text == "" | Txt_CantidadEmpleados.Text == "")
+            if (Txt_NombreReunion.Text == "" |  Txt_CantidadEmpleados.Text == "")
             {
                 MessageBox.Show("Debe llenar todos los Campos Solicitados");
             }
             else
             {
-                OdbcDataReader Reunion = Logic.InsertaReunion(Txt_CodigoEmpleado.Text, Txt_NombreReunion.Text, Txt_DescripcionReunion.Text, Txt_FechaInicio.Text, Txt_FechaFinal.Text, Txt_HoraInicio.Text, Txt_HoraFinal.Text, Txt_CantidadEmpleados.Text);
+                //FORMATO DE FECHAS Y HORAS
+                string sFechaIngreso, sFechaSalida, sHoraIngreso, sHoraSalida;
+                sFechaIngreso = Dtp_FechaIngreso.Value.ToString("yyyy-MM-dd");
+                sFechaSalida = Dtp_FechaSalida.Value.ToString("yyyy-MM-dd");
+                sHoraIngreso = Dtp_HoraIngreso.Value.ToLongTimeString();
+                sHoraSalida = Dtp_HoraSalida.Value.ToLongTimeString();
+
+                OdbcDataReader Reunion = Logic.InsertaReunion(Txt_CodigoEmpleado.Text, Txt_NombreReunion.Text, Txt_DescripcionReunion.Text, sFechaIngreso, sFechaSalida, sHoraIngreso, sHoraSalida, Txt_CantidadEmpleados.Text);
                 MessageBox.Show("Reunión Ingresada");
                 Logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
                 //LimpiarCampos
@@ -108,11 +109,11 @@ namespace CapaDiseño.Mantenimientos
                 Txt_Nombre.Clear();
                 Txt_NombreReunion.Clear();
                 Txt_DescripcionReunion.Clear();
-                Txt_FechaInicio.Clear();
-                Txt_FechaFinal.Clear();
-                Txt_HoraInicio.Clear();
-                Txt_HoraFinal.Clear();
                 Txt_CantidadEmpleados.Clear();
+                Dtp_FechaIngreso.ResetText();
+                Dtp_FechaSalida.ResetText();
+                Dtp_HoraIngreso.ResetText();
+                Dtp_HoraSalida.ResetText();
             }
         }
 
@@ -129,6 +130,18 @@ namespace CapaDiseño.Mantenimientos
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void Btn_ConsultarEmpleados_Click(object sender, EventArgs e)
+        {
+            Frm_consultaEmpleado consultaempleado = new Frm_consultaEmpleado();
+            consultaempleado.ShowDialog();
+
+            if (consultaempleado.DialogResult == DialogResult.OK)
+            {
+                Txt_CodigoEmpleado.Text = consultaempleado.Dgv_consultaEmpleado.Rows[consultaempleado.Dgv_consultaEmpleado.CurrentRow.Index].Cells[0].Value.ToString();
+
+            }
         }
     }
 }

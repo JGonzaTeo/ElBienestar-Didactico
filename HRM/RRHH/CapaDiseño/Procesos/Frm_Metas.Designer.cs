@@ -198,10 +198,12 @@
             // 
             // Txt_totalMeta
             // 
+            this.Txt_totalMeta.Enabled = false;
             this.Txt_totalMeta.Location = new System.Drawing.Point(257, 225);
             this.Txt_totalMeta.Name = "Txt_totalMeta";
             this.Txt_totalMeta.Size = new System.Drawing.Size(100, 20);
             this.Txt_totalMeta.TabIndex = 10;
+            this.Txt_totalMeta.TextChanged += new System.EventHandler(this.Txt_totalMeta_TextChanged);
             // 
             // Lbl_totalMeta
             // 

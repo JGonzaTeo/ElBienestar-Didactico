@@ -129,6 +129,9 @@ namespace CapaDiseño.Mantenimientos
             }
         }
 
-      
+        private void Txt_Cod_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

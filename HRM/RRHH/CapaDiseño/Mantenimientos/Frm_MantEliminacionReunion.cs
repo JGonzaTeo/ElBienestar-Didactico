@@ -49,10 +49,13 @@ namespace CapaDiseño.Mantenimientos
             InitializeComponent();
             obtenerip();
             suser = susuario;
+            Gpb_DatosReunion.Enabled = false;
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
         {
+
+
             if (Txt_NombreReunion.Text == "")
             {
                 MessageBox.Show("Debe Ingresar el Nombre de la Reunión");
@@ -67,10 +70,10 @@ namespace CapaDiseño.Mantenimientos
                     {
 
                         Txt_Descripcion.Text = Reunion.GetString(0);
-                        Txt_FechaInicio.Text = Reunion.GetString(1);
-                        Txt_FechaFinal.Text = Reunion.GetString(2);
-                        Txt_HoraInicio.Text = Reunion.GetString(3);
-                        Txt_HoraFinal.Text = Reunion.GetString(4);
+                        Dtp_FechaIngreso.Text = Reunion.GetString(1);
+                        Dtp_FechaSalida.Text = Reunion.GetString(2);
+                        Dtp_HoraIngreso.Text = Reunion.GetString(3);
+                        Dtp_HoraSalida.Text = Reunion.GetString(4);
                         Txt_CantidadEmpleado.Text = Reunion.GetString(5);
 
 
@@ -103,11 +106,11 @@ namespace CapaDiseño.Mantenimientos
                 Txt_NombreReunion.Clear();
                 Txt_NombreReunion.Focus();
                 Txt_Descripcion.Clear();
-                Txt_FechaInicio.Clear();
-                Txt_FechaFinal.Clear();
-                Txt_HoraInicio.Clear();
-                Txt_HoraFinal.Clear();
                 Txt_CantidadEmpleado.Clear();
+                Dtp_FechaIngreso.ResetText();
+                Dtp_FechaSalida.ResetText();
+                Dtp_HoraIngreso.ResetText();
+                Dtp_HoraSalida.ResetText();
             }
         }
 
