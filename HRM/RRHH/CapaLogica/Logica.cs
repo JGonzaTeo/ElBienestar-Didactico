@@ -200,9 +200,9 @@ namespace CapaLogica
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
         //---------------------------------------------------------------------------DESEMPEÑO-------------------------------------------------------------------------//
         //--------------------------------------------------------INSERTAR KPI-------------------------------------------------------//
-        public OdbcDataReader InsertarKpi(string fechaEvaluacion, string totalEmpleado, string desempeño)
+        public OdbcDataReader InsertarKpi(string fechaEvaluacion, string desempeño)
         {
-            return sn.InsertarKpi(fechaEvaluacion, totalEmpleado, desempeño);
+            return sn.InsertarKpi(fechaEvaluacion, desempeño);
         }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
         //--------------------------------------------------------INSERTAR CATEGORIA-------------------------------------------------------//
@@ -217,6 +217,12 @@ namespace CapaLogica
             return sn.InsertarMeta(nombreMeta, tipoMeta, descrip, comple, fechaMeta, pun);
         }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
+        //--------------------------------------------------------INSERTAR TOTAL KPI-------------------------------------------------------//
+        public OdbcDataReader InsertarKpiTotal(string totalKpi)
+        {
+            return sn.InsertarKpiTotal(totalKpi);
+        }
+        //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
         //pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
         //------------------------------------------------------------------------------------------------------BuscarEmpleado---------------------------------------------
@@ -226,9 +232,9 @@ namespace CapaLogica
         }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //-----------------------------------------------------------------------------------------------------Insertar Control Asistencia----------------------------------------------------------------//
-        public OdbcDataReader InsertaControlAsistencia(string sCodigoEmpleado, string sNombre, string sApellido, string sFechaIngreso, string sHoraIngreso)
+        public OdbcDataReader InsertaControlAsistencia(string sCodigoEmpleado, string sNombre, string sApellido, string sFechaIngreso, string sFechaSalida, string sHoraIngreso, string sHoraSalida, float fHorasTotales)
         {
-            return sn.InsertarControlAsistencia(sCodigoEmpleado, sNombre, sApellido, sFechaIngreso, sHoraIngreso);
+            return sn.InsertarControlAsistencia(sCodigoEmpleado, sNombre, sApellido, sFechaIngreso,sFechaSalida, sHoraIngreso, sHoraSalida, fHorasTotales);
         }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //-----------------------------------------------------------------------------------------------------Insertar Reunion----------------------------------------------------------------//

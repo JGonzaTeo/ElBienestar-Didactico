@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using CapaLogica;
 using System.Net;
 using System.Net.NetworkInformation;
+using CapaDiseño.Consulta;
+
 namespace CapaDiseño.Mantenimientos
 {
     public partial class Frm_MantDespidoEmpleado : Form
@@ -85,10 +87,6 @@ namespace CapaDiseño.Mantenimientos
                     {
                         MessageBox.Show("Debe ingresar un codigo existente");
                     }
-                    else
-                    {
-                        Txt_Fecha.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                    }
                 }
                 catch (Exception err)
                 {
@@ -101,13 +99,16 @@ namespace CapaDiseño.Mantenimientos
         private void Btn_RealizarDespido_Click(object sender, EventArgs e)
         {
 
-            if (Txt_NombreEmpleado.Text == "" | Txt_Fecha.Text == "" | Txt_RazonDespido.Text == "")
+            if (Txt_NombreEmpleado.Text == "" | Txt_RazonDespido.Text == "")
             {
                 MessageBox.Show("Debe llenar todos los Campos Solicitados");
             }
             else
             {
-                OdbcDataReader Despido = Logic.InsertaDespido(Txt_CodigoEmpleado.Text, Txt_RazonDespido.Text, Txt_Descripcion.Text, Txt_Fecha.Text);
+                //FORMATO DE FECHAS Y HORAS
+                string sFechaIngreso;
+                sFechaIngreso = Dtp_FechaIngreso.Value.ToString("yyyy-MM-dd");
+                OdbcDataReader Despido = Logic.InsertaDespido(Txt_CodigoEmpleado.Text, Txt_RazonDespido.Text, Txt_Descripcion.Text, sFechaIngreso);
                 MessageBox.Show("Despido Ingresado");
                 Logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
 
@@ -117,7 +118,19 @@ namespace CapaDiseño.Mantenimientos
                 Txt_NombreEmpleado.Clear();
                 Txt_RazonDespido.Clear();
                 Txt_Descripcion.Clear();
-                Txt_Fecha.Clear();
+                Dtp_FechaIngreso.ResetText();
+
+            }
+        }
+
+        private void Btn_ConsultarEmpleados_Click(object sender, EventArgs e)
+        {
+            Frm_consultaEmpleado consultaempleado = new Frm_consultaEmpleado();
+            consultaempleado.ShowDialog();
+
+            if (consultaempleado.DialogResult == DialogResult.OK)
+            {
+                Txt_CodigoEmpleado.Text = consultaempleado.Dgv_consultaEmpleado.Rows[consultaempleado.Dgv_consultaEmpleado.CurrentRow.Index].Cells[0].Value.ToString();
 
             }
         }

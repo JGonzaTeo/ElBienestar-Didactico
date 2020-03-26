@@ -65,6 +65,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pnl_nombreForm.SuspendLayout();
             this.Gpb_nominaencabezado.SuspendLayout();
             this.Gpb_Detallenominal.SuspendLayout();
@@ -239,6 +240,7 @@
             this.Dtp_fechainicio.Name = "Dtp_fechainicio";
             this.Dtp_fechainicio.Size = new System.Drawing.Size(365, 27);
             this.Dtp_fechainicio.TabIndex = 5;
+            this.Dtp_fechainicio.Value = new System.DateTime(2020, 3, 24, 22, 55, 0, 0);
             // 
             // label1
             // 
@@ -313,7 +315,8 @@
             this.Column4,
             this.Column5,
             this.Column6,
-            this.Column7});
+            this.Column7,
+            this.Column8});
             this.Dgv_empleadoscontables.Location = new System.Drawing.Point(37, 26);
             this.Dgv_empleadoscontables.Name = "Dgv_empleadoscontables";
             this.Dgv_empleadoscontables.RowHeadersWidth = 51;
@@ -419,6 +422,13 @@
             this.Column7.Name = "Column7";
             this.Column7.Width = 125;
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Sueldo Liquido";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
+            // 
             // Frm_Nomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -486,5 +496,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }

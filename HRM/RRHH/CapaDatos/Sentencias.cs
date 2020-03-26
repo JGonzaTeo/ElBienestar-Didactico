@@ -580,7 +580,7 @@ namespace CapaDatos
             try
             {
                 cn.conexionbd();
-                string consulta = "insert into tbl_curriculums values(" + scampo + ',' + nombre + ',' + apellido + ',' + numero + ',' + direccion + ',' + correo + ',' + p2 + ',' + s2 + ',' + b2 + ',' + es2 + ',' + g2 + ',' + c2 + ',' + extras + ',' + experiencia + ',' + sueldo + ',' + solicitud + ",1);";
+                string consulta = "insert into tbl_curriculums values(" + scampo + ",'" + nombre + "','" + apellido + "','" + numero + "','" + direccion + "','" + correo + "'," + p2 + ',' + s2 + ',' + b2 + ',' + es2 + ',' + g2 + ',' + c2 + ",'" + extras + "','" + experiencia + "'," + sueldo + "," + solicitud + ",1);";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -629,12 +629,12 @@ namespace CapaDatos
         }
 
         //---------------------------------------------------------------------------DESEMPEÑO-------------------------------------------------------------------------//
-        public OdbcDataReader InsertarKpi(string fechaEvaluacion, string totalEmpleado, string desempeño)
+        public OdbcDataReader InsertarKpi(string fechaEvaluacion, string desempeño)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "INSERT INTO tbl_kpi values (0," + fechaEvaluacion + totalEmpleado + desempeño + " ) ;";
+                string consulta = "INSERT INTO tbl_kpi values (0," + fechaEvaluacion + desempeño + " ) ;";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -679,6 +679,23 @@ namespace CapaDatos
                 return null;
             }
         }
+
+        public OdbcDataReader InsertarKpiTotal(string totalKpi)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "INSERT INTO metas values (0," + totalKpi + ");";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
         //PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
@@ -703,13 +720,22 @@ namespace CapaDatos
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 
         //------------------------------------------------------------------------------------- INGRESO CONTROL ASISTENCIA ------------------------------------------------------------------------------------------------------------------------------------
-        public OdbcDataReader InsertarControlAsistencia(string sCodigoEmpleado, string sNombre, string sApellido, string sFechaIngreso, string sHoraIngreso)
+        public OdbcDataReader InsertarControlAsistencia(string sCodigoEmpleado, string sNombre, string sApellido, string sFechaIngreso,string sFechaSalida, string sHoraIngreso,string  sHoraSalida, float fHorasTotales )
         {
+            int idisponible = 1;
             try
             {
-                string consulta = "INSERT INTO asistencia(fkcodigoempleado, fechaentrada, horaentrada) values(" + sCodigoEmpleado + ", '" + sFechaIngreso + "', '" + sHoraIngreso + "');";
+                cn.conexionbd();
+                //INSERT en ASISTENCIA
+                string consulta = "INSERT INTO asistencia(fkcodigoempleado, fechaentrada,fechasalida, horaentrada,horasalida) values(" + sCodigoEmpleado + ", '" + sFechaIngreso + "', '" + sFechaSalida + "' ,'" + sHoraIngreso + "', '" + sHoraSalida + "');";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
+
+                //INSERT EN HORASEXTRAS
+                string consulta2 = "INSERT INTO horasextras(fkcodigoempleado,cantidad,estado) values(" + sCodigoEmpleado + ",'" + fHorasTotales + "','" + idisponible + "');";
+                comm = new OdbcCommand(consulta2, cn.conexionbd());
+                OdbcDataReader mostrar2 = comm.ExecuteReader();
+
                 return mostrar;
             }
             catch (Exception err)

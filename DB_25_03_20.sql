@@ -1,15 +1,15 @@
-CREATE DATABASE  IF NOT EXISTS `mydb` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE  IF NOT EXISTS `mydb` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `mydb`;
--- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: mydb
+-- Host: localhost    Database: mydb
 -- ------------------------------------------------------
--- Server version	5.5.5-10.1.34-MariaDB
+-- Server version	8.0.19
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -23,10 +23,10 @@ USE `mydb`;
 
 DROP TABLE IF EXISTS `asistencia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `asistencia` (
-  `pkcodigoasistencia` int(11) NOT NULL AUTO_INCREMENT,
-  `fkcodigoempleado` int(11) NOT NULL,
+  `pkcodigoasistencia` int NOT NULL AUTO_INCREMENT,
+  `fkcodigoempleado` int NOT NULL,
   `fechaentrada` date DEFAULT NULL,
   `fechasalida` date DEFAULT NULL,
   `horaentrada` time DEFAULT NULL,
@@ -52,9 +52,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `bitacora`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `bitacora` (
-  `cod_bitacora` int(11) NOT NULL AUTO_INCREMENT,
+  `cod_bitacora` int NOT NULL AUTO_INCREMENT,
   `ip` varchar(45) DEFAULT NULL,
   `MAC` varchar(45) DEFAULT NULL,
   `usuario` varchar(45) DEFAULT NULL,
@@ -82,11 +82,11 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `candidatos_internos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `candidatos_internos` (
-  `pkcodigocandidato` int(11) NOT NULL AUTO_INCREMENT,
-  `pksolicitudempleado` int(11) NOT NULL,
-  `pkcodperfil` int(11) NOT NULL,
+  `pkcodigocandidato` int NOT NULL AUTO_INCREMENT,
+  `pksolicitudempleado` int NOT NULL,
+  `pkcodperfil` int NOT NULL,
   `estado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pkcodigocandidato`,`pksolicitudempleado`,`pkcodperfil`),
   KEY `fk_candidatos_internos_tbl_solicitud_empleado_encabezado1_idx` (`pksolicitudempleado`),
@@ -112,9 +112,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `categoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categoria` (
-  `pkcodcategoria` int(11) NOT NULL,
+  `pkcodcategoria` int NOT NULL,
   `nombre` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`pkcodcategoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -135,14 +135,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `concepto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `concepto` (
-  `pkcodigoconcepto` int(11) NOT NULL,
+  `pkcodigoconcepto` int NOT NULL,
   `nombreconcepto` varchar(45) DEFAULT NULL,
-  `tipo_concepto` tinyint(4) DEFAULT NULL,
+  `tipo_concepto` tinyint DEFAULT NULL,
   `saldo` double DEFAULT NULL,
-  `tipo_accion` tinyint(4) DEFAULT NULL,
-  `estado` tinyint(4) DEFAULT NULL,
+  `tipo_accion` tinyint DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
   PRIMARY KEY (`pkcodigoconcepto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -163,12 +163,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `departamentos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `departamentos` (
-  `pkcodigodepto` int(11) NOT NULL,
+  `pkcodigodepto` int NOT NULL,
   `nombredepto` varchar(45) DEFAULT NULL,
   `descripciondepto` varchar(45) DEFAULT NULL,
-  `estado` tinyint(4) DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
   PRIMARY KEY (`pkcodigodepto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -189,10 +189,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `despidoempleado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `despidoempleado` (
-  `pkcodigodespidoempleado` int(11) NOT NULL AUTO_INCREMENT,
-  `fkcodigoempleado` int(11) NOT NULL,
+  `pkcodigodespidoempleado` int NOT NULL AUTO_INCREMENT,
+  `fkcodigoempleado` int NOT NULL,
   `razondespido` varchar(45) DEFAULT NULL,
   `descripciondespido` varchar(45) DEFAULT NULL,
   `fechadespido` date DEFAULT NULL,
@@ -217,22 +217,22 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `empleado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `empleado` (
-  `pkcodigoempleado` int(11) NOT NULL,
-  `fkcodigojornada` int(11) NOT NULL,
+  `pkcodigoempleado` int NOT NULL,
+  `fkcodigojornada` int NOT NULL,
   `primernombre` varchar(45) DEFAULT NULL,
   `segundonombre` varchar(45) DEFAULT NULL,
   `primerapellido` varchar(45) DEFAULT NULL,
   `segundoapellido` varchar(45) DEFAULT NULL,
-  `telefono` int(11) DEFAULT NULL,
-  `celular` int(11) DEFAULT NULL,
+  `telefono` int DEFAULT NULL,
+  `celular` int DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `direccion` varchar(45) DEFAULT NULL,
   `fechanacimiento` date DEFAULT NULL,
-  `estado` tinyint(4) DEFAULT NULL,
-  `TipoContratacion_pkcodigocontratacion` int(11) DEFAULT NULL,
-  `nit` int(11) DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
+  `TipoContratacion_pkcodigocontratacion` int DEFAULT NULL,
+  `nit` int DEFAULT NULL,
   PRIMARY KEY (`pkcodigoempleado`),
   KEY `fk_empleado_jornada_idx` (`fkcodigojornada`),
   CONSTRAINT `fk_empleado_jornada` FOREIGN KEY (`fkcodigojornada`) REFERENCES `jornada` (`pkcodigojornada`)
@@ -255,11 +255,11 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `empleadocontable`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `empleadocontable` (
-  `pkcodigolinea` int(11) NOT NULL AUTO_INCREMENT,
-  `fkcodigoempleado` int(11) DEFAULT NULL,
-  `fkcodigoconcepto` int(11) DEFAULT NULL,
+  `pkcodigolinea` int NOT NULL AUTO_INCREMENT,
+  `fkcodigoempleado` int DEFAULT NULL,
+  `fkcodigoconcepto` int DEFAULT NULL,
   PRIMARY KEY (`pkcodigolinea`),
   KEY `fk_empleadocontable_empleado1_idx` (`fkcodigoempleado`),
   KEY `fk_empleadocontable_concepto1_idx` (`fkcodigoconcepto`),
@@ -283,12 +283,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `horasextras`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `horasextras` (
-  `pkcodigohorasextras` int(11) NOT NULL,
-  `fkcodigoempleado` int(11) NOT NULL,
+  `pkcodigohorasextras` int NOT NULL AUTO_INCREMENT,
+  `fkcodigoempleado` int NOT NULL,
   `cantidad` varchar(45) DEFAULT NULL,
-  `estado` tinyint(4) DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
   PRIMARY KEY (`pkcodigohorasextras`),
   KEY `fk_horasextras_empleado1_idx` (`fkcodigoempleado`),
   CONSTRAINT `fk_horasextras_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
@@ -310,12 +310,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `jornada`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jornada` (
-  `pkcodigojornada` int(11) NOT NULL,
+  `pkcodigojornada` int NOT NULL,
   `nombrejornada` varchar(45) DEFAULT NULL,
-  `horasjornada` int(11) DEFAULT NULL,
-  `estado` tinyint(4) DEFAULT NULL,
+  `horasjornada` int DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
   PRIMARY KEY (`pkcodigojornada`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -336,14 +336,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `kpi`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `kpi` (
-  `pkcodigokpi` int(11) NOT NULL,
+  `pkcodigokpi` int NOT NULL,
   `fecha` date DEFAULT NULL,
-  `puntuacion` int(11) DEFAULT NULL,
+  `puntuacion` int DEFAULT NULL,
   `desempeño` varchar(45) DEFAULT NULL,
-  `fkcodcategoria` int(11) DEFAULT NULL,
-  `fkcodempleado` int(11) DEFAULT NULL,
+  `fkcodcategoria` int DEFAULT NULL,
+  `fkcodempleado` int DEFAULT NULL,
   PRIMARY KEY (`pkcodigokpi`),
   KEY `fk_kpi_categoria1_idx` (`fkcodcategoria`),
   KEY `fk_kpi_empleado1` (`fkcodempleado`),
@@ -367,9 +367,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `mediodecomunicacion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `mediodecomunicacion` (
-  `pkmediodecomunicacion` int(11) NOT NULL,
+  `pkmediodecomunicacion` int NOT NULL,
   `Nombre` varchar(45) DEFAULT NULL,
   `Direccion` varchar(45) DEFAULT NULL,
   `Telefono` varchar(45) DEFAULT NULL,
@@ -393,19 +393,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `meta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `meta` (
-  `codigo_meta` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo_meta` int NOT NULL AUTO_INCREMENT,
   `nombre_meta` varchar(45) DEFAULT NULL,
   `descripcion` varchar(45) DEFAULT NULL,
   `plazo_meta` tinyint(1) DEFAULT NULL,
   `puntaje` varchar(45) DEFAULT NULL,
   `fecha_realizacion` datetime DEFAULT NULL,
   `completado` tinyint(1) DEFAULT NULL,
-  `fkcodigoempleado` int(11) DEFAULT NULL,
+  `fkcodigoempleado` int DEFAULT NULL,
   PRIMARY KEY (`codigo_meta`),
   KEY `fk_meta_empleado1_idx` (`fkcodigoempleado`),
-  CONSTRAINT `fk_meta_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_meta_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -424,13 +424,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `nomina_encabezado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `nomina_encabezado` (
-  `pkcodigonomina` int(11) NOT NULL,
-  `tipo_nomina` tinyint(4) DEFAULT NULL,
+  `pkcodigonomina` int NOT NULL,
+  `tipo_nomina` tinyint DEFAULT NULL,
   `fechainicio` date DEFAULT NULL,
   `fechafin` date DEFAULT NULL,
-  `fkcodigoempleado` int(11) DEFAULT NULL,
+  `fkcodigoempleado` int DEFAULT NULL,
   `Observaciones` varchar(45) DEFAULT NULL,
   `saldo_total` double DEFAULT '0',
   PRIMARY KEY (`pkcodigonomina`),
@@ -454,10 +454,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `nominadetalle`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `nominadetalle` (
-  `pkcodigonomina` int(11) NOT NULL,
-  `cod_linea` int(11) NOT NULL,
+  `pkcodigonomina` int NOT NULL,
+  `cod_linea` int NOT NULL,
   `subtotal_percepcion` double DEFAULT NULL,
   `subtotal_deduccion` double DEFAULT NULL,
   `nominadetallecol` varchar(45) DEFAULT NULL,
@@ -481,9 +481,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `perfil_detalle`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `perfil_detalle` (
-  `fkcodperfil` int(11) NOT NULL,
+  `fkcodperfil` int NOT NULL,
   `primaria` tinyint(1) DEFAULT NULL,
   `secundaria` tinyint(1) DEFAULT NULL,
   `bachillerato` tinyint(1) DEFAULT NULL,
@@ -513,10 +513,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `perfil_encabezado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `perfil_encabezado` (
-  `pkcodperfil` int(11) NOT NULL,
-  `fkcodigopuesto` int(11) DEFAULT NULL,
+  `pkcodperfil` int NOT NULL,
+  `fkcodigopuesto` int DEFAULT NULL,
   `estado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pkcodperfil`),
   KEY `fk_perfil_encabezado_puesto1_idx` (`fkcodigopuesto`),
@@ -540,11 +540,11 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `puesto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `puesto` (
-  `pkcodigopuesto` int(11) NOT NULL,
-  `fkcodigoempleado` int(11) NOT NULL,
-  `fkcodigodepto` int(11) NOT NULL,
+  `pkcodigopuesto` int NOT NULL,
+  `fkcodigoempleado` int NOT NULL,
+  `fkcodigodepto` int NOT NULL,
   `descripcion` varchar(45) DEFAULT NULL,
   `sueldo` double DEFAULT NULL,
   `estado` varchar(45) DEFAULT NULL,
@@ -572,18 +572,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `reuniones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reuniones` (
-  `pkcodigoreuniones` int(11) NOT NULL AUTO_INCREMENT,
-  `fkcodigoempleado` int(11) NOT NULL,
+  `pkcodigoreuniones` int NOT NULL AUTO_INCREMENT,
+  `fkcodigoempleado` int NOT NULL,
   `nombrereunion` varchar(45) DEFAULT NULL,
   `descripcion` varchar(45) DEFAULT NULL,
-  `fechainicio` date DEFAULT NULL,
-  `fechafinal` date DEFAULT NULL,
-  `horainicio` datetime DEFAULT NULL,
-  `horafinal` datetime DEFAULT NULL,
-  `cantidadempleados` int(11) DEFAULT NULL,
-  `estado` tinyint(4) DEFAULT NULL,
+  `fechainicio` datetime DEFAULT NULL,
+  `fechafinal` datetime DEFAULT NULL,
+  `horainicio` time DEFAULT NULL,
+  `horafinal` time DEFAULT NULL,
+  `cantidadempleados` int DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
   PRIMARY KEY (`pkcodigoreuniones`),
   KEY `fk_reuniones_empleado1_idx` (`fkcodigoempleado`),
   CONSTRAINT `fk_reuniones_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
@@ -605,15 +605,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sancionempleado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sancionempleado` (
-  `pkcodigosansionempleado` int(11) NOT NULL AUTO_INCREMENT,
-  `fkcodigoempleado` int(11) NOT NULL,
+  `pkcodigosansionempleado` int NOT NULL AUTO_INCREMENT,
+  `fkcodigoempleado` int NOT NULL,
   `nombre` varchar(45) DEFAULT NULL,
   `descipcion` varchar(45) DEFAULT NULL,
   `fechainicio` date DEFAULT NULL,
   `fechafinal` date DEFAULT NULL,
-  `estado` tinyint(4) DEFAULT NULL,
+  `estado` tinyint DEFAULT NULL,
   PRIMARY KEY (`pkcodigosansionempleado`),
   KEY `fk_sancionempleado_empleado1_idx` (`fkcodigoempleado`),
   CONSTRAINT `fk_sancionempleado_empleado1` FOREIGN KEY (`fkcodigoempleado`) REFERENCES `empleado` (`pkcodigoempleado`)
@@ -635,10 +635,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `tbl_bancotalento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tbl_bancotalento` (
-  `pkBancoTalento` int(11) NOT NULL AUTO_INCREMENT,
-  `fkCurriculum` int(11) NOT NULL,
+  `pkBancoTalento` int NOT NULL AUTO_INCREMENT,
+  `fkCurriculum` int NOT NULL,
   `estado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pkBancoTalento`,`fkCurriculum`),
   KEY `FK_Curriculum_BancoT` (`fkCurriculum`),
@@ -661,9 +661,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `tbl_curriculums`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tbl_curriculums` (
-  `pkidCurriculum` int(11) NOT NULL,
+  `pkidCurriculum` int NOT NULL,
   `Nombre` varchar(45) DEFAULT NULL,
   `Apellido` varchar(45) DEFAULT NULL,
   `Numero` varchar(45) DEFAULT NULL,
@@ -678,7 +678,7 @@ CREATE TABLE `tbl_curriculums` (
   `DescripcionCursos` varchar(100) DEFAULT NULL,
   `Experiencia_Previa` varchar(45) DEFAULT NULL,
   `SueldoEsperado` double DEFAULT NULL,
-  `fksolicitudempleado` int(11) DEFAULT NULL,
+  `fksolicitudempleado` int DEFAULT NULL,
   `estado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pkidCurriculum`),
   KEY `FK_solicitud_empleado_encabezado_Curriculums` (`fksolicitudempleado`),
@@ -701,9 +701,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `tbl_solicitud_empleado_detalle`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tbl_solicitud_empleado_detalle` (
-  `pksolicitudempleado` int(11) NOT NULL,
+  `pksolicitudempleado` int NOT NULL,
   `primaria` tinyint(1) DEFAULT NULL,
   `secundaria` tinyint(1) DEFAULT NULL,
   `bachillerato` tinyint(1) DEFAULT NULL,
@@ -733,11 +733,11 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `tbl_solicitud_empleado_encabezado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tbl_solicitud_empleado_encabezado` (
-  `pksolicitudempleado` int(11) NOT NULL,
-  `fkcodigoempleado` int(11) DEFAULT NULL,
-  `fkcodigocontratacion` int(11) DEFAULT NULL,
+  `pksolicitudempleado` int NOT NULL,
+  `fkcodigoempleado` int DEFAULT NULL,
+  `fkcodigocontratacion` int DEFAULT NULL,
   `fecha_creacion` date DEFAULT NULL,
   `estado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`pksolicitudempleado`),
@@ -764,9 +764,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `tipocontratacion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `tipocontratacion` (
-  `pkcodigocontratacion` int(11) NOT NULL,
+  `pkcodigocontratacion` int NOT NULL,
   `PorContrato` varchar(45) DEFAULT NULL,
   `PorMeses` varchar(45) DEFAULT NULL,
   `PorProyecto` varchar(45) DEFAULT NULL,
@@ -802,4 +802,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-21 23:46:28
+-- Dump completed on 2020-03-25 21:01:15

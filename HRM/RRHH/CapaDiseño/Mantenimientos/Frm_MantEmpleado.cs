@@ -51,6 +51,15 @@ namespace CapaDiseño.Mantenimientos
             InitializeComponent();
             obtenerip();
             suser = susuario;
+
+            Txt_PrimerApellido.Enabled = false;
+            Txt_SegundoNombre.Enabled = false;
+            Txt_PrimerApellido.Enabled = false;
+            Txt_SegundoNombre.Enabled = false;
+            Txt_Telefono.Enabled = false;
+            Txt_Celular.Enabled = false;
+            Txt_email.Enabled = false;
+            Txt_Direccion.Enabled = false;
         }
 
         private void Pnl_nombreForm_Paint(object sender, PaintEventArgs e)
@@ -155,6 +164,46 @@ namespace CapaDiseño.Mantenimientos
             concep.ShowDialog();
 
             
+        }
+
+        private void Btn_ingresar_Click(object sender, EventArgs e)
+        {
+            Txt_PrimerApellido.Enabled = true;
+            Txt_SegundoNombre.Enabled = true;
+            Txt_PrimerApellido.Enabled = true;
+            Txt_SegundoNombre.Enabled = true;
+            Txt_Telefono.Enabled = true;
+            Txt_Celular.Enabled = true;
+            Txt_email.Enabled = true;
+            Txt_Direccion.Enabled = true;
+        }
+
+        private void Btn_editar_Click(object sender, EventArgs e)
+        {
+            OdbcDataReader cita = logic.ModificarEmpleado(Txt_Cod.Text, Txt_PrimerApellido.Text, Txt_SegundoNombre.Text, Txt_PrimerApellido.Text, TxtSegundoApellido.Text, Txt_Telefono.Text, Txt_Celular.Text, Txt_email.Text, Txt_Direccion.Text, Cbo_estado.Text);
+            MessageBox.Show("Datos modificados correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
+        }
+
+        private void Btn_guardar_Click(object sender, EventArgs e)
+        {
+            OdbcDataReader cita = logic.Insertarempleado(Txt_PrimerApellido.Text, Txt_SegundoNombre.Text, Txt_PrimerApellido.Text, TxtSegundoApellido.Text, Txt_Telefono.Text, Txt_Celular.Text, Txt_email.Text, Txt_Direccion.Text, Cbo_estado.Text);
+            MessageBox.Show("Datos Insertados");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
+
+        }
+
+        private void Btn_borrar_Click(object sender, EventArgs e)
+        {
+            OdbcDataReader cita = logic.eliminarEmpleado(Txt_Cod.Text);
+            MessageBox.Show("Eliminado Correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
+        }
+
+        private void Btn_consultar_Click(object sender, EventArgs e)
+        {
+            Frm_consultaEmpleado concep = new Frm_consultaEmpleado();
+            concep.ShowDialog();
         }
     }
 }

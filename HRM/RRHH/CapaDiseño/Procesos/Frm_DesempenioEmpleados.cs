@@ -398,6 +398,7 @@ namespace Desempeño
             try
             {
                 OdbcDataReader desempeño = logic.InsertarCategoria(Txt_empleadosDesempeño.ToString());
+                MessageBox.Show("Datos Guardados");
             }
             catch (Exception ex)
             {
@@ -407,8 +408,7 @@ namespace Desempeño
             //TOTAL DESEMPEÑO
             try
             {
-                OdbcDataReader kpi = logic.InsertarKpi(Txt_fechaEvaluacion.ToString(), Txt_empleadosTotal.ToString(),
-                    Txt_empleadosDesempeño.ToString());
+                OdbcDataReader kpi = logic.InsertarKpi(Txt_fechaEvaluacion.ToString(), Txt_empleadosDesempeño.ToString());
             }
             catch (Exception ex)
             {

@@ -48,6 +48,7 @@ namespace CapaDiseño.Mantenimientos
             InitializeComponent();
             obtenerip();
             suser = susuario;
+            Gpb_IngresoDatos.Enabled = false;
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
@@ -72,8 +73,8 @@ namespace CapaDiseño.Mantenimientos
 
                         Txt_CodigoEmpleado.Text = Reunion.GetString(0);
                         Txt_Descripcion.Text = Reunion.GetString(1);
-                        Txt_FechaInicio.Text = Reunion.GetString(2);
-                        Txt_FechaFinal.Text = Reunion.GetString(3);
+                        Dtp_FechaIngreso.Text = Reunion.GetString(2);
+                        Dtp_FechaSalida.Text = Reunion.GetString(3);
 
 
                     }
@@ -98,6 +99,12 @@ namespace CapaDiseño.Mantenimientos
             }
             else
             {
+
+                //FORMATO DE FECHAS Y HORAS
+                string sFechaIngreso, sFechaSalida;
+                sFechaIngreso = Dtp_FechaIngreso.Value.ToString("yyyy-MM-dd");
+                sFechaSalida = Dtp_FechaSalida.Value.ToString("yyyy-MM-dd");
+
                 OdbcDataReader Sansion = Logic.DeleteSansion(Txt_RazonSansion.Text);
                 MessageBox.Show("Sanción Eliminada");
                 Logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
@@ -106,9 +113,10 @@ namespace CapaDiseño.Mantenimientos
                 Txt_RazonSansion.Clear();
                 Txt_RazonSansion.Focus();
                 Txt_Descripcion.Clear();
-                Txt_FechaInicio.Clear();
-                Txt_FechaFinal.Clear();
                 Txt_CodigoEmpleado.Clear();
+                Dtp_FechaIngreso.ResetText();
+                Dtp_FechaSalida.ResetText();
+                
             }
         }
 

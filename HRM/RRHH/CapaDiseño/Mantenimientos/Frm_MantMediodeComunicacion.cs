@@ -22,8 +22,9 @@ namespace CapaDiseño.Procesos
         string slocalIP;
         string smacAddresses;
         string suser;
-        
-          
+        string scampo;
+
+
         public void obtenerip()
         {
             IPHostEntry host;
@@ -51,39 +52,15 @@ namespace CapaDiseño.Procesos
             InitializeComponent();
             obtenerip();
             suser = susuario;
-        }
 
-        private void Pic_Insertar_Click(object sender, EventArgs e)
-        {
-            Txt_ID.Enabled = true;
-            Txt_Nombre.Enabled = true;
-            Txt_Direccion.Enabled = true;
-            Txt_Telefono.Enabled = true;
-            Cbo_Estado.Enabled = true;
-        }
+            Txt_ID.Enabled = false;
+            Txt_Nombre.Enabled = false;
+            Txt_Direccion.Enabled = false;
+            Txt_Telefono.Enabled = false;
+            Cbo_Estado.Enabled = false;
 
-        public void PicActualizar_Click(object sender, EventArgs e)
-        {
-            OdbcDataReader cita = logic.ModificarMC(Txt_ID.Text,Txt_Nombre.Text,Txt_Direccion.Text,Txt_Telefono.Text,Cbo_Estado.Text);
-            MessageBox.Show("Datos modificados correctamente.");
-            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
-
-        }
-
-        private void Pic_Guardar_Click(object sender, EventArgs e)
-        {
-            OdbcDataReader cita = logic.InsertarMC( Txt_Nombre.Text, Txt_Direccion.Text, Txt_Telefono.Text, Cbo_Estado.Text);
-            MessageBox.Show("Datos insertar correctamente.");
-            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
-
-        }
-
-        private void Pic_Borrar_Click(object sender, EventArgs e)
-        {
-            OdbcDataReader cita = logic.eliminarEmpleado(Txt_ID.Text);
-            MessageBox.Show("Eliminado Correctamente.");
-            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
-
+            scampo = logic.siguiente("mediodecomunicacion", "pkmediodecomunicacion");
+            Txt_ID.Text = scampo;
         }
 
         private void Btn_cerrar_Click(object sender, EventArgs e)
@@ -105,6 +82,48 @@ namespace CapaDiseño.Procesos
         {
             Frm_consultaMediodeComunicacion concep = new Frm_consultaMediodeComunicacion();
             concep.ShowDialog();
+        }
+
+        private void Btn_ingresar_Click(object sender, EventArgs e)
+        {
+            Txt_ID.Enabled = true;
+            Txt_Nombre.Enabled = true;
+            Txt_Direccion.Enabled = true;
+            Txt_Telefono.Enabled = true;
+            Cbo_Estado.Enabled = true;
+        }
+
+        private void Btn_editar_Click(object sender, EventArgs e)
+        {
+            OdbcDataReader cita = logic.ModificarMC(Txt_ID.Text, Txt_Nombre.Text, Txt_Direccion.Text, Txt_Telefono.Text, Cbo_Estado.Text);
+            MessageBox.Show("Datos modificados correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
+        }
+
+        private void Btn_guardar_Click(object sender, EventArgs e)
+        {
+            OdbcDataReader cita = logic.InsertarMC(Txt_Nombre.Text, Txt_Direccion.Text, Txt_Telefono.Text, Cbo_Estado.Text);
+            MessageBox.Show("Datos insertar correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
+
+        }
+
+        private void Btn_borrar_Click(object sender, EventArgs e)
+        {
+            OdbcDataReader cita = logic.eliminarEmpleado(Txt_ID.Text);
+            MessageBox.Show("Eliminado Correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
+        }
+
+        private void Btn_consultar_Click(object sender, EventArgs e)
+        {
+            Frm_consultaMediodeComunicacion concep = new Frm_consultaMediodeComunicacion();
+            concep.ShowDialog();
+        }
+
+        private void Txt_ID_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
