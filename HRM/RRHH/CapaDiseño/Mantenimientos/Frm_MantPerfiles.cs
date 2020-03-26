@@ -10,14 +10,44 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDiseño.Consulta;
 using CapaLogica;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace CapaDiseño.Mantenimientos
 {
+    
+    
+      
     public partial class Frm_MantPerfiles : Form
     {
         Logica logic = new Logica();
         string scampo;
-        public Frm_MantPerfiles()
+
+        string slocalIP;
+        string smacAddresses;
+        string suser;
+        public void obtenerip()
+        {
+            IPHostEntry host;
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    slocalIP = ip.ToString();
+                }
+            }
+            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            {
+                if (nic.OperationalStatus == OperationalStatus.Up)
+                {
+                    smacAddresses += nic.GetPhysicalAddress().ToString();
+                    break;
+
+                }
+            }
+        }
+        public Frm_MantPerfiles(String susuario)
         {
             InitializeComponent();
             scampo = logic.siguiente("perfil_encabezado", "pkcodperfil");
@@ -31,6 +61,8 @@ namespace CapaDiseño.Mantenimientos
             txt_extras.Enabled = false;
             Txt_Cod.Enabled = false;
             Txt_puesto.Enabled = false;
+            obtenerip();
+            suser = susuario;
         }
 
         private void btn_buscarCreador_Click(object sender, EventArgs e)
@@ -115,6 +147,8 @@ namespace CapaDiseño.Mantenimientos
             //MessageBox.Show(p2);
             OdbcDataReader perfil = logic.InsertarPerfil(Txt_Cod.Text, Txt_puesto.Text, p2, s2, b2, es2, g2, c2, txt_extras.Text);
             MessageBox.Show("Perfil Creado.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
+
         }
 
         private void Frm_MantPerfiles_Load(object sender, EventArgs e)
@@ -151,12 +185,16 @@ namespace CapaDiseño.Mantenimientos
             c2 = c1.ToString();
             OdbcDataReader perfil = logic.modificarPerfil(Txt_Cod.Text, Txt_puesto.Text, p2, s2, b2, es2, g2, c2, txt_extras.Text);
             MessageBox.Show("Datos modificados correctamente.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
+
         }
 
         private void Btn_borrar_Click(object sender, EventArgs e)
         {
             OdbcDataReader perfil = logic.eliminarPerfil(Txt_Cod.Text);
             MessageBox.Show("Eliminado Correctamentee.");
+            logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Eliminar", this.GetType().Name);
+
         }
     }
 }
