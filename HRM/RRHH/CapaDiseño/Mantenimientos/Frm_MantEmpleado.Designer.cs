@@ -193,6 +193,7 @@
             this.Cbo_estado.Name = "Cbo_estado";
             this.Cbo_estado.Size = new System.Drawing.Size(210, 21);
             this.Cbo_estado.TabIndex = 29;
+            this.Cbo_estado.SelectedIndexChanged += new System.EventHandler(this.Cbo_estado_SelectedIndexChanged);
             // 
             // lbl_estado
             // 

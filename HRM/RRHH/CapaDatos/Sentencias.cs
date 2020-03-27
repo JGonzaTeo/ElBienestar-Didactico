@@ -580,7 +580,7 @@ namespace CapaDatos
             try
             {
                 cn.conexionbd();
-                string consulta = "insert into tbl_curriculums values(" + scampo + ',' + nombre + ',' + apellido + ',' + numero + ',' + direccion + ',' + correo + ',' + p2 + ',' + s2 + ',' + b2 + ',' + es2 + ',' + g2 + ',' + c2 + ',' + extras + ',' + experiencia + ',' + sueldo + ',' + solicitud + ",1);";
+                string consulta = "insert into tbl_curriculums values(" + scampo + ",'" + nombre + "','" + apellido + "','" + numero + "','" + direccion + "','" + correo + "'," + p2 + ',' + s2 + ',' + b2 + ',' + es2 + ',' + g2 + ',' + c2 + ",'" + extras + "','" + experiencia + "'," + sueldo + "," + solicitud + ",1);";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -629,12 +629,12 @@ namespace CapaDatos
         }
 
         //---------------------------------------------------------------------------DESEMPEÑO-------------------------------------------------------------------------//
-        public OdbcDataReader InsertarKpi(string fechaEvaluacion, string totalEmpleado, string desempeño)
+        public OdbcDataReader InsertarKpi(string fechaEvaluacion, string desempeño)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "INSERT INTO tbl_kpi values (0," + fechaEvaluacion + totalEmpleado + desempeño + " ) ;";
+                string consulta = "INSERT INTO tbl_kpi values (0," + fechaEvaluacion + desempeño + " ) ;";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -669,6 +669,23 @@ namespace CapaDatos
             {
                 cn.conexionbd();
                 string consulta = "INSERT INTO metas values (0," + nombreMeta + tipoMeta + descrip + comple + fechaMeta + pun + ");";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader InsertarKpiTotal(string totalKpi)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "INSERT INTO metas values (0," + totalKpi + ");";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -1117,5 +1134,25 @@ namespace CapaDatos
                 return null;
             }
         }
+
+        // ESTADO
+        public OdbcDataReader consultarestado(Boolean estado)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT estado FROM empleado;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+
     }
 }

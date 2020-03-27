@@ -92,6 +92,15 @@ namespace Metas
                 MessageBox.Show(ex.ToString(), "Mensaje de error: ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             //
+            try
+            {
+                OdbcDataReader kpit = logic.InsertarKpiTotal(Txt_totalMeta.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Mensaje de error: ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            //
             if (Dgv_vistaMeta.Rows.Count > 0)
             {
                 foreach (DataGridViewRow row in Dgv_vistaMeta.Rows)
@@ -142,11 +151,6 @@ namespace Metas
         private void cambioValor(object sender, EventArgs e)
         {
             totalKpi();
-        }
-
-        private void Txt_empleadoMeta_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Txt_totalMeta_TextChanged(object sender, EventArgs e)

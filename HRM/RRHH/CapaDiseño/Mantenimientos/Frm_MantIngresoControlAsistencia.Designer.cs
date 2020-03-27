@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MantIngresoControlAsistencia));
             this.Btn_RegistrarAsistencia = new System.Windows.Forms.Button();
             this.Gpb_DatosEmpleado = new System.Windows.Forms.GroupBox();
+            this.Lbl_HoraSalida = new System.Windows.Forms.Label();
+            this.Lbl_FechaSalida = new System.Windows.Forms.Label();
+            this.Dtp_HoraSalida = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_FechaSalida = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_HoraIngreso = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_FechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.Txt_Apellido = new System.Windows.Forms.TextBox();
             this.Txt_Nombre = new System.Windows.Forms.TextBox();
             this.Lbl_HoraIngreso = new System.Windows.Forms.Label();
@@ -46,23 +52,20 @@
             this.btn_Ayuda = new System.Windows.Forms.Button();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.Dtp_HoraSalida = new System.Windows.Forms.DateTimePicker();
-            this.Dtp_FechaSalida = new System.Windows.Forms.DateTimePicker();
-            this.Dtp_HoraIngreso = new System.Windows.Forms.DateTimePicker();
-            this.Dtp_FechaIngreso = new System.Windows.Forms.DateTimePicker();
-            this.Lbl_HoraSalida = new System.Windows.Forms.Label();
-            this.Lbl_FechaSalida = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Btn_ConsultarEmpleados = new System.Windows.Forms.Button();
             this.Gpb_DatosEmpleado.SuspendLayout();
             this.Gpb_Ingreso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Barra)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_RegistrarAsistencia
             // 
-            this.Btn_RegistrarAsistencia.Location = new System.Drawing.Point(215, 494);
+            this.Btn_RegistrarAsistencia.Location = new System.Drawing.Point(291, 485);
             this.Btn_RegistrarAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_RegistrarAsistencia.Name = "Btn_RegistrarAsistencia";
-            this.Btn_RegistrarAsistencia.Size = new System.Drawing.Size(115, 30);
+            this.Btn_RegistrarAsistencia.Size = new System.Drawing.Size(162, 54);
             this.Btn_RegistrarAsistencia.TabIndex = 21;
             this.Btn_RegistrarAsistencia.Text = "Registrar Asistencia";
             this.Btn_RegistrarAsistencia.UseVisualStyleBackColor = true;
@@ -82,18 +85,76 @@
             this.Gpb_DatosEmpleado.Controls.Add(this.Lbl_FechaIngreso);
             this.Gpb_DatosEmpleado.Controls.Add(this.Lbl_Apellido);
             this.Gpb_DatosEmpleado.Controls.Add(this.Lbl_Nombre);
-            this.Gpb_DatosEmpleado.Location = new System.Drawing.Point(50, 176);
+            this.Gpb_DatosEmpleado.Location = new System.Drawing.Point(39, 176);
             this.Gpb_DatosEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Gpb_DatosEmpleado.Name = "Gpb_DatosEmpleado";
             this.Gpb_DatosEmpleado.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Gpb_DatosEmpleado.Size = new System.Drawing.Size(464, 293);
+            this.Gpb_DatosEmpleado.Size = new System.Drawing.Size(652, 293);
             this.Gpb_DatosEmpleado.TabIndex = 23;
             this.Gpb_DatosEmpleado.TabStop = false;
             this.Gpb_DatosEmpleado.Text = "Datos Empleado";
             // 
+            // Lbl_HoraSalida
+            // 
+            this.Lbl_HoraSalida.AutoSize = true;
+            this.Lbl_HoraSalida.Location = new System.Drawing.Point(132, 245);
+            this.Lbl_HoraSalida.Name = "Lbl_HoraSalida";
+            this.Lbl_HoraSalida.Size = new System.Drawing.Size(102, 17);
+            this.Lbl_HoraSalida.TabIndex = 13;
+            this.Lbl_HoraSalida.Text = "Hora de Salida";
+            // 
+            // Lbl_FechaSalida
+            // 
+            this.Lbl_FechaSalida.AutoSize = true;
+            this.Lbl_FechaSalida.Location = new System.Drawing.Point(132, 210);
+            this.Lbl_FechaSalida.Name = "Lbl_FechaSalida";
+            this.Lbl_FechaSalida.Size = new System.Drawing.Size(90, 17);
+            this.Lbl_FechaSalida.TabIndex = 12;
+            this.Lbl_FechaSalida.Text = "Fecha Salida";
+            // 
+            // Dtp_HoraSalida
+            // 
+            this.Dtp_HoraSalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.Dtp_HoraSalida.Location = new System.Drawing.Point(257, 245);
+            this.Dtp_HoraSalida.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_HoraSalida.Name = "Dtp_HoraSalida";
+            this.Dtp_HoraSalida.ShowUpDown = true;
+            this.Dtp_HoraSalida.Size = new System.Drawing.Size(265, 22);
+            this.Dtp_HoraSalida.TabIndex = 11;
+            // 
+            // Dtp_FechaSalida
+            // 
+            this.Dtp_FechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_FechaSalida.Location = new System.Drawing.Point(257, 205);
+            this.Dtp_FechaSalida.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaSalida.Name = "Dtp_FechaSalida";
+            this.Dtp_FechaSalida.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Dtp_FechaSalida.Size = new System.Drawing.Size(265, 22);
+            this.Dtp_FechaSalida.TabIndex = 10;
+            // 
+            // Dtp_HoraIngreso
+            // 
+            this.Dtp_HoraIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.Dtp_HoraIngreso.Location = new System.Drawing.Point(257, 166);
+            this.Dtp_HoraIngreso.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_HoraIngreso.Name = "Dtp_HoraIngreso";
+            this.Dtp_HoraIngreso.ShowUpDown = true;
+            this.Dtp_HoraIngreso.Size = new System.Drawing.Size(265, 22);
+            this.Dtp_HoraIngreso.TabIndex = 9;
+            // 
+            // Dtp_FechaIngreso
+            // 
+            this.Dtp_FechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Dtp_FechaIngreso.Location = new System.Drawing.Point(257, 126);
+            this.Dtp_FechaIngreso.Margin = new System.Windows.Forms.Padding(4);
+            this.Dtp_FechaIngreso.Name = "Dtp_FechaIngreso";
+            this.Dtp_FechaIngreso.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Dtp_FechaIngreso.Size = new System.Drawing.Size(265, 22);
+            this.Dtp_FechaIngreso.TabIndex = 8;
+            // 
             // Txt_Apellido
             // 
-            this.Txt_Apellido.Location = new System.Drawing.Point(107, 82);
+            this.Txt_Apellido.Location = new System.Drawing.Point(210, 81);
             this.Txt_Apellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Apellido.Name = "Txt_Apellido";
             this.Txt_Apellido.Size = new System.Drawing.Size(277, 22);
@@ -101,7 +162,7 @@
             // 
             // Txt_Nombre
             // 
-            this.Txt_Nombre.Location = new System.Drawing.Point(107, 39);
+            this.Txt_Nombre.Location = new System.Drawing.Point(210, 38);
             this.Txt_Nombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Nombre.Name = "Txt_Nombre";
             this.Txt_Nombre.Size = new System.Drawing.Size(277, 22);
@@ -110,7 +171,7 @@
             // Lbl_HoraIngreso
             // 
             this.Lbl_HoraIngreso.AutoSize = true;
-            this.Lbl_HoraIngreso.Location = new System.Drawing.Point(29, 172);
+            this.Lbl_HoraIngreso.Location = new System.Drawing.Point(132, 171);
             this.Lbl_HoraIngreso.Name = "Lbl_HoraIngreso";
             this.Lbl_HoraIngreso.Size = new System.Drawing.Size(110, 17);
             this.Lbl_HoraIngreso.TabIndex = 4;
@@ -119,7 +180,7 @@
             // Lbl_FechaIngreso
             // 
             this.Lbl_FechaIngreso.AutoSize = true;
-            this.Lbl_FechaIngreso.Location = new System.Drawing.Point(29, 132);
+            this.Lbl_FechaIngreso.Location = new System.Drawing.Point(132, 131);
             this.Lbl_FechaIngreso.Name = "Lbl_FechaIngreso";
             this.Lbl_FechaIngreso.Size = new System.Drawing.Size(118, 17);
             this.Lbl_FechaIngreso.TabIndex = 3;
@@ -128,7 +189,7 @@
             // Lbl_Apellido
             // 
             this.Lbl_Apellido.AutoSize = true;
-            this.Lbl_Apellido.Location = new System.Drawing.Point(29, 82);
+            this.Lbl_Apellido.Location = new System.Drawing.Point(132, 81);
             this.Lbl_Apellido.Name = "Lbl_Apellido";
             this.Lbl_Apellido.Size = new System.Drawing.Size(58, 17);
             this.Lbl_Apellido.TabIndex = 2;
@@ -137,7 +198,7 @@
             // Lbl_Nombre
             // 
             this.Lbl_Nombre.AutoSize = true;
-            this.Lbl_Nombre.Location = new System.Drawing.Point(29, 39);
+            this.Lbl_Nombre.Location = new System.Drawing.Point(132, 38);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
             this.Lbl_Nombre.Size = new System.Drawing.Size(58, 17);
             this.Lbl_Nombre.TabIndex = 1;
@@ -148,21 +209,21 @@
             this.Gpb_Ingreso.Controls.Add(this.Btn_Buscar);
             this.Gpb_Ingreso.Controls.Add(this.Txt_CodigoEmpleado);
             this.Gpb_Ingreso.Controls.Add(this.Lbl_CodigoEmpleado);
-            this.Gpb_Ingreso.Location = new System.Drawing.Point(50, 89);
+            this.Gpb_Ingreso.Location = new System.Drawing.Point(266, 85);
             this.Gpb_Ingreso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Gpb_Ingreso.Name = "Gpb_Ingreso";
             this.Gpb_Ingreso.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Gpb_Ingreso.Size = new System.Drawing.Size(464, 73);
+            this.Gpb_Ingreso.Size = new System.Drawing.Size(425, 86);
             this.Gpb_Ingreso.TabIndex = 22;
             this.Gpb_Ingreso.TabStop = false;
-            this.Gpb_Ingreso.Text = "Ingreso";
+            this.Gpb_Ingreso.Text = "Busqueda de Empleado";
             // 
             // Btn_Buscar
             // 
-            this.Btn_Buscar.Location = new System.Drawing.Point(360, 30);
+            this.Btn_Buscar.Location = new System.Drawing.Point(320, 27);
             this.Btn_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Buscar.Name = "Btn_Buscar";
-            this.Btn_Buscar.Size = new System.Drawing.Size(83, 23);
+            this.Btn_Buscar.Size = new System.Drawing.Size(83, 37);
             this.Btn_Buscar.TabIndex = 12;
             this.Btn_Buscar.Text = "Buscar";
             this.Btn_Buscar.UseVisualStyleBackColor = true;
@@ -170,7 +231,7 @@
             // 
             // Txt_CodigoEmpleado
             // 
-            this.Txt_CodigoEmpleado.Location = new System.Drawing.Point(181, 32);
+            this.Txt_CodigoEmpleado.Location = new System.Drawing.Point(141, 33);
             this.Txt_CodigoEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_CodigoEmpleado.Name = "Txt_CodigoEmpleado";
             this.Txt_CodigoEmpleado.Size = new System.Drawing.Size(157, 22);
@@ -179,7 +240,7 @@
             // Lbl_CodigoEmpleado
             // 
             this.Lbl_CodigoEmpleado.AutoSize = true;
-            this.Lbl_CodigoEmpleado.Location = new System.Drawing.Point(56, 34);
+            this.Lbl_CodigoEmpleado.Location = new System.Drawing.Point(16, 35);
             this.Lbl_CodigoEmpleado.Name = "Lbl_CodigoEmpleado";
             this.Lbl_CodigoEmpleado.Size = new System.Drawing.Size(119, 17);
             this.Lbl_CodigoEmpleado.TabIndex = 0;
@@ -191,7 +252,7 @@
             this.Pic_Barra.Location = new System.Drawing.Point(-51, -4);
             this.Pic_Barra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Pic_Barra.Name = "Pic_Barra";
-            this.Pic_Barra.Size = new System.Drawing.Size(615, 66);
+            this.Pic_Barra.Size = new System.Drawing.Size(798, 66);
             this.Pic_Barra.TabIndex = 25;
             this.Pic_Barra.TabStop = false;
             // 
@@ -213,7 +274,7 @@
             this.btn_Ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Ayuda.Image = global::CapaDiseño.Properties.Resources.question__1_;
-            this.btn_Ayuda.Location = new System.Drawing.Point(455, 14);
+            this.btn_Ayuda.Location = new System.Drawing.Point(627, 11);
             this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Ayuda.Name = "btn_Ayuda";
             this.btn_Ayuda.Size = new System.Drawing.Size(44, 38);
@@ -227,7 +288,7 @@
             this.btn_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
-            this.btn_minimizar.Location = new System.Drawing.Point(405, 14);
+            this.btn_minimizar.Location = new System.Drawing.Point(577, 11);
             this.btn_minimizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(44, 38);
@@ -241,7 +302,7 @@
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
-            this.btn_cerrar.Location = new System.Drawing.Point(504, 14);
+            this.btn_cerrar.Location = new System.Drawing.Point(676, 11);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(44, 38);
@@ -249,69 +310,33 @@
             this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
-            // Dtp_HoraSalida
+            // groupBox1
             // 
-            this.Dtp_HoraSalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.Dtp_HoraSalida.Location = new System.Drawing.Point(154, 246);
-            this.Dtp_HoraSalida.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_HoraSalida.Name = "Dtp_HoraSalida";
-            this.Dtp_HoraSalida.ShowUpDown = true;
-            this.Dtp_HoraSalida.Size = new System.Drawing.Size(265, 22);
-            this.Dtp_HoraSalida.TabIndex = 11;
+            this.groupBox1.Controls.Add(this.Btn_ConsultarEmpleados);
+            this.groupBox1.Location = new System.Drawing.Point(39, 85);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(207, 86);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Empleados";
             // 
-            // Dtp_FechaSalida
+            // Btn_ConsultarEmpleados
             // 
-            this.Dtp_FechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Dtp_FechaSalida.Location = new System.Drawing.Point(154, 206);
-            this.Dtp_FechaSalida.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_FechaSalida.Name = "Dtp_FechaSalida";
-            this.Dtp_FechaSalida.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Dtp_FechaSalida.Size = new System.Drawing.Size(265, 22);
-            this.Dtp_FechaSalida.TabIndex = 10;
-            // 
-            // Dtp_HoraIngreso
-            // 
-            this.Dtp_HoraIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.Dtp_HoraIngreso.Location = new System.Drawing.Point(154, 167);
-            this.Dtp_HoraIngreso.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_HoraIngreso.Name = "Dtp_HoraIngreso";
-            this.Dtp_HoraIngreso.ShowUpDown = true;
-            this.Dtp_HoraIngreso.Size = new System.Drawing.Size(265, 22);
-            this.Dtp_HoraIngreso.TabIndex = 9;
-            // 
-            // Dtp_FechaIngreso
-            // 
-            this.Dtp_FechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Dtp_FechaIngreso.Location = new System.Drawing.Point(154, 127);
-            this.Dtp_FechaIngreso.Margin = new System.Windows.Forms.Padding(4);
-            this.Dtp_FechaIngreso.Name = "Dtp_FechaIngreso";
-            this.Dtp_FechaIngreso.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Dtp_FechaIngreso.Size = new System.Drawing.Size(265, 22);
-            this.Dtp_FechaIngreso.TabIndex = 8;
-            // 
-            // Lbl_HoraSalida
-            // 
-            this.Lbl_HoraSalida.AutoSize = true;
-            this.Lbl_HoraSalida.Location = new System.Drawing.Point(29, 246);
-            this.Lbl_HoraSalida.Name = "Lbl_HoraSalida";
-            this.Lbl_HoraSalida.Size = new System.Drawing.Size(102, 17);
-            this.Lbl_HoraSalida.TabIndex = 13;
-            this.Lbl_HoraSalida.Text = "Hora de Salida";
-            // 
-            // Lbl_FechaSalida
-            // 
-            this.Lbl_FechaSalida.AutoSize = true;
-            this.Lbl_FechaSalida.Location = new System.Drawing.Point(29, 211);
-            this.Lbl_FechaSalida.Name = "Lbl_FechaSalida";
-            this.Lbl_FechaSalida.Size = new System.Drawing.Size(90, 17);
-            this.Lbl_FechaSalida.TabIndex = 12;
-            this.Lbl_FechaSalida.Text = "Fecha Salida";
+            this.Btn_ConsultarEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ConsultarEmpleados.Location = new System.Drawing.Point(19, 28);
+            this.Btn_ConsultarEmpleados.Name = "Btn_ConsultarEmpleados";
+            this.Btn_ConsultarEmpleados.Size = new System.Drawing.Size(167, 36);
+            this.Btn_ConsultarEmpleados.TabIndex = 34;
+            this.Btn_ConsultarEmpleados.Text = "Consultar Empleados";
+            this.Btn_ConsultarEmpleados.UseVisualStyleBackColor = true;
+            this.Btn_ConsultarEmpleados.Click += new System.EventHandler(this.Btn_ConsultarEmpleados_Click);
             // 
             // Frm_MantIngresoControlAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 555);
+            this.ClientSize = new System.Drawing.Size(732, 555);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_Ayuda);
             this.Controls.Add(this.btn_minimizar);
             this.Controls.Add(this.btn_cerrar);
@@ -330,6 +355,7 @@
             this.Gpb_Ingreso.ResumeLayout(false);
             this.Gpb_Ingreso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Barra)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,5 +385,7 @@
         private System.Windows.Forms.DateTimePicker Dtp_FechaSalida;
         private System.Windows.Forms.DateTimePicker Dtp_HoraIngreso;
         private System.Windows.Forms.DateTimePicker Dtp_FechaIngreso;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button Btn_ConsultarEmpleados;
     }
 }

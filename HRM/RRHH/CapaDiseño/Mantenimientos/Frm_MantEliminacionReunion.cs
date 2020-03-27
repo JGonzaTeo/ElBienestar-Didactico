@@ -49,6 +49,7 @@ namespace CapaDiseño.Mantenimientos
             InitializeComponent();
             obtenerip();
             suser = susuario;
+            Gpb_DatosReunion.Enabled = false;
         }
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
@@ -81,7 +82,6 @@ namespace CapaDiseño.Mantenimientos
                     {
                         MessageBox.Show("Ingrese un nombre existente");
                     }
-                    Gpb_DatosReunion.Visible = false;
                 }
                 catch (Exception err)
                 {

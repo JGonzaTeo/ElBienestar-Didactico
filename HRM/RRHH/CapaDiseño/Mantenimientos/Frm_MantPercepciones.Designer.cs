@@ -260,6 +260,7 @@
             this.Cbo_estado.Name = "Cbo_estado";
             this.Cbo_estado.Size = new System.Drawing.Size(122, 25);
             this.Cbo_estado.TabIndex = 11;
+            this.Cbo_estado.SelectedIndexChanged += new System.EventHandler(this.Cbo_estado_SelectedIndexChanged);
             // 
             // lbl_estado
             // 
@@ -282,6 +283,7 @@
             this.Cbo_tipooperacion.Name = "Cbo_tipooperacion";
             this.Cbo_tipooperacion.Size = new System.Drawing.Size(122, 25);
             this.Cbo_tipooperacion.TabIndex = 9;
+            this.Cbo_tipooperacion.SelectedIndexChanged += new System.EventHandler(this.Cbo_tipooperacion_SelectedIndexChanged);
             // 
             // lbl_accion
             // 

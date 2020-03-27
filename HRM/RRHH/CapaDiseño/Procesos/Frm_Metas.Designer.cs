@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Metas));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Pnl_Desempeño = new System.Windows.Forms.Panel();
             this.Btn_ayuda = new System.Windows.Forms.Button();
             this.Btn_minimizar = new System.Windows.Forms.Button();
@@ -198,6 +198,7 @@
             // 
             // Txt_totalMeta
             // 
+            this.Txt_totalMeta.Enabled = false;
             this.Txt_totalMeta.Location = new System.Drawing.Point(257, 225);
             this.Txt_totalMeta.Name = "Txt_totalMeta";
             this.Txt_totalMeta.Size = new System.Drawing.Size(100, 20);
@@ -261,7 +262,6 @@
             this.Txt_empleadoMeta.Size = new System.Drawing.Size(262, 20);
             this.Txt_empleadoMeta.TabIndex = 1;
             this.Txt_empleadoMeta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Txt_empleadoMeta.TextChanged += new System.EventHandler(this.Txt_empleadoMeta_TextChanged);
             // 
             // Txt_fechaMeta
             // 
@@ -406,18 +406,18 @@
             // 
             // Ct_graficaMeta
             // 
-            chartArea2.Name = "ChartArea1";
-            this.Ct_graficaMeta.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.Ct_graficaMeta.ChartAreas.Add(chartArea1);
             this.Ct_graficaMeta.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.Ct_graficaMeta.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.Ct_graficaMeta.Legends.Add(legend1);
             this.Ct_graficaMeta.Location = new System.Drawing.Point(3, 16);
             this.Ct_graficaMeta.Name = "Ct_graficaMeta";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series2.YValuesPerPoint = 6;
-            this.Ct_graficaMeta.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 6;
+            this.Ct_graficaMeta.Series.Add(series1);
             this.Ct_graficaMeta.Size = new System.Drawing.Size(425, 464);
             this.Ct_graficaMeta.TabIndex = 0;
             this.Ct_graficaMeta.Text = "chart1";
