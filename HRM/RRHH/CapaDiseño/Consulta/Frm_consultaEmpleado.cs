@@ -91,5 +91,10 @@ namespace CapaDiseño.Consulta
         {
             this.Dispose();
         }
+
+        private void Dgv_consultaEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

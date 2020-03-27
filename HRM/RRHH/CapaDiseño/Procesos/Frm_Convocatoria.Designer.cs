@@ -55,6 +55,7 @@
             this.Btn_minimizar = new System.Windows.Forms.Button();
             this.Btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_desempeñoTitulo = new System.Windows.Forms.Label();
+            this.Btn_Buscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_PERFIL)).BeginInit();
             this.Pnl_Desempeño.SuspendLayout();
@@ -160,7 +161,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(435, 259);
+            this.label1.Location = new System.Drawing.Point(397, 283);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 13);
             this.label1.TabIndex = 23;
@@ -179,10 +180,10 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.DGV_PERFIL.Location = new System.Drawing.Point(11, 289);
+            this.DGV_PERFIL.Location = new System.Drawing.Point(12, 328);
             this.DGV_PERFIL.Name = "DGV_PERFIL";
             this.DGV_PERFIL.RowHeadersVisible = false;
-            this.DGV_PERFIL.Size = new System.Drawing.Size(910, 205);
+            this.DGV_PERFIL.Size = new System.Drawing.Size(909, 166);
             this.DGV_PERFIL.TabIndex = 22;
             // 
             // Column1
@@ -293,11 +294,22 @@
             this.Lbl_desempeñoTitulo.TabIndex = 0;
             this.Lbl_desempeñoTitulo.Text = "CONVOCATORIA";
             // 
+            // Btn_Buscar
+            // 
+            this.Btn_Buscar.Location = new System.Drawing.Point(795, 283);
+            this.Btn_Buscar.Name = "Btn_Buscar";
+            this.Btn_Buscar.Size = new System.Drawing.Size(104, 30);
+            this.Btn_Buscar.TabIndex = 29;
+            this.Btn_Buscar.Text = "BUSCAR";
+            this.Btn_Buscar.UseVisualStyleBackColor = true;
+            this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
+            // 
             // Frm_Convocatoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 503);
+            this.Controls.Add(this.Btn_Buscar);
             this.Controls.Add(this.Pnl_Desempeño);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -344,5 +356,6 @@
         private System.Windows.Forms.Button Btn_minimizar;
         private System.Windows.Forms.Button Btn_cerrar;
         private System.Windows.Forms.Label Lbl_desempeñoTitulo;
+        private System.Windows.Forms.Button Btn_Buscar;
     }
 }

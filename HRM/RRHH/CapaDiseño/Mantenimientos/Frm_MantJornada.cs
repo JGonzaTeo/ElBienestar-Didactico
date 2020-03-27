@@ -51,6 +51,11 @@ namespace CapaDiseño.Mantenimientos
             InitializeComponent();
             obtenerip();
             suser = susuario;
+
+            Txt_codigoJornada.Enabled = false;
+            Txt_nombreJornada.Enabled = false;
+            Txt_horasJornada.Enabled = false;
+            Cbo_estadoJornada.Enabled = false;
         }
 
         private void Btn_minimizar_Click(object sender, EventArgs e)
@@ -116,6 +121,17 @@ namespace CapaDiseño.Mantenimientos
                 Cbo_estadoJornada.Text = concep.Dgv_consultaJornada.Rows[concep.Dgv_consultaJornada.CurrentRow.Index].
                      Cells[3].Value.ToString();
             }
+        }
+
+        private void Cbo_estadoJornada_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cbo_estadoJornada.Items.Add("1");
+            Cbo_estadoJornada.Items.Add("0");
+        }
+
+        private void Frm_MantJornada_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

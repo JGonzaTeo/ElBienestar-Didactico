@@ -84,7 +84,7 @@
             this.Pnl_nombreForm.Controls.Add(this.label1);
             this.Pnl_nombreForm.Controls.Add(this.btn_cerrar);
             this.Pnl_nombreForm.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Pnl_nombreForm.Margin = new System.Windows.Forms.Padding(2);
             this.Pnl_nombreForm.Name = "Pnl_nombreForm";
             this.Pnl_nombreForm.Size = new System.Drawing.Size(970, 51);
             this.Pnl_nombreForm.TabIndex = 70;
@@ -95,7 +95,7 @@
             this.btn_Ayuda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_Ayuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_Ayuda.Image")));
             this.btn_Ayuda.Location = new System.Drawing.Point(887, 12);
-            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Ayuda.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ayuda.Name = "btn_Ayuda";
             this.btn_Ayuda.Size = new System.Drawing.Size(33, 31);
             this.btn_Ayuda.TabIndex = 6;
@@ -107,7 +107,7 @@
             this.btn_minimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_minimizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_minimizar.Image")));
             this.btn_minimizar.Location = new System.Drawing.Point(852, 12);
-            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_minimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_minimizar.Name = "btn_minimizar";
             this.btn_minimizar.Size = new System.Drawing.Size(33, 31);
             this.btn_minimizar.TabIndex = 5;
@@ -132,7 +132,7 @@
             this.btn_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
             this.btn_cerrar.Location = new System.Drawing.Point(925, 12);
-            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(33, 31);
             this.btn_cerrar.TabIndex = 4;
@@ -175,9 +175,9 @@
             this.gpb_datos.Controls.Add(this.Txt_Cod);
             this.gpb_datos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpb_datos.Location = new System.Drawing.Point(16, 172);
-            this.gpb_datos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpb_datos.Margin = new System.Windows.Forms.Padding(2);
             this.gpb_datos.Name = "gpb_datos";
-            this.gpb_datos.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpb_datos.Padding = new System.Windows.Forms.Padding(2);
             this.gpb_datos.Size = new System.Drawing.Size(933, 457);
             this.gpb_datos.TabIndex = 76;
             this.gpb_datos.TabStop = false;
@@ -187,7 +187,7 @@
             // 
             this.txt_Sueldo.Enabled = false;
             this.txt_Sueldo.Location = new System.Drawing.Point(652, 356);
-            this.txt_Sueldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Sueldo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Sueldo.Name = "txt_Sueldo";
             this.txt_Sueldo.Size = new System.Drawing.Size(212, 23);
             this.txt_Sueldo.TabIndex = 89;
@@ -227,7 +227,7 @@
             // 
             this.txt_Solicitud.Enabled = false;
             this.txt_Solicitud.Location = new System.Drawing.Point(180, 303);
-            this.txt_Solicitud.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Solicitud.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Solicitud.Name = "txt_Solicitud";
             this.txt_Solicitud.Size = new System.Drawing.Size(212, 23);
             this.txt_Solicitud.TabIndex = 85;
@@ -246,7 +246,7 @@
             // 
             this.txt_Correo.Enabled = false;
             this.txt_Correo.Location = new System.Drawing.Point(180, 248);
-            this.txt_Correo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Correo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(212, 23);
             this.txt_Correo.TabIndex = 83;
@@ -265,7 +265,7 @@
             // 
             this.txt_Direccion.Enabled = false;
             this.txt_Direccion.Location = new System.Drawing.Point(180, 204);
-            this.txt_Direccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Direccion.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Direccion.Name = "txt_Direccion";
             this.txt_Direccion.Size = new System.Drawing.Size(212, 23);
             this.txt_Direccion.TabIndex = 81;
@@ -284,7 +284,7 @@
             // 
             this.txt_Numero.Enabled = false;
             this.txt_Numero.Location = new System.Drawing.Point(180, 159);
-            this.txt_Numero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Numero.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Numero.Name = "txt_Numero";
             this.txt_Numero.Size = new System.Drawing.Size(212, 23);
             this.txt_Numero.TabIndex = 79;
@@ -303,7 +303,7 @@
             // 
             this.txt_Apellido.Enabled = false;
             this.txt_Apellido.Location = new System.Drawing.Point(180, 116);
-            this.txt_Apellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Apellido.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Apellido.Name = "txt_Apellido";
             this.txt_Apellido.Size = new System.Drawing.Size(212, 23);
             this.txt_Apellido.TabIndex = 77;
@@ -333,7 +333,7 @@
             this.txt_extras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_extras.Enabled = false;
-            this.txt_extras.Location = new System.Drawing.Point(652, 276);
+            this.txt_extras.Location = new System.Drawing.Point(652, 283);
             this.txt_extras.Multiline = true;
             this.txt_extras.Name = "txt_extras";
             this.txt_extras.Size = new System.Drawing.Size(266, 55);
@@ -464,7 +464,7 @@
             // 
             this.Txt_nombre.Enabled = false;
             this.Txt_nombre.Location = new System.Drawing.Point(180, 78);
-            this.Txt_nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_nombre.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_nombre.Name = "Txt_nombre";
             this.Txt_nombre.Size = new System.Drawing.Size(212, 23);
             this.Txt_nombre.TabIndex = 3;
@@ -494,7 +494,7 @@
             // 
             this.Txt_Cod.Enabled = false;
             this.Txt_Cod.Location = new System.Drawing.Point(180, 37);
-            this.Txt_Cod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Cod.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Cod.Name = "Txt_Cod";
             this.Txt_Cod.Size = new System.Drawing.Size(212, 23);
             this.Txt_Cod.TabIndex = 0;
@@ -511,7 +511,7 @@
             this.Btn_consultar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_consultar.Image")));
             this.Btn_consultar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_consultar.Location = new System.Drawing.Point(586, 71);
-            this.Btn_consultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_consultar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_consultar.Name = "Btn_consultar";
             this.Btn_consultar.Size = new System.Drawing.Size(110, 89);
             this.Btn_consultar.TabIndex = 81;
@@ -532,7 +532,7 @@
             this.Btn_borrar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_borrar.Image")));
             this.Btn_borrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_borrar.Location = new System.Drawing.Point(502, 71);
-            this.Btn_borrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_borrar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_borrar.Name = "Btn_borrar";
             this.Btn_borrar.Size = new System.Drawing.Size(86, 89);
             this.Btn_borrar.TabIndex = 80;
@@ -553,7 +553,7 @@
             this.Btn_guardar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_guardar.Image")));
             this.Btn_guardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_guardar.Location = new System.Drawing.Point(418, 71);
-            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(86, 89);
             this.Btn_guardar.TabIndex = 79;
@@ -574,7 +574,7 @@
             this.Btn_editar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_editar.Image")));
             this.Btn_editar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_editar.Location = new System.Drawing.Point(334, 71);
-            this.Btn_editar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_editar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(86, 89);
             this.Btn_editar.TabIndex = 78;
@@ -595,7 +595,7 @@
             this.Btn_ingresar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_ingresar.Image")));
             this.Btn_ingresar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Btn_ingresar.Location = new System.Drawing.Point(250, 71);
-            this.Btn_ingresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_ingresar.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_ingresar.Name = "Btn_ingresar";
             this.Btn_ingresar.Size = new System.Drawing.Size(86, 89);
             this.Btn_ingresar.TabIndex = 77;
@@ -617,7 +617,7 @@
             this.Controls.Add(this.gpb_datos);
             this.Controls.Add(this.Pnl_nombreForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_MantCurriculum";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MantCurriculum";

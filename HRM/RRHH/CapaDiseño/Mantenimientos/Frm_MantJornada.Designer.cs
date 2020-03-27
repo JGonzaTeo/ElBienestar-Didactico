@@ -40,6 +40,7 @@
             this.Btn_editar = new System.Windows.Forms.Button();
             this.Btn_ingresar = new System.Windows.Forms.Button();
             this.Gpb_datos = new System.Windows.Forms.GroupBox();
+            this.Txt_horasJornada = new System.Windows.Forms.TextBox();
             this.Cbo_estadoJornada = new System.Windows.Forms.ComboBox();
             this.Lbl_estadoJornada = new System.Windows.Forms.Label();
             this.Lbl_horasJornada = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.Lbl_nombreJornada = new System.Windows.Forms.Label();
             this.Lbl_codigoJornada = new System.Windows.Forms.Label();
             this.Txt_codigoJornada = new System.Windows.Forms.TextBox();
-            this.Txt_horasJornada = new System.Windows.Forms.TextBox();
             this.Pnl_nombreForm.SuspendLayout();
             this.Gpb_datos.SuspendLayout();
             this.SuspendLayout();
@@ -241,6 +241,13 @@
             this.Gpb_datos.TabStop = false;
             this.Gpb_datos.Text = "Datos";
             // 
+            // Txt_horasJornada
+            // 
+            this.Txt_horasJornada.Location = new System.Drawing.Point(527, 34);
+            this.Txt_horasJornada.Name = "Txt_horasJornada";
+            this.Txt_horasJornada.Size = new System.Drawing.Size(122, 23);
+            this.Txt_horasJornada.TabIndex = 2;
+            // 
             // Cbo_estadoJornada
             // 
             this.Cbo_estadoJornada.FormattingEnabled = true;
@@ -252,6 +259,7 @@
             this.Cbo_estadoJornada.Name = "Cbo_estadoJornada";
             this.Cbo_estadoJornada.Size = new System.Drawing.Size(122, 25);
             this.Cbo_estadoJornada.TabIndex = 4;
+            this.Cbo_estadoJornada.SelectedIndexChanged += new System.EventHandler(this.Cbo_estadoJornada_SelectedIndexChanged);
             // 
             // Lbl_estadoJornada
             // 
@@ -309,13 +317,6 @@
             this.Txt_codigoJornada.Size = new System.Drawing.Size(199, 23);
             this.Txt_codigoJornada.TabIndex = 1;
             // 
-            // Txt_horasJornada
-            // 
-            this.Txt_horasJornada.Location = new System.Drawing.Point(527, 34);
-            this.Txt_horasJornada.Name = "Txt_horasJornada";
-            this.Txt_horasJornada.Size = new System.Drawing.Size(122, 23);
-            this.Txt_horasJornada.TabIndex = 2;
-            // 
             // Frm_MantJornada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,6 +333,7 @@
             this.Name = "Frm_MantJornada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_MantJornada";
+            this.Load += new System.EventHandler(this.Frm_MantJornada_Load);
             this.Pnl_nombreForm.ResumeLayout(false);
             this.Pnl_nombreForm.PerformLayout();
             this.Gpb_datos.ResumeLayout(false);

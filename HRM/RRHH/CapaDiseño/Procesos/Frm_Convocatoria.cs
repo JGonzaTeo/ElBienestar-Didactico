@@ -1,5 +1,4 @@
-﻿//using iTextSharp.text;
-//using iTextSharp.text.pdf;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +11,8 @@ using System.Windows.Forms;
 using System.Data.Odbc;
 using CapaDiseño.Procesos;
 using CapaDatos;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System.IO;
 
 
@@ -24,6 +25,7 @@ namespace CapaDiseño.Procesos
         public Frm_Convocatoria()
         {
             InitializeComponent();
+           
         }
 
         public void MostrarConsulta()
@@ -106,7 +108,82 @@ namespace CapaDiseño.Procesos
 
         private void Btn_Imprimir_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("CREACION DE PDF PENDIENTE CASI TERMINADA");
+
+            Document doc = new Document();
+            PdfWriter.GetInstance(doc, new FileStream("Convocatoria.pdf", FileMode.Create)); // asignamos el nombre de archivo
+            // Importante Abrir el documento
+            doc.Open();
+            // Creamos un titulo personalizado con tamaño de fuente 18 y color Azul
+            Paragraph title = new Paragraph();
+            title.Font = FontFactory.GetFont(FontFactory.TIMES, 18f, BaseColor.BLUE);
+            title.Add("CONVOCATORIA DE TRABAJO ");
+            doc.Add(title);
+            // Agregamos un parrafo vacio como separacion.
+            doc.Add(new Paragraph(" "));
+
+            // Empezamos a crear la tabla, definimos una tabla de 6 columnas
+            PdfPTable table = new PdfPTable(4);
+            // Esta es la primera fila
+            table.AddCell("ID Empleado Creador");
+            table.AddCell("Fecha");
+            table.AddCell("Tipo de Contratacion");
+            table.AddCell("Medio de Comunicacion");
+           
+            // Segunda fila
+            table.AddCell(Txt_Id.Text);
+            table.AddCell(DTP_fEHCA.Text);
+            table.AddCell(Cbo_TipoC.Text);
+            table.AddCell(Cbo_MC.Text);
+
+            // DOS LINEAS DE SEPARACION
+            doc.Add(new Paragraph(" "));
+            doc.Add(new Paragraph(" "));
+
+            title.Add("REQUISITOS");
+            doc.Add(title);
+            doc.Add(new Paragraph(" "));
+           
+            // Creating iTextSharp Table from the DataTable data
+            PdfPTable pdfTable = new PdfPTable(DGV_PERFIL.ColumnCount);
+            pdfTable.DefaultCell.Padding = 3;
+            pdfTable.WidthPercentage = 30;
+            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+            pdfTable.DefaultCell.BorderWidth = 1;
+
+            //Adding Header row
+            foreach (DataGridViewColumn column in DGV_PERFIL.Columns)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
+                pdfTable.AddCell(cell);
+            }
+
+            //Adding DataRow
+            foreach (DataGridViewRow row in DGV_PERFIL.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    pdfTable.AddCell(cell.Value.ToString());
+                }
+            }
+
+            //Exporting to PDF
+            string folderPath = "C:\\PDFs\\";
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+            using (FileStream stream = new FileStream(folderPath + "DataGridViewExport.pdf", FileMode.Create))
+            {
+                Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+                PdfWriter.GetInstance(pdfDoc, stream);
+                pdfDoc.Open();
+                pdfDoc.Add(pdfTable);
+                pdfDoc.Add(table);
+                pdfDoc.Close();
+                stream.Close();
+            }
+            
             
         }
 
@@ -118,6 +195,11 @@ namespace CapaDiseño.Procesos
         private void Btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void Btn_Buscar_Click(object sender, EventArgs e)
+        {
+            MostrarConsulta();
         }
     }
 }

@@ -125,5 +125,11 @@ namespace CapaDiseño.Procesos
         {
            
         }
+
+        private void Cbo_Estado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cbo_Estado.Items.Add("1");
+            Cbo_Estado.Items.Add("0");
+        }
     }
 }

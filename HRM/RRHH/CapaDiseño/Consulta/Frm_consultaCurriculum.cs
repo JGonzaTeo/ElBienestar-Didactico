@@ -79,5 +79,10 @@ namespace CapaDiseño.Consulta
         {
             this.Dispose();
         }
+
+        private void Frm_consultaCurriculum_Load(object sender, EventArgs e)
+        {
+            MostrarConsulta();
+        }
     }
 }
