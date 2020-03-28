@@ -24,7 +24,7 @@ namespace CapaDiseño.Consulta
             try
             {
                 Conexion conexion = new Conexion();
-                string consultaMostrar = "SELECT * FROM mediodecomunicacion WHERE estado='1';";
+                string consultaMostrar = "SELECT * FROM tipocontratacion WHERE estado='1';";
                 OdbcCommand comm = new OdbcCommand(consultaMostrar, conexion.conexionbd());
                 OdbcDataReader mostrarDatos = comm.ExecuteReader();
 

@@ -348,7 +348,6 @@ C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElB
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_consultaEmpleado.resources
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_consultaSolicitudEmpleado.resources
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_ControlAsistenciaPersonal.resources
-C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_MediodeComunicacion.resources
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Procesos.Frm_SansionesEmpleados.resources
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_TipoContratacion.resources
 C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Mantenimientos.Frm_MantCurriculum.resources
@@ -890,3 +889,11 @@ C:\Users\ISIS\Downloads\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaDiseño\o
 C:\Users\ISIS\Downloads\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.csproj.CopyComplete
 C:\Users\ISIS\Downloads\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.dll
 C:\Users\ISIS\Downloads\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.pdb
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\bin\Debug\itextsharp.dll
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\bin\Debug\itextsharp.xml
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_consultaDepartamento.resources
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_consultaJornada.resources
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Consulta.Frm_consultaMediodeComunicacion.resources
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Mantenimientos.Frm_ManteDepartamento.resources
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\CapaDiseño.Mantenimientos.Frm_MantJornada.resources
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDiseño\obj\Debug\Metas.Frm_Metas.resources

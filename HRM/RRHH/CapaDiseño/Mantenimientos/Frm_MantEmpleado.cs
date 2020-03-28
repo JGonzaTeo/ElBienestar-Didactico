@@ -51,7 +51,7 @@ namespace CapaDiseño.Mantenimientos
             InitializeComponent();
             obtenerip();
             suser = susuario;
-
+            Txt_Cod.Enabled = false;
             Txt_PrimerApellido.Enabled = false;
             Txt_SegundoNombre.Enabled = false;
             Txt_PrimerApellido.Enabled = false;
@@ -59,6 +59,7 @@ namespace CapaDiseño.Mantenimientos
             Txt_Telefono.Enabled = false;
             Txt_Celular.Enabled = false;
             Txt_email.Enabled = false;
+            Txt_Nit.Enabled = false;
             Txt_Direccion.Enabled = false;
         }
 
@@ -124,6 +125,7 @@ namespace CapaDiseño.Mantenimientos
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
+            Txt_Cod.Enabled = true;
             Txt_PrimerApellido.Enabled = true;
             Txt_SegundoNombre.Enabled = true;
             Txt_PrimerApellido.Enabled = true;
@@ -131,6 +133,7 @@ namespace CapaDiseño.Mantenimientos
             Txt_Telefono.Enabled = true;
             Txt_Celular.Enabled = true;
             Txt_email.Enabled = true;
+            Txt_Nit.Enabled = true;
             Txt_Direccion.Enabled = true;
         }
 
