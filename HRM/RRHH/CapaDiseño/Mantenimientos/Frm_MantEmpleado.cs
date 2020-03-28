@@ -139,7 +139,7 @@ namespace CapaDiseño.Mantenimientos
 
         public void PicActualizar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.ModificarEmpleado(Txt_Cod.Text,Txt_PrimerApellido.Text,Txt_SegundoNombre.Text,Txt_PrimerApellido.Text,TxtSegundoApellido.Text,Txt_Telefono.Text,Txt_Celular.Text,Txt_email.Text,Txt_Direccion.Text,Cbo_estado.Text);
+            OdbcDataReader cita = logic.ModificarEmpleado(Txt_Cod.Text,Txt_PrimerApellido.Text,Txt_SegundoNombre.Text,Txt_PrimerApellido.Text,TxtSegundoApellido.Text,Txt_Telefono.Text,Txt_Celular.Text,Txt_email.Text,Txt_Direccion.Text,Txt_Nit.Text,Cbo_estado.Text);
             MessageBox.Show("Datos modificados correctamente.");
             logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
 
@@ -147,7 +147,7 @@ namespace CapaDiseño.Mantenimientos
 
         private void Pic_Guardar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.Insertarempleado(Txt_PrimerApellido.Text, Txt_SegundoNombre.Text, Txt_PrimerApellido.Text, TxtSegundoApellido.Text, Txt_Telefono.Text, Txt_Celular.Text, Txt_email.Text, Txt_Direccion.Text, Cbo_estado.Text);
+            OdbcDataReader cita = logic.Insertarempleado(Txt_PrimerApellido.Text, Txt_SegundoNombre.Text, Txt_PrimerApellido.Text, TxtSegundoApellido.Text, Txt_Telefono.Text, Txt_Celular.Text, Txt_email.Text, Txt_Direccion.Text,Txt_Nit.Text ,Cbo_estado.Text);
             MessageBox.Show("Datos Insertados");
             logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
 
@@ -183,14 +183,14 @@ namespace CapaDiseño.Mantenimientos
 
         private void Btn_editar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.ModificarEmpleado(Txt_Cod.Text, Txt_PrimerApellido.Text, Txt_SegundoNombre.Text, Txt_PrimerApellido.Text, TxtSegundoApellido.Text, Txt_Telefono.Text, Txt_Celular.Text, Txt_email.Text, Txt_Direccion.Text, Cbo_estado.Text);
+            OdbcDataReader cita = logic.ModificarEmpleado(Txt_Cod.Text, Txt_PrimerApellido.Text, Txt_SegundoNombre.Text, Txt_PrimerApellido.Text, TxtSegundoApellido.Text, Txt_Telefono.Text, Txt_Celular.Text, Txt_email.Text, Txt_Direccion.Text,Txt_Nit.Text ,Cbo_estado.Text);
             MessageBox.Show("Datos modificados correctamente.");
             logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Modificar", this.GetType().Name);
         }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            OdbcDataReader cita = logic.Insertarempleado(Txt_PrimerApellido.Text, Txt_SegundoNombre.Text, Txt_PrimerApellido.Text, TxtSegundoApellido.Text, Txt_Telefono.Text, Txt_Celular.Text, Txt_email.Text, Txt_Direccion.Text, Cbo_estado.Text);
+            OdbcDataReader cita = logic.Insertarempleado(Txt_PrimerApellido.Text, Txt_SegundoNombre.Text, Txt_PrimerApellido.Text, TxtSegundoApellido.Text, Txt_Telefono.Text, Txt_Celular.Text, Txt_email.Text, Txt_Direccion.Text, Txt_Nit.Text ,Cbo_estado.Text);
             MessageBox.Show("Datos Insertados");
             logic.bitacora("0", slocalIP, smacAddresses, suser, "RRHH", DateTime.Now.ToString("G"), "Guardar", this.GetType().Name);
 
