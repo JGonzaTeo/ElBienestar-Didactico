@@ -56,6 +56,8 @@
             this.Btn_cerrar = new System.Windows.Forms.Button();
             this.Lbl_desempeñoTitulo = new System.Windows.Forms.Label();
             this.Btn_Buscar = new System.Windows.Forms.Button();
+            this.Txt_NombrePDF = new System.Windows.Forms.TextBox();
+            this.Label_NombrePdF = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_PERFIL)).BeginInit();
             this.Pnl_Desempeño.SuspendLayout();
@@ -73,6 +75,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Label_NombrePdF);
+            this.panel1.Controls.Add(this.Txt_NombrePDF);
             this.panel1.Controls.Add(this.DTP_fEHCA);
             this.panel1.Controls.Add(this.Btn_Imprimir);
             this.panel1.Controls.Add(this.Cbo_MC);
@@ -84,7 +88,7 @@
             this.panel1.Controls.Add(this.Label_ID);
             this.panel1.Location = new System.Drawing.Point(17, 64);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(904, 177);
+            this.panel1.Size = new System.Drawing.Size(904, 204);
             this.panel1.TabIndex = 25;
             // 
             // DTP_fEHCA
@@ -114,7 +118,7 @@
             // 
             // Txt_Id
             // 
-            this.Txt_Id.Location = new System.Drawing.Point(221, 22);
+            this.Txt_Id.Location = new System.Drawing.Point(221, 24);
             this.Txt_Id.Name = "Txt_Id";
             this.Txt_Id.Size = new System.Drawing.Size(173, 20);
             this.Txt_Id.TabIndex = 8;
@@ -304,6 +308,23 @@
             this.Btn_Buscar.UseVisualStyleBackColor = true;
             this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
             // 
+            // Txt_NombrePDF
+            // 
+            this.Txt_NombrePDF.Location = new System.Drawing.Point(446, 160);
+            this.Txt_NombrePDF.Name = "Txt_NombrePDF";
+            this.Txt_NombrePDF.Size = new System.Drawing.Size(173, 20);
+            this.Txt_NombrePDF.TabIndex = 27;
+            // 
+            // Label_NombrePdF
+            // 
+            this.Label_NombrePdF.AutoSize = true;
+            this.Label_NombrePdF.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_NombrePdF.Location = new System.Drawing.Point(312, 161);
+            this.Label_NombrePdF.Name = "Label_NombrePdF";
+            this.Label_NombrePdF.Size = new System.Drawing.Size(114, 17);
+            this.Label_NombrePdF.TabIndex = 28;
+            this.Label_NombrePdF.Text = "Nombre Archivo";
+            // 
             // Frm_Convocatoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,5 +378,7 @@
         private System.Windows.Forms.Button Btn_cerrar;
         private System.Windows.Forms.Label Lbl_desempeñoTitulo;
         private System.Windows.Forms.Button Btn_Buscar;
+        private System.Windows.Forms.Label Label_NombrePdF;
+        private System.Windows.Forms.TextBox Txt_NombrePDF;
     }
 }

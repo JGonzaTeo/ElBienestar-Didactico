@@ -87,15 +87,15 @@ namespace CapaLogica
         }
         /*FIN DE INSERTAR BANCO*/
         //------------------------------------------------------------------------------------------------------INSERTEMPLEADO--------//
-        public OdbcDataReader Insertarempleado(string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
+        public OdbcDataReader Insertarempleado(string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Nit,string Eestado)
         {
-            return sn.InsertarEmp(Pnombre, Snombre, Papellido, Sapellido, telefono, celular, email, direccion, Eestado);
+            return sn.InsertarEmp(Pnombre, Snombre, Papellido, Sapellido, telefono, celular, email, direccion,Nit ,Eestado);
         }
         //---------------------------------------------------------------------------------------------------------------------------//
         //------------------------------------------------------------------------------------------------------UPDATE EMPLEADO------//
-        public OdbcDataReader ModificarEmpleado(string Cod, string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
+        public OdbcDataReader ModificarEmpleado(string Cod, string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion,string Nit ,string Eestado)
         {
-            return sn.UpdateEmp(Cod, Pnombre, Snombre, Papellido, Sapellido, telefono, celular, email, direccion, Eestado);
+            return sn.UpdateEmp(Cod, Pnombre, Snombre, Papellido, Sapellido, telefono, celular, email, direccion, Nit,Eestado);
         }
         //--------------------------------------------------------------------------------------------------------------------------//
         //----------------------------------------------------------------------------------------------ELIMINAR EMPLEADO----------//

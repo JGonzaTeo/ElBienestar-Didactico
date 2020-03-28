@@ -114,7 +114,7 @@ namespace CapaDiseño.Procesos
             doc.Open();
             // Creamos un titulo personalizado con tamaño de fuente 18 y color Azul
             Paragraph title = new Paragraph();
-            title.Font = FontFactory.GetFont(FontFactory.TIMES, 18f, BaseColor.BLUE);
+  
             title.Add("CONVOCATORIA DE TRABAJO ");
             doc.Add(title);
             // Agregamos un parrafo vacio como separacion.
@@ -127,7 +127,7 @@ namespace CapaDiseño.Procesos
             table.AddCell("Fecha");
             table.AddCell("Tipo de Contratacion");
             table.AddCell("Medio de Comunicacion");
-           
+
             // Segunda fila
             table.AddCell(Txt_Id.Text);
             table.AddCell(DTP_fEHCA.Text);
@@ -141,13 +141,14 @@ namespace CapaDiseño.Procesos
             title.Add("REQUISITOS");
             doc.Add(title);
             doc.Add(new Paragraph(" "));
-           
+
             // Creating iTextSharp Table from the DataTable data
             PdfPTable pdfTable = new PdfPTable(DGV_PERFIL.ColumnCount);
             pdfTable.DefaultCell.Padding = 3;
-            pdfTable.WidthPercentage = 30;
+            pdfTable.WidthPercentage = 85;
             pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
-            pdfTable.DefaultCell.BorderWidth = 5;
+            pdfTable.DefaultCell.BorderWidth = 1;
+
 
             //Adding Header row
             foreach (DataGridViewColumn column in DGV_PERFIL.Columns)
@@ -170,12 +171,12 @@ namespace CapaDiseño.Procesos
 
 
             //Exporting to PDF
-            string folderPath = "C:\\PRUEBAS\\";
+            string folderPath = "C:\\PDF\\";
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
-            using (FileStream stream = new FileStream(folderPath + "pdf.pdf", FileMode.Create))
+            using (FileStream stream = new FileStream(folderPath + Txt_NombrePDF.Text, FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                 PdfWriter.GetInstance(pdfDoc, stream);
@@ -184,9 +185,11 @@ namespace CapaDiseño.Procesos
                 pdfDoc.Add(table);
                 pdfDoc.Close();
                 stream.Close();
+
+                MessageBox.Show("El documneto ha sido creado, dirijase a la carpeta PDF en su Disco C");
             }
-            
-            
+
+
         }
 
         private void Btn_minimizar_Click(object sender, EventArgs e)
