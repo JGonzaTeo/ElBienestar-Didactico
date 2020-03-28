@@ -265,12 +265,12 @@ namespace CapaDatos
         }
 
         //---------------------------------------------------------------------------------------------------INSERTMNTEMPLEADO-----------------//
-        public OdbcDataReader InsertarEmp(string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
+        public OdbcDataReader InsertarEmp(string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Nit,string Eestado)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "insert into empleado values(" + Pnombre + ", '" + Snombre + "' ,'" + Papellido + "','" + Sapellido + "','" + telefono + "','" + celular + "','" + email + "','" + direccion + "','" + Eestado + "');";
+                string consulta = "insert into empleado values(" + Pnombre + ", '" + Snombre + "' ,'" + Papellido + "','" + Sapellido + "','" + telefono + "','" + celular + "','" + email + "','" + direccion + "','" + Nit + "','" + Eestado + "');";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -284,12 +284,12 @@ namespace CapaDatos
         //-------------------------------------------------------------------------------------------------------------------------------------//
 
         //---------------------------------------------------------------------------------------------------UPDATE EMPLEADO------------------//
-        public OdbcDataReader UpdateEmp(string Cod, string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion, string Eestado)
+        public OdbcDataReader UpdateEmp(string Cod, string Pnombre, string Snombre, string Papellido, string Sapellido, string telefono, string celular, string email, string direccion,string Nit ,string Eestado)
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "UPDATE empleado set primernombre='" + Pnombre + "',segundonombre='" + Snombre + "',primerapellido='" + Papellido + "',segundoapellido='" + Sapellido + "',telefono='" + telefono + "',email ='" + email + "',direccion='" + direccion + "',estado='" + Eestado + "' where pkcodigoempleado='" + Cod + "';";
+                string consulta = "UPDATE empleado set primernombre='" + Pnombre + "',segundonombre='" + Snombre + "',primerapellido='" + Papellido + "',segundoapellido='" + Sapellido + "',telefono='" + telefono + "',email ='" + email + "',direccion='" + direccion + "',Nit='" + Nit + "',estado='" + Eestado + "' where pkcodigoempleado='" + Cod + "';";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;

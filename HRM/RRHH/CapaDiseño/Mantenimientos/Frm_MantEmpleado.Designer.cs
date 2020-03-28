@@ -48,7 +48,6 @@
             this.Label_email = new System.Windows.Forms.Label();
             this.Label_Celular = new System.Windows.Forms.Label();
             this.Label_Telefono = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.Label_FechaNacimiento = new System.Windows.Forms.Label();
             this.TxtSegundoApellido = new System.Windows.Forms.TextBox();
             this.Txt_PrimerApellido = new System.Windows.Forms.TextBox();
@@ -63,6 +62,8 @@
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Btn_editar = new System.Windows.Forms.Button();
             this.Btn_ingresar = new System.Windows.Forms.Button();
+            this.Txt_Nit = new System.Windows.Forms.TextBox();
+            this.Label_Nit = new System.Windows.Forms.Label();
             this.Pnl_nombreForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -134,6 +135,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Txt_Nit);
+            this.groupBox1.Controls.Add(this.Label_Nit);
             this.groupBox1.Controls.Add(this.Lbl_cod);
             this.groupBox1.Controls.Add(this.Txt_Cod);
             this.groupBox1.Controls.Add(this.Cbo_estado);
@@ -147,7 +150,6 @@
             this.groupBox1.Controls.Add(this.Label_email);
             this.groupBox1.Controls.Add(this.Label_Celular);
             this.groupBox1.Controls.Add(this.Label_Telefono);
-            this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.Label_FechaNacimiento);
             this.groupBox1.Controls.Add(this.TxtSegundoApellido);
             this.groupBox1.Controls.Add(this.Txt_PrimerApellido);
@@ -188,7 +190,7 @@
             this.Cbo_estado.Items.AddRange(new object[] {
             "0",
             "1"});
-            this.Cbo_estado.Location = new System.Drawing.Point(673, 133);
+            this.Cbo_estado.Location = new System.Drawing.Point(673, 137);
             this.Cbo_estado.Margin = new System.Windows.Forms.Padding(2);
             this.Cbo_estado.Name = "Cbo_estado";
             this.Cbo_estado.Size = new System.Drawing.Size(210, 21);
@@ -207,14 +209,14 @@
             // 
             // Dtp_FechaNacimiento
             // 
-            this.Dtp_FechaNacimiento.Location = new System.Drawing.Point(673, 97);
+            this.Dtp_FechaNacimiento.Location = new System.Drawing.Point(673, 67);
             this.Dtp_FechaNacimiento.Name = "Dtp_FechaNacimiento";
             this.Dtp_FechaNacimiento.Size = new System.Drawing.Size(210, 20);
             this.Dtp_FechaNacimiento.TabIndex = 27;
             // 
             // Txt_Direccion
             // 
-            this.Txt_Direccion.Location = new System.Drawing.Point(673, 44);
+            this.Txt_Direccion.Location = new System.Drawing.Point(673, 31);
             this.Txt_Direccion.Name = "Txt_Direccion";
             this.Txt_Direccion.Size = new System.Drawing.Size(210, 20);
             this.Txt_Direccion.TabIndex = 26;
@@ -247,7 +249,7 @@
             // Label_Direccion
             // 
             this.Label_Direccion.AutoSize = true;
-            this.Label_Direccion.Location = new System.Drawing.Point(593, 47);
+            this.Label_Direccion.Location = new System.Drawing.Point(593, 34);
             this.Label_Direccion.Name = "Label_Direccion";
             this.Label_Direccion.Size = new System.Drawing.Size(52, 13);
             this.Label_Direccion.TabIndex = 22;
@@ -284,17 +286,10 @@
             this.Label_Telefono.Text = "Teléfono";
             this.Label_Telefono.Click += new System.EventHandler(this.Label12_Click);
             // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(673, 44);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(210, 20);
-            this.textBox6.TabIndex = 14;
-            // 
             // Label_FechaNacimiento
             // 
             this.Label_FechaNacimiento.AutoSize = true;
-            this.Label_FechaNacimiento.Location = new System.Drawing.Point(593, 91);
+            this.Label_FechaNacimiento.Location = new System.Drawing.Point(593, 64);
             this.Label_FechaNacimiento.Name = "Label_FechaNacimiento";
             this.Label_FechaNacimiento.Size = new System.Drawing.Size(60, 26);
             this.Label_FechaNacimiento.TabIndex = 10;
@@ -469,6 +464,22 @@
             this.Btn_ingresar.UseVisualStyleBackColor = false;
             this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
+            // Txt_Nit
+            // 
+            this.Txt_Nit.Location = new System.Drawing.Point(673, 100);
+            this.Txt_Nit.Name = "Txt_Nit";
+            this.Txt_Nit.Size = new System.Drawing.Size(210, 20);
+            this.Txt_Nit.TabIndex = 33;
+            // 
+            // Label_Nit
+            // 
+            this.Label_Nit.AutoSize = true;
+            this.Label_Nit.Location = new System.Drawing.Point(594, 103);
+            this.Label_Nit.Name = "Label_Nit";
+            this.Label_Nit.Size = new System.Drawing.Size(20, 13);
+            this.Label_Nit.TabIndex = 32;
+            this.Label_Nit.Text = "Nit";
+            // 
             // Frm_MantEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -501,7 +512,6 @@
         private System.Windows.Forms.Label Label_MantEmpleados;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label Label_FechaNacimiento;
         private System.Windows.Forms.TextBox TxtSegundoApellido;
         private System.Windows.Forms.TextBox Txt_PrimerApellido;
@@ -529,5 +539,7 @@
         private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Button Btn_editar;
         private System.Windows.Forms.Button Btn_ingresar;
+        private System.Windows.Forms.TextBox Txt_Nit;
+        private System.Windows.Forms.Label Label_Nit;
     }
 }

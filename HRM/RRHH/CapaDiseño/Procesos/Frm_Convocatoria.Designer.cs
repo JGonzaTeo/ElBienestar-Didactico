@@ -180,10 +180,10 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            this.DGV_PERFIL.Location = new System.Drawing.Point(12, 328);
+            this.DGV_PERFIL.Location = new System.Drawing.Point(17, 325);
             this.DGV_PERFIL.Name = "DGV_PERFIL";
             this.DGV_PERFIL.RowHeadersVisible = false;
-            this.DGV_PERFIL.Size = new System.Drawing.Size(909, 166);
+            this.DGV_PERFIL.Size = new System.Drawing.Size(898, 166);
             this.DGV_PERFIL.TabIndex = 22;
             // 
             // Column1
@@ -296,7 +296,7 @@
             // 
             // Btn_Buscar
             // 
-            this.Btn_Buscar.Location = new System.Drawing.Point(795, 283);
+            this.Btn_Buscar.Location = new System.Drawing.Point(795, 274);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(104, 30);
             this.Btn_Buscar.TabIndex = 29;

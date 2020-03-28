@@ -33,15 +33,14 @@ namespace CapaDiseño.Procesos
             try
             {
                 Conexion conexion = new Conexion();
-                string consultaMostrar = "SELECT * FROM tbl_solicitud_empleado_detalle WHERE estado='1';";
+                string consultaMostrar = "SELECT * FROM perfil_detalle WHERE estado='1';";
                 OdbcCommand comm = new OdbcCommand(consultaMostrar, conexion.conexionbd());
                 OdbcDataReader mostrarDatos = comm.ExecuteReader();
 
                 while (mostrarDatos.Read())
                 {
                     DGV_PERFIL.Refresh();
-                    DGV_PERFIL.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2), mostrarDatos.GetString(3), mostrarDatos.GetString(4), mostrarDatos.GetString(5), mostrarDatos.GetString(6), mostrarDatos.GetString(7), mostrarDatos.GetString(8),
-                         mostrarDatos.GetString(9));
+                    DGV_PERFIL.Rows.Add(mostrarDatos.GetString(0), mostrarDatos.GetString(1), mostrarDatos.GetString(2), mostrarDatos.GetString(3), mostrarDatos.GetString(4), mostrarDatos.GetString(5), mostrarDatos.GetString(6), mostrarDatos.GetString(7), mostrarDatos.GetString(8));
                 }
                 comm.Connection.Close();
                 mostrarDatos.Close();
@@ -110,7 +109,7 @@ namespace CapaDiseño.Procesos
         {
 
             Document doc = new Document();
-            PdfWriter.GetInstance(doc, new FileStream("Convocatoria.pdf", FileMode.Create)); // asignamos el nombre de archivo
+            PdfWriter.GetInstance(doc, new FileStream("Convo.pdf", FileMode.Create)); // asignamos el nombre de archivo
             // Importante Abrir el documento
             doc.Open();
             // Creamos un titulo personalizado con tamaño de fuente 18 y color Azul
@@ -147,14 +146,13 @@ namespace CapaDiseño.Procesos
             PdfPTable pdfTable = new PdfPTable(DGV_PERFIL.ColumnCount);
             pdfTable.DefaultCell.Padding = 3;
             pdfTable.WidthPercentage = 30;
-            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-            pdfTable.DefaultCell.BorderWidth = 1;
+            pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
+            pdfTable.DefaultCell.BorderWidth = 5;
 
             //Adding Header row
             foreach (DataGridViewColumn column in DGV_PERFIL.Columns)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
-                cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
                 pdfTable.AddCell(cell);
             }
 
@@ -163,17 +161,21 @@ namespace CapaDiseño.Procesos
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    pdfTable.AddCell(cell.Value.ToString());
+                    if (cell.Value != null)
+                    {
+                        pdfTable.AddCell(cell.Value.ToString());
+                    }
                 }
             }
 
+
             //Exporting to PDF
-            string folderPath = "C:\\PDFs\\";
+            string folderPath = "C:\\PRUEBAS\\";
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
             }
-            using (FileStream stream = new FileStream(folderPath + "DataGridViewExport.pdf", FileMode.Create))
+            using (FileStream stream = new FileStream(folderPath + "pdf.pdf", FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                 PdfWriter.GetInstance(pdfDoc, stream);
@@ -199,7 +201,7 @@ namespace CapaDiseño.Procesos
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
         {
-            MostrarConsulta();
+            MostrarConsulta();  
         }
     }
 }

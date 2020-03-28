@@ -267,3 +267,6 @@ C:\Users\ISIS\Downloads\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaDatos\obj
 C:\Users\ISIS\Downloads\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 C:\Users\ISIS\Downloads\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\ISIS\Downloads\ElBienestar-Didactico-Conny-Maria\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDatos\bin\Debug\itextsharp.dll
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDatos\bin\Debug\itextsharp.xml
+C:\Users\ISIS\Desktop\2020\1er Semestre\Ing. Software\PROYECTO #2\BIENESTAR2\ElBienestar-Didactico\HRM\RRHH\CapaDatos\obj\Debug\CapaDatos.csprojAssemblyReference.cache
