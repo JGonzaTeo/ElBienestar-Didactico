@@ -624,7 +624,7 @@ DROP TABLE IF EXISTS `poliza_detalle`;
 CREATE TABLE `poliza_detalle` (
   `cod_linea` int(11) NOT NULL AUTO_INCREMENT,
   `pkcodigopoliza` int(11) NOT NULL,
-  `cuentas` int(11) DEFAULT NULL,
+  `cuentas`  varchar(25) DEFAULT NULL,
   `Debe` int(11) DEFAULT NULL,
   `Haber` int(11) DEFAULT NULL,
   PRIMARY KEY (`cod_linea`,`pkcodigopoliza`),

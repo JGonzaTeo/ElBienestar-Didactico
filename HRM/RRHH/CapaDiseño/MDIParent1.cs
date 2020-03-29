@@ -667,6 +667,31 @@ namespace CapaDiseño
         {
 
         }
+
+        bool Frm_PolizaNomina = false;
+        Frm_polizaNomina poliza = new Frm_polizaNomina();
+        private void polizaNominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_polizaNomina);
+            if (ventanametas == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    poliza = new Frm_polizaNomina();
+                }
+
+                poliza.MdiParent = this;
+                poliza.Show();
+                Application.DoEvents();
+                ventanametas = true;
+            }
+            else
+            {
+                metas.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
     }
 }
 

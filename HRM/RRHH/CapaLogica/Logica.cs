@@ -353,6 +353,53 @@ namespace CapaLogica
         {
             return sn.consultaayudas(id);
         }
+        public OdbcDataReader Insertarcuenta(string sCodigocuenta, string scuenta, string smonto)
+        {
+            return sn.Insertarcuentas(sCodigocuenta, scuenta, smonto);
+        }
+
+        public OdbcDataReader detallepoliza(string snombre, string smonto)
+        {
+            return sn.conceptosempleados(snombre, smonto);
+        }
+
+
+
+        public OdbcDataReader consultarnominas()
+        {
+            return sn.Consultanominas();
+        }
+        public OdbcDataReader rellenoconceptos()
+        {
+            return sn.rellenoconcepto();
+        }
+        public OdbcDataReader rellenocuentascontables()
+        {
+            return sn.Rellenocuentas();
+        }
+        public OdbcDataReader consultanomas()
+        {
+            return sn.consultanomina();
+        }
+        public OdbcDataReader comparacionconcepto()
+        {
+            return sn.sumaconceptos();
+        }
+        public OdbcDataReader detallepolizass(string scuenta, string debe, string haber)
+        {
+            return sn.detallepolizas(scuenta, debe, haber);
+        }
+
+        public OdbcDataReader comparacion()
+        {
+            return sn.comp();
+        }
+
+        public OdbcDataReader Guardarpoliza(string codigopoliza, string codigonomina, string fechainicial, string fechafinal)
+        {
+            return sn.Insertarpoliza(codigopoliza, codigonomina, fechainicial, fechafinal);
+        }
+
     }
 }
 

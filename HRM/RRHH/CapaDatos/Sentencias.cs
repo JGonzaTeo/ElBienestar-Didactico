@@ -1172,5 +1172,292 @@ namespace CapaDatos
 
 
 
+        public OdbcDataReader detallepolizas(string scuenta, string sdebe, string shaber)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into poliza_detalle (pkcodigopoliza,cuentas, debe, haber) values('1','" + scuenta + "','" + sdebe + "', '" + shaber + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader conceptosempleados(string snombre, string smonto)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into conceptos_empleado (pknombreconcepto, Total_monto)values('" + snombre + "', '" + smonto + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader comp()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT sum(Debe) FROM mydb.poliza_detalle;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader sumaconceptos()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT sum(Total_monto) FROM mydb.conceptos_empleado;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader rellenocuentas()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT nombre_cuenta, monto FROM mydb.cuentas_contables;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader consultanomina()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT max(pkcodigonomina),saldo_total FROM mydb.nomina_encabezado;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader rellenoconcepto()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT pknombreconcepto,sum(Total_monto) FROM mydb.conceptos_empleado GROUP BY pknombreconcepto;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader Insertarcuentas(string sCodigocuenta, string scuenta, string smonto)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into cuentas_contable (pkcodigocuenta, nombre_cuenta ,monto) values(" + sCodigocuenta + ", '" + scuenta + "' ,'" + smonto + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        public OdbcDataReader Detallepolizas(string scuenta, string sdebe, string shaber)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into poliza_detalle (cuentas, debe, haber ) values('" + scuenta + "','" + sdebe + "', '" + shaber + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader Conceptosempleados(string snombre, string smonto)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into conceptos_empleado values('" + snombre + "', '" + smonto + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader Comp()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT sum(Debe) FROM mydb.poliza_detalle;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader Sumaconceptos()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT sum(Total_monto) FROM mydb.conceptos_empleado;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader Rellenocuentas()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT nombre_cuenta, monto FROM mydb.cuentas_contable;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader Consultanominas()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT max(pkcodigonomina),saldo_total FROM mydb.nomina_encabezado;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+        public OdbcDataReader Rellenoconcepto()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT pknombreconcepto,sum(Total_monto) FROM mydb.conceptos_empleado GROUP BY pknombreconcepto;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        public OdbcDataReader Insertarpoliza(string codigopoliza, string codigonomina, string fechainicial, string fechafinal)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into poliza_encabezado values(" + codigopoliza + ", '" + codigonomina + "' ,'" + fechainicial + "','" + fechafinal + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+        public OdbcDataReader insertarcuentas(string sCodigocuenta, string scuenta, string smonto)
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "insert into cuentas_contable values(" + sCodigocuenta + ", '" + scuenta + "' ,'" + smonto + "');";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+        }
+
+
     }
 }

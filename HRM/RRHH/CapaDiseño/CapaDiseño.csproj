@@ -159,6 +159,12 @@
     <Compile Include="Mantenimientos\Frm_MantIngresoControlAsistencia.Designer.cs">
       <DependentUpon>Frm_MantIngresoControlAsistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresocuentascontables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\Frm_MantIngresocuentascontables.Designer.cs">
+      <DependentUpon>Frm_MantIngresocuentascontables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\Frm_MantIngresoReunion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,12 @@
     <Compile Include="Procesos\Frm_Nomina.designer.cs">
       <DependentUpon>Frm_Nomina.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Frm_polizaNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_polizaNomina.Designer.cs">
+      <DependentUpon>Frm_polizaNomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Frm_preSeleccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +350,9 @@
     <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoControlAsistencia.resx">
       <DependentUpon>Frm_MantIngresoControlAsistencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\Frm_MantIngresocuentascontables.resx">
+      <DependentUpon>Frm_MantIngresocuentascontables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\Frm_MantIngresoReunion.resx">
       <DependentUpon>Frm_MantIngresoReunion.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_Nomina.resx">
       <DependentUpon>Frm_Nomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_polizaNomina.resx">
+      <DependentUpon>Frm_polizaNomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Frm_preSeleccion.resx">
       <DependentUpon>Frm_preSeleccion.cs</DependentUpon>

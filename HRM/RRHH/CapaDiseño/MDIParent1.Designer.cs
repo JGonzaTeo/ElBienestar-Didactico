@@ -63,9 +63,11 @@
             this.sancionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.convocatoriaYSeleccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kPIEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.desempeñoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.metasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaInternaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.polizasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.polizaNominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -281,7 +283,8 @@
             this.sancionToolStripMenuItem1,
             this.convocatoriaYSeleccionToolStripMenuItem,
             this.kPIEmpleadoToolStripMenuItem,
-            this.busquedaInternaToolStripMenuItem});
+            this.busquedaInternaToolStripMenuItem,
+            this.polizasToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.procesosToolStripMenuItem.Text = "Procesos";
@@ -344,19 +347,19 @@
             this.kPIEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.kPIEmpleadoToolStripMenuItem.Text = "KPI Empleado";
             // 
-            // metasToolStripMenuItem1
-            // 
-            this.metasToolStripMenuItem1.Name = "metasToolStripMenuItem1";
-            this.metasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.metasToolStripMenuItem1.Text = "Metas";
-            this.metasToolStripMenuItem1.Click += new System.EventHandler(this.metasToolStripMenuItem1_Click);
-            // 
             // desempeñoToolStripMenuItem1
             // 
             this.desempeñoToolStripMenuItem1.Name = "desempeñoToolStripMenuItem1";
-            this.desempeñoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.desempeñoToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.desempeñoToolStripMenuItem1.Text = "Desempeño";
             this.desempeñoToolStripMenuItem1.Click += new System.EventHandler(this.desempeñoToolStripMenuItem1_Click);
+            // 
+            // metasToolStripMenuItem1
+            // 
+            this.metasToolStripMenuItem1.Name = "metasToolStripMenuItem1";
+            this.metasToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.metasToolStripMenuItem1.Text = "Metas";
+            this.metasToolStripMenuItem1.Click += new System.EventHandler(this.metasToolStripMenuItem1_Click);
             // 
             // busquedaInternaToolStripMenuItem
             // 
@@ -364,6 +367,21 @@
             this.busquedaInternaToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.busquedaInternaToolStripMenuItem.Text = "Busqueda Interna";
             this.busquedaInternaToolStripMenuItem.Click += new System.EventHandler(this.busquedaInternaToolStripMenuItem_Click);
+            // 
+            // polizasToolStripMenuItem
+            // 
+            this.polizasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.polizaNominaToolStripMenuItem});
+            this.polizasToolStripMenuItem.Name = "polizasToolStripMenuItem";
+            this.polizasToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.polizasToolStripMenuItem.Text = "Polizas";
+            // 
+            // polizaNominaToolStripMenuItem
+            // 
+            this.polizaNominaToolStripMenuItem.Name = "polizaNominaToolStripMenuItem";
+            this.polizaNominaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.polizaNominaToolStripMenuItem.Text = "Poliza Nomina";
+            this.polizaNominaToolStripMenuItem.Click += new System.EventHandler(this.polizaNominaToolStripMenuItem_Click);
             // 
             // MDIParent1
             // 
@@ -426,6 +444,8 @@
         private System.Windows.Forms.ToolStripMenuItem desempeñoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem jornadasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem polizasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem polizaNominaToolStripMenuItem;
     }
 }
 

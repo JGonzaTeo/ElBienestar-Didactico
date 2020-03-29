@@ -23,7 +23,17 @@ namespace CapaDiseño.Procesos
         string slocalIP;
         string smacAddresses;
         string suser;
-          
+        public void hackeardatos()
+
+        {
+            foreach (DataGridViewRow row in Dgv_empleadoscontables.Rows)
+            {
+                string columna1 = Convert.ToString(row.Cells["Column4"].Value);
+                string columna2 = Convert.ToString(row.Cells["Column8"].Value);
+                OdbcDataReader cita = logic.detallepoliza(columna1, columna2);
+
+            }
+        }
         public void obtenerip()
         {
             IPHostEntry host;
@@ -188,6 +198,7 @@ namespace CapaDiseño.Procesos
 
         private void Btn_generarnomina_Click(object sender, EventArgs e)
         {
+            hackeardatos();
             double prespuestaps = 0;
             double prespuestaps2 = 0;
             double prespuestapm2 = 0;

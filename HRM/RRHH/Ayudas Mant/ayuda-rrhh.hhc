@@ -113,6 +113,10 @@
 			<param name="Name" value="tipocontratacion">
 			<param name="Local" value="Tipo Contratacion.html">
 			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="poliza_nomina">
+			<param name="Local" value="Poliza _Nomina.html">
+			</OBJECT>
 	</UL>
 </UL>
 </BODY></HTML>
