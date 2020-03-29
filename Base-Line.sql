@@ -69,7 +69,7 @@ CREATE TABLE `ayudas` (
 
 LOCK TABLES `ayudas` WRITE;
 /*!40000 ALTER TABLE `ayudas` DISABLE KEYS */;
-INSERT INTO `ayudas` VALUES (1,'C:/Users/prueb/Desktop/ElBienestar-Didactico-Isisi-Diaz/HRM/RRHH/Ayudas Mant/ayudasrrhh.chm','Conceptos.html',1),(2,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Curriculum.html',1),(3,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Despido.html',1),(4,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','MantenimientoDepartamentos.html',1),(5,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','ReuniónEliminar.html',1),(6,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','SanciónEliminar.html',1),(7,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Empleados.html',1),(8,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','ControlAsistencia.html',1),(9,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Reunión.html',1),(10,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Sanción.html',1),(11,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Jornada.html',1),(12,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Medio Comunicacion.html',1),(13,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','ReuniónModificar.html',1),(14,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','MantenimientoPerfiles.html',1),(15,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Tipo Contratacion.html',1),(16,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','asignacionempleado.html',1),(17,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','ProcesoBusquedaInterna.html',1),(18,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Convocatoria.html',1),(19,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Desempenio.html',1),(20,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','ProcesoBusquedaInterna',1),(21,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','PreSeleccion.html',1),(22,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Metas.html',1),(23,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','Nomina.html',1),(24,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','PreSeleccion',1),(25,'C:UserspruebDesktopElBienestar-Didactico-Isisi-DiazHRMRRHHAyudas Mant/ayudasrrhh.chm','ProcesoSolicitudEmpleado',1);
+INSERT INTO `ayudas` VALUES (1,'Ayudas Mant/ayudasrrhh.chm','Conceptos.html',1),(2,'Ayudas Mant/ayudasrrhh.chm','Curriculum.html',1),(3,'Ayudas Mant/ayudasrrhh.chm','Despido.html',1),(4,'Ayudas Mant/ayudasrrhh.chm','MantenimientoDepartamentos.html',1),(5,'Ayudas Mant/ayudasrrhh.chm','ReuniónEliminar.html',1),(6,'Ayudas Mant/ayudasrrhh.chm','SanciónEliminar.html',1),(7,'Ayudas Mant/ayudasrrhh.chm','Empleados.html',1),(8,'Ayudas Mant/ayudasrrhh.chm','ControlAsistencia.html',1),(9,'Ayudas Mant/ayudasrrhh.chm','Reunión.html',1),(10,'Ayudas Mant/ayudasrrhh.chm','Sanción.html',1),(11,'Ayudas Mant/ayudasrrhh.chm','Jornada.html',1),(12,'Ayudas Mant/ayudasrrhh.chm','Medio Comunicacion.html',1),(13,'Ayudas Mant/ayudasrrhh.chm','ReuniónModificar.html',1),(14,'Ayudas Mant/ayudasrrhh.chm','MantenimientoPerfiles.html',1),(15,'Ayudas Mant/ayudasrrhh.chm','Tipo Contratacion.html',1),(16,'Ayudas Mant/ayudasrrhh.chm','asignacionempleado.html',1),(17,'Ayudas Mant/ayudasrrhh.chm','ProcesoBusquedaInterna.html',1),(18,'Ayudas Mant/ayudasrrhh.chm','Convocatoria.html',1),(19,'Ayudas Mant/ayudasrrhh.chm','Desempenio.html',1),(20,'Ayudas Mant/ayudasrrhh.chm','ProcesoBusquedaInterna',1),(21,'Ayudas Mant/ayudasrrhh.chm','PreSeleccion.html',1),(22,'Ayudas Mant/ayudasrrhh.chm','Metas.html',1),(23,'Ayudas Mant/ayudasrrhh.chm','Nomina.html',1),(24,'Ayudas Mant/ayudasrrhh.chm','PreSeleccion',1),(25,'Ayudas Mant/ayudasrrhh.chm','ProcesoSolicitudEmpleado',1),(26,'Ayudas Mant/ayudasrrhh.chm','Poliza _Nomina',1);
 /*!40000 ALTER TABLE `ayudas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,7 +90,7 @@ CREATE TABLE `bitacora` (
   `accion` varchar(45) DEFAULT NULL,
   `formulario` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`cod_bitacora`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE `bitacora` (
 
 LOCK TABLES `bitacora` WRITE;
 /*!40000 ALTER TABLE `bitacora` DISABLE KEYS */;
-INSERT INTO `bitacora` VALUES (7,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantPercepciones'),(8,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantPercepciones'),(9,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Eliminar','Frm_MantPercepciones'),(10,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantPercepciones'),(11,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantPerfiles'),(12,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantIngresoControlAsistencia'),(13,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantIngresoSansion'),(14,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MediodeComunicacion'),(15,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantTipoContratacion'),(16,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantCurriculum'),(17,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantJornada'),(18,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Modificar','Frm_MantJornada'),(19,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_ManteDepartamento'),(20,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantPercepciones'),(21,'192.168.0.17','0A0027000002','Usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_Asignaciondeconcepto'),(22,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_Nomina'),(23,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Modificar','Frm_MantJornada'),(24,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Modificar','Frm_MantPercepciones'),(25,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantEmpleado'),(26,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantEmpleado'),(27,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantEmpleado');
+INSERT INTO `bitacora` VALUES (7,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantPercepciones'),(8,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantPercepciones'),(9,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Eliminar','Frm_MantPercepciones'),(10,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantPercepciones'),(11,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantPerfiles'),(12,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantIngresoControlAsistencia'),(13,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantIngresoSansion'),(14,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MediodeComunicacion'),(15,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantTipoContratacion'),(16,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantCurriculum'),(17,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantJornada'),(18,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Modificar','Frm_MantJornada'),(19,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_ManteDepartamento'),(20,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantPercepciones'),(21,'192.168.0.17','0A0027000002','Usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_Asignaciondeconcepto'),(22,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_Nomina'),(23,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Modificar','Frm_MantJornada'),(24,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Modificar','Frm_MantPercepciones'),(25,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantEmpleado'),(26,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantEmpleado'),(27,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_MantEmpleado'),(28,'192.168.0.17','0A0027000002','usuario','RRHH','0000-00-00 00:00:00','Guardar','Frm_Nomina');
 /*!40000 ALTER TABLE `bitacora` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -196,7 +196,7 @@ CREATE TABLE `conceptos_empleado` (
   `pknombreconcepto` varchar(25) DEFAULT NULL,
   `Total_monto` int(11) DEFAULT NULL,
   PRIMARY KEY (`pkconceptoempleado`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -205,6 +205,7 @@ CREATE TABLE `conceptos_empleado` (
 
 LOCK TABLES `conceptos_empleado` WRITE;
 /*!40000 ALTER TABLE `conceptos_empleado` DISABLE KEYS */;
+INSERT INTO `conceptos_empleado` VALUES (1,'Bono250',251),(2,'',0);
 /*!40000 ALTER TABLE `conceptos_empleado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -624,13 +625,13 @@ DROP TABLE IF EXISTS `poliza_detalle`;
 CREATE TABLE `poliza_detalle` (
   `cod_linea` int(11) NOT NULL AUTO_INCREMENT,
   `pkcodigopoliza` int(11) NOT NULL,
-  `cuentas`  varchar(25) DEFAULT NULL,
+  `cuentas` varchar(25) DEFAULT NULL,
   `Debe` int(11) DEFAULT NULL,
   `Haber` int(11) DEFAULT NULL,
   PRIMARY KEY (`cod_linea`,`pkcodigopoliza`),
   KEY `fk_poliza_detalle_poliza_encabezado1` (`pkcodigopoliza`),
   CONSTRAINT `fk_poliza_detalle_poliza_encabezado1` FOREIGN KEY (`pkcodigopoliza`) REFERENCES `poliza_encabezado` (`pkcodigopoliza`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -639,6 +640,7 @@ CREATE TABLE `poliza_detalle` (
 
 LOCK TABLES `poliza_detalle` WRITE;
 /*!40000 ALTER TABLE `poliza_detalle` DISABLE KEYS */;
+INSERT INTO `poliza_detalle` VALUES (1,1,'',0,0),(2,1,'Bono250',251,0),(3,1,'BANCOS',0,-2501),(4,1,'SUELDOS',-2752,0);
 /*!40000 ALTER TABLE `poliza_detalle` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -666,6 +668,7 @@ CREATE TABLE `poliza_encabezado` (
 
 LOCK TABLES `poliza_encabezado` WRITE;
 /*!40000 ALTER TABLE `poliza_encabezado` DISABLE KEYS */;
+INSERT INTO `poliza_encabezado` VALUES (1,1,2020,2020);
 /*!40000 ALTER TABLE `poliza_encabezado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -940,4 +943,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-28 22:49:35
+-- Dump completed on 2020-03-29  9:04:23

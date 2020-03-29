@@ -88,7 +88,10 @@ namespace CapaDiseño.Mantenimientos
                 }
 
               Help.ShowHelp(this, ruta, indice);
-           
+            //Help.ShowHelp(this, "Ayudas Mant/ayudasrrhh.chm", "Conceptos.html");
+         
+
+
 
         }
 
