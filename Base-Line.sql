@@ -185,6 +185,55 @@ INSERT INTO `concepto` VALUES (1,'Bono Incentivo',1,250,0,0),(2,'Bono250',1,250,
 UNLOCK TABLES;
 
 --
+-- Table structure for table `conceptos_empleado`
+--
+
+DROP TABLE IF EXISTS `conceptos_empleado`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `conceptos_empleado` (
+  `pkconceptoempleado` int(11) NOT NULL AUTO_INCREMENT,
+  `pknombreconcepto` varchar(25) DEFAULT NULL,
+  `Total_monto` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pkconceptoempleado`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `conceptos_empleado`
+--
+
+LOCK TABLES `conceptos_empleado` WRITE;
+/*!40000 ALTER TABLE `conceptos_empleado` DISABLE KEYS */;
+/*!40000 ALTER TABLE `conceptos_empleado` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cuentas_contable`
+--
+
+DROP TABLE IF EXISTS `cuentas_contable`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cuentas_contable` (
+  `pkcodigocuenta` int(11) NOT NULL,
+  `nombre_cuenta` varchar(45) DEFAULT NULL,
+  `monto` int(11) DEFAULT NULL,
+  `debe_haber` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`pkcodigocuenta`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `cuentas_contable`
+--
+
+LOCK TABLES `cuentas_contable` WRITE;
+/*!40000 ALTER TABLE `cuentas_contable` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cuentas_contable` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `departamentos`
 --
 
@@ -566,6 +615,61 @@ INSERT INTO `perfil_encabezado` VALUES (1,1,1),(2,1,1),(3,1,1);
 UNLOCK TABLES;
 
 --
+-- Table structure for table `poliza_detalle`
+--
+
+DROP TABLE IF EXISTS `poliza_detalle`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `poliza_detalle` (
+  `cod_linea` int(11) NOT NULL AUTO_INCREMENT,
+  `pkcodigopoliza` int(11) NOT NULL,
+  `cuentas` int(11) DEFAULT NULL,
+  `Debe` int(11) DEFAULT NULL,
+  `Haber` int(11) DEFAULT NULL,
+  PRIMARY KEY (`cod_linea`,`pkcodigopoliza`),
+  KEY `fk_poliza_detalle_poliza_encabezado1` (`pkcodigopoliza`),
+  CONSTRAINT `fk_poliza_detalle_poliza_encabezado1` FOREIGN KEY (`pkcodigopoliza`) REFERENCES `poliza_encabezado` (`pkcodigopoliza`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `poliza_detalle`
+--
+
+LOCK TABLES `poliza_detalle` WRITE;
+/*!40000 ALTER TABLE `poliza_detalle` DISABLE KEYS */;
+/*!40000 ALTER TABLE `poliza_detalle` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `poliza_encabezado`
+--
+
+DROP TABLE IF EXISTS `poliza_encabezado`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `poliza_encabezado` (
+  `pkcodigopoliza` int(11) NOT NULL,
+  `pkcodigonomina` int(11) NOT NULL,
+  `fechainicio` int(21) DEFAULT NULL,
+  `fechafin` int(21) DEFAULT NULL,
+  PRIMARY KEY (`pkcodigopoliza`,`pkcodigonomina`),
+  KEY `fk_poliza_encabezado_nomina_encabezado1_idx` (`pkcodigonomina`),
+  CONSTRAINT `fk_poliza_encabezado_nomina_encabezado1` FOREIGN KEY (`pkcodigonomina`) REFERENCES `nomina_encabezado` (`pkcodigonomina`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `poliza_encabezado`
+--
+
+LOCK TABLES `poliza_encabezado` WRITE;
+/*!40000 ALTER TABLE `poliza_encabezado` DISABLE KEYS */;
+/*!40000 ALTER TABLE `poliza_encabezado` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `puesto`
 --
 
@@ -836,4 +940,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-28 20:05:40
+-- Dump completed on 2020-03-28 22:49:35

@@ -176,7 +176,7 @@ namespace CapaDiseño.Procesos
             {
                 Directory.CreateDirectory(folderPath);
             }
-            using (FileStream stream = new FileStream(folderPath + Txt_NombrePDF.Text, FileMode.Create))
+            using (FileStream stream = new FileStream(folderPath + Txt_NombrePDF.Text + ".pdf", FileMode.Create))
             {
                 Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                 PdfWriter.GetInstance(pdfDoc, stream);
