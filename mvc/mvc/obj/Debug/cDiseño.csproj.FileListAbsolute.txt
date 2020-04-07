@@ -1,0 +1,14 @@
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\bin\Debug\mvc.dll
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\bin\Debug\mvc.pdb
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\bin\Debug\cLogica.dll
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\bin\Debug\cLogica.pdb
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\obj\Debug\cDiseño.csprojAssemblyReference.cache
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\obj\Debug\mvc.interfazgrafica.resources
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\obj\Debug\cDiseño.csproj.GenerateResource.cache
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\obj\Debug\cDiseño.csproj.CopyComplete
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\obj\Debug\mvc.dll
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\obj\Debug\mvc.pdb
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\obj\Debug\mvc.modificar_bodega.resources
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\obj\Debug\mvc.modificar_producto.resources
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\bin\Debug\cDatos.dll
+C:\Users\dell\Desktop\conosimientos\mvc\mvc\bin\Debug\cDatos.pdb

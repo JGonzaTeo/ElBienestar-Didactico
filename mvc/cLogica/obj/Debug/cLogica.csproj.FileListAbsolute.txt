@@ -1,0 +1,8 @@
+C:\Users\dell\Desktop\conosimientos\mvc\cLogica\bin\Debug\cLogica.dll
+C:\Users\dell\Desktop\conosimientos\mvc\cLogica\bin\Debug\cLogica.pdb
+C:\Users\dell\Desktop\conosimientos\mvc\cLogica\bin\Debug\cDatos.dll
+C:\Users\dell\Desktop\conosimientos\mvc\cLogica\bin\Debug\cDatos.pdb
+C:\Users\dell\Desktop\conosimientos\mvc\cLogica\obj\Debug\cLogica.csprojAssemblyReference.cache
+C:\Users\dell\Desktop\conosimientos\mvc\cLogica\obj\Debug\cLogica.csproj.CopyComplete
+C:\Users\dell\Desktop\conosimientos\mvc\cLogica\obj\Debug\cLogica.dll
+C:\Users\dell\Desktop\conosimientos\mvc\cLogica\obj\Debug\cLogica.pdb

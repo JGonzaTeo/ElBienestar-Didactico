@@ -1,2 +1,0 @@
-# ElBienestar-Didactico
-Proyecto didactico.
