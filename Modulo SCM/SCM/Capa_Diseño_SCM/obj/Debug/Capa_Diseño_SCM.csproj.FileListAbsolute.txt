@@ -1,0 +1,26 @@
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.dll
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.pdb
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.dll
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.pdb
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csprojAssemblyReference.cache
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.MDISCM.resources
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.GenerateResource.cache
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.CoreCompileInputs.cache
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.CopyComplete
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.dll
+C:\Users\prueb\source\repos\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csprojAssemblyReference.cache
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\CapaDiseño.Mantenimientos.Frm_MantPercepciones.resources
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.MDISCM.resources
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.GenerateResource.cache
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.CoreCompileInputs.cache
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.dll
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.dll
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Diseño_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.dll
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Datos_SCM.dll
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Logica_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\bin\Debug\Capa_Datos_SCM.pdb
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\Capa_Diseño_SCM.csproj.CopyComplete
+C:\Users\prueb\Desktop\Modulo SCM\SCM\Capa_Diseño_SCM\obj\Debug\CapaDiseño.Consulta.Frm_consultaConceptos.resources
