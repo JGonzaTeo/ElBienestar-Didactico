@@ -61,6 +61,18 @@
     <Compile Include="MDISCM.Designer.cs">
       <DependentUpon>MDISCM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Frm_BusquedaOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_BusquedaOrdenCompra.Designer.cs">
+      <DependentUpon>Frm_BusquedaOrdenCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Frm_FacturaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Frm_FacturaProveedores.Designer.cs">
+      <DependentUpon>Frm_FacturaProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Frm_Polizas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +96,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MDISCM.resx">
       <DependentUpon>MDISCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_BusquedaOrdenCompra.resx">
+      <DependentUpon>Frm_BusquedaOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Frm_FacturaProveedores.resx">
+      <DependentUpon>Frm_FacturaProveedores.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
